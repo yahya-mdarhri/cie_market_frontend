@@ -1,0 +1,27 @@
+.layout-container {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+	min-height: 100vh;
+	background-color: #f0f4f8;
+}
+
+.hero-bg{
+	height: 390px;
+	width: 100%;
+	position: absolute;
+	background: url("/bg.png") center/100% no-repeat;;
+}
+
+.hero-bg2{
+	position: absolute;
+	height: 390px;
+	width: 100%;
+	opacity: 0.5;
+	background-color: var(--primary-color);
+}
+
+.layout-container main{
+	z-index: 2;
+}

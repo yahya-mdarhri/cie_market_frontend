@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap'); /* inter font */
+
+
 :root{
-    /* main colors */
-    --primary-color: #073567;
-    --background-color: #D7DEE6;
-    --secondary-color: #D1D600;
-    --white: #FFFEFF;
+	/* main colors */
+	--primary-color: #073567;
+	--background-color: ##E9F1FA;
+	--secondary-color: #D1D600;
+	--white: #FFFEFF;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Inter', sans-serif;
 }

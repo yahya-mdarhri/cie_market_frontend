@@ -1,0 +1,29 @@
+.navbar {
+  background-color: var(--primary-color);
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+	border-radius: 8px;
+	margin: 5px 5%;
+	z-index: 1;
+	height: 60px;
+  color: var(--white);
+}
+
+.navbar .logo img{
+	/* height: 30%; */
+	width: 170px;
+	/* margin: 0; */
+}
+
+.nav a {
+  margin-right: 16px;
+  text-decoration: none;
+  color: var(--white);
+}
+
+
+.nav a:hover {
+  color:var(--secondary-color);
+}
