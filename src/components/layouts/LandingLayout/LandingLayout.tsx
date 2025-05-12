@@ -4,12 +4,17 @@ import NavBar from "../../ui/Landing/NavBar/NavBar";
 import Hero from "../../ui/Landing/Hero/Hero";
 import Stats from "../../ui/Landing/Stats/Stats";
 
+interface StatsItemsType {
+	[key: string]: {name: string; value: number};
+}
+
 interface HeroProps {
 	heroTitle: React.ReactNode;
 	heroDescription: string;
 	heroImage: string;
 	firstAction: string;
 	secondAction?: string;
+	stats: StatsItemsType;
 }
 
 interface LandingLayoutProps {
@@ -26,7 +31,7 @@ function LandingLayout({ children, heroProps}: LandingLayoutProps) {
 			<NavBar />
 			<main>
 				<Hero props={heroProps}/>
-				<Stats />
+				<Stats statsData={heroProps.stats}/>
 				{children}
 			</main>
 
@@ -35,5 +40,5 @@ function LandingLayout({ children, heroProps}: LandingLayoutProps) {
 	);
 }
 
-export type { HeroProps };
+export type { HeroProps, StatsItemsType };
 export default LandingLayout;
