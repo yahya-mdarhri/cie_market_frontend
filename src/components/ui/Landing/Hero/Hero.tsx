@@ -1,27 +1,27 @@
 
+import { HeroProps } from "../../../layouts/LandingLayout/LandingLayout";
 import "./Hero.css";
 
-function Hero() {
+function Hero({props}: { props: HeroProps }) {
 	return (
 		<section className="hero-section">
 			<div className="hero-content">
 				<div className="hero-left">
 					<h1>
-						From Idea to Market
-						<br/>— Bridging Innovation
-						<br/>————— and Industry
+						{props.heroTitle}
 					</h1>
 					<p>
-						UIR's Technology Transfer Office supports IP protection, innovation valorization, 
-						and industrial collaboration.
+						{props.heroDescription}
 					</p>
 					<div className="hero-buttons">
-						<button className="hero-btn">Partner With Us</button>
-						<button className="hero-btn">Submit A Patent</button>
+						<button className="hero-btn">{props.firstAction}</button>
+						{props.secondAction && (
+							<button className="hero-btn">{props.secondAction}</button>
+						)}
 					</div>
 				</div>
 				<div className="hero-right">
-					<img src="/side_pic.png" alt="Hero" />
+					<img src={props.heroImage} alt="Hero" />
 				</div>
 			</div>
 		</section>
