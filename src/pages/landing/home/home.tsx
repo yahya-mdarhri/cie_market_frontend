@@ -1,4 +1,6 @@
 import LandingLayout, { HeroProps, StatsItemsType } from "../../../components/layouts/LandingLayout/LandingLayout";
+import "./home.css";
+
 
 const statsData:StatsItemsType = {
 	a: { name: "Innovation & Patents", value: 644 },
@@ -18,7 +20,22 @@ const heroProps: HeroProps = {
 function Home() {
 	return (
 		<LandingLayout heroProps={heroProps}>
-			body
+			<section>
+				<div className="Home1stSection">
+					<h1>The Centre for Innovation and Entrepreneurship</h1>
+					<div className="sectionContent">
+						<div>
+							<img src="/public/home/1.svg" alt="" />
+						</div>
+						<div className="sectionText">
+						The Centre for Innovation and Entrepreneurship is 
+						dedicated to protecting and promoting the University's
+						research and innovation, as well as encouraging entrepreneurship
+						and technology transfer to the industrial sector.
+						</div>
+					</div>
+				</div>
+			</section>
 		</LandingLayout>
 	);
 }
