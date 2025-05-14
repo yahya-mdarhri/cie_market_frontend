@@ -1,6 +1,10 @@
 import LandingLayout, { HeroProps, StatsItemsType } from "../../../components/layouts/LandingLayout/LandingLayout";
 import "./home.css";
-
+import tto_logo from "./images/tto.svg";
+import industrial_logo from "./images/industrial.svg";
+import incubator_logo from "./images/incubator.svg";
+import tech_center_logo from "./images/tech_center.svg";
+import arrow from '../../../assets/icons/arrow.svg';
 
 const statsData:StatsItemsType = {
 	a: { name: "Innovation & Patents", value: 644 },
@@ -17,25 +21,85 @@ const heroProps: HeroProps = {
 	stats: statsData,
 };
 
+interface CIEItemProps {
+	name: string;
+	description: string;
+	image: string;
+}
+
+function CIEItem({name, description, image}: CIEItemProps) {
+	return (
+		<div className="CIEItem">
+			<img src={image} alt="" />
+			<h3>{name}</h3>
+			<p>{description}</p>
+			<div className="CIEItemMore">
+				learn more
+				<img src={arrow} alt="" />
+			</div>
+		</div>
+	);
+}
+
 function Home() {
 	return (
 		<LandingLayout heroProps={heroProps}>
-			<section>
+			{/* <section> */}
 				<div className="Home1stSection">
 					<h1>The Centre for Innovation and Entrepreneurship</h1>
-					<div className="sectionContent">
-						<div>
-							<img src="/public/home/1.svg" alt="" />
+					<div className="Home1stSectionMain">
+						<div className="Home1stSectionMainLeft">
+							<p>
+								The Centre for Innovation and Entrepreneurship is 
+								dedicated to protecting and promoting the University's
+								research and innovation, as well as encouraging entrepreneurship
+								and technology transfer to the industrial sector.
+							</p>
 						</div>
-						<div className="sectionText">
-						The Centre for Innovation and Entrepreneurship is 
-						dedicated to protecting and promoting the University's
-						research and innovation, as well as encouraging entrepreneurship
-						and technology transfer to the industrial sector.
+						<div className="Home1stSectionMainRight">
+							<img src="/public/home/1.svg" alt="" />
 						</div>
 					</div>
 				</div>
-			</section>
+				<div className="Home2ndSection">
+					<div className="Home2ndSectionLeft">
+						<h2>Mission</h2>
+						<p>
+						Multiplying the impact of RDI in the service of 
+						industrial and territorial competitiveness, through: 
+						The valorization of research results, the promotion of 
+						entrepreneurship and the solid partnership with socioeconomic actors 
+						</p>
+					</div>
+					<div className="Home2ndSectionRight">
+						<h2>Vision</h2>
+						<p>
+						UIR's leadership as a University promoting innovation and 
+						entrepreneurship at the national and African levels.
+						</p>
+					</div>
+				</div>
+				<div className="Home3rdSection">
+				</div>
+				<div className="Home4thSection">
+					<CIEItem
+						image={tto_logo}
+						name="Technology Transfer Office"
+						description="Bridging Innovation and Industry through Research Commercialization"/>
+					<CIEItem
+						image={industrial_logo}
+						name="Industrial Clinic"
+						description="Solving Real-World Challenges Through Academic–Industry Collaboration"/>
+					<CIEItem
+						image={incubator_logo}
+						name="Incubator"
+						description="Empowering Startups to Transform Ideas into Impact"/>
+					<CIEItem
+						image={tech_center_logo}
+						name="Tech Center"
+						description="Driving Innovation with Cutting-Edge Tools, Talent, and Infrastructure"/>
+				</div>
+			{/* </section> */}
 		</LandingLayout>
 	);
 }
