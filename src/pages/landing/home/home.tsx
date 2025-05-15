@@ -101,6 +101,35 @@ function Home() {
 						name="Tech Center"
 						description="Driving Innovation with Cutting-Edge Tools, Talent, and Infrastructure"/>
 				</div>
+				<div className="Home5thSection">
+					<form className="HomeContactUs">
+						<div className="HomeContactUsHeader">
+							<h2>Let’s Get In Touch</h2>
+							<div className="HomeContactUsRadios">
+								<div>
+									<label htmlFor="isInventor">Inventor</label>
+									<input type="radio" name="isInventor" id="isInventor" />
+								</div>
+								<div>
+									<label htmlFor="isCompany">Company</label>
+									<input type="radio" name="isCompany" id="isCompany" />
+								</div>
+							</div>
+						</div>
+						<div className="HomeContactUsInputs">
+							<input type="text" name="name" id="name" placeholder="Name"/>
+							<div className="email_and_phone">
+								<input type="email" name="email" id="email" placeholder="Email" />
+								<input type="tel" name="phone" id="phone" placeholder="Phone" />
+							</div>
+							<input type="text" name="subject" id="subject" placeholder="Subject"/>
+							<textarea name="message" id="message" placeholder="Message"/>
+						</div>
+						<div className="HomeContactUsSubmit">
+							<button type="submit">Send Message</button>
+						</div>
+					</form>
+				</div>
 			{/* </section> */}
 		</LandingLayout>
 	);
