@@ -130,6 +130,7 @@ function Home() {
 						</div>
 					</form>
 				</div>
+
 			{/* </section> */}
 		</LandingLayout>
 	);

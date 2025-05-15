@@ -1,5 +1,6 @@
 import React, { createContext, ReactNode } from "react";
 import "./LandingLayout.css";
+import Footer from "../../ui/Landing/Footer/Footer";
 import NavBar from "../../ui/Landing/NavBar/NavBar";
 import Hero from "../../ui/Landing/Hero/Hero";
 import Stats from "../../ui/Landing/Stats/Stats";
@@ -34,7 +35,7 @@ function LandingLayout({ children, heroProps}: LandingLayoutProps) {
 				<Stats statsData={heroProps.stats}/>
 				{children}
 			</main>
-
+			<Footer/>
 			{/* <Footer /> ill add it later */}
 		</div>
 	);
