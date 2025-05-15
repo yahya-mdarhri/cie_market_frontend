@@ -30,7 +30,9 @@ interface CIEItemProps {
 function CIEItem({name, description, image}: CIEItemProps) {
 	return (
 		<div className="CIEItem">
-			<img src={image} alt="" />
+			<div>
+				<img src={image} alt="" />
+			</div>
 			<h3>{name}</h3>
 			<p>{description}</p>
 			<div className="CIEItemMore">
