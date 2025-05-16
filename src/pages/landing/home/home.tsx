@@ -5,6 +5,12 @@ import industrial_logo from "./images/industrial.svg";
 import incubator_logo from "./images/incubator.svg";
 import tech_center_logo from "./images/tech_center.svg";
 import arrow from '../../../assets/icons/arrow.svg';
+import p1 from '../../../assets/partners/1.png';
+import p2 from '../../../assets/partners/2.png';
+import p3 from '../../../assets/partners/3.png';
+import p4 from '../../../assets/partners/4.png';
+import p5 from '../../../assets/partners/5.png';
+
 
 const statsData:StatsItemsType = {
 	a: { name: "Innovation & Patents", value: 644 },
@@ -100,6 +106,16 @@ function Home() {
 						image={tech_center_logo}
 						name="Tech Center"
 						description="Driving Innovation with Cutting-Edge Tools, Talent, and Infrastructure"/>
+				</div>
+				<div className="Home6thSection">
+					<h2>Our Partners</h2>
+					<div className="Home6thSectionLogos">
+						<img src={p1} alt="" />
+						<img src={p2} alt="" />
+						<img src={p3} alt="" />
+						<img src={p4} alt="" />
+						<img src={p5} alt="" />
+					</div>
 				</div>
 				<div className="Home5thSection">
 					<form className="HomeContactUs">
