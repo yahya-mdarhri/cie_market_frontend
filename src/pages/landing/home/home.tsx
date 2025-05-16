@@ -11,6 +11,7 @@ import p3 from '../../../assets/partners/3.png';
 import p4 from '../../../assets/partners/4.png';
 import p5 from '../../../assets/partners/5.png';
 import FirstSection from "../../../components/ui/Landing/FirstSection/FirstSection";
+import VisionAndMission from "../../../components/ui/Landing/VisionAndMission/VisionAndMission";
 
 
 const statsData:StatsItemsType = {
@@ -58,24 +59,10 @@ function Home() {
 					description="The Centre for Innovation and Entrepreneurship is dedicated to protecting and promoting the University's research and innovation, as well as encouraging entrepreneurship and technology transfer to the industrial sector."
 					image="/home/1.svg"	
 				/>
-				<div className="Home2ndSection">
-					<div className="Home2ndSectionLeft">
-						<h2>Mission</h2>
-						<p>
-						Multiplying the impact of RDI in the service of 
-						industrial and territorial competitiveness, through: 
-						The valorization of research results, the promotion of 
-						entrepreneurship and the solid partnership with socioeconomic actors 
-						</p>
-					</div>
-					<div className="Home2ndSectionRight">
-						<h2>Vision</h2>
-						<p>
-						UIR's leadership as a University promoting innovation and 
-						entrepreneurship at the national and African levels.
-						</p>
-					</div>
-				</div>
+				<VisionAndMission 
+					mission="Multiplying the impact of RDI in the service of industrial and territorial competitiveness, through The valorization of research results, the promotion of entrepreneurship and the solid partnership with socioeconomic actors "
+					vision="UIR's leadership as a University promoting innovation and entrepreneurship at the national and African levels."
+				/>
 				<div className="Home3rdSection">
 				</div>
 				<div className="Home4thSection">

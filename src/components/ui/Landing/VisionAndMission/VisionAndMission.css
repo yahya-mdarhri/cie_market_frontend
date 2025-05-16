@@ -1,0 +1,34 @@
+
+.VisionAndMission {
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+	justify-content: space-around;
+	padding: 20px;
+	width: 100%;
+	margin-top: 15px;
+}
+
+.VisionAndMissionLeft , .VisionAndMissionRight {
+	display: flex;
+	flex-direction: column;
+	width: 45%;
+	justify-content: center;
+}
+
+.VisionAndMissionLeft h2, .VisionAndMissionRight h2 {
+	color: var(--primary-color);
+	text-align: center;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+}
+
+.VisionAndMissionLeft p, .VisionAndMissionRight p {
+	margin-top: 3%;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
