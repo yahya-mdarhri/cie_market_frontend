@@ -1,0 +1,35 @@
+.FirstSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-top: 15px;
+}
+
+.FirstSection h1 {
+	color: var(--primary-color);
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+}
+
+.FirstSectionMain {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+	margin-top: 2%;
+}
+
+.FirstSectionMainLeft {
+	display: flex;
+	flex-direction: column;
+	width: 45%;
+	justify-content: center;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 40px;
+}

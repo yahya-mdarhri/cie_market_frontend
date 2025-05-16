@@ -10,6 +10,7 @@ import p2 from '../../../assets/partners/2.png';
 import p3 from '../../../assets/partners/3.png';
 import p4 from '../../../assets/partners/4.png';
 import p5 from '../../../assets/partners/5.png';
+import FirstSection from "../../../components/ui/Landing/FirstSection/FirstSection";
 
 
 const statsData:StatsItemsType = {
@@ -52,23 +53,11 @@ function CIEItem({name, description, image}: CIEItemProps) {
 function Home() {
 	return (
 		<LandingLayout heroProps={heroProps}>
-			{/* <section> */}
-				<div className="Home1stSection">
-					<h1>The Centre for Innovation and Entrepreneurship</h1>
-					<div className="Home1stSectionMain">
-						<div className="Home1stSectionMainLeft">
-							<p>
-								The Centre for Innovation and Entrepreneurship is 
-								dedicated to protecting and promoting the University's
-								research and innovation, as well as encouraging entrepreneurship
-								and technology transfer to the industrial sector.
-							</p>
-						</div>
-						<div className="Home1stSectionMainRight">
-							<img src="/public/home/1.svg" alt="" />
-						</div>
-					</div>
-				</div>
+				<FirstSection 
+					title="The Centre for Innovation and Entrepreneurship"
+					description="The Centre for Innovation and Entrepreneurship is dedicated to protecting and promoting the University's research and innovation, as well as encouraging entrepreneurship and technology transfer to the industrial sector."
+					image="/home/1.svg"	
+				/>
 				<div className="Home2ndSection">
 					<div className="Home2ndSectionLeft">
 						<h2>Mission</h2>
