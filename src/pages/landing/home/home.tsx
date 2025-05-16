@@ -10,7 +10,7 @@ import p2 from '../../../assets/partners/2.png';
 import p3 from '../../../assets/partners/3.png';
 import p4 from '../../../assets/partners/4.png';
 import p5 from '../../../assets/partners/5.png';
-import FirstSection from "../../../components/ui/Landing/FirstSection/FirstSection";
+import Introduction from "../../../components/ui/Landing/Introduction/Introduction";
 import VisionAndMission from "../../../components/ui/Landing/VisionAndMission/VisionAndMission";
 
 
@@ -54,7 +54,7 @@ function CIEItem({name, description, image}: CIEItemProps) {
 function Home() {
 	return (
 		<LandingLayout heroProps={heroProps}>
-				<FirstSection 
+				<Introduction 
 					title="The Centre for Innovation and Entrepreneurship"
 					description="The Centre for Innovation and Entrepreneurship is dedicated to protecting and promoting the University's research and innovation, as well as encouraging entrepreneurship and technology transfer to the industrial sector."
 					image="/home/1.svg"	

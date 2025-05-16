@@ -1,10 +1,11 @@
 import './VisionAndMission.css';
 
 interface VisionAndMissionProps {
-	mission: string;
-	vision: string;
+	mission: string; // The mission statement of the organization	
+	vision: string; // The vision statement of the organization
 }
 
+// This component is used to display the mission and vision of the organization.
 function VisionAndMission({mission, vision}: VisionAndMissionProps) {
 	return (
 		<div className="VisionAndMission">

@@ -1,4 +1,4 @@
-.FirstSection {
+.Introduction {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -7,7 +7,7 @@
 	margin-top: 15px;
 }
 
-.FirstSection h1 {
+.Introduction h1 {
 	color: var(--primary-color);
 	font-size: 30px;
 	font-style: normal;
@@ -15,7 +15,7 @@
 	line-height: normal;
 }
 
-.FirstSectionMain {
+.IntroductionMain {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -23,7 +23,7 @@
 	margin-top: 2%;
 }
 
-.FirstSectionMainLeft {
+.IntroductionMainLeft {
 	display: flex;
 	flex-direction: column;
 	width: 45%;
