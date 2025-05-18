@@ -20,7 +20,17 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+		/* Path aliases*/
+		"baseUrl": "./src",
+		"paths": {
+			"@/*": ["*"], // src 
+			"@pages/*": ["pages/*"], // Pages components
+			"@ui/*": ["components/ui/*"], // UI components
+			"@components/*": ["components/*"], // all components
+			"@layouts/*": ["components/layouts/*"], // layouts components
+		}
   },
   "include": ["src"]
 }
