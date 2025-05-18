@@ -5,18 +5,12 @@ function Stats({statsData}: {statsData: StatsItemsType}) { // i will pass the st
 	return (
 		<div className="info-cards">
 			<div className="info_center">
+				{Object.keys(statsData).map((key) => (
 				<div className="info-card">
-					<h2>{statsData['a'].value}</h2>
-					<p>{statsData['a'].name}</p>
+					<h2>{statsData[key].value}</h2>
+					<p>{statsData[key].name}</p>
 				</div>
-				<div className="info-card">
-					<h2>{statsData['b'].value}</h2>
-					<p>{statsData['b'].name}</p>
-				</div>
-				<div className="info-card">
-					<h2>{statsData['c'].value}</h2>
-					<p>{statsData['c'].name}</p>
-				</div>
+				))}
 			</div>
 		</div>
 	);
