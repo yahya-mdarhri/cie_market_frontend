@@ -1,4 +1,4 @@
-import { StatsItemsType } from "../../../layouts/LandingLayout/LandingLayout";
+import { StatsItemsType } from "@layouts/LandingLayout/LandingLayout";
 import "./Stats.css";
 
 function Stats({statsData}: {statsData: StatsItemsType}) { // i will pass the stats as props later

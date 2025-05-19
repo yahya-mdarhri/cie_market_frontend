@@ -1,9 +1,9 @@
 import React, { ReactNode } from "react";
 import "./LandingLayout.css";
-import Footer from "../../ui/Landing/Footer/Footer";
-import NavBar from "../../ui/Landing/NavBar/NavBar";
-import Hero from "../../ui/Landing/Hero/Hero";
-import Stats from "../../ui/Landing/Stats/Stats";
+import Footer from "@ui/Landing/Footer/Footer";
+import NavBar from "@ui/Landing/NavBar/NavBar";
+import Hero from "@ui/Landing/Hero/Hero";
+import Stats from "@ui/Landing/Stats/Stats";
 
 // The StatsItemsType interface defines the structure of the stats to be dynamic.
 interface StatsItemsType {

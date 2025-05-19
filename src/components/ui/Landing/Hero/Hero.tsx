@@ -1,5 +1,5 @@
 
-import { HeroProps } from "../../../layouts/LandingLayout/LandingLayout";
+import { HeroProps } from "@layouts/LandingLayout/LandingLayout";
 import "./Hero.css";
 
 function Hero({props}: { props: HeroProps }) {

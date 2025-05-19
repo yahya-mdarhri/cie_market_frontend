@@ -1,4 +1,4 @@
-import LandingLayout, { HeroProps, StatsItemsType } from "../../../components/layouts/LandingLayout/LandingLayout";
+import LandingLayout, { HeroProps, StatsItemsType } from "@layouts/LandingLayout/LandingLayout";
 import "./home.css";
 import tto_logo from "./images/tto.svg";
 import industrial_logo from "./images/industrial.svg";
@@ -10,8 +10,8 @@ import p2 from '../../../assets/partners/2.png';
 import p3 from '../../../assets/partners/3.png';
 import p4 from '../../../assets/partners/4.png';
 import p5 from '../../../assets/partners/5.png';
-import Introduction from "../../../components/ui/Landing/Introduction/Introduction";
-import VisionAndMission from "../../../components/ui/Landing/VisionAndMission/VisionAndMission";
+import Introduction from "@ui/Landing/Introduction/Introduction";
+import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 
 
 const statsData:StatsItemsType = {

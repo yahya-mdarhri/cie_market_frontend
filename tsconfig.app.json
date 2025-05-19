@@ -25,7 +25,7 @@
 		/* Path aliases*/
 		"baseUrl": "./src",
 		"paths": {
-			"@/*": ["*"], // src 
+			// "@/*": ["*"], // src
 			"@pages/*": ["pages/*"], // Pages components
 			"@ui/*": ["components/ui/*"], // UI components
 			"@components/*": ["components/*"], // all components
