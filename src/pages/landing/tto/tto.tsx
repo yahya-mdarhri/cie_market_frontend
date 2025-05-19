@@ -3,7 +3,9 @@ import LandingLayout, { HeroProps, StatsItemsType } from "@layouts/LandingLayout
 import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 
-import  image from "./images/tto.png";
+import inv_img1 from "./images/inv1.jpg";
+import image from "./images/tto.png";
+import InventionCard from "@ui/Landing/InventionCard/InventionCard";
 
 const statsData:StatsItemsType = {
 	a: { name: "Innovation & Patents", value: 644 },
@@ -59,9 +61,24 @@ function TTO() {
 					<div className="HighLightSpotRight">
 						<div className="leftbtn">{'<'}</div>
 						<div className="Rightbtn">{'>'}</div>
-
 					</div>
-					{/* <InventionCard/> */}
+				</div>
+				<div className="LandingInventionCards">
+					<InventionCard
+						title="hello"
+						description="test test test tes"
+						image={inv_img1}
+						/>
+					<InventionCard
+						title="hello"
+						description="test test test tes"
+						image={inv_img1}
+						/>
+					<InventionCard
+						title="hello"
+						description="test test test tes"
+						image={inv_img1}
+						/>
 				</div>
 		</LandingLayout>
 	);

@@ -1,0 +1,33 @@
+.InventionCard {
+	width: 25%;
+	display: flex;
+	position: relative;
+	border-radius: 15px;
+	border: 2px solid var(--primary-color);
+	flex-direction: column;
+}
+
+.InventionCard .InventionImg {
+	border-top-right-radius: 12.75px;
+	border-top-left-radius: 12.75px;
+	height: 80%;
+}
+
+.InventionCard .blueArrow {
+	width: 7%;
+	top: 62%;
+	left: 90%;
+	position: absolute;
+
+}
+
+.InventionCardContent {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+.InventionCardContent h2 {
+	color: var(--primary-color);
+}
+
