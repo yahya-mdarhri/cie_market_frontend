@@ -3,7 +3,12 @@ import LandingLayout, { HeroProps, StatsItemsType } from "@layouts/LandingLayout
 import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 
-import  image from "./images/tto.png";
+import inv_img1 from "./images/inv1.jpg";
+import image from "./images/tto.png";
+import InventionCard from "@ui/Landing/InventionCard/InventionCard";
+
+import { useState } from "react";
+import { useEffect } from "react";
 
 const statsData:StatsItemsType = {
 	a: { name: "Innovation & Patents", value: 644 },
@@ -19,6 +24,81 @@ const heroProps: HeroProps = {
 	// secondAction: "Submit A Patent",
 	stats: statsData,
 };
+
+const inventionCardData = [
+	{
+		title: "hello1",
+		description: "test test test tes",
+		image: inv_img1,
+	},
+	{
+		title: "hello2",
+		description: "test test test tes",
+		image: inv_img1,
+	},
+	{
+		title: "hello3",
+		description: "test test test tes",
+		image: inv_img1,
+	},
+	{
+		title: "hello4",
+		description: "test test test tes",
+		image: inv_img1,
+	},
+	{
+		title: "hello5",
+		description: "test test test tes",
+		image: inv_img1,
+	},
+	{
+		title: "hello6",
+		description: "test test test tes",
+		image: inv_img1,
+	},
+];
+
+function LandingInventionCards() {
+	const [slice, setSlice] = useState<[number, number]>([0, 3]);
+
+	// moveLeft and moveRight will be animated later
+	const moveLeft = () => {
+		if (slice[0] > 0) {
+			setSlice([slice[0] - 1, slice[1] - 1]);
+		}
+	};
+	const moveRight = () => {
+		if (slice[1] < inventionCardData.length) {
+			setSlice([slice[0] + 1, slice[1] + 1]);
+		}
+	}
+	return (
+		<>
+			<div className="HighLightSpot">
+				<div className="HighLightSpotLeft">
+					<h2>Inventions Spotlight</h2>
+					<div>
+						Highlighted technologies and innovations
+					</div>
+				</div>
+				<div className="HighLightSpotRight">
+					<div className="leftbtn" onClick={moveLeft}>{'<'}</div>
+					<div className="Rightbtn" onClick={moveRight}>{'>'}</div>
+				</div>
+			</div>
+			<div className="LandingInventionCards">
+				{inventionCardData.slice(...slice).map((item, index) => (
+					<InventionCard
+						key={index}
+						title={item.title}
+						description={item.description}
+						image={item.image}
+					/>
+				))}
+			</div>
+		</>
+	);
+}
 
 function TTO() {
 	return (
@@ -49,20 +129,7 @@ function TTO() {
 						</div>
 					</div>
 				</div>
-				<div className="HighLightSpot">
-					<div className="HighLightSpotLeft">
-						<h2>Inventions Spotlight</h2>
-						<div>
-							Highlighted technologies and innovations
-						</div>
-					</div>
-					<div className="HighLightSpotRight">
-						<div className="leftbtn">{'<'}</div>
-						<div className="Rightbtn">{'>'}</div>
-
-					</div>
-					{/* <InventionCard/> */}
-				</div>
+				<LandingInventionCards />
 		</LandingLayout>
 	);
 }

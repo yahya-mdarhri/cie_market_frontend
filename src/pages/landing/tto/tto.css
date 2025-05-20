@@ -67,6 +67,7 @@
 	align-items: center;
 	width: 100%;
 	justify-content: space-between;
+	margin-bottom: 20px;
 }
 
 .HighLightSpotLeft{
@@ -85,7 +86,7 @@
 
 .HighLightSpotLeft p {
 	color: #000;
-	opacity: 0.3;
+	opacity: 40%;
 }
 
 .HighLightSpotRight {
@@ -108,4 +109,15 @@
 	justify-content: center;
 	text-align: center;
 	color: var(--white);
+}
+
+.LandingInventionCards {
+	display: flex;
+	width: 80%;
+	overflow: auto;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none;  /* IE and Edge */
+	justify-self: center;
+	justify-content: space-between;
+	gap: 1;
 }
