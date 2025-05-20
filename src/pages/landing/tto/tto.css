@@ -113,6 +113,11 @@
 
 .LandingInventionCards {
 	display: flex;
-	justify-content: space-around;
+	width: 80%;
+	overflow: auto;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none;  /* IE and Edge */
+	justify-self: center;
+	justify-content: space-between;
 	gap: 1;
 }
