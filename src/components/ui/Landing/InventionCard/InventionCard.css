@@ -18,7 +18,6 @@
 	top: 62%;
 	left: 90%;
 	position: absolute;
-
 }
 
 .InventionCardContent {
@@ -29,5 +28,10 @@
 
 .InventionCardContent h2 {
 	color: var(--primary-color);
+}
+
+.InventionCardContent p {
+	color: #000;
+	opacity: 70%;
 }
 
