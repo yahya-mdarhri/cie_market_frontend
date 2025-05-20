@@ -163,29 +163,3 @@
 	border-radius: 10px;
 	cursor: pointer;
 }
-
-.Home6thSection {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	margin-top: 15px;
-}
-
-.Home6thSection h2 {
-	color: var(--primary-color);
-	font-size: 30px;
-	font-style: normal;
-	font-weight: 900;
-	line-height: normal;
-}
-
-.Home6thSectionLogos {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
-	width: 100%;
-	margin-top: 2%;
-}

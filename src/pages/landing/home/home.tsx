@@ -12,6 +12,7 @@ import p4 from '../../../assets/partners/4.png';
 import p5 from '../../../assets/partners/5.png';
 import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
+import Partners from "@ui/Landing/Partners/Partners";
 
 
 const statsData:StatsItemsType = {
@@ -83,16 +84,7 @@ function Home() {
 						name="Tech Center"
 						description="Driving Innovation with Cutting-Edge Tools, Talent, and Infrastructure"/>
 				</div>
-				<div className="Home6thSection">
-					<h2>Our Partners</h2>
-					<div className="Home6thSectionLogos">
-						<img src={p1} alt="" />
-						<img src={p2} alt="" />
-						<img src={p3} alt="" />
-						<img src={p4} alt="" />
-						<img src={p5} alt="" />
-					</div>
-				</div>
+				<Partners partners={[p1, p2, p3, p4, p5]} />
 				<div className="Home5thSection">
 					<form className="HomeContactUs">
 						<div className="HomeContactUsHeader">
