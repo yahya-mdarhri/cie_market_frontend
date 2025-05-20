@@ -61,6 +61,7 @@ const inventionCardData = [
 function LandingInventionCards() {
 	const [slice, setSlice] = useState<[number, number]>([0, 3]);
 
+	// moveLeft and moveRight will be animated later
 	const moveLeft = () => {
 		if (slice[0] > 0) {
 			setSlice([slice[0] - 1, slice[1] - 1]);
