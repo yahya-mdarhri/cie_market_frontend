@@ -4,8 +4,8 @@ import Home from '@pages/landing/home/home'
 
 function App() {
 	return (
-		<Home />
-		// <TTO />
+		// <Home />
+		<TTO />
 		// <About />
 	)
 }

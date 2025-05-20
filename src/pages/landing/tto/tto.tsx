@@ -7,8 +7,14 @@ import inv_img1 from "./images/inv1.jpg";
 import image from "./images/tto.png";
 import InventionCard from "@ui/Landing/InventionCard/InventionCard";
 
+import p1 from "../../../assets/partners/1.png";
+import p2 from "../../../assets/partners/2.png";
+import p3 from "../../../assets/partners/3.png";
+import p4 from "../../../assets/partners/4.png";
+import p5 from "../../../assets/partners/5.png";
+
 import { useState } from "react";
-import { useEffect } from "react";
+import Partners from "@ui/Landing/Partners/Partners";
 
 const statsData:StatsItemsType = {
 	a: { name: "Innovation & Patents", value: 644 },
@@ -130,6 +136,8 @@ function TTO() {
 					</div>
 				</div>
 				<LandingInventionCards />
+
+				<Partners partners={[p1, p2, p3, p4, p5]} />
 		</LandingLayout>
 	);
 }
