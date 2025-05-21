@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap'); /* inter font */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 :root{
 	/* main colors */
@@ -15,3 +19,11 @@
 	box-sizing: border-box;
 	font-family: 'Inter', sans-serif;
 }
+
+
+
+@layer base {
+	html {
+	  font-family: 'Inter', system-ui, sans-serif;
+	}
+  } 
