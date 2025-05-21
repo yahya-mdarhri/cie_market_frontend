@@ -1,13 +1,8 @@
 import './root.css'
-import TTO from '@pages/landing/tto/tto'
-import Home from '@pages/landing/home/home'
+import { Router } from './router'
 
 function App() {
-	return (
-		// <Home />
-		<TTO />
-		// <About />
-	)
+	return <Router />;
 }
 
 export default App
