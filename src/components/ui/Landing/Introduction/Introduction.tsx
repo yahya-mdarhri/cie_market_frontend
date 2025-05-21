@@ -12,13 +12,13 @@ function Introduction({title, description, image}: IntroductionProps) {
 		<div className="Introduction">
 				<h1>{title}</h1>
 				<div className="IntroductionMain">
+					<div className="IntroductionMainRight">
+						<img src={image} alt="" />
+					</div>
 					<div className="IntroductionMainLeft">
 						<p>
 							{description}
 						</p>
-					</div>
-					<div className="IntroductionMainRight">
-						<img src={image} alt="" />
 					</div>
 				</div>
 			</div>

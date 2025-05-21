@@ -1,11 +1,8 @@
-import './App.css'
-import Home from '@pages/landing/home/home'
+import './root.css'
+import { Router } from './router'
 
 function App() {
-	return (
-		<Home />
-		// <About />
-	)
+	return <Router />;
 }
 
 export default App
