@@ -1,4 +1,4 @@
-import './App.css'
+import './root.css'
 import TTO from '@pages/landing/tto/tto'
 import Home from '@pages/landing/home/home'
 
