@@ -32,38 +32,68 @@ const heroProps: HeroProps = {
 	stats: statsData,
 };
 
-function ProgramCard({image, logo, name}:{image:string, logo:string, name:string}){
+function StartupCard({logo, name, description}:{logo:string, name:string, description:string}){
 	return(
-		<div className="programCard w-[300px] h-[200px]">
-			<img src={image} alt="Program" />
-			<div className="programCardContent">
-				<img src={logo} alt="Program Logo" />
+		<div className="startupCard">
+			<div className="startupCardImage">
+				<img src={logo} alt={name} />
+			</div>
+			<div className="startupCardContent">
 				<h3>{name}</h3>
+				<p>{description}</p>
+				<div className="startupCardTags">
+					<span>Tech</span>
+					<span>Innovation</span>
+				</div>
 			</div>
 		</div>
 	)
 }
 
-function Programs(){
+function Startups(){
 	return(
-		<div className="programs m-[30px]">
-			<h2 className="text-center text-[var(--primary-color)]">
-				Programs & Startups
-			</h2>
-			<div className="programCards">
-				<ProgramCard image={program1} logo={startup1} name="Program Name" />	
-				<ProgramCard image={image} logo={startup1} name="Program Name" />	
-				<ProgramCard image={program1} logo={startup1} name="Program Name" />	
-				<ProgramCard image={image} logo={startup1} name="Program Name" />	
-				<ProgramCard image={image} logo={startup1} name="Program Name" />	
-				<ProgramCard image={program1} logo={startup1} name="Program Name" />	
-				<ProgramCard image={program1} logo={startup1} name="Program Name" />	
-				
+		<section className="startups">
+			<div className="startupsHeader">
+				<h2>Our Startups</h2>
+				<p>Discover the innovative ventures we've helped launch and grow</p>
 			</div>
-		</div>
+			<div className="startupCards">
+			<StartupCard 
+					logo={startup1} 
+					name="TESTname" 
+					description="this is a sample tescription for this card"
+				/>
+				<StartupCard 
+					logo={startup1} 
+					name="TESTname" 
+					description="this is a sample tescription for this card"
+				/>
+				<StartupCard 
+					logo={startup1} 
+					name="TESTname" 
+					description="this is a sample tescription for this card"
+				/>
+				<StartupCard 
+					logo={startup1} 
+					name="TESTname" 
+					description="this is a sample tescription for this card"
+				/>
+				<StartupCard 
+					logo={startup1} 
+					name="TESTname" 
+					description="this is a sample tescription for this card"
+				/>
+				<StartupCard 
+					logo={startup1} 
+					name="TESTname" 
+					description="this is a sample tescription for this card"
+				/>
+
+			</div>
+			
+		</section>
 	)
 }
-
 
 function Incubator() {
 	return (
@@ -96,7 +126,7 @@ function Incubator() {
 						</div>
 					</div>
 				</div>
-				<Programs/>
+				<Startups/>
 				<Partners partners={[p1, p2, p3, p4, p5]} />
 		</LandingLayout>
 	);
