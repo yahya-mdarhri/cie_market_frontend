@@ -14,6 +14,7 @@ import p5 from "../../../assets/partners/5.png";
 
 import { useState, useEffect } from "react";
 import Partners from "@ui/Landing/Partners/Partners";
+import { useDocumentTitle } from "@hooks/useDocumentTitle";
 
 const statsData:StatsItemsType = {
 	a: { name: "Innovation & Patents", value: 644 },
@@ -31,6 +32,7 @@ const heroProps: HeroProps = {
 };
 
 function Industrial() {
+	useDocumentTitle('Industrial Clinic | Centre for Innovation and Entrepreneurship');
 	return (
 		<LandingLayout heroProps={heroProps}>
 				<Introduction 

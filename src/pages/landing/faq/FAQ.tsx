@@ -1,8 +1,10 @@
 import NavBar from "@ui/Landing/NavBar/NavBar";
 import { useState } from "react";
 import "./FAQ.css";
+import { useDocumentTitle } from "@hooks/useDocumentTitle";
 
 function FAQ() {
+    useDocumentTitle('FAQ | Centre for Innovation and Entrepreneurship');
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
     const [searchQuery, setSearchQuery] = useState("");
 

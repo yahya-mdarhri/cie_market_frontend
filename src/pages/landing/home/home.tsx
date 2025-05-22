@@ -13,6 +13,7 @@ import p5 from '../../../assets/partners/5.png';
 import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 import Partners from "@ui/Landing/Partners/Partners";
+import { useDocumentTitle } from "@hooks/useDocumentTitle";
 
 
 const statsData:StatsItemsType = {
@@ -53,6 +54,7 @@ function CIEItem({name, description, image}: CIEItemProps) {
 }
 
 function Home() {
+	useDocumentTitle('Home | Centre for Innovation and Entrepreneurship');
 	return (
 		<LandingLayout heroProps={heroProps}>
 				<Introduction 

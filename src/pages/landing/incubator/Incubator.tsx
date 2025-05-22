@@ -16,6 +16,7 @@ import p4 from "../../../assets/partners/4.png";
 import p5 from "../../../assets/partners/5.png";
 
 import Partners from "@ui/Landing/Partners/Partners";
+import { useDocumentTitle } from "@hooks/useDocumentTitle";
 
 const statsData:StatsItemsType = {
 	a: { name: "Innovation & Patents", value: 644 },
@@ -96,6 +97,7 @@ function Startups(){
 }
 
 function Incubator() {
+	useDocumentTitle('Incubator 360º | Centre for Innovation and Entrepreneurship');
 	return (
 		<LandingLayout heroProps={heroProps}>
 				<Introduction 
