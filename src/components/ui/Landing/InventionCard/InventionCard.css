@@ -1,37 +1,95 @@
 .InventionCard {
-	width: 25%;
 	display: flex;
 	position: relative;
 	border-radius: 15px;
 	border: 2px solid var(--primary-color);
 	flex-direction: column;
+	overflow: hidden;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	background: white;
+	height: auto;
+	/* min-height: 300px; */
+	width: 85%;
+	margin: 0 auto;
+}
+
+.InventionCard:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .InventionCard .InventionImg {
 	border-top-right-radius: 12.75px;
 	border-top-left-radius: 12.75px;
-	height: 80%;
+	height: 160px;
+	width: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease-in-out;
+}
+
+.InventionCard:hover .InventionImg {
+	transform: scale(1.05);
 }
 
 .InventionCard .blueArrow {
-	width: 7%;
-	top: 62%;
-	left: 90%;
+	width: 24px;
 	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	transition: transform 0.3s ease;
+	opacity: 0;
+}
+
+.InventionCard:hover .blueArrow {
+	opacity: 1;
+	transform: translateX(5px);
 }
 
 .InventionCardContent {
 	display: flex;
 	flex-direction: column;
 	padding: 1rem;
+	gap: 0.5rem;
+	background: white;
+	flex: 1;
 }
 
 .InventionCardContent h2 {
 	color: var(--primary-color);
+	margin: 0;
+	font-size: 1.1rem;
+	transition: color 0.3s ease;
 }
 
 .InventionCardContent p {
 	color: #000;
-	opacity: 70%;
+	opacity: 0.7;
+	margin: 0;
+	font-size: 0.85rem;
+	line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+	.InventionCard {
+		width: 90%;
+		min-height: 280px;
+	}
+
+	.InventionCard .InventionImg {
+		height: 140px;
+	}
+
+	.InventionCardContent {
+		padding: 0.75rem;
+	}
+
+	.InventionCardContent h2 {
+		font-size: 1rem;
+	}
+
+	.InventionCardContent p {
+		font-size: 0.8rem;
+	}
 }
 

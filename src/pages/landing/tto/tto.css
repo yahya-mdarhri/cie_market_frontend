@@ -113,11 +113,106 @@
 
 .LandingInventionCards {
 	display: flex;
-	width: 80%;
-	overflow: auto;
-	scrollbar-width: none; /* Firefox */
-	-ms-overflow-style: none;  /* IE and Edge */
-	justify-self: center;
-	justify-content: space-between;
-	gap: 1;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	padding: 1rem;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.inventionCardsContainer {
+	display: flex;
+	gap: 1.5rem;
+	transition: transform 0.5s ease-in-out;
+	width: 100%;
+	padding: 0.5rem;
+}
+
+.inventionCardWrapper {
+	flex: 0 0 calc(33.333% - 1rem);
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeInUp 0.5s forwards;
+	transition: transform 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.HighLightSpot {
+	max-width: 1200px;
+	margin: 0 auto 2rem auto;
+	padding: 0 1rem;
+}
+
+.HighLightSpotRight div {
+	background-color: var(--primary-color);
+	border-radius: 100%;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: var(--white);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.HighLightSpotRight div:hover:not([aria-disabled="true"]) {
+	transform: scale(1.1);
+	background-color: var(--secondary-color);
+}
+
+.HighLightSpotRight div[aria-disabled="true"] {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+	.inventionCardWrapper {
+		flex: 0 0 100%;
+	}
+
+	.HighLightSpot {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1rem;
+	}
+
+	.HighLightSpotLeft {
+		width: 100%;
+	}
+
+	.HighLightSpotRight {
+		width: 100%;
+		justify-content: flex-start;
+	}
+}
+
+/* Animation for cards */
+.inventionCard {
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }

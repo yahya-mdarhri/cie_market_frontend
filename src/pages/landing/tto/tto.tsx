@@ -13,7 +13,7 @@ import p3 from "../../../assets/partners/3.png";
 import p4 from "../../../assets/partners/4.png";
 import p5 from "../../../assets/partners/5.png";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Partners from "@ui/Landing/Partners/Partners";
 
 const statsData:StatsItemsType = {
@@ -65,19 +65,28 @@ const inventionCardData = [
 ];
 
 function LandingInventionCards() {
-	const [slice, setSlice] = useState<[number, number]>([0, 3]);
+	const [currentIndex, setCurrentIndex] = useState(0);
+	const cardsPerView = 3;
 
-	// moveLeft and moveRight will be animated later
 	const moveLeft = () => {
-		if (slice[0] > 0) {
-			setSlice([slice[0] - 1, slice[1] - 1]);
+		if (currentIndex > 0) {
+			setCurrentIndex(currentIndex - 1);
 		}
 	};
+
 	const moveRight = () => {
-		if (slice[1] < inventionCardData.length) {
-			setSlice([slice[0] + 1, slice[1] + 1]);
+		if (currentIndex < inventionCardData.length - cardsPerView) {
+			setCurrentIndex(currentIndex + 1);
 		}
-	}
+	};
+
+	const getTranslateValue = () => {
+		// Calculate the width of a single card (including gap)
+		const cardWidth = 100 / cardsPerView; // Width in percentage
+		const gapWidth = 1.5; // 1.5rem gap converted to percentage
+		return -(currentIndex * (cardWidth + gapWidth));
+	};
+
 	return (
 		<>
 			<div className="HighLightSpot">
@@ -88,19 +97,56 @@ function LandingInventionCards() {
 					</div>
 				</div>
 				<div className="HighLightSpotRight">
-					<div className="leftbtn" onClick={moveLeft}>{'<'}</div>
-					<div className="Rightbtn" onClick={moveRight}>{'>'}</div>
+					<div 
+						className="leftbtn" 
+						onClick={moveLeft}
+						style={{ opacity: currentIndex === 0 ? 0.5 : 1 }}
+						role="button"
+						tabIndex={0}
+						onKeyDown={(e) => e.key === 'Enter' && moveLeft()}
+						aria-disabled={currentIndex === 0}
+					>
+						{'<'}
+					</div>
+					<div 
+						className="Rightbtn" 
+						onClick={moveRight}
+						style={{ 
+							opacity: currentIndex >= inventionCardData.length - cardsPerView ? 0.5 : 1 
+						}}
+						role="button"
+						tabIndex={0}
+						onKeyDown={(e) => e.key === 'Enter' && moveRight()}
+						aria-disabled={currentIndex >= inventionCardData.length - cardsPerView}
+					>
+						{'>'}
+					</div>
 				</div>
 			</div>
 			<div className="LandingInventionCards">
-				{inventionCardData.slice(...slice).map((item, index) => (
-					<InventionCard
-						key={index}
-						title={item.title}
-						description={item.description}
-						image={item.image}
-					/>
-				))}
+				<div 
+					className="inventionCardsContainer"
+					style={{ 
+						transform: `translateX(${getTranslateValue()}%)`,
+					}}
+				>
+					{inventionCardData.map((item, index) => (
+						<div 
+							key={index} 
+							className="inventionCardWrapper"
+							style={{
+								opacity: index >= currentIndex && index < currentIndex + cardsPerView ? 1 : 0.3
+							}}
+						>
+							<InventionCard
+								key={index}
+								title={item.title}
+								description={item.description}
+								image={item.image}
+							/>
+						</div>
+					))}
+				</div>
 			</div>
 		</>
 	);
