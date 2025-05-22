@@ -4,6 +4,7 @@ import TTO from '@pages/landing/tto/tto';
 import Industrial from '@pages/landing/industrial/industrial';
 import Incubator from '@pages/landing/incubator/Incubator';
 import TechCenter from '@pages/landing/tech_center/tech_center';
+import FAQ from '@pages/landing/faq/FAQ';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: '/tech_center',
     element: <TechCenter />,
+  },
+  {
+    path: '/faq',
+    element: <FAQ />,
   }
 ]);
 
