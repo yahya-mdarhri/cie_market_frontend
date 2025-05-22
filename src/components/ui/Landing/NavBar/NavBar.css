@@ -17,12 +17,17 @@
 	/* margin: 0; */
 }
 
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
 .nav a {
-  margin-right: 16px;
   text-decoration: none;
   color: var(--white);
 }
-
 
 .nav a:hover {
   color:var(--secondary-color);

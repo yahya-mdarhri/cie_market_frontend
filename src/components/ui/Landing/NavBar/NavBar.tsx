@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import "./NavBar.css";
 
- function NavBar() {
+function NavBar() {
 	const location = useLocation();
 	const isActive = (path: string) => location.pathname === path;
 
@@ -23,7 +23,7 @@ import "./NavBar.css";
 					to="/tto" 
 					className={`nav-link ${isActive('/tto') ? 'active' : ''}`}
 				>
-					TTO
+					Technology Transform Office
 				</Link>
 				<Link 
 					to="/incubator" 
@@ -38,10 +38,10 @@ import "./NavBar.css";
 					Industrial
 				</Link>
 				<Link 
-					to="/contact" 
-					className={`nav-link ${isActive('/contact') ? 'active' : ''}`}
+					to="/tech_center" 
+					className={`nav-link ${isActive('/tech_center') ? 'active' : ''}`}
 				>
-					Contact
+					Tech Center
 				</Link>
 				<Link 
 					to="/about" 
