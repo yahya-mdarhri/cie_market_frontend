@@ -5,6 +5,9 @@ import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 
 import image from "./images/incubator.png";
 import image2 from "./images/incubator2.png";
+import startup1 from "./images/startup1.png";
+import program1 from "./images/program1.png";
+
 
 import p1 from "../../../assets/partners/1.png";
 import p2 from "../../../assets/partners/2.png";
@@ -29,13 +32,13 @@ const heroProps: HeroProps = {
 	stats: statsData,
 };
 
-function ProgramCard(){
+function ProgramCard({image, logo, name}:{image:string, logo:string, name:string}){
 	return(
-		<div className="programCard">
+		<div className="programCard w-[300px] h-[200px]">
 			<img src={image} alt="Program" />
-			<div>
-				<img src={image} alt="" />
-				<h3>Program Name</h3>
+			<div className="programCardContent">
+				<img src={logo} alt="Program Logo" />
+				<h3>{name}</h3>
 			</div>
 		</div>
 	)
@@ -43,14 +46,24 @@ function ProgramCard(){
 
 function Programs(){
 	return(
-		<div className="programs">
-			<h2>Programs & Startups</h2>
+		<div className="programs m-[30px]">
+			<h2 className="text-center text-[var(--primary-color)]">
+				Programs & Startups
+			</h2>
 			<div className="programCards">
-				<ProgramCard/>
+				<ProgramCard image={program1} logo={startup1} name="Program Name" />	
+				<ProgramCard image={image} logo={startup1} name="Program Name" />	
+				<ProgramCard image={program1} logo={startup1} name="Program Name" />	
+				<ProgramCard image={image} logo={startup1} name="Program Name" />	
+				<ProgramCard image={image} logo={startup1} name="Program Name" />	
+				<ProgramCard image={program1} logo={startup1} name="Program Name" />	
+				<ProgramCard image={program1} logo={startup1} name="Program Name" />	
+				
 			</div>
 		</div>
 	)
 }
+
 
 function Incubator() {
 	return (
@@ -83,7 +96,7 @@ function Incubator() {
 						</div>
 					</div>
 				</div>
-				{/* <Programs/> */}
+				<Programs/>
 				<Partners partners={[p1, p2, p3, p4, p5]} />
 		</LandingLayout>
 	);
