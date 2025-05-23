@@ -19,6 +19,7 @@ import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 import Partners from "@ui/Landing/Partners/Partners";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
+import { useState } from "react";
 
 const partners = [
 		{
@@ -97,6 +98,16 @@ function CIEItem({name, description, image}: CIEItemProps) {
 
 function Home() {
 	useDocumentTitle('Home | Centre for Innovation and Entrepreneurship');
+	const [contactType, setContactType] = useState('inventor');
+
+	const handleContactTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setContactType(e.target.value);
+		const companyFields = document.getElementById('companyFields');
+		if (companyFields) {
+			companyFields.style.display = e.target.value === 'company' ? 'flex' : 'none';
+		}
+	};
+
 	return (
 		<LandingLayout heroProps={heroProps}>
 				<Introduction 
@@ -132,23 +143,42 @@ function Home() {
 				<div className="Home5thSection">
 					<form className="HomeContactUs">
 						<div className="HomeContactUsHeader">
-							<h2>Let’s Get In Touch</h2>
+							<h2>Let's Get In Touch</h2>
 							<div className="HomeContactUsRadios">
 								<div>
 									<label htmlFor="isInventor">Inventor</label>
-									<input type="radio" name="isInventor" id="isInventor" />
+									<input 
+										type="radio" 
+										name="contactType" 
+										id="isInventor" 
+										value="inventor"
+										checked={contactType === 'inventor'}
+										onChange={handleContactTypeChange}
+									/>
 								</div>
 								<div>
 									<label htmlFor="isCompany">Company</label>
-									<input type="radio" name="isCompany" id="isCompany" />
+									<input 
+										type="radio" 
+										name="contactType" 
+										id="isCompany" 
+										value="company"
+										checked={contactType === 'company'}
+										onChange={handleContactTypeChange}
+									/>
 								</div>
 							</div>
 						</div>
 						<div className="HomeContactUsInputs">
-							<input type="text" name="name" id="name" placeholder="Name"/>
+							<input type="text" name="name" id="name" placeholder="Full Name"/>
 							<div className="email_and_phone">
 								<input type="email" name="email" id="email" placeholder="Email" />
 								<input type="tel" name="phone" id="phone" placeholder="Phone" />
+							</div>
+							<div className="company_fields" id="companyFields" style={{ display: 'none' }}>
+								<input type="text" name="companyName" id="companyName" placeholder="Company Name"/>
+								<input type="text" name="position" id="position" placeholder="Your Position"/>
+								<input type="text" name="companySize" id="companySize" placeholder="Company Size"/>
 							</div>
 							<input type="text" name="subject" id="subject" placeholder="Subject"/>
 							<textarea name="message" id="message" placeholder="Message"/>
