@@ -23,7 +23,7 @@ function NavBar({isFullWidth}:{isFullWidth?:boolean}) {
 					to="/tto" 
 					className={`nav-link ${isActive('/tto') ? 'active' : ''}`}
 				>
-					Technology Transform Office
+					Technology Transfer Office
 				</Link>
 				<Link 
 					to="/incubator" 
