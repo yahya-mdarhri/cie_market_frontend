@@ -11,7 +11,7 @@ import program1 from "./images/program1.png";
 
 import enabel from "./images/partners/enabel.png";
 import cdgInvest from "./images/partners/CDG_Invest.png";
-
+import founders from "./images/partners/212_founders.png";
 
 import Partners from "@ui/Landing/Partners/Partners";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
@@ -33,6 +33,11 @@ const partners = [
 		name: "Enabel",
 		link: "https://www.enabel.be/"
 	},
+	{
+		logo: founders,
+		name: "212 Founders",
+		link: "https://www.212founders.co/",
+	}
 ];
 
 const heroProps: HeroProps = {
