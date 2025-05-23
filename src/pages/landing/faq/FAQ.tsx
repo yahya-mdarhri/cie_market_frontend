@@ -49,7 +49,7 @@ function FAQ() {
 
     return (
         <div className="faq-container">
-            <NavBar isFullWidth={true} />
+            <NavBar isFullWidth={false} />
             <div className="faq-wrapper">
                 <div className="faq-header">
                     <div className="faq-title">
