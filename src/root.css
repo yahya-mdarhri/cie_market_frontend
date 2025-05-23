@@ -24,6 +24,7 @@
 
 @layer base {
 	html {
-	  font-family: 'Inter', system-ui, sans-serif;
+		background: var(--background-color);
+	  	font-family: 'Inter', system-ui, sans-serif;
 	}
   } 
