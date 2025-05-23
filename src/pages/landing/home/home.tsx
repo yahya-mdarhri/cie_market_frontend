@@ -4,17 +4,59 @@ import tto_logo from "./images/tto.svg";
 import industrial_logo from "./images/industrial.svg";
 import incubator_logo from "./images/incubator.svg";
 import tech_center_logo from "./images/tech_center.svg";
+
 import arrow from '../../../assets/icons/arrow.svg';
-import p1 from '../../../assets/partners/1.png';
-import p2 from '../../../assets/partners/2.png';
-import p3 from '../../../assets/partners/3.png';
-import p4 from '../../../assets/partners/4.png';
-import p5 from '../../../assets/partners/5.png';
+
+import cdg from './images/partners/cdg.jpg';
+import cloudflare from './images/partners/cloudflare.jpeg';
+import dxc from './images/partners/dxc.webp';
+import safari from './images/partners/SAFARI.jpg';
+import yanaHolding from './images/partners/Ynna-holding.png';
+import eu from './images/partners/European_Union.webp';
+import efficacity from './images/partners/Efficacity.png';
+
 import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 import Partners from "@ui/Landing/Partners/Partners";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
 
+const partners = [
+		{
+			logo: cdg,
+			name: "CDG",
+			link: "https://www.cdg.ma/"
+		},
+		{
+			logo: cloudflare,
+			name: "Cloudflare",
+			link: "https://www.cloudflare.com/"
+		},
+		{
+			logo: dxc,
+			name: "DXC",
+			link: "https://dxc.com/"
+		},
+		{
+			logo: safari,
+			name: "SAFARI",
+			link: "https://www.groupe-safari.com/"
+		},
+		{
+			logo: yanaHolding,
+			name: "Yana Holding",
+			link: "https://www.ynna.ma/"
+		},
+		{
+			name: "European Union",
+			logo: eu,
+			link: "https://european-union.europa.eu/"
+		},
+		{
+			name: "Efficacity",
+			logo: efficacity,
+			link: "https://efficacity.com/",
+		}
+]
 
 const statsData:StatsItemsType = {
 	a: { name: "Innovation & Patents", value: 644 },
@@ -86,7 +128,7 @@ function Home() {
 						name="Tech Center"
 						description="Driving Innovation with Cutting-Edge Tools, Talent, and Infrastructure"/>
 				</div>
-				<Partners partners={[p1, p2, p3, p4, p5]} />
+				<Partners partners={partners} />
 				<div className="Home5thSection">
 					<form className="HomeContactUs">
 						<div className="HomeContactUsHeader">

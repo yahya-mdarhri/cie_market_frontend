@@ -1,11 +1,20 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import './Partners.css';
 
+interface Partner {
+	logo: string;
+	name: string;
+	link: string;
+}
+
 interface PartnersProps {
-	partners: string[];
+	partners: Partner[];
 }
 
 export default function Partners({ partners }: PartnersProps) {
+	const navigate = useNavigate();
+
 	return (
 		<section className="partners-section">
 			<h2 className="partners-title">
@@ -21,10 +30,12 @@ export default function Partners({ partners }: PartnersProps) {
 						transition={{ duration: 0.5, delay: index * 0.1 }}
 						whileHover={{ scale: 1.05 }}
 						whileTap={{ scale: 0.95 }}
+						onClick={() => navigate(partner.link)}
+						style={{ cursor: 'pointer' }}
 					>
 						<img 
-							src={partner} 
-							alt="Partner logo" 
+							src={partner.logo} 
+							alt={partner.name}
 							className="partner-logo"
 						/>
 					</motion.div>
