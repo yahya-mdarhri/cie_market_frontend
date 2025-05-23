@@ -85,9 +85,9 @@ function NavBar({isFullWidth}:{isFullWidth?:boolean}) {
 						<span className="language-flag">
 							{languages.find(lang => lang.code === currentLang)?.flag}
 						</span>
-						<span className="language-name">
+						{/* <span className="language-name">
 							{languages.find(lang => lang.code === currentLang)?.name}
-						</span>
+						</span> */}
 						<span className="language-arrow">▼</span>
 					</button>
 					{isLanguageOpen && (
