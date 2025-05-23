@@ -1,9 +1,23 @@
 import { Link, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 import "./NavBar.css";
 
 function NavBar({isFullWidth}:{isFullWidth?:boolean}) {
 	const location = useLocation();
 	const isActive = (path: string) => location.pathname === path;
+	const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+	const [currentLang, setCurrentLang] = useState('en');
+
+	const languages = [
+		{ code: 'en', name: 'English', flag: '🇺🇸' },
+		{ code: 'es', name: 'Español', flag: '🇪🇸' },
+		{ code: 'fr', name: 'Français', flag: '🇫🇷' }
+	];
+
+	const handleLanguageSelect = (langCode: string) => {
+		setCurrentLang(langCode);
+		setIsLanguageOpen(false);
+	};
 
 	return (
 		<header className={`navbar ${isFullWidth ? 'w-full rounded-none m-none p-none' : ' mt-[5px] ml-[5%] mr-[5%] rounded-[8px]'}`}>
@@ -50,12 +64,48 @@ function NavBar({isFullWidth}:{isFullWidth?:boolean}) {
 					FAQ
 				</Link>
 				<Link 
-						to="/about" 
-						className={`nav-link ${isActive('/about') ? 'active' : ''}`}
-					>
-						About
-					</Link>
+					to="/about" 
+					className={`nav-link ${isActive('/about') ? 'active' : ''}`}
+				>
+					About
+				</Link>
 			</nav>
+			<div className="nav-right">
+				<Link 
+					to="/invention-disclosure" 
+					className={`nav-link ${isActive('/invention-disclosure') ? 'active' : ''}`}
+				>
+					Invention Disclosure
+				</Link>
+				<div className="language-selector">
+					<button 
+						className="language-button"
+						onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+					>
+						<span className="language-flag">
+							{languages.find(lang => lang.code === currentLang)?.flag}
+						</span>
+						<span className="language-name">
+							{languages.find(lang => lang.code === currentLang)?.name}
+						</span>
+						<span className="language-arrow">▼</span>
+					</button>
+					{isLanguageOpen && (
+						<div className="language-dropdown">
+							{languages.map((lang) => (
+								<button
+									key={lang.code}
+									className={`language-option ${currentLang === lang.code ? 'active' : ''}`}
+									onClick={() => handleLanguageSelect(lang.code)}
+								>
+									<span className="language-flag">{lang.flag}</span>
+									<span className="language-name">{lang.name}</span>
+								</button>
+							))}
+						</div>
+					)}
+				</div>
+			</div>
 		</header>
 	);
 }
