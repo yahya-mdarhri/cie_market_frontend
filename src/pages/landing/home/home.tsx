@@ -178,7 +178,6 @@ function Home() {
 							<div className="company_fields" id="companyFields" style={{ display: 'none' }}>
 								<input type="text" name="companyName" id="companyName" placeholder="Company Name"/>
 								<input type="text" name="position" id="position" placeholder="Your Position"/>
-								<input type="text" name="companySize" id="companySize" placeholder="Company Size"/>
 							</div>
 							<input type="text" name="subject" id="subject" placeholder="Subject"/>
 							<textarea name="message" id="message" placeholder="Message"/>
