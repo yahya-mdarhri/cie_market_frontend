@@ -9,11 +9,9 @@ import startup1 from "./images/startup1.png";
 import program1 from "./images/program1.png";
 
 
-import p1 from "../../../assets/partners/1.png";
-import p2 from "../../../assets/partners/2.png";
-import p3 from "../../../assets/partners/3.png";
-import p4 from "../../../assets/partners/4.png";
-import p5 from "../../../assets/partners/5.png";
+import enabel from "./images/partners/enabel.png";
+import cdgInvest from "./images/partners/CDG_Invest.png";
+
 
 import Partners from "@ui/Landing/Partners/Partners";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
@@ -23,6 +21,19 @@ const statsData:StatsItemsType = {
 	b: { name: "International Patents", value: 117 },
 	c: { name: "Gold Medals", value: 2 },
 };
+
+const partners = [
+	{
+		logo: cdgInvest,
+		name: "cdg invest",
+		link: "https://www.linkedin.com/company/cdg-invest/"
+	},
+	{
+		logo: enabel,
+		name: "Enabel",
+		link: "https://www.enabel.be/"
+	},
+];
 
 const heroProps: HeroProps = {
 	heroTitle: <>Incubator 360º</>,
@@ -129,7 +140,7 @@ function Incubator() {
 					</div>
 				</div>
 				<Startups/>
-				<Partners partners={[p1, p2, p3, p4, p5]} />
+				<Partners partners={partners} />
 		</LandingLayout>
 	);
 }
