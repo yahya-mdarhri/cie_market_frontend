@@ -7,6 +7,7 @@ function NavBar({isFullWidth}:{isFullWidth?:boolean}) {
 	const isActive = (path: string) => location.pathname === path;
 	const [isLanguageOpen, setIsLanguageOpen] = useState(false);
 	const [currentLang, setCurrentLang] = useState('en');
+	const [isAboutOpen, setIsAboutOpen] = useState(false);
 
 	const languages = [
 		{ code: 'en', name: 'English', flag: '🇺🇸' },
@@ -57,18 +58,33 @@ function NavBar({isFullWidth}:{isFullWidth?:boolean}) {
 				>
 					Tech Center
 				</Link>
-				<Link 
-					to="/faq" 
-					className={`nav-link ${isActive('/faq') ? 'active' : ''}`}
-				>
-					FAQ
-				</Link>
-				<Link 
-					to="/about" 
-					className={`nav-link ${isActive('/about') ? 'active' : ''}`}
-				>
-					About
-				</Link>
+				<div className="dropdown-container">
+					<button 
+						className={`nav-link dropdown-button ${isAboutOpen ? 'active' : ''}`}
+						onClick={() => setIsAboutOpen(!isAboutOpen)}
+					>
+						About
+						<span className="dropdown-arrow">▼</span>
+					</button>
+					{isAboutOpen && (
+						<div className="dropdown-menu">
+							<Link 
+								to="/faq" 
+								className={`dropdown-item ${isActive('/faq') ? 'active' : ''}`}
+								onClick={() => setIsAboutOpen(false)}
+							>
+								FAQ
+							</Link>
+							<Link 
+								to="/our-team" 
+								className={`dropdown-item ${isActive('/our-team') ? 'active' : ''}`}
+								onClick={() => setIsAboutOpen(false)}
+							>
+								Our Team
+							</Link>
+						</div>
+					)}
+				</div>
 			</nav>
 			<div className="nav-right">
 				<Link 
