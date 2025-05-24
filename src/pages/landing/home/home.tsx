@@ -121,23 +121,29 @@ function Home() {
 				/>
 				<div className="Home3rdSection">
 				</div>
-				<div className="Home4thSection">
-					<CIEItem
-						image={tto_logo}
-						name="Technology Transfer Office"
-						description="Bridging Innovation and Industry through Research Commercialization"/>
-					<CIEItem
-						image={industrial_logo}
-						name="Industrial Clinic"
-						description="Solving Real-World Challenges Through Academic–Industry Collaboration"/>
-					<CIEItem
-						image={incubator_logo}
-						name="Incubator"
-						description="Empowering Startups to Transform Ideas into Impact"/>
-					<CIEItem
-						image={tech_center_logo}
-						name="Tech Center"
-						description="Driving Innovation with Cutting-Edge Tools, Talent, and Infrastructure"/>
+				<div className="DepartmentsSection">
+					<div className="DepartmentsSectionHeader">
+						<h2>Our Departments</h2>
+						<p>Explore our specialized units working together to drive innovation and entrepreneurship</p>
+					</div>
+					<div className="DepartmentsSectionContent">
+						<CIEItem
+							image={tto_logo}
+							name="Technology Transfer Office"
+							description="Bridging Innovation and Industry through Research Commercialization"/>
+						<CIEItem
+							image={industrial_logo}
+							name="Industrial Clinic"
+							description="Solving Real-World Challenges Through Academic–Industry Collaboration"/>
+						<CIEItem
+							image={incubator_logo}
+							name="Incubator"
+							description="Empowering Startups to Transform Ideas into Impact"/>
+						<CIEItem
+							image={tech_center_logo}
+							name="Tech Center"
+							description="Driving Innovation with Cutting-Edge Tools, Talent, and Infrastructure"/>
+					</div>
 				</div>
 				<Partners partners={partners} />
 				<div className="Home5thSection">
