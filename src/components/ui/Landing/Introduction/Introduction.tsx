@@ -30,13 +30,13 @@ function Introduction({title, description, image, years, inventions}: Introducti
 								{years && (
 									<div className="Metric">
 										<div className="MetricNumber">{years}+</div>
-										<div className="MetricLabel">Years of Innovation</div>
+										<div className="MetricLabel">Years of experience</div>
 									</div>
 								)}
 								{inventions && (
 									<div className="Metric">
 										<div className="MetricNumber">{inventions}+</div>
-										<div className="MetricLabel">Inventions Delivered</div>
+										<div className="MetricLabel">Inventions disclosed</div>
 									</div>
 								)}
 							</div>
