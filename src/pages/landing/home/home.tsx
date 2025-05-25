@@ -114,6 +114,8 @@ function Home() {
 					title="The Centre for Innovation and Entrepreneurship"
 					description="The Centre for Innovation and Entrepreneurship is dedicated to protecting and promoting the University's research and innovation, as well as encouraging entrepreneurship and technology transfer to the industrial sector."
 					image="/home/1.svg"	
+					years={10}
+					inventions={600}
 				/>
 				<VisionAndMission 
 					mission="Multiplying the impact of RDI in the service of industrial and territorial competitiveness, through The valorization of research results, the promotion of entrepreneurship and the solid partnership with socioeconomic actors "
