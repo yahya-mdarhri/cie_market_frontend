@@ -21,11 +21,11 @@ function NavActions({ closeMobileMenu }: { closeMobileMenu: () => void }) {
 	return (
 		<div className="nav-actions">
 		<Link 
-			to="/invention-disclosure" 
-			className={`nav-link action-link ${useIsActive('/invention-disclosure') ? 'active' : ''}`}
+			to="/invention-Diagnosis" 
+			className={`nav-link action-link ${useIsActive('/invention-Diagnosis') ? 'active' : ''}`}
 			onClick={closeMobileMenu}
 		>
-			Invention Disclosure
+			Invention Diagnosis
 		</Link>
 		<div className="language-selector">
 			<button 
@@ -60,6 +60,8 @@ function NavActions({ closeMobileMenu }: { closeMobileMenu: () => void }) {
 }	
 
 function NavLinks({ closeMobileMenu }: { closeMobileMenu: () => void }) {
+	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
 	return (
 		<div className="nav-main">
 		<Link 
@@ -97,20 +99,33 @@ function NavLinks({ closeMobileMenu }: { closeMobileMenu: () => void }) {
 		>
 			Tech Center
 		</Link>
-		<Link 
-			to="/our-team" 
-			className={`nav-link ${useIsActive('/our-team') ? 'active' : ''}`}
-			onClick={closeMobileMenu}
-		>
-			Our Team
-		</Link>
-		<Link 
-			to="/faq" 
-			className={`nav-link ${useIsActive('/faq') ? 'active' : ''}`}
-			onClick={closeMobileMenu}
-		>
-			FAQ
-		</Link>
+		<div className="dropdown-container">
+			<button 
+				className={`dropdown-button ${isDropdownOpen ? 'active' : ''}`}
+				onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+			>
+				About
+				<span className="dropdown-arrow">▼</span>
+			</button>
+			{isDropdownOpen && (
+				<div className="dropdown-menu">
+					<Link 
+						to="/our-team" 
+						className={`dropdown-item ${useIsActive('/our-team') ? 'active' : ''}`}
+						onClick={closeMobileMenu}
+					>
+						Our Team
+					</Link>
+					<Link 
+						to="/faq" 
+						className={`dropdown-item ${useIsActive('/faq') ? 'active' : ''}`}
+						onClick={closeMobileMenu}
+					>
+						FAQ
+					</Link>
+				</div>
+			)}
+		</div>
 	</div>
 	);
 }
