@@ -59,7 +59,7 @@ function NavActions({ closeMobileMenu }: { closeMobileMenu: () => void }) {
 	);
 }	
 
-function NavLinks({ closeMobileMenu }: { closeMobileMenu: () => void }) {
+function NavLinks({ closeMobileMenu, isMobile }: { closeMobileMenu: () => void, isMobile: boolean }) {
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
 	return (
@@ -99,33 +99,54 @@ function NavLinks({ closeMobileMenu }: { closeMobileMenu: () => void }) {
 		>
 			Tech Center
 		</Link>
-		<div className="dropdown-container">
-			<button 
-				className={`dropdown-button ${isDropdownOpen ? 'active' : ''}`}
-				onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+		{isMobile ? (
+			<>
+			<Link 
+				to="/our-team" 
+				className={`nav-link  ${useIsActive('/our-team') ? 'active' : ''}`}
+				onClick={closeMobileMenu}
 			>
-				About
-				<span className="dropdown-arrow">▼</span>
-			</button>
-			{isDropdownOpen && (
-				<div className="dropdown-menu">
-					<Link 
-						to="/our-team" 
-						className={`dropdown-item ${useIsActive('/our-team') ? 'active' : ''}`}
-						onClick={closeMobileMenu}
-					>
-						Our Team
-					</Link>
-					<Link 
-						to="/faq" 
-						className={`dropdown-item ${useIsActive('/faq') ? 'active' : ''}`}
-						onClick={closeMobileMenu}
-					>
-						FAQ
-					</Link>
-				</div>
-			)}
+				Our Team
+			</Link>
+			<Link 
+				to="/faq" 
+				className={`nav-link  ${useIsActive('/faq') ? 'active' : ''}`}
+				onClick={closeMobileMenu}
+			>
+				FAQ
+			</Link>
+			</>
+		) : (
+			<>
+			<div className="dropdown-container">
+				<button 
+					className={`dropdown-button ${isDropdownOpen ? 'active' : ''}`}
+					onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+				>
+					About
+					<span className="dropdown-arrow">▼</span>
+				</button>
+				{isDropdownOpen && (
+					<div className="dropdown-menu">
+						<Link 
+							to="/our-team" 
+							className={`dropdown-item ${useIsActive('/our-team') ? 'active' : ''}`}
+							onClick={closeMobileMenu}
+						>
+							Our Team
+						</Link>
+						<Link 
+							to="/faq" 
+							className={`dropdown-item ${useIsActive('/faq') ? 'active' : ''}`}
+							onClick={closeMobileMenu}
+						>
+							FAQ
+						</Link>
+					</div>
+				)}
 		</div>
+			</>
+		)}
 	</div>
 	);
 }
@@ -160,13 +181,13 @@ function NavBar() {
 			)}
 			{isMobile ? (
 			<nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
-				<NavLinks closeMobileMenu={closeMobileMenu} />
+				<NavLinks closeMobileMenu={closeMobileMenu} isMobile={isMobile}/>
 				<NavActions closeMobileMenu={closeMobileMenu} />
 			</nav>
 			) : (
 				<>
 					<nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
-						<NavLinks closeMobileMenu={closeMobileMenu} />
+						<NavLinks closeMobileMenu={closeMobileMenu} isMobile={isMobile}/>
 					</nav>
 					<NavActions closeMobileMenu={closeMobileMenu} />
 				</>
