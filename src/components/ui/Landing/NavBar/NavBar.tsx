@@ -1,15 +1,13 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import "./NavBar.css";
+import { useIsActive } from '@hooks/useIsActive';
+import { useWindowWidth } from '@hooks/useWindowWidth';
+import { MEDIA_QUERY } from '@constants/media';
 
-function NavBar({isFullWidth}:{isFullWidth?:boolean}) {
-	const location = useLocation();
-	const isActive = (path: string) => location.pathname === path;
+function NavActions({ closeMobileMenu }: { closeMobileMenu: () => void }) {
 	const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-	const [currentLang, setCurrentLang] = useState('en');
-	const [isAboutOpen, setIsAboutOpen] = useState(false);
-
-	const languages = [
+	const [currentLang, setCurrentLang] = useState('en');	const languages = [
 		{ code: 'en', name: 'English', flag: '🇺🇸' },
 		{ code: 'es', name: 'Español', flag: '🇪🇸' },
 		{ code: 'fr', name: 'Français', flag: '🇫🇷' }
@@ -21,107 +19,143 @@ function NavBar({isFullWidth}:{isFullWidth?:boolean}) {
 	};
 
 	return (
-		<header className={`navbar ${isFullWidth ? 'w-full rounded-none m-none p-none' : ' mt-[5px] ml-[5%] mr-[5%] rounded-[8px]'}`}>
+		<div className="nav-actions">
+		<Link 
+			to="/invention-disclosure" 
+			className={`nav-link action-link ${useIsActive('/invention-disclosure') ? 'active' : ''}`}
+			onClick={closeMobileMenu}
+		>
+			Invention Disclosure
+		</Link>
+		<div className="language-selector">
+			<button 
+				className="language-button"
+				onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+			>
+				<span className="language-flag">
+					{languages.find(lang => lang.code === currentLang)?.flag}
+				</span>
+				<span className="language-name">
+					{languages.find(lang => lang.code === currentLang)?.name}
+				</span>
+				<span className="language-arrow">▼</span>
+			</button>
+			{isLanguageOpen && (
+				<div className="language-dropdown">
+					{languages.map((lang) => (
+						<button
+							key={lang.code}
+							className={`language-option ${currentLang === lang.code ? 'active' : ''}`}
+							onClick={() => handleLanguageSelect(lang.code)}
+						>
+							<span className="language-flag">{lang.flag}</span>
+							<span className="language-name">{lang.name}</span>
+						</button>
+					))}
+				</div>
+			)}
+		</div>
+	</div>
+	);
+}	
+
+function NavLinks({ closeMobileMenu }: { closeMobileMenu: () => void }) {
+	return (
+		<div className="nav-main">
+		<Link 
+			to="/" 
+			className={`nav-link ${useIsActive('/') ? 'active' : ''}`}
+			onClick={closeMobileMenu}
+		>
+			Home
+		</Link>
+		<Link 
+			to="/tto" 
+			className={`nav-link ${useIsActive('/tto') ? 'active' : ''}`}
+			onClick={closeMobileMenu}
+		>
+			Technology Transfer Office
+		</Link>
+		<Link 
+			to="/incubator" 
+			className={`nav-link ${useIsActive('/incubator') ? 'active' : ''}`}
+			onClick={closeMobileMenu}
+		>
+			Incubator
+		</Link>
+		<Link 
+			to="/industrial" 
+			className={`nav-link ${useIsActive('/industrial') ? 'active' : ''}`}
+			onClick={closeMobileMenu}
+		>
+			Industrial
+		</Link>
+		<Link 
+			to="/tech_center" 
+			className={`nav-link ${useIsActive('/tech_center') ? 'active' : ''}`}
+			onClick={closeMobileMenu}
+		>
+			Tech Center
+		</Link>
+		<Link 
+			to="/our-team" 
+			className={`nav-link ${useIsActive('/our-team') ? 'active' : ''}`}
+			onClick={closeMobileMenu}
+		>
+			Our Team
+		</Link>
+		<Link 
+			to="/faq" 
+			className={`nav-link ${useIsActive('/faq') ? 'active' : ''}`}
+			onClick={closeMobileMenu}
+		>
+			FAQ
+		</Link>
+	</div>
+	);
+}
+
+function NavBar() {
+	const width = useWindowWidth();
+	const isMobile = width < MEDIA_QUERY.MOBILE;
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+	const toggleMobileMenu = () => {
+		setIsMobileMenuOpen(!isMobileMenuOpen);
+	};
+
+	const closeMobileMenu = () => {
+		setIsMobileMenuOpen(false);
+	};
+
+	return (
+		<header className={`navbar`}>
 			<div className="logo">
 				<Link to="/" className="logo">
 					<img src="/navbar_logo.svg" alt="Logo" />
 				</Link>
 			</div>
-			<nav className="nav">
-				<Link 
-					to="/" 
-					className={`nav-link ${isActive('/') ? 'active' : ''}`}
-				>
-					Home
-				</Link>
-				<Link 
-					to="/tto" 
-					className={`nav-link ${isActive('/tto') ? 'active' : ''}`}
-				>
-					Technology Transfer Office
-				</Link>
-				<Link 
-					to="/incubator" 
-					className={`nav-link ${isActive('/incubator') ? 'active' : ''}`}
-				>
-					Incubator
-				</Link>
-				<Link 
-					to="/industrial" 
-					className={`nav-link ${isActive('/industrial') ? 'active' : ''}`}
-				>
-					Industrial
-				</Link>
-				<Link 
-					to="/tech_center" 
-					className={`nav-link ${isActive('/tech_center') ? 'active' : ''}`}
-				>
-					Tech Center
-				</Link>
-				<div className="dropdown-container">
-					<button 
-						className={`nav-link dropdown-button ${isAboutOpen ? 'active' : ''}`}
-						onClick={() => setIsAboutOpen(!isAboutOpen)}
-					>
-						About
-						<span className="dropdown-arrow">▼</span>
-					</button>
-					{isAboutOpen && (
-						<div className="dropdown-menu">
-							<Link 
-								to="/faq" 
-								className={`dropdown-item ${isActive('/faq') ? 'active' : ''}`}
-								onClick={() => setIsAboutOpen(false)}
-							>
-								FAQ
-							</Link>
-							<Link 
-								to="/our-team" 
-								className={`dropdown-item ${isActive('/our-team') ? 'active' : ''}`}
-								onClick={() => setIsAboutOpen(false)}
-							>
-								Our Team
-							</Link>
-						</div>
-					)}
-				</div>
+			{isMobile ? (
+			<button className="mobile-menu-button" onClick={toggleMobileMenu} aria-label="Toggle menu">
+				<span className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}></span>
+			</button>
+			) : (
+				<>
+				</>
+			)}
+			{isMobile ? (
+			<nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
+				<NavLinks closeMobileMenu={closeMobileMenu} />
+				<NavActions closeMobileMenu={closeMobileMenu} />
 			</nav>
-			<div className="nav-right">
-				<Link 
-					to="/invention-disclosure" 
-					className={`nav-link ${isActive('/invention-disclosure') ? 'active' : ''}`}
-				>
-					Invention Disclosure
-				</Link>
-				<div className="language-selector">
-					<button 
-						className="language-button"
-						onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-					>
-						<span className="language-flag">
-							{languages.find(lang => lang.code === currentLang)?.flag}
-						</span>
-						{/* <span className="language-name">
-							{languages.find(lang => lang.code === currentLang)?.name}
-						</span> */}
-						<span className="language-arrow">▼</span>
-					</button>
-					{isLanguageOpen && (
-						<div className="language-dropdown">
-							{languages.map((lang) => (
-								<button
-									key={lang.code}
-									className={`language-option ${currentLang === lang.code ? 'active' : ''}`}
-									onClick={() => handleLanguageSelect(lang.code)}
-								>
-									<span className="language-flag">{lang.flag}</span>
-									<span className="language-name">{lang.name}</span>
-								</button>
-							))}
-						</div>
-					)}
-				</div>
-			</div>
+			) : (
+				<>
+					<nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
+						<NavLinks closeMobileMenu={closeMobileMenu} />
+					</nav>
+					<NavActions closeMobileMenu={closeMobileMenu} />
+				</>
+			)}
 		</header>
 	);
 }
