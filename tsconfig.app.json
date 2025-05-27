@@ -28,6 +28,7 @@
 			// "@/*": ["*"], // src
       "@hooks/*": ["hooks/*"], // hooks
 			"@pages/*": ["pages/*"], // Pages components
+      "@constants/*": ["constants/*"], // constants
 			"@ui/*": ["components/ui/*"], // UI components
 			"@components/*": ["components/*"], // all components
 			"@layouts/*": ["components/layouts/*"], // layouts components
