@@ -6,7 +6,7 @@ function Hero({props}: { props: HeroProps }) {
 	return (
 		<section className="hero-section">
 			<div className="hero-content">
-				<div className="hero-left">
+				<div className="hero-text">
 					<h1>
 						{props.heroTitle}
 					</h1>
@@ -14,14 +14,11 @@ function Hero({props}: { props: HeroProps }) {
 						{props.heroDescription}
 					</p>
 					<div className="hero-buttons">
-						<button className="hero-btn">{props.firstAction}</button>
+						<button className="hero-btn primary">{props.firstAction}</button>
 						{props.secondAction && (
-							<button className="hero-btn">{props.secondAction}</button>
+							<button className="hero-btn secondary">{props.secondAction}</button>
 						)}
 					</div>
-				</div>
-				<div className="hero-right">
-					<img src={props.heroImage} alt="Hero" />
 				</div>
 			</div>
 		</section>

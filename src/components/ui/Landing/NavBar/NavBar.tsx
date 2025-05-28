@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import "./NavBar.css";
 import { useIsActive } from '@hooks/useIsActive';
 import { useWindowWidth } from '@hooks/useWindowWidth';
@@ -155,6 +155,18 @@ function NavBar() {
 	const width = useWindowWidth();
 	const isMobile = width < MEDIA_QUERY.MOBILE;
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const scrollPosition = window.scrollY;
+			setIsScrolled(scrollPosition > 50);
+		};
+
+		window.addEventListener('scroll', handleScroll);
+		handleScroll();
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
 
 	const toggleMobileMenu = () => {
 		setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -165,7 +177,7 @@ function NavBar() {
 	};
 
 	return (
-		<header className={`navbar`}>
+		<header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
 			<div className="logo">
 				<Link to="/" className="logo">
 					<img src="/navbar_logo.svg" alt="Logo" />

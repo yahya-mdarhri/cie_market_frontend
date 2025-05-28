@@ -14,7 +14,6 @@ interface StatsItemsType {
 interface HeroProps {
 	heroTitle: React.ReactNode; // The title of the hero section
 	heroDescription: string; // The description of the hero section
-	heroImage: string; // The image of the hero section
 	firstAction: string; // The first action button text
 	secondAction?: string; // The second action button text (optional)
 	stats: StatsItemsType; // The stats to be displayed in the hero section
@@ -34,16 +33,15 @@ interface LandingLayoutProps {
 function LandingLayout({ children, heroProps}: LandingLayoutProps) {
 	return (
 		<div className="layout-container">
-			<div className="hero-bg"></div>
-			<div className="hero-bg2"></div>
+			{/* <div className="hero-bg"></div>
+			<div className="hero-bg2"></div> */}
 			<NavBar />
 			<main>
 				<Hero props={heroProps}/>
-				<Stats statsData={heroProps.stats}/>
+				{/* <Stats statsData={heroProps.stats}/> */}
 				{children}
 			</main>
 			<Footer/>
-			{/* <Footer /> ill add it later */}
 		</div>
 	);
 }
