@@ -10,6 +10,9 @@
 	--primary-color: #073567;
 	--background-color: #E9F1FA;
 	--secondary-color: #D1D600;
+	--card-color1: rgba(255, 255, 255, 0.1);
+	--card-color2: rgba(255, 255, 255, 0.2);
+	--card-color3: rgba(255, 255, 255, 0.3);
 	--white: #FFFEFF;
 
 	/* Typography scale */
