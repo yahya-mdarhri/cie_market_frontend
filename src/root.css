@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap'); /* inter font */
-@import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 
 :root{
 	/* main colors */
@@ -34,36 +29,32 @@
 	font-family: 'Inter', sans-serif;
 }
 
+html {
+	background: var(--background-color);
+	font-family: 'Inter', system-ui, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
 
+h1 {
+	font-size: var(--text-4xl);
+	font-weight: 700;
+	line-height: 1.2;
+}
 
-@layer base {
-	html {
-		background: var(--background-color);
-	  	font-family: 'Inter', system-ui, sans-serif;
-		font-size: 16px;
-		line-height: 1.5;
-	}
+h2 {
+	font-size: var(--text-3xl);
+	font-weight: 600;
+	line-height: 1.3;
+}
 
-	h1 {
-		font-size: var(--text-4xl);
-		font-weight: 700;
-		line-height: 1.2;
-	}
+h3 {
+	font-size: var(--text-2xl);
+	font-weight: 600;
+	line-height: 1.4;
+}
 
-	h2 {
-		font-size: var(--text-3xl);
-		font-weight: 600;
-		line-height: 1.3;
-	}
-
-	h3 {
-		font-size: var(--text-2xl);
-		font-weight: 600;
-		line-height: 1.4;
-	}
-
-	p {
-		font-size: var(--text-base);
-		line-height: 1.6;
-	}
+p {
+	font-size: var(--text-base);
+	line-height: 1.6;
 } 
