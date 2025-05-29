@@ -48,6 +48,21 @@
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);
 }
 
+
+.service-card::before {
+    content: "";
+    height: 80px;
+    border-radius: 1rem;
+    position: absolute;
+    top: 1.7rem;    
+    right: 100%;
+    width: 1%;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);
+    background-color: var(--secondary-color);
+    z-index: -1;
+}
+
+
 .service-card:hover .service-card-icon {
     transform: scale(1.2) rotate(-5deg);
 }

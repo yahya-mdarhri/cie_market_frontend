@@ -21,7 +21,9 @@ interface HeroProps {
 
 interface LandingLayoutProps {
 	children?: ReactNode; // The additional section as children
-	heroProps: HeroProps; // The hero section props
+	heroProps?: HeroProps; // The hero section props
+	noHero?: boolean; // Whether to hide the hero section
+	noFooter?: boolean; // Whether to hide the footer section
 }
 
 /*
@@ -30,18 +32,17 @@ interface LandingLayoutProps {
  * The hero section is passed as props to the component.
  * The additional children can be passed to the component to render below the hero section.
 */
-function LandingLayout({ children, heroProps}: LandingLayoutProps) {
+function LandingLayout({ children, heroProps, noFooter = false, noHero = false}: LandingLayoutProps) {
 	return (
 		<div className="layout-container">
 			{/* <div className="hero-bg"></div>
 			<div className="hero-bg2"></div> */}
-			<NavBar />
+			<NavBar noHero={noHero}/>	
 			<main>
-				<Hero props={heroProps}/>
-				{/* <Stats statsData={heroProps.stats}/> */}
+				{heroProps && <Hero props={heroProps}/>}
 				{children}
 			</main>
-			<Footer/>
+			{!noFooter && <Footer/>}
 		</div>
 	);
 }
