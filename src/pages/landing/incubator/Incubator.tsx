@@ -6,7 +6,6 @@ import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 import image from "./images/incubator.png";
 import image2 from "./images/incubator2.png";
 import startup1 from "./images/startup1.png";
-import program1 from "./images/program1.png";
 
 
 import enabel from "./images/partners/enabel.png";
@@ -15,6 +14,44 @@ import founders from "./images/partners/212_founders.png";
 
 import Partners from "@ui/Landing/Partners/Partners";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
+
+import {
+	FaGlobeAmericas,
+	FaRocket,
+	FaChalkboardTeacher,
+	FaUserTie,
+	FaSeedling
+  } from "react-icons/fa";
+import Services from "@ui/Landing/Services/Services";
+  
+  const servicesData = [
+	{
+	  icon: <FaGlobeAmericas />,
+	  title: "Funding for Entrepreneurship",
+	  description: "Attracting national and international funds to entrepreneurship promotion projects."
+	},
+	{
+	  icon: <FaRocket />,
+	  title: "Startup Creation & Support",
+	  description: "Creation of Made@UIR startups, project setup, access to financing, and coaching."
+	},
+	{
+	  icon: <FaChalkboardTeacher />,
+	  title: "Entrepreneurship Training",
+	  description: "Providing specialized entrepreneurship and innovation training."
+	},
+	{
+	  icon: <FaUserTie />,
+	  title: "Mentorship & Preincubation",
+	  description: "Mentoring of project leaders and preincubation services."
+	},
+	{
+	  icon: <FaSeedling />,
+	  title: "Access to Capital",
+	  description: "Support in accessing seed and acceleration capital."
+	}
+  ];
+  
 
 const statsData:StatsItemsType = {
 	a: { name: "Innovation & Patents", value: 644 },
@@ -43,7 +80,6 @@ const partners = [
 const heroProps: HeroProps = {
 	heroTitle: <>Incubator 360º</>,
 	heroDescription: "We provide the tools, mentorship, and environment to turn ideas into saleable ventures",
-	heroImage: image,
 	firstAction: "Submit A Patent",
 	// secondAction: "Submit A Patent",
 	stats: statsData,
@@ -125,25 +161,7 @@ function Incubator() {
 					mission="support the Made @UIR towards the Go to Market and the association with investors."
 					vision="Accelerating the ROI of Made @UIR = Invention x Commercialization"
 				/>
-				<div className="ttoServices">
-					<div className="ttoServicesLeft">
-						<h2>Our Services</h2>
-						<p>
-						We connect industry with academic expertise to solve technical challenges through tailored research and innovation support
-						</p>
-					</div>
-					<div className="ttoServicesRight">
-						<div className="ttoServicesRight1">
-							<div className=" ttoServiceCard">Attracting national and international funds to entrepreneurship promotion projects</div>
-							<div className=" ttoServiceCard">Creation of Made@UIR startups, Project set-up, access to financing, coaching</div>
-						</div>
-						<div className="ttoServicesRight2">
-							<div className=" ttoServiceCard">Entrepreneurship and innovation training</div>
-							<div className=" ttoServiceCard">Mentoring of project leaders and preincubation services</div>
-							<div className=" ttoServiceCard">Access to seed and acceleration capital</div>
-						</div>
-					</div>
-				</div>
+				<Services services={servicesData} />
 				<Startups/>
 				<Partners partners={partners} />
 		</LandingLayout>

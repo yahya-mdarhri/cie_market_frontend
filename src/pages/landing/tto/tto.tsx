@@ -16,6 +16,9 @@ import p5 from "../../../assets/partners/5.png";
 import { useState, useEffect } from "react";
 import Partners from "@ui/Landing/Partners/Partners";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
+import Services from "@ui/Landing/Services/Services";
+
+import { FaHandshake, FaFileSignature, FaBullhorn } from "react-icons/fa";
 
 const statsData:StatsItemsType = {
 	a: { name: "Innovation & Patents", value: 644 },
@@ -26,7 +29,6 @@ const statsData:StatsItemsType = {
 const heroProps: HeroProps = {
 	heroTitle: <>Technology Transfer Office</>,
 	heroDescription: "Protecting ideas, fostering collaborations, and bringing research to market.",
-	heroImage: image,
 	firstAction: "Submit A Patent",
 	// secondAction: "Submit A Patent",
 	stats: statsData,
@@ -64,6 +66,29 @@ const inventionCardData = [
 		image: inv_img1,
 	},
 ];
+
+
+const servicesData = [
+	{
+		icon: <FaHandshake />,
+		title: "Assistance with the Transfer",
+		description: "Support and guidance in the transfer of technology and knowledge to relevant industries or institutions."
+	},
+	{
+		icon: <FaFileSignature />,
+		title: "Patent and IP Protection Drafting",
+		description: "Drafting support for patent applications and protection of intellectual property."
+	},
+	{
+		icon: <FaBullhorn />,
+		title: "IP Awareness and Innovation Marketing",
+		description: "Promotion of IP awareness and strategic marketing of innovative solutions."
+	}
+];
+
+
+
+
 
 function LandingInventionCards() {
 	const [currentIndex, setCurrentIndex] = useState(0);
@@ -166,26 +191,9 @@ function TTO() {
 					mission="Facilitate the exploitation of the results of scientific research, Open Innovation and its opening up to the market"
 					vision="Transform the TTO into a springboard for innovation at the UIR and make its activity profitable"
 				/>
-				<div className="ttoServices">
-					<div className="ttoServicesLeft">
-						<h2>Our Services</h2>
-						<p>
-							We help protect innovations, build industry partnerships, and bring research to market
-						</p>
-					</div>
-					<div className="ttoServicesRight">
-						<div className="ttoServicesRight1">
-							<div className=" ttoServiceCard">Assistance with the transfer</div>
-						</div>
-						<div className="ttoServicesRight2">
-							<div className=" ttoServiceCard">Patent and IP Protection Drafting</div>
-							<div className=" ttoServiceCard">IP Awareness and Innovation Marketing</div>
-						</div>
-					</div>
-				</div>
+				<Services services={servicesData} />
 				<LandingInventionCards />
-
-				<Partners partners={[p1, p2, p3, p4, p5]} />
+				{/* <Partners partners={[p1, p2, p3, p4, p5]} /> */}
 		</LandingLayout>
 	);
 }
