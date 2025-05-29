@@ -1,0 +1,318 @@
+.DepartmentsSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	background-color: var(--primary-color);
+	padding: 80px 20px;
+	margin-top: 15px;
+}
+
+.DepartmentsSectionHeader {
+	text-align: center;
+	max-width: 800px;
+	margin-bottom: 60px;
+}
+
+.DepartmentsSectionHeader h2 {
+	color: var(--white);
+	font-size: 2.5rem;
+	font-weight: 800;
+	margin-bottom: 20px;
+}
+
+.DepartmentsSectionHeader p {
+	color: var(--white);
+	font-size: 1.1rem;
+	opacity: 0.9;
+	line-height: 1.6;
+}
+
+.DepartmentsSectionContent {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 30px;
+	width: 100%;
+	max-width: 1400px;
+}
+
+.CIEItem {
+	display: flex;
+	background-color: var(--white);
+	flex-direction: column;
+	align-items: center;
+	width: 280px;
+	height: 320px;
+	padding: 25px 20px;
+	border-radius: 20px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+	border: 2px solid transparent;
+	background-image: linear-gradient(var(--white), var(--white)), 
+		linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+	background-origin: border-box;
+	background-clip: padding-box, border-box;
+}
+
+.CIEItem:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+	background-image: linear-gradient(var(--white), var(--white)), 
+		linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+}
+
+.CIEItem > div:first-child {
+	width: 70px;
+	height: 70px;
+	margin-bottom: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.CIEItem > div:first-child img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.CIEItem h3 {
+	color: var(--primary-color);
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-bottom: 12px;
+	text-align: center;
+}
+
+.CIEItem p {
+	margin: 0;
+	font-size: 0.9rem;
+	text-align: center;
+	line-height: 1.5;
+	color: #666;
+}
+
+.CIEItemMore {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 45px;
+	background-color: var(--secondary-color);
+	color: var(--white);
+	font-size: 0.95rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.CIEItemMore:hover {
+	background-color: var(--primary-color);
+}
+
+.CIEItemMore img {
+	width: 20px;
+	height: 20px;
+	margin-left: 8px;
+	transition: transform 0.3s ease;
+}
+
+.CIEItemMore:hover img {
+	transform: translateX(5px);
+}
+
+@media (max-width: 1200px) {
+	.DepartmentsSectionContent {
+		gap: 20px;
+	}
+	
+	.CIEItem {
+		width: calc(50% - 20px);
+		max-width: 320px;
+	}
+}
+
+@media (max-width: 768px) {
+	.DepartmentsSection {
+		padding: 60px 15px;
+	}
+
+	.DepartmentsSectionHeader h2 {
+		font-size: 2rem;
+	}
+
+	.DepartmentsSectionHeader p {
+		font-size: 1rem;
+	}
+
+	.CIEItem {
+		width: 100%;
+		max-width: 320px;
+		height: 300px;
+	}
+}
+
+.Home5thSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-top: 15px;
+}
+
+.HomeContactUs {
+	background-color: var(--primary-color);
+	width: 60%;
+	padding: 20px;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.HomeContactUsHeader {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 70%;
+}
+
+.HomeContactUs h2 {
+	color: var(--white);
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+}
+
+.HomeContactUsRadios {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 35%;
+	color: var(--white);
+	gap: 20px;
+}
+
+.HomeContactUsRadios div {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.HomeContactUsRadios input[type="radio"] {
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
+}
+
+.HomeContactUsInputs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 70%;
+}
+
+.HomeContactUsInputs input,
+.HomeContactUsInputs textarea {
+	width: 100%;
+	margin: 10px 0;
+	padding: 12px 15px;
+	border: none;
+	border-radius: 8px;
+	color: var(--primary-color);
+	font-size: 16px;
+	transition: all 0.3s ease;
+}
+
+.HomeContactUsInputs input:focus,
+.HomeContactUsInputs textarea:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px var(--secondary-color);
+}
+
+.HomeContactUsInputs .email_and_phone {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	gap: 15px;
+}
+
+.HomeContactUsInputs .email_and_phone input {
+	width: 48%;
+}
+
+.HomeContactUsInputs .company_fields {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	transition: all 0.3s ease;
+}
+
+.HomeContactUsInputs .company_fields input {
+	width: 100%;
+}
+
+.HomeContactUsInputs textarea {
+	height: 120px;
+	resize: vertical;
+}
+
+.HomeContactUsSubmit {
+	display: flex;
+	justify-content: end;
+	width: 70%;
+	margin-top: 20px;
+}
+
+.HomeContactUsSubmit button {
+	all: unset;
+	background-color: var(--secondary-color);
+	padding: 12px 30px;
+	border-radius: 8px;
+	color: var(--primary-color);
+	font-size: 18px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.HomeContactUsSubmit button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+	.HomeContactUs {
+		width: 90%;
+		padding: 15px;
+	}
+
+	.HomeContactUsHeader,
+	.HomeContactUsInputs,
+	.HomeContactUsSubmit {
+		width: 90%;
+	}
+
+	.HomeContactUsInputs .email_and_phone {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.HomeContactUsInputs .email_and_phone input {
+		width: 100%;
+	}
+}
