@@ -1,4 +1,3 @@
-
 import { HeroProps } from "@layouts/LandingLayout/LandingLayout";
 import "./Hero.css";
 
@@ -20,6 +19,16 @@ function Hero({props}: { props: HeroProps }) {
 						)}
 					</div>
 				</div>
+					{props.stats && (
+						<div className="hero-stats">
+							{Object.entries(props.stats).map(([key, stat]) => (
+								<div key={key} className="stat-card">
+									<div className="stat-value">{stat.value}</div>
+									<div className="stat-label">{stat.name}</div>
+								</div>
+							))}
+						</div>
+					)}
 			</div>
 		</section>
 	);
