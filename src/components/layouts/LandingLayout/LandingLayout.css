@@ -7,21 +7,6 @@
 	background-color: var(--background-color);
 }
 
-.hero-bg{
-	height: 390px;
-	width: 100%;
-	position: absolute;
-	background: url("/bg.png") center/100% no-repeat;;
-}
-
-.hero-bg2{
-	position: absolute;
-	height: 390px;
-	width: 100%;
-	opacity: 0.5;
-	background-color: var(--primary-color);
-}
-
 .layout-container main{
 	z-index: 2;
 }
