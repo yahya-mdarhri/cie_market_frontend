@@ -1,5 +1,6 @@
 import { HeroProps } from "@layouts/LandingLayout/LandingLayout";
 import "./Hero.css";
+import Stats from "@components/ui/Landing/Stats/Stats";
 
 function Hero({props}: { props: HeroProps }) {
 	return (
@@ -20,14 +21,7 @@ function Hero({props}: { props: HeroProps }) {
 					</div>
 				</div>
 					{props.stats && (
-						<div className="hero-stats">
-							{Object.entries(props.stats).map(([key, stat]) => (
-								<div key={key} className="stat-card">
-									<div className="stat-value">{stat.value}</div>
-									<div className="stat-label">{stat.name}</div>
-								</div>
-							))}
-						</div>
+						<Stats statsData={props.stats} />
 					)}
 			</div>
 		</section>
