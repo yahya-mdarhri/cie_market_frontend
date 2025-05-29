@@ -153,7 +153,7 @@ function NavLinks({ closeMobileMenu, isMobile }: { closeMobileMenu: () => void, 
 
 function NavBar() {
 	const width = useWindowWidth();
-	const isMobile = width < MEDIA_QUERY.MOBILE;
+	const isMobile = width <= MEDIA_QUERY.TABLET; // is mobile or
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
 
@@ -180,7 +180,7 @@ function NavBar() {
 		<header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
 			<div className="logo">
 				<Link to="/" className="logo">
-					<img src="/navbar_logo.svg" alt="Logo" />
+					<img src={"/small_logo.svg"} alt="Logo" />
 				</Link>
 			</div>
 			{isMobile ? (
@@ -194,7 +194,14 @@ function NavBar() {
 			{isMobile ? (
 			<nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
 				<NavLinks closeMobileMenu={closeMobileMenu} isMobile={isMobile}/>
-				<NavActions closeMobileMenu={closeMobileMenu} />
+				{
+					isMobile ? (
+						<NavActions closeMobileMenu={closeMobileMenu} />
+					) : (
+						<>
+						</>
+					)
+				}
 			</nav>
 			) : (
 				<>
