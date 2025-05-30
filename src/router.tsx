@@ -6,7 +6,7 @@ import Incubator from '@pages/landing/incubator/Incubator';
 import TechCenter from '@pages/landing/tech_center/tech_center';
 import FAQ from '@pages/landing/faq/FAQ';
 import NotFound from '@pages/NotFound/NotFound';
-import AuditInnovationForm from '@pages/landing/AuditInnovation/AuditInnovation';
+import AuditInnovationForm from '@pages/landing/AuditInnovation/InnovationDiagnosis';
 
 const router = createBrowserRouter([
   {
