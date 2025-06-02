@@ -21,8 +21,8 @@ function NavActions({ closeMobileMenu }: { closeMobileMenu: () => void }) {
 	return (
 		<div className="nav-actions">
 		<Link 
-			to="/invention-Diagnosis" 
-			className={`nav-link action-link ${useIsActive('/invention-Diagnosis') ? 'active' : ''}`}
+			to="/audit-innovation" 
+			className={`nav-link action-link ${useIsActive('/audit-innovation') ? 'active' : ''}`}
 			onClick={closeMobileMenu}
 		>
 			Invention Diagnosis
@@ -151,7 +151,7 @@ function NavLinks({ closeMobileMenu, isMobile }: { closeMobileMenu: () => void, 
 	);
 }
 
-function NavBar() {
+function NavBar({ noHero }: { noHero: boolean }) {
 	const width = useWindowWidth();
 	const isMobile = width <= MEDIA_QUERY.TABLET; // is mobile or
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -161,7 +161,7 @@ function NavBar() {
 		const handleScroll = () => {
 			const scrollPosition = window.scrollY;
 			setIsScrolled(scrollPosition > 50);
-		};
+		};	
 
 		window.addEventListener('scroll', handleScroll);
 		handleScroll();
@@ -177,7 +177,7 @@ function NavBar() {
 	};
 
 	return (
-		<header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+		<header className={`navbar ${isScrolled || noHero ? 'scrolled' : ''}`}>
 			<div className="logo">
 				<Link to="/" className="logo">
 					<img src={"/small_logo.svg"} alt="Logo" />
