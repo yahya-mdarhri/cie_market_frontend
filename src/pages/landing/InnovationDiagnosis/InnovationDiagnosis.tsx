@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaThumbsDown, FaThumbsUp, FaRegMeh, FaThumbsUp as FaSolidThumbsUp, FaThumbsDown as FaSolidThumbsDown, FaTimes, FaRedo } from "react-icons/fa";
 import { motion } from "framer-motion";
-import "./AuditInnovation.css";
+import "./InnovationDiagnosis.css";
 
 const phases = [
   "Phase 1 - Launch",
