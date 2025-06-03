@@ -178,6 +178,58 @@ function LandingInventionCards() {
 	);
 }
 
+interface Inventor {
+	name: string;
+	image: string;
+}
+
+function InventorCard({ name, image, index }: Inventor & { index: number }) {
+	return (
+		<div className="inventorCard" style={{ '--index': index } as React.CSSProperties}>
+			<div className="inventorContent">
+				<div className="inventorImageWrapper">
+					<img src={image} alt={name} />
+				</div>
+				<div className="inventorNameBox">
+					<h3>{name}</h3>
+				</div>
+			</div>
+		</div>
+	);
+}
+
+const inventorData: Inventor[] = [
+	{
+		name: "John Doe",
+		image: "https://i.pravatar.cc/300",
+	},
+	{
+		name: "Jane Doe",
+		image: "https://i.pravatar.cc/300",
+	},
+	{
+		name: "John Doe",
+		image: "https://i.pravatar.cc/300",
+	},
+];
+
+function HighlightedInventors() {
+	return (
+		<section className="highlightedInventors">
+			<div className="inventorsHeader">
+				<h2>Our Distinguished Inventors</h2>
+				<p>Meet the brilliant minds behind our innovative breakthroughs</p>
+			</div>
+			<div className="inventorsGrid">
+				{inventorData.map((inventor, index) => (
+					<InventorCard key={index} {...inventor} index={index} />
+				))}
+			</div>
+		</section>
+	);
+}
+
+
 function TTO() {
 	useDocumentTitle('Technology Transfer Office | Centre for Innovation and Entrepreneurship');
 	return (
@@ -193,6 +245,7 @@ function TTO() {
 				/>
 				<Services services={servicesData} />
 				<LandingInventionCards />
+				<HighlightedInventors />
 				{/* <Partners partners={[p1, p2, p3, p4, p5]} /> */}
 		</LandingLayout>
 	);
