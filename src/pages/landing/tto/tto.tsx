@@ -183,9 +183,9 @@ interface Inventor {
 	image: string;
 }
 
-function InventorCard({ name, image, index }: Inventor & { index: number }) {
+function InventorCard({ name, image }: Inventor) {
 	return (
-		<div className="inventorCard" style={{ '--index': index } as React.CSSProperties}>
+		<div className="inventorCard">
 			<div className="inventorContent">
 				<div className="inventorImageWrapper">
 					<img src={image} alt={name} />
@@ -222,7 +222,7 @@ function HighlightedInventors() {
 			</div>
 			<div className="inventorsGrid">
 				{inventorData.map((inventor, index) => (
-					<InventorCard key={index} {...inventor} index={index} />
+					<InventorCard key={index} {...inventor} />
 				))}
 			</div>
 		</section>
