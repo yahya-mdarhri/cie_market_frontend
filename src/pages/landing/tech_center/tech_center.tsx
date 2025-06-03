@@ -18,9 +18,10 @@ import Partners from "@ui/Landing/Partners/Partners";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
 
 const statsData:StatsItemsType = {
-	a: { name: "Innovation & Patents", value: 644 },
-	b: { name: "International Patents", value: 117 },
-	c: { name: "Gold Medals", value: 2 },
+	a: { name: "Tech Centers", value: 11 },
+	b: { name: "Labeled Laboratories", value: 66 },
+	c: { name: "Research Centers", value: 55 },
+	d: { name: "Industrial R&D Projects", value: 40 },
 };
 
 const heroProps: HeroProps = {
