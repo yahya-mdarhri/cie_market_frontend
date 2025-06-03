@@ -75,10 +75,26 @@ interface QuizResult {
   description: string;
 }
 
+interface UserInfo {
+  name: string;
+  email: string;
+  organisation: string;
+  position: string;
+  phone: string;
+}
+
 function InnovationDiagnosis() {
   const [responses, setResponses] = useState<Responses>({});
   const [step, setStep] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
+  const [userInfo, setUserInfo] = useState<UserInfo>({
+    name: '',
+    email: '',
+    organisation: '',
+    position: '',
+    phone: ''
+  });
+  const [hasStarted, setHasStarted] = useState(false);
 
   const handleExit = () => {
     window.history.back();
@@ -88,6 +104,7 @@ function InnovationDiagnosis() {
     setResponses({});
     setStep(0);
     setIsComplete(false);
+    setHasStarted(false);
   };
 
   const handleChange = (index: number, field: keyof Response, value: string | number) => {
@@ -97,6 +114,19 @@ function InnovationDiagnosis() {
         ...prev[index],
         [field]: value
       }
+    }));
+  };
+
+  const handleUserInfoSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setHasStarted(true);
+  };
+
+  const handleUserInfoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setUserInfo(prev => ({
+      ...prev,
+      [name]: value
     }));
   };
 
@@ -148,6 +178,93 @@ function InnovationDiagnosis() {
 
   const { total, type, description } = calculateScore();
 
+  if (!hasStarted) {
+    return (
+      <div className="audit-container">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="audit-content"
+        >
+          <h1 className="audit-title">Innovation Diagnosis</h1>
+          <form onSubmit={handleUserInfoSubmit} className="user-info-form">
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="name">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={userInfo.name}
+                  onChange={handleUserInfoChange}
+                  required
+                  placeholder="Enter your full name"
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="phone">Phone Number *</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={userInfo.phone}
+                  onChange={handleUserInfoChange}
+                  required
+                  placeholder="Enter your phone number"
+                />
+              </div>
+            </div>
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="organisation">Organization *</label>
+                <input
+                  type="text"
+                  id="organisation"
+                  name="organisation"
+                  value={userInfo.organisation}
+                  onChange={handleUserInfoChange}
+                  required
+                  placeholder="Enter your organization name"
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="position">Position *</label>
+                <input
+                  type="text"
+                  id="position"
+                  name="position"
+                  value={userInfo.position}
+                  onChange={handleUserInfoChange}
+                  required
+                  placeholder="Enter your position"
+                />
+              </div>
+            </div>
+            <div className="form-row">
+              <div className="form-group full-width">
+                <label htmlFor="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={userInfo.email}
+                  onChange={handleUserInfoChange}
+                  placeholder="Enter your email address"
+                />
+              </div>
+            </div>
+            <div className="form-submit">
+              <button type="submit" className="audit-nav-button next">
+                Start Assessment
+              </button>
+            </div>
+          </form>
+        </motion.div>
+      </div>
+    );
+  }
+
   if (isComplete) {
     return (
       <div className="audit-container">
@@ -164,10 +281,6 @@ function InnovationDiagnosis() {
           className="results-container"
         >
           <h2 className="results-title">Your Innovation Assessment</h2>
-          <div className="results-score">
-            <span className="score-number">{total}</span>
-            <span className="score-max">/ {totalQuestions * 4}</span>
-          </div>
           <div className="results-type">
             <h3 className="type-label">Innovation Assessment</h3>
             <div className="type-value">{type}</div>
