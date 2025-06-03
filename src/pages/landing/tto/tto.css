@@ -206,12 +206,11 @@
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
     position: relative;
-    padding: 1rem;
+    padding: 0.5rem;
 	background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
 	border-radius: 20px;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     animation: cardAppear 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    animation-delay: calc(var(--index) * 0.1s);
     transform-origin: center;
 }
 
@@ -227,19 +226,13 @@
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    /* background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); */
 }
 
 .inventorCard:hover {
-	border: 1px solid var(--primary-color);
+	border: 1px solid var(--primary-color); 
 	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(-10px) scale(1.05);
 }
-
-/* .inventorCard:hover .inventorContent {
-    transform: translateY(-8px);
-} */
 
 .inventorImageWrapper {
     position: absolute;
@@ -268,7 +261,7 @@
     position: absolute;
     bottom: 20px;
     background: rgba(255, 255, 255, 0.95);
-    padding: 1rem 1.5rem;
+    padding: 1rem 0.7rem;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     border-left: 5px solid var(--primary-color);
@@ -294,7 +287,6 @@
     font-weight: 600;
     white-space: nowrap;
     position: relative;
-    padding-left: 0.5rem;
     transition: all 0.3s ease;
 }
 
