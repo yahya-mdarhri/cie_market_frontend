@@ -71,7 +71,17 @@
 	opacity: 0;
 	transform: translateY(20px);
 	animation: fadeInUp 0.5s forwards;
-	transition: transform 0.5s ease-in-out;
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	position: relative;
+}
+
+.inventionCardWrapper:hover {
+	transform: translateY(-8px);
+	z-index: 2;
+}
+
+.inventionCardWrapper:hover .inventionCard {
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 @keyframes fadeInUp {
@@ -172,17 +182,6 @@
     display: inline-block;
 }
 
-.inventorsHeader h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: var(--primary-color);
-    border-radius: 2px;
-}
 
 .inventorsHeader p {
     font-size: 1.1rem;
@@ -207,11 +206,17 @@
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
     position: relative;
-    padding: 1rem;
+    padding: 0.5rem;
 	background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
 	border-radius: 20px;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: cardAppear 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    transform-origin: center;
 }
+
+/* .inventorCard:hover {
+    transform: translateY(-10px) scale(1.02);
+} */
 
 .inventorContent {
     position: relative;
@@ -221,11 +226,12 @@
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); */
 }
 
-.inventorCard:hover .inventorContent {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+.inventorCard:hover {
+	border: 1px solid var(--primary-color); 
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
 .inventorImageWrapper {
@@ -242,10 +248,12 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(0.95);
 }
 
 .inventorCard:hover .inventorImageWrapper img {
     transform: scale(1.1);
+    filter: brightness(1.05);
 }
 
 .inventorNameBox {
@@ -253,7 +261,7 @@
     position: absolute;
     bottom: 20px;
     background: rgba(255, 255, 255, 0.95);
-    padding: 1rem 1.5rem;
+    padding: 1rem 0.7rem;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     border-left: 5px solid var(--primary-color);
@@ -269,6 +277,7 @@
     background: rgba(255, 255, 255, 1);
     transform: translateX(0);
     opacity: 1;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .inventorNameBox h3 {
@@ -278,24 +287,23 @@
     font-weight: 600;
     white-space: nowrap;
     position: relative;
-    padding-left: 0.5rem;
+    transition: all 0.3s ease;
 }
 
-/* Add animation for card appearance */
+.inventorCard:hover .inventorNameBox h3 {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
 @keyframes cardAppear {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px) scale(0.95);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
-}
-
-.inventorCard {
-    animation: cardAppear 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    animation-delay: calc(var(--index) * 0.1s);
 }
 
 /* Responsive adjustments */
