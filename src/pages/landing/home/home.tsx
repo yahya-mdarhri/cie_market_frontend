@@ -147,7 +147,7 @@ function Home() {
 					</div>
 				</div>
 				<Partners partners={partners} />
-				<div className="Home5thSection">
+				<div className="Home5thSection" id="contact">
 					<form className="HomeContactUs">
 						<div className="HomeContactUsHeader">
 							<h2>Let's Get In Touch</h2>

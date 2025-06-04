@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { FaThumbsDown, FaThumbsUp, FaRegMeh, FaThumbsUp as FaSolidThumbsUp, FaThumbsDown as FaSolidThumbsDown, FaTimes, FaRedo } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 import "./InnovationDiagnosis.css";
+import { Link } from "react-router-dom";
 
 const phases = [
   "Phase 1 - Launch",
@@ -83,11 +87,31 @@ interface UserInfo {
   phone: string;
 }
 
+const userInfoSchema = yup.object().shape({
+  name: yup.string()
+    .min(3, "Name must be at least 3 characters")
+    .max(50, "Name must be at most 50 characters")
+    .required("Name is required"),
+  email: yup.string()
+    .email("Invalid email format")
+    .required("Email is required"),
+  organisation: yup.string()
+    .min(3, "Organization must be at least 3 characters")
+    .required("Organization is required"),
+  position: yup.string()
+    .min(3, "Position must be at least 3 characters")
+    .required("Position is required"),
+  phone: yup.string()
+    .min(10, "Phone number must be at least 10 characters")
+    .max(15, "Phone number must be at most 15 characters")
+    .required("Phone number is required")
+});
+
 function InnovationDiagnosis() {
   const [responses, setResponses] = useState<Responses>({});
   const [step, setStep] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
-  const [userInfo, setUserInfo] = useState<UserInfo>({
+  const [_userInfo, setUserInfo] = useState<UserInfo>({
     name: '',
     email: '',
     organisation: '',
@@ -95,6 +119,10 @@ function InnovationDiagnosis() {
     phone: ''
   });
   const [hasStarted, setHasStarted] = useState(false);
+
+  const { register, handleSubmit, formState: { errors } } = useForm<UserInfo>({
+    resolver: yupResolver(userInfoSchema)
+  });
 
   const handleExit = () => {
     window.history.back();
@@ -117,17 +145,9 @@ function InnovationDiagnosis() {
     }));
   };
 
-  const handleUserInfoSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleUserInfoSubmit = (data: UserInfo) => {
+    setUserInfo(data);
     setHasStarted(true);
-  };
-
-  const handleUserInfoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setUserInfo(prev => ({
-      ...prev,
-      [name]: value
-    }));
   };
 
   const totalQuestions = questions.length;
@@ -181,9 +201,9 @@ function InnovationDiagnosis() {
   if (!hasStarted) {
     return (
       <div className="audit-container">
-      <button className="exit-button" onClick={handleExit}>
-        <FaTimes />
-      </button>
+        <button className="exit-button" onClick={handleExit}>
+          <FaTimes />
+        </button>
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -191,31 +211,27 @@ function InnovationDiagnosis() {
           className="audit-content"
         >
           <h1 className="audit-title">Innovation Diagnosis</h1>
-          <form onSubmit={handleUserInfoSubmit} className="user-info-form">
+          <form onSubmit={handleSubmit(handleUserInfoSubmit)} className="user-info-form">
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="name">Full Name *</label>
                 <input
                   type="text"
                   id="name"
-                  name="name"
-                  value={userInfo.name}
-                  onChange={handleUserInfoChange}
-                  required
+                  {...register("name")}
                   placeholder="Enter your full name"
                 />
+                {errors.name && <span className="error-message">{errors.name.message}</span>}
               </div>
               <div className="form-group">
                 <label htmlFor="phone">Phone Number *</label>
                 <input
                   type="tel"
                   id="phone"
-                  name="phone"
-                  value={userInfo.phone}
-                  onChange={handleUserInfoChange}
-                  required
+                  {...register("phone")}
                   placeholder="Enter your phone number"
                 />
+                {errors.phone && <span className="error-message">{errors.phone.message}</span>}
               </div>
             </div>
             <div className="form-row">
@@ -224,24 +240,20 @@ function InnovationDiagnosis() {
                 <input
                   type="text"
                   id="organisation"
-                  name="organisation"
-                  value={userInfo.organisation}
-                  onChange={handleUserInfoChange}
-                  required
+                  {...register("organisation")}
                   placeholder="Enter your organization name"
                 />
+                {errors.organisation && <span className="error-message">{errors.organisation.message}</span>}
               </div>
               <div className="form-group">
                 <label htmlFor="position">Position *</label>
                 <input
                   type="text"
                   id="position"
-                  name="position"
-                  value={userInfo.position}
-                  onChange={handleUserInfoChange}
-                  required
+                  {...register("position")}
                   placeholder="Enter your position"
                 />
+                {errors.position && <span className="error-message">{errors.position.message}</span>}
               </div>
             </div>
             <div className="form-row">
@@ -250,12 +262,10 @@ function InnovationDiagnosis() {
                 <input
                   type="email"
                   id="email"
-                  name="email"
-                  required
-                  value={userInfo.email}
-                  onChange={handleUserInfoChange}
+                  {...register("email")}
                   placeholder="Enter your email address"
                 />
+                {errors.email && <span className="error-message">{errors.email.message}</span>}
               </div>
             </div>
             <div className="form-submit">
@@ -289,6 +299,15 @@ function InnovationDiagnosis() {
             <h3 className="type-label">Innovation Assessment</h3>
             <div className="type-value">{type}</div>
             <p className="type-description">{description}</p>
+          </div>
+          
+          <div className="results-actions">
+            <Link 
+                to="/#contact"
+                className="action-button contact"
+            >
+              Contact Our Experts
+            </Link>
           </div>
         </motion.div>
       </div>
