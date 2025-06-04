@@ -54,9 +54,10 @@ import Services from "@ui/Landing/Services/Services";
   
 
 const statsData:StatsItemsType = {
-	a: { name: "Innovation & Patents", value: 644 },
-	b: { name: "International Patents", value: 117 },
-	c: { name: "Gold Medals", value: 2 },
+	a: { name: "Incubated Startups", value: 50 },
+	b: { name: "Success Rate", value: 85 },
+	c: { name: "Investment Attracted (M DHS)", value: 25 },
+	d: { name: "Strategic Partners", value: 15 },
 };
 
 const partners = [

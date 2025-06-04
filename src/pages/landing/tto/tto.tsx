@@ -21,9 +21,10 @@ import Services from "@ui/Landing/Services/Services";
 import { FaHandshake, FaFileSignature, FaBullhorn } from "react-icons/fa";
 
 const statsData:StatsItemsType = {
-	a: { name: "Innovation & Patents", value: 644 },
-	b: { name: "International Patents", value: 117 },
-	c: { name: "Gold Medals", value: 2 },
+	a: { name: "Total Patents Filed", value: 650 },
+	b: { name: "International Patents", value: 108 },
+	c: { name: "Research Contracts (M DHS)", value: 66 },
+	d: { name: "Gold Medals", value: 2 },
 };
 
 const heroProps: HeroProps = {
@@ -178,6 +179,58 @@ function LandingInventionCards() {
 	);
 }
 
+interface Inventor {
+	name: string;
+	image: string;
+}
+
+function InventorCard({ name, image }: Inventor) {
+	return (
+		<div className="inventorCard">
+			<div className="inventorContent">
+				<div className="inventorImageWrapper">
+					<img src={image} alt={name} />
+				</div>
+				<div className="inventorNameBox">
+					<h3>{name}</h3>
+				</div>
+			</div>
+		</div>
+	);
+}
+
+const inventorData: Inventor[] = [
+	{
+		name: "John Doe",
+		image: "https://i.pravatar.cc/300",
+	},
+	{
+		name: "Jane Doe",
+		image: "https://i.pravatar.cc/300",
+	},
+	{
+		name: "John Doe",
+		image: "https://i.pravatar.cc/300",
+	},
+];
+
+function HighlightedInventors() {
+	return (
+		<section className="highlightedInventors">
+			<div className="inventorsHeader">
+				<h2>Our Distinguished Inventors</h2>
+				<p>Meet the brilliant minds behind our innovative breakthroughs</p>
+			</div>
+			<div className="inventorsGrid">
+				{inventorData.map((inventor, index) => (
+					<InventorCard key={index} {...inventor} />
+				))}
+			</div>
+		</section>
+	);
+}
+
+
 function TTO() {
 	useDocumentTitle('Technology Transfer Office | Centre for Innovation and Entrepreneurship');
 	return (
@@ -193,6 +246,7 @@ function TTO() {
 				/>
 				<Services services={servicesData} />
 				<LandingInventionCards />
+				<HighlightedInventors />
 				{/* <Partners partners={[p1, p2, p3, p4, p5]} /> */}
 		</LandingLayout>
 	);

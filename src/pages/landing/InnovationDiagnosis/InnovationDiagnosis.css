@@ -432,6 +432,69 @@
     opacity: 0.9;
 }
 
+.user-info-form {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--white);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-submit {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.form-submit button {
+    min-width: 200px;
+}
+
 @media (max-width: 640px) {
     .audit-container {
         padding: 1rem;
@@ -539,5 +602,22 @@
     .results-type {
         padding: 1.5rem;
         margin: 1.5rem 0;
+    }
+
+    .user-info-form {
+        padding: 0 1rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-group input {
+        padding: 0.6rem;
     }
 }
