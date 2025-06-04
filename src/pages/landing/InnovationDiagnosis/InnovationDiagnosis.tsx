@@ -181,6 +181,9 @@ function InnovationDiagnosis() {
   if (!hasStarted) {
     return (
       <div className="audit-container">
+      <button className="exit-button" onClick={handleExit}>
+        <FaTimes />
+      </button>
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
