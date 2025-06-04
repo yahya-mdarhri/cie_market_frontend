@@ -164,155 +164,205 @@
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	margin-top: 15px;
+	padding: clamp(40px, 5vw, 60px) clamp(16px, 3vw, 20px);
 }
 
 .HomeContactUs {
 	background-color: var(--primary-color);
-	width: 60%;
-	padding: 20px;
-	border-radius: 15px;
+	width: 100%;
+	max-width: 700px;
+	padding: clamp(24px, 4vw, 40px);
+	border-radius: 16px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .HomeContactUsHeader {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
-	width: 70%;
+	width: 100%;
+	margin-bottom: clamp(24px, 3vw, 32px);
+	text-align: center;
 }
 
 .HomeContactUs h2 {
 	color: var(--white);
-	font-size: 30px;
-	font-style: normal;
-	font-weight: 900;
-	line-height: normal;
+	font-size: clamp(1.75rem, 4vw, 2.25rem);
+	font-weight: 800;
+	margin-bottom: 16px;
+	line-height: 1.2;
 }
 
 .HomeContactUsRadios {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-between;
-	width: 35%;
+	justify-content: center;
+	gap: clamp(16px, 3vw, 32px);
 	color: var(--white);
-	gap: 20px;
+	margin-top: 16px;
+	flex-wrap: wrap;
 }
 
 .HomeContactUsRadios div {
 	display: flex;
 	align-items: center;
 	gap: 8px;
+	cursor: pointer;
+	padding: clamp(6px, 1.5vw, 8px) clamp(12px, 2vw, 16px);
+	border-radius: 8px;
+	transition: background-color 0.2s ease;
+	white-space: nowrap;
+}
+
+.HomeContactUsRadios div:hover {
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 .HomeContactUsRadios input[type="radio"] {
-	width: 18px;
-	height: 18px;
+	width: 20px;
+	height: 20px;
 	cursor: pointer;
+	accent-color: var(--secondary-color);
 }
 
 .HomeContactUsInputs {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 70%;
+	width: 100%;
+	gap: clamp(12px, 2vw, 16px);
 }
 
 .HomeContactUsInputs input,
 .HomeContactUsInputs textarea {
 	width: 100%;
-	margin: 10px 0;
-	padding: 12px 15px;
-	border: none;
+	padding: clamp(12px, 2vw, 16px);
+	border: 2px solid transparent;
 	border-radius: 8px;
 	color: var(--primary-color);
-	font-size: 16px;
-	transition: all 0.3s ease;
+	background-color: var(--white);
+	font-size: clamp(14px, 1.5vw, 16px);
+	transition: all 0.2s ease;
+}
+
+.HomeContactUsInputs input:hover,
+.HomeContactUsInputs textarea:hover {
+	border-color: rgba(255, 255, 255, 0.2);
 }
 
 .HomeContactUsInputs input:focus,
 .HomeContactUsInputs textarea:focus {
 	outline: none;
-	box-shadow: 0 0 0 2px var(--secondary-color);
+	border-color: var(--secondary-color);
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
 }
 
 .HomeContactUsInputs .email_and_phone {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: clamp(12px, 2vw, 16px);
 	width: 100%;
-	gap: 15px;
-}
-
-.HomeContactUsInputs .email_and_phone input {
-	width: 48%;
 }
 
 .HomeContactUsInputs .company_fields {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: clamp(12px, 2vw, 16px);
 	width: 100%;
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
 	transition: all 0.3s ease;
-}
-
-.HomeContactUsInputs .company_fields input {
-	width: 100%;
 }
 
 .HomeContactUsInputs textarea {
-	height: 120px;
+	min-height: clamp(120px, 15vw, 140px);
 	resize: vertical;
+	line-height: 1.5;
 }
 
 .HomeContactUsSubmit {
-	display: flex;
-	justify-content: end;
-	width: 70%;
-	margin-top: 20px;
+	width: 100%;
+	margin-top: clamp(20px, 3vw, 24px);
 }
 
 .HomeContactUsSubmit button {
-	all: unset;
-	background-color: var(--secondary-color);
-	padding: 12px 30px;
+	width: 100%;
+	padding: clamp(14px, 2vw, 16px);
+	border: none;
 	border-radius: 8px;
-	color: var(--primary-color);
-	font-size: 18px;
+	background-color: var(--secondary-color);
+	color: var(--white);
+	font-size: clamp(15px, 1.5vw, 16px);
 	font-weight: 600;
 	cursor: pointer;
-	transition: all 0.3s ease;
+	transition: all 0.2s ease;
 }
 
 .HomeContactUsSubmit button:hover {
-	transform: translateY(-2px);
+	transform: translateY(-1px);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.HomeContactUsSubmit button:active {
+	transform: translateY(0);
 }
 
 @media (max-width: 768px) {
 	.HomeContactUs {
-		width: 90%;
-		padding: 15px;
+		width: 95%;
 	}
 
-	.HomeContactUsHeader,
-	.HomeContactUsInputs,
-	.HomeContactUsSubmit {
-		width: 90%;
-	}
-
-	.HomeContactUsInputs .email_and_phone {
+	.HomeContactUsRadios {
 		flex-direction: column;
-		gap: 10px;
+		align-items: stretch;
+		padding: 0 20px;
 	}
 
-	.HomeContactUsInputs .email_and_phone input {
-		width: 100%;
+	.HomeContactUsRadios div {
+		justify-content: center;
 	}
 }
+
+@media (max-width: 480px) {
+	.HomeContactUs {
+		width: 100%;
+		border-radius: 12px;
+	}
+
+	.HomeContactUsInputs input,
+	.HomeContactUsInputs textarea {
+		font-size: 16px; /* Prevent zoom on iOS */
+	}
+
+	.HomeContactUsSubmit button {
+		font-size: 16px; /* Prevent zoom on iOS */
+	}
+}
+
+/* For very small devices */
+@media (max-width: 360px) {
+	.HomeContactUs {
+		padding: 20px 16px;
+	}
+
+	.HomeContactUsRadios div {
+		padding: 8px 12px;
+	}
+}
+
+/* For landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+	.Home5thSection {
+		padding: 30px 20px;
+	}
+
+	.HomeContactUs {
+		padding: 24px;
+	}
+
+	.HomeContactUsInputs textarea {
+		min-height: 100px;
+	}
+}
+
