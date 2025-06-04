@@ -246,11 +246,12 @@ function InnovationDiagnosis() {
             </div>
             <div className="form-row">
               <div className="form-group full-width">
-                <label htmlFor="email">Email Address</label>
+                <label htmlFor="email">Email Address *</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
+                  required
                   value={userInfo.email}
                   onChange={handleUserInfoChange}
                   placeholder="Enter your email address"
