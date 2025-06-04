@@ -1,4 +1,3 @@
-
 .inventorCard {
     flex: 0 1 300px;
     background-color: var(--white);
@@ -86,8 +85,23 @@
     transition: all 0.3s ease;
 }
 
+.inventorRole {
+    margin: 0.3rem 0 0 0;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 400;
+    white-space: nowrap;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
 .inventorCard:hover .inventorNameBox h3 {
     color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.inventorCard:hover .inventorRole {
+    color: #444;
     transform: translateX(5px);
 }
 
