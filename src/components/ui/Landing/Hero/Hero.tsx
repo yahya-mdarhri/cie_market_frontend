@@ -14,7 +14,9 @@ function Hero({props}: { props: HeroProps }) {
 						{props.heroDescription}
 					</p>
 					<div className="hero-buttons">
-						<button className="hero-btn primary">{props.firstAction}</button>
+						{props.firstAction && (
+							<button className="hero-btn primary">{props.firstAction}</button>
+						)}
 						{props.secondAction && (
 							<button className="hero-btn secondary">{props.secondAction}</button>
 						)}
