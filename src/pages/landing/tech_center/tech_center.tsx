@@ -35,15 +35,16 @@ const heroProps: HeroProps = {
 
 function TechCenterServiceCard({title, description, image}:{title:string, description:string, image:string}){
 	return (
-		<div className="techCenterServiceCard flex flex-row items-center justify-center h-[200px] w-[40%] bg-[var(--background-color)] mb-[4rem] rounded-[1rem] gap-[1rem]">
-			<img src={image} alt={title} className="w-[50%] h-full rounded-l-[1rem]"/>
-			<div className="techCenterServiceCardContent flex flex-col gap-[1rem]">
-				<h3 className="text-2xl font-bold">{title}</h3>
+		<div className="techCenterServiceCard">
+			<img src={image} alt={title} />
+			<div className="techCenterServiceCardContent">
+				<h3>{title}</h3>
 				<p>{description}</p>
 			</div>
 		</div>
 	);
 }
+
 function TechCenter() {
 	useDocumentTitle('Tech Center | Centre for Innovation and Entrepreneurship');
 	return (
@@ -58,13 +59,13 @@ function TechCenter() {
 					vision="Transform the CIE into an effective Business Unit serving industry and the territories"
 				/>
 				<div className="techCenterServices">
-					<div className="techCenterServicesLeft text-center">
+					<div className="techCenterServicesLeft">
 						<h2>Our Services</h2>
 						<p>
-						We connect industry with academic expertise to solve technical challenges through tailored research and innovation support
+							We connect industry with academic expertise to solve technical challenges through tailored research and innovation support
 						</p>
 					</div>
-					<div className=" w-full flex flex-row items-center justify-around flex-wrap">
+					<div className="techCenterServicesGrid">
 					<TechCenterServiceCard
 							image={service1}
 							title="Mentoring of project leaders and preincubation services"
