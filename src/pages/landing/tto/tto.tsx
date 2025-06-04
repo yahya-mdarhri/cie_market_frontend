@@ -21,9 +21,10 @@ import Services from "@ui/Landing/Services/Services";
 import { FaHandshake, FaFileSignature, FaBullhorn } from "react-icons/fa";
 
 const statsData:StatsItemsType = {
-	a: { name: "Innovation & Patents", value: 644 },
-	b: { name: "International Patents", value: 117 },
-	c: { name: "Gold Medals", value: 2 },
+	a: { name: "Total Patents Filed", value: 650 },
+	b: { name: "International Patents", value: 108 },
+	c: { name: "Research Contracts (M DHS)", value: 66 },
+	d: { name: "Gold Medals", value: 2 },
 };
 
 const heroProps: HeroProps = {

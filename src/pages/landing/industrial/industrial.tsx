@@ -42,9 +42,10 @@ import {
   
 
 const statsData:StatsItemsType = {
-	a: { name: "Innovation & Patents", value: 644 },
-	b: { name: "International Patents", value: 117 },
-	c: { name: "Gold Medals", value: 2 },
+	a: { name: "Scientific Publications", value: 1800 },
+	b: { name: "National & International Awards", value: 10 },
+	c: { name: "Co-development Projects", value: 40 },
+	d: { name: "Industry Partnerships", value: 25 },
 };
 
 const heroProps: HeroProps = {
