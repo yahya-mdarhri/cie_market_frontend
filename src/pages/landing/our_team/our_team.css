@@ -27,7 +27,7 @@
     display: inline-block;
 }
 
-.team-intro h2::after {
+/* .team-intro h2::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -37,7 +37,7 @@
     height: 4px;
     background: var(--primary-color, #2c3e50);
     border-radius: 2px;
-}
+} */
 
 .team-intro p {
     font-size: 1.2rem;
