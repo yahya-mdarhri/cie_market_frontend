@@ -14,9 +14,9 @@ interface StatsItemsType {
 interface HeroProps {
 	heroTitle: React.ReactNode; // The title of the hero section
 	heroDescription: string; // The description of the hero section
-	firstAction: string; // The first action button text
+	firstAction?: string; // The first action button text
 	secondAction?: string; // The second action button text (optional)
-	stats: StatsItemsType; // The stats to be displayed in the hero section
+	stats?: StatsItemsType; // The stats to be displayed in the hero section
 }
 
 interface LandingLayoutProps {

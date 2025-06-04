@@ -200,112 +200,6 @@
     padding: 1rem;
 }
 
-.inventorCard {
-    flex: 0 1 300px;
-    background-color: var(--white);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
-    position: relative;
-    padding: 0.5rem;
-	background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-	border-radius: 20px;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    animation: cardAppear 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    transform-origin: center;
-}
-
-/* .inventorCard:hover {
-    transform: translateY(-10px) scale(1.02);
-} */
-
-.inventorContent {
-    position: relative;
-    width: 100%;
-    padding-top: 100%;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    /* background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); */
-}
-
-.inventorCard:hover {
-	border: 1px solid var(--primary-color); 
-	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-.inventorImageWrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.inventorImageWrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    filter: brightness(0.95);
-}
-
-.inventorCard:hover .inventorImageWrapper img {
-    transform: scale(1.1);
-    filter: brightness(1.05);
-}
-
-.inventorNameBox {
-    width: 90%;
-    position: absolute;
-    bottom: 20px;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 1rem 0.7rem;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    border-left: 5px solid var(--primary-color);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    z-index: 2;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateX(-10px);
-    opacity: 0.9;
-}
-
-.inventorCard:hover .inventorNameBox {
-    background: rgba(255, 255, 255, 1);
-    transform: translateX(0);
-    opacity: 1;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.inventorNameBox h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    color: #333;
-    font-weight: 600;
-    white-space: nowrap;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.inventorCard:hover .inventorNameBox h3 {
-    color: var(--primary-color);
-    transform: translateX(5px);
-}
-
-@keyframes cardAppear {
-    from {
-        opacity: 0;
-        transform: translateY(30px) scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .highlightedInventors {
@@ -314,11 +208,6 @@
 
     .inventorsHeader h2 {
         font-size: 2rem;
-    }
-
-    .inventorCard {
-        flex: 0 1 250px;
-        padding: 0.75rem;
     }
 }
 
@@ -329,18 +218,5 @@
 
     .inventorsHeader h2 {
         font-size: 1.75rem;
-    }
-
-    .inventorCard {
-        flex: 0 1 200px;
-        padding: 0.5rem;
-    }
-    
-    .inventorNameBox {
-        padding: 0.75rem 1rem;
-    }
-    
-    .inventorNameBox h3 {
-        font-size: 1rem;
     }
 }

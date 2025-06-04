@@ -19,6 +19,7 @@ import { useDocumentTitle } from "@hooks/useDocumentTitle";
 import Services from "@ui/Landing/Services/Services";
 
 import { FaHandshake, FaFileSignature, FaBullhorn } from "react-icons/fa";
+import InventorCard from "@ui/Landing/InventorCard/InventorCard";
 
 const statsData:StatsItemsType = {
 	a: { name: "Total Patents Filed", value: 650 },
@@ -184,20 +185,6 @@ interface Inventor {
 	image: string;
 }
 
-function InventorCard({ name, image }: Inventor) {
-	return (
-		<div className="inventorCard">
-			<div className="inventorContent">
-				<div className="inventorImageWrapper">
-					<img src={image} alt={name} />
-				</div>
-				<div className="inventorNameBox">
-					<h3>{name}</h3>
-				</div>
-			</div>
-		</div>
-	);
-}
 
 const inventorData: Inventor[] = [
 	{
