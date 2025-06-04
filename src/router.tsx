@@ -7,6 +7,7 @@ import TechCenter from '@pages/landing/tech_center/tech_center';
 import FAQ from '@pages/landing/faq/FAQ';
 import NotFound from '@pages/NotFound/NotFound';
 import AuditInnovationForm from '@pages/landing/InnovationDiagnosis/InnovationDiagnosis';
+import OurTeam from '@pages/landing/our_team/our_team';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: '/audit-innovation',
         element: <AuditInnovationForm />,
+      },
+      {
+        path: '/our-team',
+        element: <OurTeam />,
       },
     ]
   },
