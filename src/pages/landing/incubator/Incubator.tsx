@@ -3,7 +3,6 @@ import LandingLayout, { HeroProps, StatsItemsType } from "@layouts/LandingLayout
 import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 
-import image from "./images/incubator.png";
 import image2 from "./images/incubator2.png";
 import startup1 from "./images/startup1.png";
 
@@ -82,7 +81,6 @@ const heroProps: HeroProps = {
 	heroTitle: <>Incubator 360º</>,
 	heroDescription: "We provide the tools, mentorship, and environment to turn ideas into saleable ventures",
 	firstAction: "Submit A Patent",
-	// secondAction: "Submit A Patent",
 	stats: statsData,
 };
 

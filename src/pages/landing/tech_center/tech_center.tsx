@@ -4,17 +4,8 @@ import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 
 import service1 from "./images/service1.jpg";
-import image from "./images/industrial.png";
 import image2 from "./images/industrial2.png";
 
-import p1 from "../../../assets/partners/1.png";
-import p2 from "../../../assets/partners/2.png";
-import p3 from "../../../assets/partners/3.png";
-import p4 from "../../../assets/partners/4.png";
-import p5 from "../../../assets/partners/5.png";
-
-import { useState, useEffect } from "react";
-import Partners from "@ui/Landing/Partners/Partners";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
 
 const statsData:StatsItemsType = {
@@ -27,9 +18,7 @@ const statsData:StatsItemsType = {
 const heroProps: HeroProps = {
 	heroTitle: <>Tech Center</>,
 	heroDescription: "We provide the tools, mentorship, and environment to turn ideas into saleable ventures",
-	heroImage: image,
 	firstAction: "Submit A Patent",
-	// secondAction: "Submit A Patent",
 	stats: statsData,
 };
 
@@ -119,8 +108,6 @@ function TechCenter() {
 
 					</div>
 				</div>
-
-				<Partners partners={[p1, p2, p3, p4, p5]} />
 		</LandingLayout>
 	);
 }

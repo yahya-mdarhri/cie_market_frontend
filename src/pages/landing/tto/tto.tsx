@@ -7,14 +7,7 @@ import inv_img1 from "./images/inv1.jpg";
 import image from "./images/tto.png";
 import InventionCard from "@ui/Landing/InventionCard/InventionCard";
 
-import p1 from "../../../assets/partners/1.png";
-import p2 from "../../../assets/partners/2.png";
-import p3 from "../../../assets/partners/3.png";
-import p4 from "../../../assets/partners/4.png";
-import p5 from "../../../assets/partners/5.png";
-
-import { useState, useEffect } from "react";
-import Partners from "@ui/Landing/Partners/Partners";
+import { useState } from "react";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
 import Services from "@ui/Landing/Services/Services";
 
@@ -32,7 +25,6 @@ const heroProps: HeroProps = {
 	heroTitle: <>Technology Transfer Office</>,
 	heroDescription: "Protecting ideas, fostering collaborations, and bringing research to market.",
 	firstAction: "Submit A Patent",
-	// secondAction: "Submit A Patent",
 	stats: statsData,
 };
 
