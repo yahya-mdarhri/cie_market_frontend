@@ -1,5 +1,5 @@
 import LandingLayout from "@components/layouts/LandingLayout/LandingLayout";
-import InventorCard from "../InventorCard/InventorCard";
+import InventorCard from "@ui/Landing/InventorCard/InventorCard";
 import './our_team.css';
 
 function OurTeam() {

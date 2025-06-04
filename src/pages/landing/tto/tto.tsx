@@ -19,7 +19,7 @@ import { useDocumentTitle } from "@hooks/useDocumentTitle";
 import Services from "@ui/Landing/Services/Services";
 
 import { FaHandshake, FaFileSignature, FaBullhorn } from "react-icons/fa";
-import InventorCard from "../InventorCard/InventorCard";
+import InventorCard from "@ui/Landing/InventorCard/InventorCard";
 
 const statsData:StatsItemsType = {
 	a: { name: "Total Patents Filed", value: 650 },
