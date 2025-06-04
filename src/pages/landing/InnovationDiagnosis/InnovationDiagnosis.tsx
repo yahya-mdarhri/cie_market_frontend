@@ -176,7 +176,7 @@ function InnovationDiagnosis() {
     if (step > 0) setStep(step - 1);
   };
 
-  const { total, type, description } = calculateScore();
+  const { type, description } = calculateScore();
 
   if (!hasStarted) {
     return (

@@ -1,7 +1,7 @@
-import NavBar from "@ui/Landing/NavBar/NavBar";
 import { useState } from "react";
 import "./FAQ.css";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
+import LandingLayout from "@components/layouts/LandingLayout/LandingLayout";
 
 function FAQ() {
     useDocumentTitle('FAQ | Centre for Innovation and Entrepreneurship');
@@ -48,8 +48,13 @@ function FAQ() {
     };
 
     return (
+        <LandingLayout
+        heroProps={{
+            heroTitle: <>FAQ</>,
+            heroDescription: "Frequently Asked Questions",
+        }}
+        >
         <div className="faq-container">
-            <NavBar isFullWidth={false} />
             <div className="faq-wrapper">
                 <div className="faq-header">
                     <div className="faq-title">
@@ -105,6 +110,7 @@ function FAQ() {
                 </div>
             </div>
         </div>
+        </LandingLayout>
     )
 }
 export default FAQ;

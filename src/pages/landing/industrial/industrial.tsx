@@ -3,16 +3,8 @@ import LandingLayout, { HeroProps, StatsItemsType } from "@layouts/LandingLayout
 import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 
-import image from "./images/industrial.png";
 import image2 from "./images/industrial2.png";
 
-import p1 from "../../../assets/partners/1.png";
-import p2 from "../../../assets/partners/2.png";
-import p3 from "../../../assets/partners/3.png";
-import p4 from "../../../assets/partners/4.png";
-import p5 from "../../../assets/partners/5.png";
-
-import Partners from "@ui/Landing/Partners/Partners";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
 import Services from "@ui/Landing/Services/Services";
 
