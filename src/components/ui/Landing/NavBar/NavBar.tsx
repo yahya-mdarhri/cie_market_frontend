@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import "./NavBar.css";
 import { useIsActive } from '@hooks/useIsActive';
 import { useWindowWidth } from '@hooks/useWindowWidth';
@@ -7,7 +7,23 @@ import { MEDIA_QUERY } from '@constants/media';
 
 function NavActions({ closeMobileMenu }: { closeMobileMenu: () => void }) {
 	const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-	const [currentLang, setCurrentLang] = useState('en');	const languages = [
+	const [currentLang, setCurrentLang] = useState('en');
+	const languageSelectorRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (languageSelectorRef.current && !languageSelectorRef.current.contains(event.target as Node)) {
+				setIsLanguageOpen(false);
+			}
+		};
+
+		document.addEventListener('mousedown', handleClickOutside);
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	}, []);
+
+	const languages = [
 		{ code: 'en', name: 'English', flag: '🇺🇸' },
 		{ code: 'es', name: 'Español', flag: '🇪🇸' },
 		{ code: 'fr', name: 'Français', flag: '🇫🇷' }
@@ -27,7 +43,7 @@ function NavActions({ closeMobileMenu }: { closeMobileMenu: () => void }) {
 		>
 			Invention Diagnosis
 		</Link>
-		<div className="language-selector">
+		<div className="language-selector" ref={languageSelectorRef}>
 			<button 
 				className="language-button"
 				onClick={() => setIsLanguageOpen(!isLanguageOpen)}
@@ -61,6 +77,20 @@ function NavActions({ closeMobileMenu }: { closeMobileMenu: () => void }) {
 
 function NavLinks({ closeMobileMenu, isMobile }: { closeMobileMenu: () => void, isMobile: boolean }) {
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+	const dropdownRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+				setIsDropdownOpen(false);
+			}
+		};
+
+		document.addEventListener('mousedown', handleClickOutside);
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	}, []);
 
 	return (
 		<div className="nav-main">
@@ -118,7 +148,7 @@ function NavLinks({ closeMobileMenu, isMobile }: { closeMobileMenu: () => void, 
 			</>
 		) : (
 			<>
-			<div className="dropdown-container">
+			<div className="dropdown-container" ref={dropdownRef}>
 				<button 
 					className={`dropdown-button ${isDropdownOpen ? 'active' : ''}`}
 					onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -144,7 +174,7 @@ function NavLinks({ closeMobileMenu, isMobile }: { closeMobileMenu: () => void, 
 						</Link>
 					</div>
 				)}
-		</div>
+			</div>
 			</>
 		)}
 	</div>
