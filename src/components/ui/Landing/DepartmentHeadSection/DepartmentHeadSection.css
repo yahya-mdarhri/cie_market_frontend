@@ -1,6 +1,5 @@
 .department-head-section {
     padding: 4rem 2rem;
-    /* background: #ffffff; */
     position: relative;
 }
 
@@ -10,9 +9,14 @@
     display: flex;
     align-items: center;
     gap: 5rem;
-    padding: 2rem;
+    padding: 3rem;
     position: relative;
-    /* background: var(--primary-color); */
+    background: white;
+    border-radius: 24px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.05),
+        0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .head-image-container {
@@ -37,6 +41,7 @@
 .head-content {
     flex: 1;
     max-width: 600px;
+    position: relative;
 }
 
 .head-role-container {
@@ -96,34 +101,40 @@
     color: #4b5563;
     font-style: italic;
     position: relative;
-    padding: 2rem 0 2rem 3rem;
-    border-left: 4px solid var(--primary-color);
-    background: linear-gradient(to right, rgba(79, 70, 229, 0.05), transparent);
-    border-radius: 0 8px 8px 0;
+    padding: 2.5rem 2rem;
+    background: #f8fafc;
+    border-radius: 16px;
+    margin-top: 2rem;
+}
+
+.head-message::before , .head-message::after {
+    content: '"';
+    position: absolute;
+    font-size: 5rem;
+    line-height: 1;
+    color: var(--primary-color);
+    opacity: 0.7;
+    font-family: Georgia, serif;
 }
 
 .head-message::before {
-    content: '"';
-    position: absolute;
-    left: 0.5rem;
-    top: 0;
-    font-size: 4rem;
-    line-height: 1;
-    color: var(--primary-color);
-    opacity: 0.2;
-    font-family: Georgia, serif;
+    top: -0.5rem;
+    left: 1rem;
 }
 
 .head-message::after {
-    content: '"';
+    bottom: -2rem;
+    right: 1rem;
+}
+
+.head-message .quote-line {
     position: absolute;
-    right: 0;
-    bottom: -1rem;
-    font-size: 4rem;
-    line-height: 1;
-    color: var(--primary-color);
-    opacity: 0.2;
-    font-family: Georgia, serif;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 4px 0 0 4px;
 }
 
 .head-stats {
@@ -165,6 +176,7 @@
 @media (max-width: 1024px) {
     .head-container {
         gap: 3rem;
+        padding: 2.5rem;
     }
 
     .head-image-container {
@@ -185,6 +197,7 @@
         flex-direction: column;
         gap: 2rem;
         text-align: center;
+        padding: 2rem;
     }
 
     .head-image-container {
@@ -209,7 +222,8 @@
     }
 
     .head-message {
-        padding: 1.5rem 0 1.5rem 2rem;
+        padding: 2rem 1.5rem;
         font-size: 1.125rem;
+        margin-top: 1.5rem;
     }
 }

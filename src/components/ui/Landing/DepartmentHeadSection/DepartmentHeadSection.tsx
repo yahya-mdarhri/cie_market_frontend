@@ -31,6 +31,7 @@ function DepartmentHeadSection({name, role, department, message, imageUrl}: Depa
                     </div>
                     <h2 className="head-name">{name}</h2>
                     <p className="head-message">
+                        <span className="quote-line"></span>
                         {message}
                     </p>
                 </div>
