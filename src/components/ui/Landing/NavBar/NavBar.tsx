@@ -83,7 +83,7 @@ function NavLinks({ closeMobileMenu, isMobile }: { closeMobileMenu: () => void, 
 			className={`nav-link ${useIsActive('/incubator') ? 'active' : ''}`}
 			onClick={closeMobileMenu}
 		>
-			Incubator
+			Incubator 360º
 		</Link>
 		<Link 
 			to="/industrial" 
