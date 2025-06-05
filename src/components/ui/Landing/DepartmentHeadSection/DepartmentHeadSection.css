@@ -39,6 +39,13 @@
     max-width: 600px;
 }
 
+.head-role-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
 .head-role {
     display: inline-block;
     font-size: 0.875rem;
@@ -46,7 +53,6 @@
     color: var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    margin-bottom: 1rem;
     position: relative;
 }
 
@@ -57,7 +63,23 @@
     bottom: -4px;
     width: 30px;
     height: 2px;
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+.head-at {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    opacity: 0.7;
+    transform: translateY(-1px);
+    font-family: 'Georgia', serif;
+    font-style: italic;
+}
+
+.head-department {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-weight: 500;
 }
 
 .head-name {
@@ -171,6 +193,10 @@
 
     .head-content {
         max-width: 100%;
+    }
+
+    .head-role-container {
+        justify-content: center;
     }
 
     .head-role::after {
