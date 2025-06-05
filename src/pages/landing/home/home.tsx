@@ -129,8 +129,6 @@ function Home() {
 				<DepartmentHeadSection 
 					name="Mohsine BOUYA"
 					role="Executive Director"
-					department="Centre for Innovation and Entrepreneurship"
-					title="Centre for Innovation and Entrepreneurship"
 					message="We are committed to fostering a culture of innovation and entrepreneurship that drives economic growth and societal impact. Our team is dedicated to supporting researchers, inventors, and entrepreneurs in transforming their ideas into successful ventures."
 					imageUrl={headImg}
 				/>
