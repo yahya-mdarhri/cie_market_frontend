@@ -16,12 +16,12 @@ function OurTeam() {
         },
         {
             name: "Houcaine EDDAHBI",
-            role: "DevOps Engineer",
+            role: "DevOps",
             image: "https://i.pravatar.cc/300?img=5",
         },
         {
             name: "Hamza Oumansour",
-            role: "Full Stack Engineer",
+            role: "Full Stack",
             image: "https://i.pravatar.cc/300?img=3",
         },
     ];

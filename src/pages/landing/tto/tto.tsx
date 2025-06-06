@@ -28,6 +28,7 @@ const heroProps: HeroProps = {
 	heroTitle: <>Technology Transfer Office</>,
 	heroDescription: "Protecting ideas, fostering collaborations, and bringing research to market.",
 	firstAction: "Submit A Patent",
+	secondAction: "Licening Process",
 	stats: statsData,
 };
 

@@ -8,6 +8,7 @@ import FAQ from '@pages/landing/faq/FAQ';
 import NotFound from '@pages/NotFound/NotFound';
 import AuditInnovationForm from '@pages/landing/InnovationDiagnosis/InnovationDiagnosis';
 import OurTeam from '@pages/landing/our_team/our_team';
+import LicensingProcess from '@pages/landing/licensing_process/licensing_process';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
         path: '/our-team',
         element: <OurTeam />,
       },
+      {
+        path: 'licensing-process',
+        element: <LicensingProcess />,
+      }
     ]
   },
 ]);
