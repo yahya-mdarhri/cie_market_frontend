@@ -158,6 +158,13 @@ function NavLinks({ closeMobileMenu, isMobile }: { closeMobileMenu: () => void, 
 				</button>
 				{isDropdownOpen && (
 					<div className="dropdown-menu">
+					<Link 
+						to="/licensing-process" 
+						className={`dropdown-item ${useIsActive('/licensing-process') ? 'active' : ''}`}
+						onClick={closeMobileMenu}
+					>
+						Licensing Process  
+					</Link>
 						<Link 
 							to="/our-team" 
 							className={`dropdown-item ${useIsActive('/our-team') ? 'active' : ''}`}
