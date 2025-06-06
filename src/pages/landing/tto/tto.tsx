@@ -179,22 +179,31 @@ function LandingInventionCards() {
 interface Inventor {
 	name: string;
 	image: string;
+	role?: string;
 }
 
 
 const inventorData: Inventor[] = [
 	{
-		name: "John Doe",
+		name: "Abdellatif BENABDELLAH",
+		role: "full professor",
 		image: "https://i.pravatar.cc/300",
 	},
 	{
-		name: "Jane Doe",
+		name: "Maouena FONGBEDGI",
+		role: "PhD, M.Eng",
 		image: "https://i.pravatar.cc/300",
 	},
 	{
-		name: "John Doe",
+		name: "Ahmed ZOUGGAR",
+		role: "Expert",
 		image: "https://i.pravatar.cc/300",
 	},
+	{
+		name: "Mohammed OUAHABI",
+		role: "Prototyping Panager",
+		image: "https://i.pravatar.cc/300",
+	}
 ];
 
 function HighlightedInventors() {
