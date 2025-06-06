@@ -3,7 +3,7 @@ import './licensing_process.css'
 
 const heroProps = {
     heroTitle: <>Licensing Process</>,
-    heroDescription: "A comprehensive guide to our licensing process at UIR, ensuring transparency and efficiency.",
+    heroDescription: "A comprehensive guide to our licensing process at Technology Transfer Office, ensuring transparency and efficiency.",
 }
 
 function LicensingProcess() {
