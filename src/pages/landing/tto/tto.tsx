@@ -3,6 +3,8 @@ import LandingLayout, { HeroProps, StatsItemsType } from "@layouts/LandingLayout
 import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 
+import headImg from "./images/wacim.jpeg";
+
 import inv_img1 from "./images/inv1.jpg";
 import image from "./images/tto.png";
 import InventionCard from "@ui/Landing/InventionCard/InventionCard";
@@ -13,6 +15,7 @@ import Services from "@ui/Landing/Services/Services";
 
 import { FaHandshake, FaFileSignature, FaBullhorn } from "react-icons/fa";
 import InventorCard from "@ui/Landing/InventorCard/InventorCard";
+import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentHeadSection";
 
 const statsData:StatsItemsType = {
 	a: { name: "Total Patents Filed", value: 650 },
@@ -25,6 +28,7 @@ const heroProps: HeroProps = {
 	heroTitle: <>Technology Transfer Office</>,
 	heroDescription: "Protecting ideas, fostering collaborations, and bringing research to market.",
 	firstAction: "Submit A Patent",
+	secondAction: "Licening Process",
 	stats: statsData,
 };
 
@@ -222,6 +226,11 @@ function TTO() {
 				<VisionAndMission 
 					mission="Facilitate the exploitation of the results of scientific research, Open Innovation and its opening up to the market"
 					vision="Transform the TTO into a springboard for innovation at the UIR and make its activity profitable"
+				/>
+				<DepartmentHeadSection
+					name="Wacim BEN YAHYA"
+					role="Head of Technology Transfer Office"
+					imageUrl={headImg}
 				/>
 				<Services services={servicesData} />
 				<LandingInventionCards />

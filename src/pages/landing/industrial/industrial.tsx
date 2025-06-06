@@ -13,6 +13,7 @@ import {
 	FaIndustry,
 	FaLightbulb
   } from "react-icons/fa";
+import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentHeadSection";
   
   const servicesData = [
 	{
@@ -60,6 +61,11 @@ function Industrial() {
 				<VisionAndMission 
 					mission="support Made @UIR innovation projects to meet the specific needs of industry and territories"
 					vision="Transform the CIE into an effective Business Unit serving industry and the territories"
+				/>
+				<DepartmentHeadSection
+					name="Bertrand DENIS"
+					role="Head of industrial Clinic"
+					// imageUrl={headImg}
 				/>
 				<Services services={servicesData} />
 

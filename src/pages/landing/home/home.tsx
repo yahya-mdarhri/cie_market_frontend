@@ -4,8 +4,11 @@ import tto_logo from "./images/tto.svg";
 import industrial_logo from "./images/industrial.svg";
 import incubator_logo from "./images/incubator.svg";
 import tech_center_logo from "./images/tech_center.svg";
+import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentHeadSection";
 
 import arrow from '../../../assets/icons/arrow.svg';
+
+import headImg from "./images/M-Bouya.png";
 
 import cdg from './images/partners/cdg.jpg';
 import cloudflare from './images/partners/cloudflare.jpeg';
@@ -122,6 +125,13 @@ function Home() {
 				/>
 				<div className="Home3rdSection">
 				</div>
+
+				<DepartmentHeadSection 
+					name="Mohsine BOUYA"
+					role="Executive Director"
+					message="We are committed to fostering a culture of innovation and entrepreneurship that drives economic growth and societal impact. Our team is dedicated to supporting researchers, inventors, and entrepreneurs in transforming their ideas into successful ventures."
+					imageUrl={headImg}
+				/>
 				<div className="DepartmentsSection">
 					<div className="DepartmentsSectionHeader">
 						<h2>Our Departments</h2>
