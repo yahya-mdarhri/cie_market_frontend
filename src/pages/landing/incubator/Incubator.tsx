@@ -4,8 +4,10 @@ import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 
 import image2 from "./images/incubator2.png";
-import startup1 from "./images/startup1.png";
-
+import linkup_africa from "./images/progrmas/linkup_africa.png";
+import enactus from "./images/progrmas/enactus.svg";
+import ram from "./images/progrmas/RAM.svg";
+import etoufoula from "./images/progrmas/etoufoula.png";
 
 import enabel from "./images/partners/enabel.png";
 import cdgInvest from "./images/partners/CDG_Invest.png";
@@ -23,7 +25,7 @@ import {
   } from "react-icons/fa";
 import Services from "@ui/Landing/Services/Services";
   
-  const servicesData = [
+const servicesData = [
 	{
 	  icon: <FaGlobeAmericas />,
 	  title: "Funding for Entrepreneurship",
@@ -84,23 +86,65 @@ const heroProps: HeroProps = {
 	stats: statsData,
 };
 
-function StartupCard({logo, name, description}:{logo:string, name:string, description:string}){
+interface StartupCardProps {
+	logo: string;
+	name: string;
+	key: any;
+	description: string;
+	link?: string;
+}
+
+function StartupCard({logo, name, description, link, key}:StartupCardProps) {
 	return(
-		<div className="startupCard">
+		<div className="startupCard" key={key} onClick={
+			() => {
+				if (link) {
+					window.open(link, "_blank");
+				}
+			}
+		}>
 			<div className="startupCardImage">
 				<img src={logo} alt={name} />
 			</div>
 			<div className="startupCardContent">
 				<h3>{name}</h3>
 				<p>{description}</p>
-				<div className="startupCardTags">
+				{/* <div className="startupCardTags">
 					<span>Tech</span>
 					<span>Innovation</span>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	)
 }
+
+const programs = [
+	{
+		name: "Linkup africa",
+		description: "Empowers African youth in Morocco through entrepreneurship support.",
+		image: linkup_africa,
+		link: "https://www.lua.ma/"
+	},
+	{
+		name: "Enactus",
+		description: "Empowers students to create positive social and environmental impact through entrepreneurial projects",
+		image: enactus,
+		link: "https://enactus-morocco.org/",
+	},
+	{
+		name: "RAM Open Innovation",
+		image: ram,
+		description: "Connects startups with aviation experts to develop innovative solutions for travel challenge",
+		link: "https://openinnovation.royalairmaroc.com/",
+	},
+	{
+		name: "E-Toufoula",
+		description: "A platform that connects Moroccan artisans with global markets, promoting traditional crafts and cultural heritage.",
+		image: etoufoula,
+		link: "https://ityhad.com"
+	}
+
+]
 
 function Startups(){
 	return(
@@ -110,36 +154,15 @@ function Startups(){
 				<p>Discover the innovative ventures we've helped launch and grow</p>
 			</div>
 			<div className="startupCards">
-			<StartupCard 
-					logo={startup1} 
-					name="TESTname" 
-					description="this is a sample tescription for this card"
+			{				programs.map((program, index) => (
+				<StartupCard
+					key={index}
+					logo={program.image}
+					name={program.name}
+					link={program.link}
+					description={program.description}
 				/>
-				<StartupCard 
-					logo={startup1} 
-					name="TESTname" 
-					description="this is a sample tescription for this card"
-				/>
-				<StartupCard 
-					logo={startup1} 
-					name="TESTname" 
-					description="this is a sample tescription for this card"
-				/>
-				<StartupCard 
-					logo={startup1} 
-					name="TESTname" 
-					description="this is a sample tescription for this card"
-				/>
-				<StartupCard 
-					logo={startup1} 
-					name="TESTname" 
-					description="this is a sample tescription for this card"
-				/>
-				<StartupCard 
-					logo={startup1} 
-					name="TESTname" 
-					description="this is a sample tescription for this card"
-				/>
+			))}
 
 			</div>
 			
