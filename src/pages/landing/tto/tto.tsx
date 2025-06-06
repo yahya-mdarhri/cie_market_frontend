@@ -17,6 +17,9 @@ import { FaHandshake, FaFileSignature, FaBullhorn } from "react-icons/fa";
 import InventorCard from "@ui/Landing/InventorCard/InventorCard";
 import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentHeadSection";
 
+import ahmed_zouggar from "./images/inventors/ahmed_zouggar.jpeg";
+import maouena_fongbedgi from './images/inventors/maouena_fongbedgi.jpeg'
+
 const statsData:StatsItemsType = {
 	a: { name: "Total Patents Filed", value: 650 },
 	b: { name: "International Patents", value: 108 },
@@ -192,12 +195,12 @@ const inventorData: Inventor[] = [
 	{
 		name: "Maouena FONGBEDGI",
 		role: "PhD, M.Eng",
-		image: "https://i.pravatar.cc/300",
+		image: maouena_fongbedgi,
 	},
 	{
 		name: "Ahmed ZOUGGAR",
 		role: "Expert",
-		image: "https://i.pravatar.cc/300",
+		image: ahmed_zouggar,
 	},
 	{
 		name: "Mohammed OUAHABI",
