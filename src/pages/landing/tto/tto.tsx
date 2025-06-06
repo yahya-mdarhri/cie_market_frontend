@@ -19,6 +19,7 @@ import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentH
 
 import ahmed_zouggar from "./images/inventors/ahmed_zouggar.jpeg";
 import maouena_fongbedgi from './images/inventors/maouena_fongbedgi.jpeg'
+import abdellatif_benabdellah from './images/inventors/abdellatif_benabdellah.jpeg'
 
 const statsData:StatsItemsType = {
 	a: { name: "Total Patents Filed", value: 650 },
@@ -190,7 +191,7 @@ const inventorData: Inventor[] = [
 	{
 		name: "Abdellatif BENABDELLAH",
 		role: "full professor",
-		image: "https://i.pravatar.cc/300",
+		image: abdellatif_benabdellah,
 	},
 	{
 		name: "Maouena FONGBEDGI",
@@ -202,11 +203,11 @@ const inventorData: Inventor[] = [
 		role: "Expert",
 		image: ahmed_zouggar,
 	},
-	{
-		name: "Mohammed OUAHABI",
-		role: "Prototyping Panager",
-		image: "https://i.pravatar.cc/300",
-	}
+	// {
+	// 	name: "Mohammed OUAHABI",
+	// 	role: "Prototyping Panager",
+	// 	image: "https://i.pravatar.cc/300",
+	// }
 ];
 
 function HighlightedInventors() {
