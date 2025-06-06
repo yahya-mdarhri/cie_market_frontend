@@ -16,6 +16,8 @@ import {
 import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentHeadSection";
 import Partners from "@ui/Landing/Partners/Partners";
 
+import headImg from "./images/bertrand_denise.jpeg";
+
 import madaef_golf from "./images/partners/madaef_golfs.png";	
 
 const clients = [
@@ -75,7 +77,7 @@ function Industrial() {
 				<DepartmentHeadSection
 					name="Bertrand DENIS"
 					role="Head of industrial Clinic"
-					// imageUrl={headImg}
+					imageUrl={headImg}
 				/>
 				<Services services={servicesData} />
 
