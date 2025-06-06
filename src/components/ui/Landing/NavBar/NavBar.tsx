@@ -120,7 +120,7 @@ function NavLinks({ closeMobileMenu, isMobile }: { closeMobileMenu: () => void, 
 			className={`nav-link ${useIsActive('/industrial') ? 'active' : ''}`}
 			onClick={closeMobileMenu}
 		>
-			Industrial
+			Industrial Clinic
 		</Link>
 		<Link 
 			to="/tech_center" 
