@@ -14,8 +14,18 @@ import {
 	FaLightbulb
   } from "react-icons/fa";
 import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentHeadSection";
-  
-  const servicesData = [
+import Partners from "@ui/Landing/Partners/Partners";
+
+import madaef_golf from "./images/partners/madaef_golfs.png";	
+
+const clients = [
+	{
+		logo: madaef_golf,
+		name: "madaef golf",
+		link: "https://www.madaefgolfs.com/"
+	},
+]
+const servicesData = [
 	{
 	  icon: <FaTools />,
 	  title: "Solutions to Industrial Problems",
@@ -69,7 +79,7 @@ function Industrial() {
 				/>
 				<Services services={servicesData} />
 
-				{/* <Partners partners={[p1, p2, p3, p4, p5]} /> */}
+				<Partners partners={clients} areCLients/>
 		</LandingLayout>
 	);
 }
