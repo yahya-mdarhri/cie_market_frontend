@@ -150,7 +150,7 @@ function Startups(){
 	return(
 		<section className="startups">
 			<div className="startupsHeader">
-				<h2>Our Startups</h2>
+				<h2>Our Programs And Startups</h2>
 				<p>Discover the innovative ventures we've helped launch and grow</p>
 			</div>
 			<div className="startupCards">
