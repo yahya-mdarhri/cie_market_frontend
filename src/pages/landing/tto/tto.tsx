@@ -20,6 +20,15 @@ import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentH
 import ahmed_zouggar from "./images/inventors/ahmed_zouggar.jpeg";
 import maouena_fongbedgi from './images/inventors/maouena_fongbedgi.jpeg'
 import abdellatif_benabdellah from './images/inventors/abdellatif_benabdellah.jpeg'
+import Partners from "@ui/Landing/Partners/Partners";
+
+import royaume from "./images/partners/royaume.png";
+import cdg from './images/partners/cdg.jpg'
+import dxg from './images/partners/dxg.png'
+import innovation_genva from './images/partners/innovation_genva.png'
+import stellants from './images/partners/stellants.png'
+import ingelec from './images/partners/ingelec.png'
+import autm from './images/partners/autm.png'
 
 const statsData:StatsItemsType = {
 	a: { name: "Total Patents Filed", value: 650 },
@@ -27,6 +36,44 @@ const statsData:StatsItemsType = {
 	c: { name: "Research Contracts (M DHS)", value: 66 },
 	d: { name: "Gold Medals", value: 2 },
 };
+
+const partners = [
+	{
+		logo: royaume,
+		name: "Royaume of Morocco",
+		link: ""
+	},
+	{
+		logo: cdg,
+		name: "CDG",
+		link: ""
+	},
+	{
+		logo: dxg,
+		name: "DXG",
+		link: "https://dxc.com/"
+	},
+	{
+		logo: innovation_genva,
+		name: "Innovation Gen",
+		link: ""
+	},
+	{
+		logo: stellants,
+		name: "Stellants",
+		link: ""
+	},
+	{
+		logo: ingelec,
+		name: "INGELEC",
+		link: "https://www.ingelec.ma/"
+	},
+	{
+		logo: autm,
+		name: "autym",
+		link: ""
+	}
+]
 
 const heroProps: HeroProps = {
 	heroTitle: <>Technology Transfer Office</>,
@@ -248,7 +295,7 @@ function TTO() {
 				<Services services={servicesData} />
 				<LandingInventionCards />
 				<HighlightedInventors />
-				{/* <Partners partners={[p1, p2, p3, p4, p5]} /> */}
+				<Partners partners={partners} />
 		</LandingLayout>
 	);
 }
