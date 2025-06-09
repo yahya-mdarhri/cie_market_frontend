@@ -30,7 +30,7 @@ function InventionCard({ title, description, image, key, onClick, style }: Inven
 			<img src={blueArrow} alt="" className="blueArrow" aria-hidden="true" />
 			<div className="InventionCardContent">
 				<h2>{title}</h2>
-				<p>{description}</p>
+				<p># {description}</p>
 			</div>
 		</div>
 	)

@@ -30,6 +30,14 @@ import stellants from './images/partners/stellants.png'
 import ingelec from './images/partners/ingelec.png'
 import autm from './images/partners/autm.png'
 
+import ma63830 from './images/inventions/ma63830.jpg'
+import ma47040 from './images/inventions/ma47040.png'
+import ma52677 from './images/inventions/ma52677.png'
+import ma36470 from './images/inventions/ma36470.png'
+import ma39538 from './images/inventions/ma39538.png'
+import ma37414 from './images/inventions/ma37414.jpg'
+
+
 const statsData:StatsItemsType = {
 	a: { name: "Total Patents Filed", value: 650 },
 	b: { name: "International Patents", value: 108 },
@@ -85,34 +93,34 @@ const heroProps: HeroProps = {
 
 const inventionCardData = [
 	{
-		title: "hello1",
-		description: "test test test tes",
-		image: inv_img1,
+		title: "Hybrid Renewable Energy Generator",
+		description: "MA63830",
+		image: ma63830,
 	},
 	{
-		title: "hello2",
-		description: "test test test tes",
-		image: inv_img1,
+		title: ".OXCharge",
+		description: "MA47040",
+		image: ma47040,
 	},
 	{
-		title: "hello3",
-		description: "test test test tes",
-		image: inv_img1,
+		title: "Hybrid Gravity Energy Storage",
+		description: "MA52677",
+		image: ma52677,
 	},
 	{
-		title: "hello4",
-		description: "test test test tes",
-		image: inv_img1,
+		title: "Hybrid Gravity Energy Storage",
+		description: "MA39538",
+		image: ma39538,
 	},
 	{
-		title: "hello5",
-		description: "test test test tes",
-		image: inv_img1,
+		title: "Hybrid Gravity Energy Storage",
+		description: "MA36470",
+		image: ma36470,
 	},
 	{
-		title: "hello6",
-		description: "test test test tes",
-		image: inv_img1,
+		title: "Hybrid Gravity Energy Storage",
+		description: "MA37414",
+		image: ma37414,
 	},
 ];
 
