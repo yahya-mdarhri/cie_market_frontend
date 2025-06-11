@@ -113,34 +113,39 @@ const inventionCardData: Invention[] = [
 		title: "Hybrid Gravity Energy Storage",
 		image: ma52677,
 		nationalId: "MA52677",
-		problem: "Problem statement for Hybrid Gravity Energy Storage MA52677.",
-		solution: "Solution details for Hybrid Gravity Energy Storage MA52677.",
-		impact: "Impact details for Hybrid Gravity Energy Storage MA52677.",
+		internationalId: "PCT/MA2021/050028",
+		problem: "Current energy storage solutions often fail to meet criteria for durability, scalability, and low environmental impact.",
+		solution: "HyGES is a hybrid gravity-based storage system combining pulleys, weights, and hydromechanics. It stores electricity by lifting masses using hydraulic pumps, then releases it through turbines. Compact, modular, and free from rare metal dependency, it's ideal for local or decentralized installations",
+		impact: "HyGES reduces the ecological footprint of energy storage, extends the lifespan of infrastructure, and integrates easily into remote or industrial environments.",
 	},
 	{
-		title: "Hybrid Gravity Energy Storage",
-		image: ma39538,
-		nationalId: "MA39538",
-		problem: "Problem statement for Hybrid Gravity Energy Storage MA39538.",
-		solution: "Solution details for Hybrid Gravity Energy Storage MA39538.",
-		impact: "Impact details for Hybrid Gravity Energy Storage MA39538.",
-	},
-	{
-		title: "Hybrid Gravity Energy Storage",
+		title: "Dessalement thermique",
 		image: ma36470,
 		nationalId: "MA36470",
-		problem: "Problem statement for Hybrid Gravity Energy Storage MA36470.",
-		solution: "Solution details for Hybrid Gravity Energy Storage MA36470.",
-		impact: "Impact details for Hybrid Gravity Energy Storage MA36470.",
+		internationalId: "WO2015076647A1",
+		problem: "Rural communities and isolated areas lack viable solutions for access to safe drinking water. Current desalination technologies are expensive, poorly suited for small-scale use, and heavily reliant on continuous energy supply.",
+		solution: "A solar-powered desalination unit based on MED (Multi-Effect Distillation) technology tailored to local needs. The project develops a pilot unit capable of producing 7,000 L/day (within 6 hours), combining falling film evaporators, an intelligent network of heat exchangers, a thermal storage system, and power supplied by vacuum tube solar panels.",
+		impact: "This solution reduces dependence on electric grids, lowers operational costs, and provides a sustainable answer to the challenges of climate change and water security."
 	},
 	{
-		title: "Hybrid Gravity Energy Storage",
+		title: "Éclairage public intelligent INARA",
+		image: ma39538, 
+		nationalId: "MA39538", 
+		internationalId: "WO2018117779A1", 
+		problem: "Current public lighting suffers from high costs, lack of remote control, limited performance, and outdated technology. This is compounded by rising energy prices and the global energy crisis.",
+		solution: "INARA integrates optimized LED components, an intelligent dimming system based on ambient light, a communication module, and a locally developed control board. This setup enables remote monitoring and precise management of standard streetlights.",
+		impact: "INARA achieves measurable reductions in energy consumption and maintenance costs, while contributing directly to sustainability goals. It also positions Morocco strategically as a regional player in the smart city sector."
+	},
+	{
+		title: "Concentrateur solaire Taqa PRO",
 		image: ma37414,
 		nationalId: "MA37414",
-		problem: "Problem statement for Hybrid Gravity Energy Storage MA37414.",
-		solution: "Solution details for Hybrid Gravity Energy Storage MA37414.",
-		impact: "Impact details for Hybrid Gravity Energy Storage MA37414.",
-	},
+		internationalId: "WO2016056880A1",
+		problem: "In Morocco, rising petroleum product prices severely affect industrial competitiveness. Existing solar solutions often fail to meet specific temperature requirements and continuous operation needs.",
+		solution: "Taqa PRO develops a nano cylindrical-parabolic solar concentrator capable of producing hot water and steam between 60°C and 250°C, cutting fuel consumption in industrial boilers by up to 80%.",
+		impact: "By offering a local, cost-effective, and eco-friendly alternative, Taqa PRO supports the decarbonization of national industries and positions Morocco as an innovative player in solar energy efficiency."
+	  }
+	  ,
 ];
 
 
