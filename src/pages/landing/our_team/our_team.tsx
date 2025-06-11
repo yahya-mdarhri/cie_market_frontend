@@ -16,7 +16,7 @@ function OurTeam() {
             image: avatar,
         },
         {
-            name: "Houcaine EDDAHBI",
+            name: "Elhoussaine EDDAHBI",
             role: "DevOps",
             image: avatar,
         },
