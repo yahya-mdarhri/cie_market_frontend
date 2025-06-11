@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import "./InnovationDiagnosis.css";
-  import { HashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 
 const phases = [
   "Phase 1 - Launch",
@@ -268,6 +268,9 @@ function InnovationDiagnosis() {
                 {errors.email && <span className="error-message">{errors.email.message}</span>}
               </div>
             </div>
+            <p className="consent-text">
+              By clicking on 'Start Assessment', I consent to the collection and processing of the information I have provided for evaluation purposes.
+            </p>
             <div className="form-submit">
               <button type="submit" className="audit-nav-button next">
                 Start Assessment
