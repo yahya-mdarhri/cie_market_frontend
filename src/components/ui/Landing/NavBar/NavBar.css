@@ -170,7 +170,14 @@
 
 .language-name {
     font-size: 0.9em;
+}
+
+.language-button .language-name {
     display: none;
+}
+
+.language-option .language-name {
+    display: inline;
 }
 
 .language-arrow {

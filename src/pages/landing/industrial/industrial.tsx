@@ -16,7 +16,7 @@ import {
 // import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentHeadSection";
 import Partners from "@ui/Landing/Partners/Partners";
 
-import headImg from "./images/bertrand_denise.jpeg";
+// import headImg from "./images/bertrand_denise.jpeg";
 
 import madaef_golf from "./images/partners/madaef_golfs.png";	
 
