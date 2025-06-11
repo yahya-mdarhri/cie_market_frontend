@@ -13,7 +13,7 @@ import {
 	FaIndustry,
 	FaLightbulb
   } from "react-icons/fa";
-import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentHeadSection";
+// import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentHeadSection";
 import Partners from "@ui/Landing/Partners/Partners";
 
 import headImg from "./images/bertrand_denise.jpeg";
@@ -74,11 +74,11 @@ function Industrial() {
 					mission="support Made @UIR innovation projects to meet the specific needs of industry and territories"
 					vision="Transform the CIE into an effective Business Unit serving industry and the territories"
 				/>
-				<DepartmentHeadSection
+				{/* <DepartmentHeadSection
 					name="Bertrand DENIS"
 					role="Head of industrial Clinic"
 					imageUrl={headImg}
-				/>
+				/> */}
 				<Services services={servicesData} />
 
 				<Partners partners={clients} areCLients/>

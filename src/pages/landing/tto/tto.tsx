@@ -3,7 +3,7 @@ import LandingLayout, { HeroProps, StatsItemsType } from "@layouts/LandingLayout
 import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 
-import headImg from "./images/wacim.jpeg";
+// import headImg from "./images/wacim.jpeg";
 
 import image from "./images/tto.png";
 import InventionCard from "@ui/Landing/InventionCard/InventionCard";
@@ -14,7 +14,7 @@ import Services from "@ui/Landing/Services/Services";
 
 import { FaHandshake, FaFileSignature, FaBullhorn } from "react-icons/fa";
 import InventorCard from "@ui/Landing/InventorCard/InventorCard";
-import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentHeadSection";
+// import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentHeadSection";
 import { Invention } from "@ui/Landing/InventionInfo/InventionInfo";
 
 import ahmed_zouggar from "./images/inventors/ahmed_zouggar.jpeg";
@@ -42,7 +42,7 @@ const statsData:StatsItemsType = {
 	a: { name: "Total Patents Filed", value: 650 },
 	b: { name: "International Patents", value: 108 },
 	c: { name: "Research Contracts (M DHS)", value: 66 },
-	d: { name: "Gold Medals", value: 2 },
+	d: { name: "Gold Medals", value: 3 },
 };
 
 const partners = [
@@ -337,11 +337,11 @@ function TTO() {
 					mission="Facilitate the exploitation of the results of scientific research, Open Innovation and its opening up to the market"
 					vision="Transform the TTO into a springboard for innovation at the UIR and make its activity profitable"
 				/>
-				<DepartmentHeadSection
+				{/* <DepartmentHeadSection
 					name="Wacim BEN YAHYA"
 					role="Head of Technology Transfer Office"
 					imageUrl={headImg}
-				/>
+				/> */}
 				<Services services={servicesData} />
 				<LandingInventionCards onSelectInvention={setSelectedInvention} />
 				<HighlightedInventors />

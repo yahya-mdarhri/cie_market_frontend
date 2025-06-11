@@ -173,6 +173,13 @@ function NavLinks({ closeMobileMenu, isMobile }: { closeMobileMenu: () => void, 
 							Our Team
 						</Link>
 						<Link 
+							to="https://uir-recrutement.ma/" 
+							className={`dropdown-item `}
+							onClick={closeMobileMenu}
+						>
+							Career Opportunities
+						</Link>
+						<Link 
 							to="/faq" 
 							className={`dropdown-item ${useIsActive('/faq') ? 'active' : ''}`}
 							onClick={closeMobileMenu}

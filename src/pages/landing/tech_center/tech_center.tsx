@@ -7,7 +7,7 @@ import service1 from "./images/service1.jpg";
 import image2 from "./images/industrial2.png";
 
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
-import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentHeadSection";
+// import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentHeadSection";
 
 const statsData:StatsItemsType = {
 	a: { name: "Tech Centers", value: 11 },
@@ -101,11 +101,11 @@ function TechCenter() {
 					mission="support Made @UIR innovation projects to meet the specific needs of industry and territories"
 					vision="Transform the CIE into an effective Business Unit serving industry and the territories"
 				/>
-				<DepartmentHeadSection
+				{/* <DepartmentHeadSection
 					name="Omar JABBOURI"
 					role="Head of Tech Center"
 					// imageUrl={headImg}
-				/>
+				/> */}
 				<div className="techCenterServices">
 					<div className="techCenterServicesLeft">
 						<h2>Our Services</h2>
