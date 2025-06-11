@@ -5,7 +5,6 @@ import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 
 import headImg from "./images/wacim.jpeg";
 
-import inv_img1 from "./images/inv1.jpg";
 import image from "./images/tto.png";
 import InventionCard from "@ui/Landing/InventionCard/InventionCard";
 
@@ -16,6 +15,7 @@ import Services from "@ui/Landing/Services/Services";
 import { FaHandshake, FaFileSignature, FaBullhorn } from "react-icons/fa";
 import InventorCard from "@ui/Landing/InventorCard/InventorCard";
 import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentHeadSection";
+import { Invention } from "@ui/Landing/InventionInfo/InventionInfo";
 
 import ahmed_zouggar from "./images/inventors/ahmed_zouggar.jpeg";
 import maouena_fongbedgi from './images/inventors/maouena_fongbedgi.jpeg'
@@ -91,36 +91,55 @@ const heroProps: HeroProps = {
 	stats: statsData,
 };
 
-const inventionCardData = [
+const inventionCardData: Invention[] = [
 	{
 		title: "Hybrid Renewable Energy Generator",
-		description: "MA63830",
+		problem: "Portable solar generators often lack sufficient power or reliability, while hybrid solutions remain rare and inaccessible.",
+		solution: "This kit combines solar panels and a micro wind turbine in a lightweight, foldable, and durable structure. It enables autonomous renewable energy production in remote areas or while on the move.",
+		impact: "The solution reduces carbon footprint, enhances energy autonomy, and enables new use cases in fields such as exploration, temporary housing, and emergency response.",
 		image: ma63830,
+		nationalId: "MA63830",
 	},
 	{
-		title: ".OXCharge",
-		description: "MA47040",
+		title: "OxCharger",
+		problem: "Users face poorly optimized chargers: energy loss, overheating, lack of control, and incompatibility with fast charging standards or new ports.",
+		solution: "OxCharger is a next-generation charger featuring a control chip that adjusts energy in real time, an optimized data cable, and both Micro-B and Type-C ports compatible with QC 3.0 technology.",
+		impact: "OxCharger extends battery life, reduces energy loss, and provides better device protection — offering a concrete response to user needs and energy efficiency challenges.",
 		image: ma47040,
+		nationalId: "MA47040",
+		internationalId: "WO2021071349A1",
 	},
 	{
 		title: "Hybrid Gravity Energy Storage",
-		description: "MA52677",
 		image: ma52677,
+		nationalId: "MA52677",
+		problem: "Problem statement for Hybrid Gravity Energy Storage MA52677.",
+		solution: "Solution details for Hybrid Gravity Energy Storage MA52677.",
+		impact: "Impact details for Hybrid Gravity Energy Storage MA52677.",
 	},
 	{
 		title: "Hybrid Gravity Energy Storage",
-		description: "MA39538",
 		image: ma39538,
+		nationalId: "MA39538",
+		problem: "Problem statement for Hybrid Gravity Energy Storage MA39538.",
+		solution: "Solution details for Hybrid Gravity Energy Storage MA39538.",
+		impact: "Impact details for Hybrid Gravity Energy Storage MA39538.",
 	},
 	{
 		title: "Hybrid Gravity Energy Storage",
-		description: "MA36470",
 		image: ma36470,
+		nationalId: "MA36470",
+		problem: "Problem statement for Hybrid Gravity Energy Storage MA36470.",
+		solution: "Solution details for Hybrid Gravity Energy Storage MA36470.",
+		impact: "Impact details for Hybrid Gravity Energy Storage MA36470.",
 	},
 	{
 		title: "Hybrid Gravity Energy Storage",
-		description: "MA37414",
 		image: ma37414,
+		nationalId: "MA37414",
+		problem: "Problem statement for Hybrid Gravity Energy Storage MA37414.",
+		solution: "Solution details for Hybrid Gravity Energy Storage MA37414.",
+		impact: "Impact details for Hybrid Gravity Energy Storage MA37414.",
 	},
 ];
 
@@ -147,7 +166,11 @@ const servicesData = [
 
 
 
-function LandingInventionCards() {
+function LandingInventionCards({
+	onSelectInvention
+}: { 
+	onSelectInvention: (invention: Invention) => void 
+}) {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const cardsPerView = 3;
 
@@ -164,10 +187,13 @@ function LandingInventionCards() {
 	};
 
 	const getTranslateValue = () => {
-		// Calculate the width of a single card (including gap)
-		const cardWidth = 100 / cardsPerView; // Width in percentage
-		const gapWidth = 1.5; // 1.5rem gap converted to percentage
+		const cardWidth = 100 / cardsPerView;
+		const gapWidth = 1.5;
 		return -(currentIndex * (cardWidth + gapWidth));
+	};
+
+	const handleInventionClick = (invention: Invention) => {
+		onSelectInvention(invention);
 	};
 
 	return (
@@ -220,11 +246,12 @@ function LandingInventionCards() {
 							style={{
 								opacity: index >= currentIndex && index < currentIndex + cardsPerView ? 1 : 0.3
 							}}
+							onClick={() => handleInventionClick(item)}
 						>
 							<InventionCard
 								key={index}
 								title={item.title}
-								description={item.description}
+								nationalId={item.nationalId}
 								image={item.image}
 							/>
 						</div>
@@ -284,8 +311,23 @@ function HighlightedInventors() {
 
 function TTO() {
 	useDocumentTitle('Technology Transfer Office | Centre for Innovation and Entrepreneurship');
+
+	const [selectedInvention, setSelectedInvention] = useState<Invention | null>(null);
+
 	return (
-		<LandingLayout heroProps={heroProps}>
+		<LandingLayout heroProps={heroProps} inventionInfoProps={{
+			isOpen: !!selectedInvention,
+			onClose: () => setSelectedInvention(null),
+			invention: selectedInvention ? {
+				image: selectedInvention.image,
+				title: selectedInvention.title,
+				internationalId: selectedInvention.internationalId,
+				nationalId: selectedInvention.nationalId,
+				problem: selectedInvention.problem,
+				solution: selectedInvention.solution,
+				impact: selectedInvention.impact
+			} : null	
+		}}>
 				<Introduction 
 					title="Technology Transfer Office"
 					description="The UIR has created the first Technology Transfer Office (TTO) according to international standards to carry out technology transfer and support economic development at the regional and national levels. The TTO operates on several levels to support research activities and to improve the implementation of the innovative product value chain."
@@ -301,7 +343,7 @@ function TTO() {
 					imageUrl={headImg}
 				/>
 				<Services services={servicesData} />
-				<LandingInventionCards />
+				<LandingInventionCards onSelectInvention={setSelectedInvention} />
 				<HighlightedInventors />
 				<Partners partners={partners} />
 		</LandingLayout>

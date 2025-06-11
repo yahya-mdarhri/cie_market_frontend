@@ -3,15 +3,15 @@ import './InventionCard.css'
 import blueArrow from './images/arrow.svg'
 
 interface InventionCardProps {
-	key: number; // for map key
-	title: string; // Invention title
-	image: string; // Invention image
-	description: string; // invention description -could be change later-
+	title: string;
+	nationalId: string;
+	image: string;
 	onClick?: () => void;
+	key: number;
 	style?: React.CSSProperties;
 }
 
-function InventionCard({ title, description, image, key, onClick, style }: InventionCardProps) {
+function InventionCard({ title, nationalId, image, key, onClick, style }: InventionCardProps) {
 	return (
 		<div 
 			className="InventionCard" 
@@ -30,10 +30,11 @@ function InventionCard({ title, description, image, key, onClick, style }: Inven
 			<img src={blueArrow} alt="" className="blueArrow" aria-hidden="true" />
 			<div className="InventionCardContent">
 				<h2>{title}</h2>
-				<p># {description}</p>
+				<p># {nationalId}</p>
 			</div>
 		</div>
 	)
 }
+
 
 export default InventionCard
