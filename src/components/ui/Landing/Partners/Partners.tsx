@@ -9,13 +9,16 @@ interface Partner {
 
 interface PartnersProps {
 	partners: Partner[];
+	areCLients?: boolean;
 }
 
-export default function Partners({ partners }: PartnersProps) {
+export default function Partners({ partners, areCLients = false}: PartnersProps) {
 	return (
 		<section className="partners-section">
 			<h2 className="partners-title">
-				Our Trusted Partners
+				{
+					areCLients ? "Trusted us" : "Our Partners"
+				}
 			</h2>
 			<div className="partners-grid">
 				{partners.map((partner, index) => (

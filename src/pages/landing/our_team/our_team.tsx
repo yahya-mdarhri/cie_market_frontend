@@ -1,5 +1,6 @@
 import LandingLayout from "@components/layouts/LandingLayout/LandingLayout";
 import InventorCard from "@ui/Landing/InventorCard/InventorCard";
+import avatar from './images/avatar.jpg';
 import './our_team.css';
 
 function OurTeam() {
@@ -7,22 +8,22 @@ function OurTeam() {
         {
             name: "Wacim BEN YAHYA",
             role: "Head of TTO",
-            image: "https://i.pravatar.cc/300?img=1",
+            image: avatar,
         },
         {
             name: "Yahya MDARHRI",
             role: "Tech Lead",
-            image: "https://i.pravatar.cc/300?img=2",
+            image: avatar,
         },
         {
             name: "Houcaine EDDAHBI",
             role: "DevOps",
-            image: "https://i.pravatar.cc/300?img=5",
+            image: avatar,
         },
         {
             name: "Hamza Oumansour",
             role: "Full Stack",
-            image: "https://i.pravatar.cc/300?img=3",
+            image: avatar,
         },
     ];
 

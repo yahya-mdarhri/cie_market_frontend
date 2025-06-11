@@ -120,7 +120,7 @@ function NavLinks({ closeMobileMenu, isMobile }: { closeMobileMenu: () => void, 
 			className={`nav-link ${useIsActive('/industrial') ? 'active' : ''}`}
 			onClick={closeMobileMenu}
 		>
-			Industrial
+			Industrial Clinic
 		</Link>
 		<Link 
 			to="/tech_center" 
@@ -171,6 +171,13 @@ function NavLinks({ closeMobileMenu, isMobile }: { closeMobileMenu: () => void, 
 							onClick={closeMobileMenu}
 						>
 							Our Team
+						</Link>
+						<Link 
+							to="https://uir-recrutement.ma/" 
+							className={`dropdown-item `}
+							onClick={closeMobileMenu}
+						>
+							Career Opportunities
 						</Link>
 						<Link 
 							to="/faq" 

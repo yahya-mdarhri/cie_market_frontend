@@ -296,7 +296,7 @@
     justify-content: center;
     cursor: pointer;
     transition: all 0.2s ease;
-    z-index: 1000;
+    z-index: 6;
 }
 
 .exit-button:hover {
@@ -324,7 +324,7 @@
     justify-content: center;
     cursor: pointer;
     transition: all 0.2s ease;
-    z-index: 1000;
+    z-index: 6;
 }
 
 .reset-button:hover {
@@ -541,8 +541,15 @@
     color: #ff4d4d;
     font-size: 0.8rem;
     margin-top: 0.25rem;
-    /* display: block; */
-    text-align: left;
+    display: block;
+}
+
+.consent-text {
+    font-size: 0.8rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    text-align: center;
+    opacity: 0.9;
 }
 
 .form-group input.error {

@@ -3,6 +3,7 @@ import "./LandingLayout.css";
 import Footer from "@ui/Landing/Footer/Footer";
 import NavBar from "@ui/Landing/NavBar/NavBar";
 import Hero from "@ui/Landing/Hero/Hero";
+import InventionInfo, { InventionInfoProps } from "@ui/Landing/InventionInfo/InventionInfo";
 
 // The StatsItemsType interface defines the structure of the stats to be dynamic.
 interface StatsItemsType {
@@ -23,6 +24,7 @@ interface LandingLayoutProps {
 	heroProps?: HeroProps; // The hero section props
 	noHero?: boolean; // Whether to hide the hero section
 	noFooter?: boolean; // Whether to hide the footer section
+	inventionInfoProps?: InventionInfoProps; // Props for InventionInfo modal
 }
 
 /*
@@ -31,7 +33,7 @@ interface LandingLayoutProps {
  * The hero section is passed as props to the component.
  * The additional children can be passed to the component to render below the hero section.
 */
-function LandingLayout({ children, heroProps, noFooter = false, noHero = false}: LandingLayoutProps) {
+function LandingLayout({ children, heroProps, noFooter = false, noHero = false, inventionInfoProps}: LandingLayoutProps) {
 	return (
 		<div className="layout-container">
 			{/* <div className="hero-bg"></div>
@@ -42,6 +44,7 @@ function LandingLayout({ children, heroProps, noFooter = false, noHero = false}:
 				{children}
 			</main>
 			{!noFooter && <Footer/>}
+			{inventionInfoProps && <InventionInfo {...inventionInfoProps} />}
 		</div>
 	);
 }
