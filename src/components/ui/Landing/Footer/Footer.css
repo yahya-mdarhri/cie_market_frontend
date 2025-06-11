@@ -1,0 +1,35 @@
+.Footer {
+	background-color: var(--primary-color);
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	/* justify-content: center; */
+	flex-direction: column;
+}
+
+.FooterLogo img{
+	width: 250px;
+}
+
+.FooterCopyRight {
+	color: var(--white);
+	font-size: 14px;
+	text-align: center;
+	padding: 10px 0;
+	opacity: 60%;
+}
+
+.FooterSocialMedia {
+	display: flex;
+	width: auto;
+	justify-content: space-between;
+	align-items: center;
+}
+.FooterSocialMedia a:not(:nth-child(1)) {
+	margin-left: 20px;
+}
+
+.FooterSocialMedia a {
+	color: var(--white);
+	text-decoration: none;
+}

@@ -1,0 +1,222 @@
+.HighLightSpot{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.HighLightSpotLeft{
+	display: flex;
+	flex-direction: column;
+	/* gap: 1rem; */
+	width: 30%;
+	justify-content: center;
+	/* align-items: center; */
+	padding: 10px;
+}
+
+.HighLightSpotLeft h2 {
+	color: var(--primary-color);
+}
+
+.HighLightSpotLeft p {
+	color: #000;
+	opacity: 40%;
+}
+
+.HighLightSpotRight {
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+	padding: 0 10px;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.HighLightSpotRight div {
+	background-color: var(--primary-color);
+	border-radius: 100%;
+	/* padding: 10px; */
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: var(--white);
+}
+
+.LandingInventionCards {
+	display: flex;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	padding: 1rem;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.inventionCardsContainer {
+	display: flex;
+	gap: 1.5rem;
+	transition: transform 0.5s ease-in-out;
+	width: 100%;
+	padding: 0.5rem;
+}
+
+.inventionCardWrapper {
+	flex: 0 0 calc(33.333% - 1rem);
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeInUp 0.5s forwards;
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	position: relative;
+}
+
+.inventionCardWrapper:hover {
+	transform: translateY(-8px);
+	z-index: 2;
+}
+
+.inventionCardWrapper:hover .inventionCard {
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.HighLightSpot {
+	max-width: 1200px;
+	margin: 0 auto 2rem auto;
+	padding: 0 1rem;
+}
+
+.HighLightSpotRight div {
+	background-color: var(--primary-color);
+	border-radius: 100%;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: var(--white);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.HighLightSpotRight div:hover:not([aria-disabled="true"]) {
+	transform: scale(1.1);
+	background-color: var(--secondary-color);
+}
+
+.HighLightSpotRight div[aria-disabled="true"] {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+	.inventionCardWrapper {
+		flex: 0 0 100%;
+	}
+
+	.HighLightSpot {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1rem;
+	}
+
+	.HighLightSpotLeft {
+		width: 100%;
+	}
+
+	.HighLightSpotRight {
+		width: 100%;
+		justify-content: flex-start;
+	}
+}
+
+/* Animation for cards */
+.inventionCard {
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Inventors Section Styles */
+.highlightedInventors {
+    padding: 4rem 2rem;
+}
+
+.inventorsHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.inventorsHeader h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+
+.inventorsHeader p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.inventorsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .highlightedInventors {
+        padding: 3rem 1rem;
+    }
+
+    .inventorsHeader h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .highlightedInventors {
+        padding: 2rem 1rem;
+    }
+
+    .inventorsHeader h2 {
+        font-size: 1.75rem;
+    }
+}
