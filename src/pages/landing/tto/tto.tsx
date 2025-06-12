@@ -2,6 +2,7 @@ import "./tto.css";
 import LandingLayout, { HeroProps, StatsItemsType } from "@layouts/LandingLayout/LandingLayout";
 import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
+import { useNavigate } from "react-router-dom";
 
 // import headImg from "./images/wacim.jpeg";
 
@@ -36,7 +37,6 @@ import ma52677 from './images/inventions/ma52677.png'
 import ma36470 from './images/inventions/ma36470.png'
 import ma39538 from './images/inventions/ma39538.png'
 import ma37414 from './images/inventions/ma37414.jpg'
-
 
 const statsData:StatsItemsType = {
 	a: { name: "Total Patents Filed", value: 650 },
@@ -82,14 +82,6 @@ const partners = [
 		link: ""
 	}
 ]
-
-const heroProps: HeroProps = {
-	heroTitle: <>Technology Transfer Office</>,
-	heroDescription: "Protecting ideas, fostering collaborations, and bringing research to market.",
-	firstAction: "Submit A Patent",
-	secondAction: "Licening Process",
-	stats: statsData,
-};
 
 const inventionCardData: Invention[] = [
 	{
@@ -316,9 +308,18 @@ function HighlightedInventors() {
 
 
 function TTO() {
+	const navigate = useNavigate();
 	useDocumentTitle('Technology Transfer Office | Centre for Innovation and Entrepreneurship');
 
 	const [selectedInvention, setSelectedInvention] = useState<Invention | null>(null);
+	const heroProps: HeroProps = {
+		heroTitle: <>Technology Transfer Office</>,
+		heroDescription: "Protecting ideas, fostering collaborations, and bringing research to market.",
+		firstAction: "Submit A Patent",
+		secondAction: "Licening Process",
+		stats: statsData,
+		onSecondActionClick: () => navigate('/licensing-process')
+	};
 
 	return (
 		<LandingLayout heroProps={heroProps} inventionInfoProps={{
