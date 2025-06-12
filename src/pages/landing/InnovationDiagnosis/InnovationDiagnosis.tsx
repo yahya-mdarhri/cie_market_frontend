@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import "./InnovationDiagnosis.css";
-  import { HashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 
 const phases = [
   "Phase 1 - Launch",
@@ -305,9 +305,9 @@ function InnovationDiagnosis() {
           </div>
           
           <div className="results-actions">
-          <HashLink smooth to="/#contact" className="action-button contact">
-            Contact Our Experts
-          </HashLink>
+            <HashLink smooth to="/#contact" className="action-button contact">
+              Contact Our Experts
+            </HashLink>
           </div>
         </motion.div>
       </div>

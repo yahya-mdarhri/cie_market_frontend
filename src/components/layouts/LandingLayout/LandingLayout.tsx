@@ -17,6 +17,8 @@ interface HeroProps {
 	firstAction?: string; // The first action button text
 	secondAction?: string; // The second action button text (optional)
 	stats?: StatsItemsType; // The stats to be displayed in the hero section
+	onFirstActionClick?: () => void; // Handler for first action button click
+	onSecondActionClick?: () => void; // Handler for second action button click
 }
 
 interface LandingLayoutProps {
