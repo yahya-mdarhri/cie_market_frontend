@@ -273,6 +273,7 @@ interface Inventor {
 	role?: string;
 }
 
+import avatar from "@pages/landing/our_team/images/avatar.jpg"
 
 const inventorData: Inventor[] = [
 	{
@@ -290,11 +291,11 @@ const inventorData: Inventor[] = [
 		role: "Expert",
 		image: ahmed_zouggar,
 	},
-	// {
-	// 	name: "Mohammed OUAHABI",
-	// 	role: "Prototyping Panager",
-	// 	image: "https://i.pravatar.cc/300",
-	// }
+	{
+		name: "Mohammed OUAHABI",
+		role: "Prototyping Manager",
+		image: avatar,
+	}
 ];
 
 function HighlightedInventors() {
