@@ -3,6 +3,7 @@ import LandingLayout, { HeroProps, StatsItemsType } from "@layouts/LandingLayout
 import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 import { useNavigate } from "react-router-dom";
+import Contact, { ContactPerson } from "@ui/Landing/Contact/Contact";
 
 // import headImg from "./images/wacim.jpeg";
 
@@ -14,7 +15,7 @@ import { useDocumentTitle } from "@hooks/useDocumentTitle";
 import Services from "@ui/Landing/Services/Services";
 
 import { FaHandshake, FaFileSignature, FaBullhorn } from "react-icons/fa";
-import InventorCard from "@ui/Landing/InventorCard/InventorCard";
+import ProfileCard from "@ui/Landing/ProfileCard/ProfileCard";
 // import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentHeadSection";
 import { Invention } from "@ui/Landing/InventionInfo/InventionInfo";
 
@@ -259,15 +260,13 @@ function LandingInventionCards({
 	);
 }
 
-interface Inventor {
+interface Profile {
 	name: string;
 	image: string;
 	role?: string;
 }
 
-import avatar from "@pages/landing/our_team/images/avatar.jpg"
-
-const inventorData: Inventor[] = [
+const profileData: Profile[] = [
 	{
 		name: "Abdellatif BENABDELLAH",
 		role: "full professor",
@@ -290,22 +289,54 @@ const inventorData: Inventor[] = [
 	}
 ];
 
-function HighlightedInventors() {
+function HighlightedProfiles() {
 	return (
-		<section className="highlightedInventors">
-			<div className="inventorsHeader">
-				<h2>Our Distinguished Inventors</h2>
+		<section className="highlightedProfiles">
+			<div className="profilesHeader">
+				<h2>Our Distinguished Profiles</h2>
 				<p>Meet the brilliant minds behind our innovative breakthroughs</p>
 			</div>
-			<div className="inventorsGrid">
-				{inventorData.map((inventor, index) => (
-					<InventorCard key={index} {...inventor} />
+			<div className="profilesGrid">
+				{profileData.map((profile, index) => (
+					<ProfileCard key={index} {...profile} />
 				))}
 			</div>
 		</section>
 	);
 }
 
+const contactData: ContactPerson[] = [
+    {
+        name: "John Doe",
+        role: "Technical Lead",
+        image: avatar, 
+        social: {
+            linkedin: "https://linkedin.com/in/johndoe",
+            twitter: "https://twitter.com/johndoe",
+            email: "john.doe@example.com"
+        }
+    },
+	{
+        name: "John Doe",
+        role: "Technical Lead",
+        image: avatar, 
+        social: {
+            linkedin: "https://linkedin.com/in/johndoe",
+            twitter: "https://twitter.com/johndoe",
+            email: "john.doe@example.com"
+        }
+    },
+	{
+        name: "John Doe",
+        role: "Technical Lead",
+        image: avatar, 
+        social: {
+            linkedin: "https://linkedin.com/in/johndoe",
+            twitter: "https://twitter.com/johndoe",
+            email: "john.doe@example.com"
+        }
+    },
+];
 
 function TTO() {
 	const navigate = useNavigate();
@@ -351,7 +382,12 @@ function TTO() {
 				/> */}
 				<Services services={servicesData} />
 				<LandingInventionCards onSelectInvention={setSelectedInvention} />
-				<HighlightedInventors />
+				<HighlightedProfiles />
+				<Contact 
+					contacts={contactData}
+					title="Contact Our Team"
+					description="Get in touch with our experts for any questions about technology transfer and innovation."
+				/>
 				<Partners partners={partners} />
 		</LandingLayout>
 	);

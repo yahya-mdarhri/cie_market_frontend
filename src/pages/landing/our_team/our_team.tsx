@@ -1,5 +1,5 @@
 import LandingLayout from "@components/layouts/LandingLayout/LandingLayout";
-import InventorCard from "@ui/Landing/InventorCard/InventorCard";
+import ProfileCard from "@ui/Landing/ProfileCard/ProfileCard";
 import avatar from './images/avatar.jpg';
 import './our_team.css';
 
@@ -66,7 +66,7 @@ function OurTeam() {
 
                     <div className="team-flex">
                         {teamMembers.map((member, index) => (
-                            <InventorCard
+                            <ProfileCard
                                 key={index}
                                 name={member.name}
                                 role={member.role}
