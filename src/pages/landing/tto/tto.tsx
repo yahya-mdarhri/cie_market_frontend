@@ -42,7 +42,7 @@ import ma37414 from './images/inventions/ma37414.jpg'
 const statsData:StatsItemsType = {
 	a: { name: "Total Patents Filed", value: 650 },
 	b: { name: "International Patents", value: 108 },
-	c: { name: "Research Contracts (M DHS)", value: 66 },
+	c: { name: "Research Contracts", value: 66 },
 	d: { name: "Gold Medals", value: 3 },
 };
 
@@ -305,6 +305,8 @@ function HighlightedProfiles() {
 	);
 }
 
+import avatar from "@pages/landing/our_team/images/avatar.jpg"
+
 const contactData: ContactPerson[] = [
     {
         name: "John Doe",
@@ -385,8 +387,8 @@ function TTO() {
 				<HighlightedProfiles />
 				<Contact 
 					contacts={contactData}
-					title="Contact Our Team"
-					description="Get in touch with our experts for any questions about technology transfer and innovation."
+					title="Learn More About Our Innovations"
+					description="Interested in a specific invention or technology? Contact us to learn more about our research and development projects."
 				/>
 				<Partners partners={partners} />
 		</LandingLayout>
