@@ -23,6 +23,8 @@ import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 import Partners from "@ui/Landing/Partners/Partners";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
+import { FaHandshake, FaIndustry, FaLightbulb, FaTools } from 'react-icons/fa';
 
 const partners = [
 		{
@@ -79,14 +81,15 @@ const heroProps: HeroProps = {
 interface CIEItemProps {
 	name: string;
 	description: string;
-	image: string;
+	icon: React.ReactNode;
+	link: string;
 }
 
-function CIEItem({name, description, image}: CIEItemProps) {
+function CIEItem({name, description, icon, link}: CIEItemProps) {
 	return (
-		<div className="CIEItem">
+		<Link to={link} className="CIEItem">
 			<div>
-				<img src={image} alt="" />
+				{icon}
 			</div>
 			<h3>{name}</h3>
 			<p>{description}</p>
@@ -94,9 +97,36 @@ function CIEItem({name, description, image}: CIEItemProps) {
 				learn more
 				<img src={arrow} alt="" />
 			</div>
-		</div>
+		</Link>
 	);
 }
+
+const departments = [
+    {
+        icon: <FaHandshake size={40} color="var(--primary-color)" />,
+        name: "Technology Transfer Office",
+        description: "Bridging Innovation and Industry through Research Commercialization",
+        link: "/tto"
+    },
+    {
+        icon: <FaIndustry size={40} color="var(--primary-color)" />,
+        name: "Industrial Clinic",
+        description: "Solving Real-World Challenges Through Academic–Industry Collaboration",
+        link: "/industrial"
+    },
+    {
+        icon: <FaLightbulb size={40} color="var(--primary-color)" />,
+        name: "Incubator",
+        description: "Empowering Startups to Transform Ideas into Impact",
+        link: "/incubator"
+    },
+    {
+        icon: <FaTools size={40} color="var(--primary-color)" />,
+        name: "Tech Center",
+        description: "Driving Innovation with Cutting-Edge Tools, Talent, and Infrastructure",
+        link: "/tech-center"
+    }
+];
 
 function Home() {
 	useDocumentTitle('Home | Centre for Innovation and Entrepreneurship');
@@ -138,22 +168,15 @@ function Home() {
 						<p>Explore our specialized units working together to drive innovation and entrepreneurship</p>
 					</div>
 					<div className="DepartmentsSectionContent">
-						<CIEItem
-							image={tto_logo}
-							name="Technology Transfer Office"
-							description="Bridging Innovation and Industry through Research Commercialization"/>
-						<CIEItem
-							image={industrial_logo}
-							name="Industrial Clinic"
-							description="Solving Real-World Challenges Through Academic–Industry Collaboration"/>
-						<CIEItem
-							image={incubator_logo}
-							name="Incubator"
-							description="Empowering Startups to Transform Ideas into Impact"/>
-						<CIEItem
-							image={tech_center_logo}
-							name="Tech Center"
-							description="Driving Innovation with Cutting-Edge Tools, Talent, and Infrastructure"/>
+						{departments.map((dept, index) => (
+							<CIEItem
+								key={index}
+								icon={dept.icon}
+								name={dept.name}
+								description={dept.description}
+								link={dept.link}
+							/>
+						))}
 					</div>
 				</div>
 				<Partners partners={partners} />
