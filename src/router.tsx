@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         element: <Incubator />,
       },
       {
-        path: '/tech_center',
+        path: '/tech-center',
         element: <TechCenter />,
       },
       {
