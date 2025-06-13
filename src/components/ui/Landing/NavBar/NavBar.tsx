@@ -180,6 +180,13 @@ function NavLinks({ closeMobileMenu, isMobile }: { closeMobileMenu: () => void, 
 							Career Opportunities
 						</Link>
 						<Link 
+							to="/impact" 
+							className={`dropdown-item `}
+							onClick={closeMobileMenu}
+						>
+							impact
+						</Link>
+						<Link 
 							to="/join-our-mailing-list" 
 							className={`dropdown-item ${useIsActive('/faq') ? 'active' : ''}`}
 							onClick={closeMobileMenu}

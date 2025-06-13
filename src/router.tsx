@@ -10,6 +10,7 @@ import AuditInnovationForm from '@pages/landing/InnovationDiagnosis/InnovationDi
 import OurTeam from '@pages/landing/our_team/our_team';
 import LicensingProcess from '@pages/landing/licensing_process/licensing_process';
 import JoinTheMailingList from '@pages/landing/JoinTheMailingList/JoinTheMailingList';
+import Impact from '@pages/landing/impact/Impact';
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: '/join-our-mailing-list',
         element: <JoinTheMailingList />,
+      },
+      {
+        path: '/impact',
+        element: <Impact />,
       }
     ]
   },
