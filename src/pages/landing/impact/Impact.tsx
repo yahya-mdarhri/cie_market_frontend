@@ -116,7 +116,6 @@ export default function Impact() {
               key={item.id} 
               className="sdg-news-card"
               role="button"
-              tabIndex={0}
             >
               <div className="sdg-news-image">
                 <img src={item.image} alt={item.title} />
