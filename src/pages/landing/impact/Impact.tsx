@@ -3,21 +3,14 @@ import LandingLayout from '@layouts/LandingLayout/LandingLayout';
 import { HeroProps } from '@layouts/LandingLayout/LandingLayout';
 import './Impact.css';
 
-import {metrics, newsItems} from './data';
+import {metrics, newsItems, getSDGIcon, heroProps} from './data';
 
 export default function Impact() {
     const navigate = useNavigate();
     
-    const handleCardClick = () => {
-    navigate('/join-our-mailing-list');
-    };
-    const heroProps: HeroProps = {
-        heroTitle: 'Our Impact',
-        heroDescription: 'Discover how we are making a difference through sustainable innovation and technology.',
-        firstAction: 'Join Our Mailing List',
-        onFirstActionClick: handleCardClick,
-    };
-
+    heroProps.onFirstActionClick = () => {
+      navigate('/join-our-mailing-list');
+      };
   return (
     <LandingLayout heroProps={heroProps}>
       <div className="impact-metrics">

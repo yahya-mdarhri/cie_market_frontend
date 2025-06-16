@@ -1,5 +1,7 @@
 //  this file contains the data for the impact page of the landing page
 
+import { HeroProps } from "@components/layouts/LandingLayout/LandingLayout";
+
 // this function returns the URL of the SDG icon based on the SDG number
 function getSDGIcon(sdgNumber: number) {
     return `https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-${sdgNumber.toString().padStart(2, '0')}.jpg`;
@@ -79,4 +81,11 @@ const metrics = [
     }
 ];
 
-export {newsItems, metrics, getSDGIcon};
+
+const heroProps: HeroProps = {
+    heroTitle: 'Our Impact',
+    heroDescription: 'Discover how we are making a difference through sustainable innovation and technology.',
+    firstAction: 'Join Our Mailing List',
+};
+
+export {newsItems, metrics, getSDGIcon, heroProps};
