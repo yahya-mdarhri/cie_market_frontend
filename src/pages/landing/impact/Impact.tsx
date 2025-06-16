@@ -3,6 +3,8 @@ import LandingLayout from '@layouts/LandingLayout/LandingLayout';
 import { HeroProps } from '@layouts/LandingLayout/LandingLayout';
 import './Impact.css';
 
+import {metrics, newsItems} from './data';
+
 export default function Impact() {
     const navigate = useNavigate();
     
