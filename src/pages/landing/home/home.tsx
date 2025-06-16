@@ -1,9 +1,5 @@
 import LandingLayout, { HeroProps, StatsItemsType } from "@layouts/LandingLayout/LandingLayout";
 import "./home.css";
-import tto_logo from "./images/tto.svg";
-import industrial_logo from "./images/industrial.svg";
-import incubator_logo from "./images/incubator.svg";
-import tech_center_logo from "./images/tech_center.svg";
 import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentHeadSection";
 
 import arrow from '../../../assets/icons/arrow.svg';
@@ -22,9 +18,9 @@ import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 import Partners from "@ui/Landing/Partners/Partners";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
-import { useState } from "react";
 import { Link } from 'react-router-dom';
 import { FaHandshake, FaIndustry, FaLightbulb, FaTools } from 'react-icons/fa';
+import ContactUs from "@ui/Landing/ContactUs/ContactUs";
 
 const partners = [
 		{
@@ -130,15 +126,6 @@ const departments = [
 
 function Home() {
 	useDocumentTitle('Home | Centre for Innovation and Entrepreneurship');
-	const [contactType, setContactType] = useState('inventor');
-
-	const handleContactTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setContactType(e.target.value);
-		const companyFields = document.getElementById('companyFields');
-		if (companyFields) {
-			companyFields.style.display = e.target.value === 'company' ? 'flex' : 'none';
-		}
-	};
 
 	return (
 		<LandingLayout heroProps={heroProps}>
@@ -181,54 +168,8 @@ function Home() {
 				</div>
 				<Partners partners={partners} />
 				<div className="Home5thSection" id="contact">
-					<form className="HomeContactUs">
-						<div className="HomeContactUsHeader">
-							<h2>Let's Get In Touch</h2>
-							<div className="HomeContactUsRadios">
-								<div>
-									<label htmlFor="isInventor">Inventor</label>
-									<input 
-										type="radio" 
-										name="contactType" 
-										id="isInventor" 
-										value="inventor"
-										checked={contactType === 'inventor'}
-										onChange={handleContactTypeChange}
-									/>
-								</div>
-								<div>
-									<label htmlFor="isCompany">Company</label>
-									<input 
-										type="radio" 
-										name="contactType" 
-										id="isCompany" 
-										value="company"
-										checked={contactType === 'company'}
-										onChange={handleContactTypeChange}
-									/>
-								</div>
-							</div>
-						</div>
-						<div className="HomeContactUsInputs">
-							<input type="text" name="name" id="name" placeholder="Full Name"/>
-							<div className="email_and_phone">
-								<input type="email" name="email" id="email" placeholder="Email" />
-								<input type="tel" name="phone" id="phone" placeholder="Phone" />
-							</div>
-							<div className="company_fields" id="companyFields" style={{ display: 'none' }}>
-								<input type="text" name="companyName" id="companyName" placeholder="Company Name"/>
-								<input type="text" name="position" id="position" placeholder="Your Position"/>
-							</div>
-							<input type="text" name="subject" id="subject" placeholder="Subject"/>
-							<textarea name="message" id="message" placeholder="Message"/>
-						</div>
-						<div className="HomeContactUsSubmit">
-							<button type="submit">Send Message</button>
-						</div>
-					</form>
+					<ContactUs onSubmit={(formData) =>{}} />
 				</div>
-
-			{/* </section> */}
 		</LandingLayout>
 	);
 }

@@ -299,6 +299,48 @@
     .benefit-card p {
         font-size: 0.95rem;
     }
+}
+
+/* Update form-related classes to be scoped to join-mailing-container */
+.join-mailing-container .form-group {
+    margin-bottom: 2rem;
+}
+
+.join-mailing-container .form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: #2d3748;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.join-mailing-container .form-group input,
+.join-mailing-container .form-group select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: white;
+    color: #2d3748;
+}
+
+.join-mailing-container .form-group input:focus,
+.join-mailing-container .form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(var(--primary-color-rgb, 0, 123, 255), 0.1);
+}
+
+.join-mailing-container .form-group input::placeholder {
+    color: #a0aec0;
+}
+
+.join-mailing-container .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
 } 
  
  

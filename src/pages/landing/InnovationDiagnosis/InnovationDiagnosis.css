@@ -431,28 +431,15 @@
     opacity: 0.9;
 }
 
-.user-info-form {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    /* margin-bottom: 0rem; */
-}
-
-.form-group {
+.audit-container .form-group {
     margin-bottom: 1.5rem;
 }
 
-.form-group.full-width {
+.audit-container .form-group.full-width {
     grid-column: 1 / -1;
 }
 
-.form-group label {
+.audit-container .form-group label {
     display: block;
     font-size: 0.9rem;
     font-weight: 500;
@@ -461,7 +448,7 @@
     opacity: 0.9;
 }
 
-.form-group input {
+.audit-container .form-group input {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -472,26 +459,40 @@
     transition: all 0.2s ease;
 }
 
-.form-group input:focus {
+.audit-container .form-group input:focus {
     outline: none;
     border-color: var(--white);
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
 }
 
-.form-group input::placeholder {
+.audit-container .form-group input::placeholder {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.form-submit {
+.audit-container .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.audit-container .form-submit {
     grid-column: 1 / -1;
     display: flex;
     justify-content: center;
     margin-top: 1rem;
 }
 
-.form-submit button {
+.audit-container .form-submit button {
     min-width: 200px;
+}
+
+.audit-container .form-group input.error {
+    border-color: #ff4d4d;
+}
+
+.audit-container .form-group input.error:focus {
+    box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.2);
 }
 
 .results-actions {
@@ -550,14 +551,6 @@
     margin-bottom: 1rem;
     text-align: center;
     opacity: 0.9;
-}
-
-.form-group input.error {
-    border-color: #ff4d4d;
-}
-
-.form-group input.error:focus {
-    box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.2);
 }
 
 @media print {
@@ -640,6 +633,41 @@
 
     .reset-button svg {
         font-size: 1rem;
+    }
+
+    .results-container {
+        padding: 1.5rem;
+    }
+
+    .results-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .score-number {
+        font-size: 3rem;
+    }
+
+    .score-max {
+        font-size: 1.25rem;
+    }
+
+    .type-value {
+        font-size: 1.75rem;
+    }
+
+    .type-description {
+        font-size: 1rem;
+        padding-top: 0.75rem;
+    }
+
+    .description-value {
+        font-size: 1rem;
+    }
+
+    .results-type {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
     }
 
     .results-container {
