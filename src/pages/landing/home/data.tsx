@@ -1,3 +1,5 @@
+// This file contains the data for the home page of the landing page.
+
 import { HeroProps, StatsItemsType } from "@layouts/LandingLayout/LandingLayout";
 import { FaHandshake, FaIndustry, FaLightbulb, FaTools } from 'react-icons/fa';
 
@@ -9,7 +11,6 @@ import yanaHolding from './images/partners/Ynna-holding.png';
 import eu from './images/partners/European_Union.webp';
 import efficacity from './images/partners/Efficacity.png';
 
-// This file contains the data for the home page of the landing page.
 
 // this array contains the partners logos and links
 export const partners = [
