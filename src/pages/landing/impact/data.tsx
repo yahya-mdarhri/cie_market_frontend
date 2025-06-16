@@ -81,7 +81,7 @@ const metrics = [
     }
 ];
 
-
+// this object contains the properties for the hero section of the impact page
 const heroProps: HeroProps = {
     heroTitle: 'Our Impact',
     heroDescription: 'Discover how we are making a difference through sustainable innovation and technology.',
