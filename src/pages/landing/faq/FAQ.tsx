@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./FAQ.css";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
 import LandingLayout from "@components/layouts/LandingLayout/LandingLayout";
+import { faqItems } from "./data";
+
 
 function FAQ() {
     useDocumentTitle('FAQ | Centre for Innovation and Entrepreneurship');
@@ -11,29 +13,6 @@ function FAQ() {
     const toggleFAQ = (index: number) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
-
-    const faqItems = [
-        {
-            question: "this is a example question?",
-            answer: "this is a example answer."
-        },
-        {
-            question: "this is a example of a verry long long long long long long question?",
-            answer: "this is a example answer. this is a example answer.this is a example answer.this is a example answer.this is a example answer."
-        },
-        {
-            question: "this is a example question?",
-            answer: "this is a example answer."
-        },
-        {
-            question: "this is a example question?",
-            answer: "this is a example answer."
-        },
-        {
-            question: "this is a example question?",
-            answer: "this is a example answer."
-        },
-    ];
 
     // filter the question and answer based on search query
     const filteredFaqItems = faqItems.filter(item => 
