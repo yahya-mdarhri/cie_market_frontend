@@ -9,6 +9,9 @@ import yanaHolding from './images/partners/Ynna-holding.png';
 import eu from './images/partners/European_Union.webp';
 import efficacity from './images/partners/Efficacity.png';
 
+// This file contains the data for the home page of the landing page.
+
+// this array contains the partners logos and links
 export const partners = [
     {
         logo: cdg,
@@ -47,12 +50,15 @@ export const partners = [
     }
 ];
 
+
+// this array contains the stats data for the hero section
 export const statsData: StatsItemsType = {
     a: { name: "Innovation & Patents", value: 644 },
     b: { name: "International Patents", value: 117 },
     c: { name: "Gold Medals", value: 2 },
 };
 
+// this object contains the data for the hero section
 export const heroProps: HeroProps = {
     heroTitle: <>From Idea to Market Bridging Innovation and Industry</>,
     heroDescription: "We are glad to have you here. Explore our features and services.",
@@ -61,6 +67,7 @@ export const heroProps: HeroProps = {
     stats: statsData,
 };
 
+// this array contains the departments data for the home page
 export const departments = [
     {
         icon: <FaHandshake size={40} color="var(--primary-color)" />,
