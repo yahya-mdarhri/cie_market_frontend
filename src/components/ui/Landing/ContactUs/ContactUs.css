@@ -252,7 +252,22 @@
 
 .contact-section-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contact-section-header h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 0.8rem;
+}
+
+.contact-section-header p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 @media (max-width: 1024px) {
