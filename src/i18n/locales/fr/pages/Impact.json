@@ -1,0 +1,45 @@
+{
+  "hero": {
+    "title": "Notre Impact",
+    "description": "Découvrez comment nous faisons la différence grâce à l'innovation durable et à la technologie.",
+    "firstAction": "Rejoignez Notre Liste de Diffusion"
+  },
+  "metrics": {
+    "title": "Métriques Clés",
+    "items": {
+      "metric_1": {
+        "value": "50+",
+        "title": "Innovations Développées",
+        "description": "Solutions de pointe pour relever les défis mondiaux"
+      },
+      "metric_2": {
+        "value": "100+",
+        "title": "Startups Soutenues",
+        "description": "Entrepreneurs habilités à créer un changement positif"
+      },
+      "metric_3": {
+        "value": "1M+",
+        "title": "Vies Impactées",
+        "description": "Personnes bénéficiant de nos solutions durables"
+      }
+    }
+  },
+  "news": {
+    "title": "Actualités et Histoires",
+    "sdg_alt": "ODD {{number}}",
+    "items": {
+      "news_1": {
+        "title": "Développement Durable en Action",
+        "description": "Comment nos innovations contribuent aux objectifs mondiaux de durabilité et créent un impact durable."
+      },
+      "news_2": {
+        "title": "Percée dans l'Énergie Propre",
+        "description": "Technologie révolutionnaire qui promet de transformer la production et la distribution d'énergie renouvelable."
+      },
+      "news_3": {
+        "title": "Éducation pour Tous",
+        "description": "Briser les barrières dans l'éducation grâce à des solutions innovantes d'apprentissage numérique."
+      }
+    }
+  }
+} 

@@ -1,0 +1,45 @@
+{
+  "hero": {
+    "title": "Nuestro Impacto",
+    "description": "Descubre cómo estamos marcando la diferencia a través de la innovación sostenible y la tecnología.",
+    "firstAction": "Únete a Nuestra Lista de Correo"
+  },
+  "metrics": {
+    "title": "Métricas Clave",
+    "items": {
+      "metric_1": {
+        "value": "50+",
+        "title": "Innovaciones Desarrolladas",
+        "description": "Soluciones de vanguardia que abordan desafíos globales"
+      },
+      "metric_2": {
+        "value": "100+",
+        "title": "Startups Apoyadas",
+        "description": "Emprendedores empoderados para crear un cambio positivo"
+      },
+      "metric_3": {
+        "value": "1M+",
+        "title": "Vidas Impactadas",
+        "description": "Personas beneficiadas por nuestras soluciones sostenibles"
+      }
+    }
+  },
+  "news": {
+    "title": "Noticias e Historias",
+    "sdg_alt": "ODS {{number}}",
+    "items": {
+      "news_1": {
+        "title": "Desarrollo Sostenible en Acción",
+        "description": "Cómo nuestras innovaciones están contribuyendo a los objetivos globales de sostenibilidad y creando un impacto duradero."
+      },
+      "news_2": {
+        "title": "Avance en Energía Limpia",
+        "description": "Tecnología revolucionaria que promete transformar la producción y distribución de energía renovable."
+      },
+      "news_3": {
+        "title": "Educación para Todos",
+        "description": "Rompiendo barreras en la educación a través de soluciones innovadoras de aprendizaje digital."
+      }
+    }
+  }
+} 
