@@ -6,25 +6,40 @@
     "secondAction": "Submit A Patent"
   },
   "introduction": {
-    "title": "The Centre for Innovation and Entrepreneurship",
-    "description": "The Centre for Innovation and Entrepreneurship is dedicated to protecting and promoting the University's research and innovation, as well as encouraging entrepreneurship and technology transfer to the industrial sector.",
-    "yearsOfExperience": "Years of experience",
-    "inventionsDisclosed": "Inventions disclosed"
+    "title": "Centre for Innovation and Entrepreneurship",
+    "description": "The Centre for Innovation and Entrepreneurship (CIE) is a hub for innovation, research, and entrepreneurship at the International University of Rabat. We support researchers, students, and entrepreneurs in developing and commercializing their ideas."
   },
   "visionAndMission": {
-    "mission": "Multiplying the impact of RDI in the service of industrial and territorial competitiveness, through The valorization of research results, the promotion of entrepreneurship and the solid partnership with socioeconomic actors",
-    "vision": "UIR's leadership as a University promoting innovation and entrepreneurship at the national and African levels."
+    "mission": "To foster innovation and entrepreneurship by providing resources, support, and opportunities for researchers, students, and entrepreneurs to develop and commercialize their ideas.",
+    "vision": "To be a leading center for innovation and entrepreneurship in Morocco and Africa, driving economic growth and social impact through research commercialization and startup development."
   },
   "departmentHead": {
-    "role": "Executive Director",
-    "message": "We are committed to fostering a culture of innovation and entrepreneurship that drives economic growth and societal impact. Our team is dedicated to supporting researchers, inventors, and entrepreneurs in transforming their ideas into successful ventures."
+    "role": "Director of the Centre for Innovation and Entrepreneurship",
+    "message": "Welcome to the Centre for Innovation and Entrepreneurship. We are committed to supporting innovation and entrepreneurship at the International University of Rabat and beyond."
   },
   "departments": {
     "title": "Our Departments",
-    "subtitle": "Explore our specialized units working together to drive innovation and entrepreneurship"
+    "subtitle": "Discover our specialized departments and their unique offerings",
+    "learnMore": "Learn More",
+    "tto": {
+      "name": "Technology Transfer Office",
+      "description": "Bridging Innovation and Industry through Research Commercialization"
+    },
+    "industrial": {
+      "name": "Industrial Clinic",
+      "description": "Solving Real-World Challenges Through Academic–Industry Collaboration"
+    },
+    "incubator": {
+      "name": "Incubator",
+      "description": "Empowering Startups to Transform Ideas into Impact"
+    },
+    "techCenter": {
+      "name": "Tech Center",
+      "description": "Driving Innovation with Cutting-Edge Tools, Talent, and Infrastructure"
+    }
   },
   "stats": {
-    "innovationAndPatents": "Innovation & Patents",
+    "innovationPatents": "Innovation & Patents",
     "internationalPatents": "International Patents",
     "goldMedals": "Gold Medals"
   }

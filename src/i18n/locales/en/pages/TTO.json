@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "title": "Technology Transfer Office",
+    "description": "Protecting ideas, fostering collaborations, and bringing research to market.",
+    "firstAction": "Submit A Patent",
+    "secondAction": "Licensing Process"
+  },
+  "introduction": {
+    "title": "Technology Transfer Office",
+    "description": "The UIR has created the first Technology Transfer Office (TTO) according to international standards to carry out technology transfer and support economic development at the regional and national levels. The TTO operates on several levels to support research activities and to improve the implementation of the innovative product value chain."
+  },
+  "visionAndMission": {
+    "mission": "Facilitate the exploitation of the results of scientific research, Open Innovation and its opening up to the market",
+    "vision": "Transform the TTO into a springboard for innovation at the UIR and make its activity profitable"
+  },
+  "inventions": {
+    "title": "Inventions Spotlight",
+    "subtitle": "Highlighted technologies and innovations"
+  },
+  "profiles": {
+    "title": "Our Distinguished Profiles",
+    "subtitle": "Meet the brilliant minds behind our innovative breakthroughs"
+  },
+  "contact": {
+    "title": "Learn More About Our Innovations",
+    "description": "Interested in a specific invention or technology? Contact us to learn more about our research and development projects."
+  },
+  "stats": {
+    "totalPatents": "Total Patents Filed",
+    "internationalPatents": "International Patents",
+    "researchContracts": "Research Contracts",
+    "goldMedals": "Gold Medals"
+  }
+} 

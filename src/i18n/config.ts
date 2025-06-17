@@ -11,6 +11,10 @@ import enHome from './locales/en/pages/Home.json';
 import esHome from './locales/es/pages/Home.json';
 import frHome from './locales/fr/pages/Home.json';
 
+import enTTO from './locales/en/pages/TTO.json';
+import esTTO from './locales/es/pages/TTO.json';
+import frTTO from './locales/fr/pages/TTO.json';
+
 import enIntroduction from './locales/en/components/Introduction.json';
 import esIntroduction from './locales/es/components/Introduction.json';
 import frIntroduction from './locales/fr/components/Introduction.json';
@@ -40,6 +44,7 @@ export const NAMESPACES = {
   footer: 'footer',
   contact: 'contact',
   home: 'home',
+  tto: 'tto',
   introduction: 'introduction',
   visionAndMission: 'visionAndMission',
   contactUs: 'contactUs'
@@ -56,6 +61,7 @@ i18n
       en: {
         navbar: enNavbar,
         home: enHome,
+        tto: enTTO,
         introduction: enIntroduction,
         visionAndMission: enVisionAndMission,
         contactUs: enContactUs
@@ -63,6 +69,7 @@ i18n
       es: {
         navbar: esNavbar,
         home: esHome,
+        tto: esTTO,
         introduction: esIntroduction,
         visionAndMission: esVisionAndMission,
         contactUs: esContactUs
@@ -70,6 +77,7 @@ i18n
       fr: {
         navbar: frNavbar,
         home: frHome,
+        tto: frTTO,
         introduction: frIntroduction,
         visionAndMission: frVisionAndMission,
         contactUs: frContactUs

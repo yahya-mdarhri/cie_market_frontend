@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "title": "Bureau de Transfert de Technologie",
+    "description": "Protéger les idées, favoriser les collaborations et amener la recherche sur le marché.",
+    "firstAction": "Soumettre un Brevet",
+    "secondAction": "Processus de Licence"
+  },
+  "introduction": {
+    "title": "Bureau de Transfert de Technologie",
+    "description": "L'UIR a créé le premier Bureau de Transfert de Technologie (BTT) selon les normes internationales pour effectuer le transfert de technologie et soutenir le développement économique aux niveaux régional et national. Le BTT opère à plusieurs niveaux pour soutenir les activités de recherche et améliorer la mise en œuvre de la chaîne de valeur du produit innovant."
+  },
+  "visionAndMission": {
+    "mission": "Faciliter l'exploitation des résultats de la recherche scientifique, l'Innovation Ouverte et son ouverture au marché",
+    "vision": "Transformer le BTT en tremplin pour l'innovation à l'UIR et rendre son activité rentable"
+  },
+  "inventions": {
+    "title": "Mise en Avant des Inventions",
+    "subtitle": "Technologies et innovations mises en avant"
+  },
+  "profiles": {
+    "title": "Nos Profils Distingués",
+    "subtitle": "Découvrez les esprits brillants derrière nos percées innovantes"
+  },
+  "contact": {
+    "title": "En Savoir Plus sur Nos Innovations",
+    "description": "Intéressé par une invention ou une technologie spécifique ? Contactez-nous pour en savoir plus sur nos projets de recherche et développement."
+  },
+  "stats": {
+    "totalPatents": "Total des Brevets Déposés",
+    "internationalPatents": "Brevets Internationaux",
+    "researchContracts": "Contrats de Recherche",
+    "goldMedals": "Médailles d'Or"
+  }
+} 

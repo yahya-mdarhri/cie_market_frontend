@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "title": "Oficina de Transferencia de Tecnología",
+    "description": "Protegiendo ideas, fomentando colaboraciones y llevando la investigación al mercado.",
+    "firstAction": "Presentar una Patente",
+    "secondAction": "Proceso de Licenciamiento"
+  },
+  "introduction": {
+    "title": "Oficina de Transferencia de Tecnología",
+    "description": "La UIR ha creado la primera Oficina de Transferencia de Tecnología (OTT) según estándares internacionales para llevar a cabo la transferencia de tecnología y apoyar el desarrollo económico a nivel regional y nacional. La OTT opera en varios niveles para apoyar las actividades de investigación y mejorar la implementación de la cadena de valor del producto innovador."
+  },
+  "visionAndMission": {
+    "mission": "Facilitar la explotación de los resultados de la investigación científica, la Innovación Abierta y su apertura al mercado",
+    "vision": "Transformar la OTT en un trampolín para la innovación en la UIR y hacer rentable su actividad"
+  },
+  "inventions": {
+    "title": "Destacado de Invenciones",
+    "subtitle": "Tecnologías e innovaciones destacadas"
+  },
+  "profiles": {
+    "title": "Nuestros Perfiles Distinguidos",
+    "subtitle": "Conozca las mentes brillantes detrás de nuestros avances innovadores"
+  },
+  "contact": {
+    "title": "Aprenda Más Sobre Nuestras Innovaciones",
+    "description": "¿Interesado en una invención o tecnología específica? Contáctenos para obtener más información sobre nuestros proyectos de investigación y desarrollo."
+  },
+  "stats": {
+    "totalPatents": "Total de Patentes Presentadas",
+    "internationalPatents": "Patentes Internacionales",
+    "researchContracts": "Contratos de Investigación",
+    "goldMedals": "Medallas de Oro"
+  }
+} 

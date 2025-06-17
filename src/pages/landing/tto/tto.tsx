@@ -4,6 +4,7 @@ import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 import { useNavigate } from "react-router-dom";
 import Contact from "@ui/Landing/Contact/Contact";
+import { useTranslation } from 'react-i18next';
 
 // import headImg from "./images/wacim.jpeg";
 
@@ -19,7 +20,7 @@ import ProfileCard from "@ui/Landing/ProfileCard/ProfileCard";
 import { Invention } from "@ui/Landing/InventionInfo/InventionInfo";
 import Partners from "@ui/Landing/Partners/Partners";
 
-import {statsData, partners, inventionCardData, servicesData, profileData, contactData} from "./data";
+import {getTranslatedStats, partners, inventionCardData, servicesData, profileData, contactData} from "./data";
 
 
 function LandingInventionCards({
@@ -27,6 +28,7 @@ function LandingInventionCards({
 }: { 
 	onSelectInvention: (invention: Invention) => void 
 }) {
+	const { t } = useTranslation('tto');
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const cardsPerView = 3;
 
@@ -56,9 +58,9 @@ function LandingInventionCards({
 		<>
 			<div className="HighLightSpot">
 				<div className="HighLightSpotLeft">
-					<h2>Inventions Spotlight</h2>
+					<h2>{t('inventions.title')}</h2>
 					<div>
-						Highlighted technologies and innovations
+						{t('inventions.subtitle')}
 					</div>
 				</div>
 				<div className="HighLightSpotRight">
@@ -120,11 +122,13 @@ function LandingInventionCards({
 
 
 function HighlightedProfiles() {
+	const { t } = useTranslation('tto');
+	
 	return (
 		<section className="highlightedProfiles">
 			<div className="profilesHeader">
-				<h2>Our Distinguished Profiles</h2>
-				<p>Meet the brilliant minds behind our innovative breakthroughs</p>
+				<h2>{t('profiles.title')}</h2>
+				<p>{t('profiles.subtitle')}</p>
 			</div>
 			<div className="profilesGrid">
 				{profileData.map((profile, index) => (
@@ -137,16 +141,18 @@ function HighlightedProfiles() {
 
 
 function TTO() {
+	const { t } = useTranslation('tto');
 	const navigate = useNavigate();
 	useDocumentTitle('Technology Transfer Office | Centre for Innovation and Entrepreneurship');
 
 	const [selectedInvention, setSelectedInvention] = useState<Invention | null>(null);
+	
 	const heroProps: HeroProps = {
-		heroTitle: <>Technology Transfer Office</>,
-		heroDescription: "Protecting ideas, fostering collaborations, and bringing research to market.",
-		firstAction: "Submit A Patent",
-		secondAction: "Licening Process",
-		stats: statsData,
+		heroTitle: <>{t('hero.title')}</>,
+		heroDescription: t('hero.description'),
+		firstAction: t('hero.firstAction'),
+		secondAction: t('hero.secondAction'),
+		stats: getTranslatedStats(),
 		onSecondActionClick: () => navigate('/licensing-process')
 	};
 
@@ -165,13 +171,13 @@ function TTO() {
 			} : null	
 		}}>
 				<Introduction 
-					title="Technology Transfer Office"
-					description="The UIR has created the first Technology Transfer Office (TTO) according to international standards to carry out technology transfer and support economic development at the regional and national levels. The TTO operates on several levels to support research activities and to improve the implementation of the innovative product value chain."
+					title={t('introduction.title')}
+					description={t('introduction.description')}
 					image={image}
 				/>
 				<VisionAndMission 
-					mission="Facilitate the exploitation of the results of scientific research, Open Innovation and its opening up to the market"
-					vision="Transform the TTO into a springboard for innovation at the UIR and make its activity profitable"
+					mission={t('visionAndMission.mission')}
+					vision={t('visionAndMission.vision')}
 				/>
 				{/* <DepartmentHeadSection
 					name="Wacim BEN YAHYA"
@@ -183,8 +189,8 @@ function TTO() {
 				<HighlightedProfiles />
 				<Contact 
 					contacts={contactData}
-					title="Learn More About Our Innovations"
-					description="Interested in a specific invention or technology? Contact us to learn more about our research and development projects."
+					title={t('contact.title')}
+					description={t('contact.description')}
 				/>
 				<Partners partners={partners} />
 		</LandingLayout>

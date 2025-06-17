@@ -1,8 +1,20 @@
 import { StatsItemsType } from "@layouts/LandingLayout/LandingLayout";
 import { Invention } from "@ui/Landing/InventionInfo/InventionInfo";
+import { useTranslation } from 'react-i18next';
 
+// Create a function to get translated stats
+export const getTranslatedStats = () => {
+	const { t } = useTranslation('tto');
+	return {
+		a: { name: t('stats.totalPatents'), value: 650 },
+		b: { name: t('stats.internationalPatents'), value: 108 },
+		c: { name: t('stats.researchContracts'), value: 66 },
+		d: { name: t('stats.goldMedals'), value: 3 },
+	};
+};
 
-const statsData:StatsItemsType = {
+// Keep the original stats data for reference
+const statsData: StatsItemsType = {
 	a: { name: "Total Patents Filed", value: 650 },
 	b: { name: "International Patents", value: 108 },
 	c: { name: "Research Contracts", value: 66 },

@@ -6,25 +6,40 @@
     "secondAction": "Soumettre un Brevet"
   },
   "introduction": {
-    "title": "Le Centre d'Innovation et d'Entrepreneuriat",
-    "description": "Le Centre d'Innovation et d'Entrepreneuriat est dédié à la protection et à la promotion de la recherche et de l'innovation de l'Université, ainsi qu'à l'encouragement de l'entrepreneuriat et du transfert de technologie vers le secteur industriel.",
-    "yearsOfExperience": "Années d'expérience",
-    "inventionsDisclosed": "Inventions divulguées"
+    "title": "Centre d'Innovation et d'Entrepreneuriat",
+    "description": "Le Centre d'Innovation et d'Entrepreneuriat (CIE) est un centre d'innovation, de recherche et d'entrepreneuriat à l'Université Internationale de Rabat. Nous soutenons les chercheurs, les étudiants et les entrepreneurs dans le développement et la commercialisation de leurs idées."
   },
   "visionAndMission": {
-    "mission": "Multiplier l'impact de la RDI au service de la compétitivité industrielle et territoriale, à travers la valorisation des résultats de la recherche, la promotion de l'entrepreneuriat et le partenariat solide avec les acteurs socio-économiques",
-    "vision": "Le leadership de l'UIR en tant qu'Université promotrice de l'innovation et de l'entrepreneuriat aux niveaux national et africain."
+    "mission": "Favoriser l'innovation et l'entrepreneuriat en fournissant des ressources, un soutien et des opportunités aux chercheurs, aux étudiants et aux entrepreneurs pour développer et commercialiser leurs idées.",
+    "vision": "Être un centre leader en innovation et entrepreneuriat au Maroc et en Afrique, stimulant la croissance économique et l'impact social grâce à la commercialisation de la recherche et au développement de startups."
   },
   "departmentHead": {
-    "role": "Directeur Exécutif",
-    "message": "Nous nous engageons à favoriser une culture d'innovation et d'entrepreneuriat qui stimule la croissance économique et l'impact social. Notre équipe est dédiée à soutenir les chercheurs, inventeurs et entrepreneurs dans la transformation de leurs idées en entreprises prospères."
+    "role": "Directeur du Centre d'Innovation et d'Entrepreneuriat",
+    "message": "Bienvenue au Centre d'Innovation et d'Entrepreneuriat. Nous nous engageons à soutenir l'innovation et l'entrepreneuriat à l'Université Internationale de Rabat et au-delà."
   },
   "departments": {
     "title": "Nos Départements",
-    "subtitle": "Explorez nos unités spécialisées travaillant ensemble pour stimuler l'innovation et l'entrepreneuriat"
+    "subtitle": "Découvrez nos départements spécialisés et leurs offres uniques",
+    "learnMore": "En Savoir Plus",
+    "tto": {
+      "name": "Bureau de Transfert de Technologie",
+      "description": "Relier l'Innovation et l'Industrie par la Commercialisation de la Recherche"
+    },
+    "industrial": {
+      "name": "Clinique Industrielle",
+      "description": "Résoudre les Défis du Monde Réel par la Collaboration Académique-Industrielle"
+    },
+    "incubator": {
+      "name": "Incubateur",
+      "description": "Donner les Moyens aux Startups de Transformer les Idées en Impact"
+    },
+    "techCenter": {
+      "name": "Centre Technologique",
+      "description": "Propulser l'Innovation avec des Outils, des Talents et une Infrastructure de Pointe"
+    }
   },
   "stats": {
-    "innovationAndPatents": "Innovation et Brevets",
+    "innovationPatents": "Innovation et Brevets",
     "internationalPatents": "Brevets Internationaux",
     "goldMedals": "Médailles d'Or"
   }
