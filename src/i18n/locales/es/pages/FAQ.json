@@ -1,0 +1,23 @@
+{
+  "faq": {
+    "hero": {
+      "title": "FAQ",
+      "description": "Encuentre respuestas a las preguntas más comunes sobre nuestros servicios, programas e instalaciones"
+    },
+    "title": "FAQ",
+    "subtitle": "Preguntas Frecuentes",
+    "description": "Encuentre respuestas a las preguntas más comunes sobre nuestros servicios, programas e instalaciones",
+    "searchPlaceholder": "Buscar preguntas...",
+    "noResults": "No se encontraron preguntas que coincidan con su búsqueda.",
+    "question1": "¿Qué es la Oficina de Transferencia de Tecnología (OTT)?",
+    "answer1": "La Oficina de Transferencia de Tecnología (OTT) es responsable de gestionar y comercializar la propiedad intelectual y los resultados de investigación de la institución.",
+    "question2": "¿Cómo puedo proteger mi propiedad intelectual?",
+    "answer2": "Puede proteger su propiedad intelectual a través de patentes, marcas registradas, derechos de autor y secretos comerciales. Nuestro equipo de OTT puede guiarle en el proceso y ayudarle a elegir la mejor estrategia de protección para su innovación.",
+    "question3": "¿Qué servicios ofrece el Departamento Industrial?",
+    "answer3": "El Departamento Industrial proporciona soporte técnico, servicios de investigación y desarrollo, y soluciones industriales para ayudar a las empresas a innovar y crecer.",
+    "question4": "¿Cómo puedo unirme al programa de incubación?",
+    "answer4": "Para unirse a nuestro programa de incubación, debe presentar una solicitud con su idea o proyecto de negocio. Nuestro equipo evaluará su propuesta y le guiará en el proceso de selección.",
+    "question5": "¿Qué recursos están disponibles en el Centro Tecnológico?",
+    "answer5": "El Centro Tecnológico ofrece equipos de última generación, experiencia técnica y espacios colaborativos para proyectos de investigación, desarrollo e innovación."
+  }
+}

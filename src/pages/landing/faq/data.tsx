@@ -1,28 +1,25 @@
 // This file contains the data for the FAQ page of the landing page.
-// It exports an array of FAQ items, each containing a question and an answer.
+// It exports a function that returns an array of FAQ items with translations.
 
-const faqItems = [
+export const getFaqItems = (t: any) => [
     {
-        question: "this is a example question?",
-        answer: "this is a example answer."
+        question: t('faq.question1'),
+        answer: t('faq.answer1')
     },
     {
-        question: "this is a example of a verry long long long long long long question?",
-        answer: "this is a example answer. this is a example answer.this is a example answer.this is a example answer.this is a example answer."
+        question: t('faq.question2'),
+        answer: t('faq.answer2')
     },
     {
-        question: "this is a example question?",
-        answer: "this is a example answer."
+        question: t('faq.question3'),
+        answer: t('faq.answer3')
     },
     {
-        question: "this is a example question?",
-        answer: "this is a example answer."
+        question: t('faq.question4'),
+        answer: t('faq.answer4')
     },
     {
-        question: "this is a example question?",
-        answer: "this is a example answer."
-    },
+        question: t('faq.question5'),
+        answer: t('faq.answer5')
+    }
 ];
-
-
-export {faqItems}
