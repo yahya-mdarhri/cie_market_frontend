@@ -53,45 +53,49 @@ export const partners = [
 
 
 // this array contains the stats data for the hero section
-export const statsData: StatsItemsType = {
-    a: { name: "Innovation & Patents", value: 644 },
-    b: { name: "International Patents", value: 117 },
-    c: { name: "Gold Medals", value: 2 },
-};
+export const getStatsData = (t: any): StatsItemsType => {
+    return {
+        a: { name: t('stats.innovationPatents'), value: 644 },
+        b: { name: t('stats.internationalPatents'), value: 117 },
+        c: { name: t('stats.goldMedals'), value: 2 },
+    };
+}
 
 // this object contains the data for the hero section
-export const heroProps: HeroProps = {
-    heroTitle: <>From Idea to Market Bridging Innovation and Industry</>,
-    heroDescription: "We are glad to have you here. Explore our features and services.",
-    firstAction: "Partner With Us",
-    secondAction: "Submit A Patent",
-    stats: statsData,
+export const getHeroProps = (t: any): HeroProps => {
+    return {
+        heroTitle: t('hero.title'),
+        heroDescription: t('hero.description'),
+        firstAction: t('hero.firstAction'),
+        secondAction: t('hero.secondAction'),
+        stats: getStatsData(t),
+    };
 };
 
 // this array contains the departments data for the home page
-export const departments = [
+export const getDepartments = (t: any) => [
     {
         icon: <FaHandshake size={40} color="var(--primary-color)" />,
-        name: "Technology Transfer Office",
-        description: "Bridging Innovation and Industry through Research Commercialization",
+        name: t('departments.tto.name'),
+        description: t('departments.tto.description'),
         link: "/tto"
     },
     {
         icon: <FaIndustry size={40} color="var(--primary-color)" />,
-        name: "Industrial Clinic",
-        description: "Solving Real-World Challenges Through Academic–Industry Collaboration",
+        name: t('departments.industrial.name'),
+        description: t('departments.industrial.description'),
         link: "/industrial"
     },
     {
         icon: <FaLightbulb size={40} color="var(--primary-color)" />,
-        name: "Incubator",
-        description: "Empowering Startups to Transform Ideas into Impact",
+        name: t('departments.incubator.name'),
+        description: t('departments.incubator.description'),
         link: "/incubator"
     },
     {
         icon: <FaTools size={40} color="var(--primary-color)" />,
-        name: "Tech Center",
-        description: "Driving Innovation with Cutting-Edge Tools, Talent, and Infrastructure",
+        name: t('departments.techCenter.name'),
+        description: t('departments.techCenter.description'),
         link: "/tech-center"
     }
 ];

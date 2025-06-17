@@ -12,7 +12,7 @@ import Partners from "@ui/Landing/Partners/Partners";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
 import { Link } from 'react-router-dom';
 import ContactUs from "@ui/Landing/ContactUs/ContactUs";
-import { departments, heroProps, partners } from './data';
+import { getDepartments, getHeroProps, partners } from './data';
 
 interface CIEItemProps {
 	name: string;
@@ -22,6 +22,7 @@ interface CIEItemProps {
 }
 
 function CIEItem({name, description, icon, link}: CIEItemProps) {
+	const { t } = useTranslation('home');
 	return (
 		<Link to={link} className="CIEItem">
 			<div>
@@ -30,7 +31,7 @@ function CIEItem({name, description, icon, link}: CIEItemProps) {
 			<h3>{name}</h3>
 			<p>{description}</p>
 			<div className="CIEItemMore">
-				learn more
+				{t('departments.learnMore')}
 				<img src={arrow} alt="" />
 			</div>
 		</Link>
@@ -42,13 +43,7 @@ function Home() {
 	useDocumentTitle('Home | Centre for Innovation and Entrepreneurship');
 
 	return (
-		<LandingLayout heroProps={{
-			...heroProps,
-			heroTitle: t('hero.title'),
-			heroDescription: t('hero.description'),
-			firstAction: t('hero.firstAction'),
-			secondAction: t('hero.secondAction')
-		}}>
+		<LandingLayout heroProps={getHeroProps(t)}>
 				<Introduction 
 					title={t('introduction.title')}
 					description={t('introduction.description')}
@@ -75,7 +70,7 @@ function Home() {
 						<p>{t('departments.subtitle')}</p>
 					</div>
 					<div className="DepartmentsSectionContent">
-						{departments.map((dept, index) => (
+						{getDepartments(t).map((dept, index) => (
 							<CIEItem
 								key={index}
 								icon={dept.icon}
