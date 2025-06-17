@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import "./InnovationDiagnosis.css";
 import { HashLink } from "react-router-hash-link";
-import { phases, questionsByPhase , icons} from "./data";
+import { phases, questionsByPhase, icons, scoreRanges, consentText } from "./data";
 
 const questions = phases.flatMap(phase => 
   questionsByPhase[phase].map(question => ({
@@ -113,25 +113,11 @@ function InnovationDiagnosis() {
       (sum: number, r: Response) => sum + Number(r.note || 0),
       0
     );
-    if (total <= 30) return { 
-      total, 
-      type: "Embryonic Innovation",
-      description: "High potential but few structures in place."
-    };
-    if (total <= 60) return { 
-      total, 
-      type: "Innovation in Development",
-      description: "A solid foundation, but further effort needed."
-    };
-    if (total <= 90) return { 
-      total, 
-      type: "Active Innovation",
-      description: "Many projects and practices are in place."
-    };
-    return { 
-      total, 
-      type: "Mature Innovation",
-      description: "A well-established culture and visible results."
+    const result = scoreRanges.find(range => total <= range.max);
+    return {
+      total,
+      type: result?.type || "Unknown",
+      description: result?.description || "No description available."
     };
   };
 
@@ -220,7 +206,7 @@ function InnovationDiagnosis() {
               </div>
             </div>
             <p className="consent-text">
-              By clicking on 'Start Assessment', I consent to the collection and processing of the information I have provided for evaluation purposes.
+              {consentText}
             </p>
             <div className="form-submit">
               <button type="submit" className="audit-nav-button next">
