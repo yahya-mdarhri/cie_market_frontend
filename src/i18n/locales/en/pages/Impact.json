@@ -6,6 +6,7 @@
   },
   "metrics": {
     "title": "Key Metrics",
+    "description": "Our commitment to sustainable innovation is reflected in these key achievements",
     "items": {
       "metric_1": {
         "value": "50+",
@@ -26,6 +27,7 @@
   },
   "news": {
     "title": "News & Stories",
+    "description": "Stay updated with our latest developments and success stories",
     "sdg_alt": "SDG {{number}}",
     "items": {
       "news_1": {

@@ -18,8 +18,11 @@ export default function Impact() {
 
     return (
         <LandingLayout heroProps={heroProps}>
-            <div className="impact-metrics">
-                <h2>{t('metrics.title')}</h2>
+            <div className="impact-section">
+                <div className="impact-section-header">
+                    <h2>{t('metrics.title')}</h2>
+                    <p>{t('metrics.description')}</p>
+                </div>
                 <div className="metrics-grid">
                     {metrics.map((metric) => (
                         <div key={metric.id} className="metric-card">
@@ -31,8 +34,11 @@ export default function Impact() {
                 </div>
             </div>
 
-            <div className="sdg-news-section">
-                <h2>{t('news.title')}</h2>
+            <div className="impact-section">
+                <div className="impact-section-header">
+                    <h2>{t('news.title')}</h2>
+                    <p>{t('news.description')}</p>
+                </div>
                 <div className="sdg-news-grid">
                     {newsItems.map((item) => (
                         <div 

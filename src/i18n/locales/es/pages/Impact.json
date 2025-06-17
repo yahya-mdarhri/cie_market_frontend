@@ -6,6 +6,7 @@
   },
   "metrics": {
     "title": "Métricas Clave",
+    "description": "Nuestro compromiso con la innovación sostenible se refleja en estos logros clave",
     "items": {
       "metric_1": {
         "value": "50+",
@@ -26,6 +27,7 @@
   },
   "news": {
     "title": "Noticias e Historias",
+    "description": "Mantente actualizado con nuestros últimos desarrollos e historias de éxito",
     "sdg_alt": "ODS {{number}}",
     "items": {
       "news_1": {

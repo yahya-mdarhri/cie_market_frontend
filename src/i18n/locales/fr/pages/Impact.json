@@ -6,11 +6,12 @@
   },
   "metrics": {
     "title": "Métriques Clés",
+    "description": "Notre engagement envers l'innovation durable se reflète dans ces réalisations clés",
     "items": {
       "metric_1": {
         "value": "50+",
         "title": "Innovations Développées",
-        "description": "Solutions de pointe pour relever les défis mondiaux"
+        "description": "Solutions de pointe répondant aux défis mondiaux"
       },
       "metric_2": {
         "value": "100+",
@@ -26,6 +27,7 @@
   },
   "news": {
     "title": "Actualités et Histoires",
+    "description": "Restez informé de nos derniers développements et histoires de réussite",
     "sdg_alt": "ODD {{number}}",
     "items": {
       "news_1": {
