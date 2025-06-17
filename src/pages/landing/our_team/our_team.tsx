@@ -1,53 +1,11 @@
 import LandingLayout from "@components/layouts/LandingLayout/LandingLayout";
 import ProfileCard from "@ui/Landing/ProfileCard/ProfileCard";
-import avatar from './images/avatar.jpg';
 import './our_team.css';
+import { teamMembers, teamValues, heroProps } from './data';
 
 function OurTeam() {
-    const teamMembers = [
-        {
-            name: "Wacim BEN YAHYA",
-            role: "Head of TTO",
-            image: avatar,
-        },
-        {
-            name: "Yahya MDARHRI",
-            role: "Tech Lead",
-            image: avatar,
-        },
-        {
-            name: "Elhoussaine EDDAHBI",
-            role: "DevOps",
-            image: avatar,
-        },
-        {
-            name: "Hamza Oumansour",
-            role: "Full Stack",
-            image: avatar,
-        },
-    ];
-
-    const teamValues = [
-        {
-            title: "Innovation",
-            description: "We push boundaries and embrace new ideas to create groundbreaking solutions."
-        },
-        {
-            title: "Collaboration",
-            description: "We believe in the power of teamwork and diverse perspectives."
-        },
-        {
-            title: "Excellence",
-            description: "We strive for the highest quality in everything we do."
-        }
-    ];
-
     return (
-        <LandingLayout heroProps={{
-            heroTitle: <>Meet Our Inn2Market Team</>,
-            heroDescription: "A diverse group of visionaries, creators, and problem-solvers dedicated to transforming ideas into reality. Together, we're building the future of technology and innovation.",
-            firstAction: "Contact Us",
-        }}>
+        <LandingLayout heroProps={heroProps}>
             <div className="our-team-container">
                 <div className="team-content">
                     <div className="team-intro">
