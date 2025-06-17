@@ -30,7 +30,7 @@ function LicensingProcess() {
                                 <li key={index} className="goal-item">
                                     <div className="goal-number">{goal.number}</div>
                                     <div className="goal-text">{goal.text}</div>
-                                </li>
+                            </li>
                             ))}
                         </ul>
                     </div>
