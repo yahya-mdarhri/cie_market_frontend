@@ -19,6 +19,10 @@ import enVisionAndMission from './locales/en/components/VisionAndMission.json';
 import esVisionAndMission from './locales/es/components/VisionAndMission.json';
 import frVisionAndMission from './locales/fr/components/VisionAndMission.json';
 
+import enContactUs from './locales/en/components/ContactUs.json';
+import esContactUs from './locales/es/components/ContactUs.json';
+import frContactUs from './locales/fr/components/ContactUs.json';
+
 // Define supported languages
 export const SUPPORTED_LANGUAGES = {
   en: { name: 'English', flag: '🇺🇸' },
@@ -37,7 +41,8 @@ export const NAMESPACES = {
   contact: 'contact',
   home: 'home',
   introduction: 'introduction',
-  visionAndMission: 'visionAndMission'
+  visionAndMission: 'visionAndMission',
+  contactUs: 'contactUs'
 } as const;
 
 export type Namespace = keyof typeof NAMESPACES;
@@ -52,19 +57,22 @@ i18n
         navbar: enNavbar,
         home: enHome,
         introduction: enIntroduction,
-        visionAndMission: enVisionAndMission
+        visionAndMission: enVisionAndMission,
+        contactUs: enContactUs
       },
       es: {
         navbar: esNavbar,
         home: esHome,
         introduction: esIntroduction,
-        visionAndMission: esVisionAndMission
+        visionAndMission: esVisionAndMission,
+        contactUs: esContactUs
       },
       fr: {
         navbar: frNavbar,
         home: frHome,
         introduction: frIntroduction,
-        visionAndMission: frVisionAndMission
+        visionAndMission: frVisionAndMission,
+        contactUs: frContactUs
       }
     },
     lng: 'en', // Set English as default language

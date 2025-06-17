@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ContactUs.css';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaUserTie, FaBuilding } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 interface ContactUsProps {
   onSubmit?: (formData: ContactFormData) => void;
@@ -18,6 +19,7 @@ export interface ContactFormData {
 }
 
 const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
+  const { t } = useTranslation('contactUs');
   const [contactType, setContactType] = useState('inventor');
 
   const handleContactTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -49,15 +51,15 @@ const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
   return (
     <div className="contact-section">
       <div className="contact-section-header">
-        <h2>Get in Touch</h2>
-        <p>We'd love to hear from you. Whether you're an inventor or a company, we're here to help.</p>
+        <h2>{t('title')}</h2>
+        <p>{t('subtitle')}</p>
       </div>
     <div className="contact-us-wrapper">
       <div className="contact-info-side">
         <div className="contact-info-content">
           <div className="contact-info-header">
-            <h3>Contact Information</h3>
-            <p>Get in touch with us for any inquiries about our services, partnerships, or innovation opportunities.</p>
+            <h3>{t('contactInfo.title')}</h3>
+            <p>{t('contactInfo.description')}</p>
           </div>
           
           <div className="contact-details">
@@ -66,7 +68,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
                 <FaPhone className="contact-icon" />
               </div>
               <div className="contact-text">
-                <h4>Phone</h4>
+                <h4>{t('contactInfo.phone')}</h4>
                 <p>+212 5XX-XXXXXX</p>
               </div>
             </div>
@@ -76,7 +78,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
                 <FaEnvelope className="contact-icon" />
               </div>
               <div className="contact-text">
-                <h4>Email</h4>
+                <h4>{t('contactInfo.email')}</h4>
                 <p>contact@uir.ac.ma</p>
               </div>
             </div>
@@ -86,7 +88,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
                 <FaMapMarkerAlt className="contact-icon" />
               </div>
               <div className="contact-text">
-                <h4>Address</h4>
+                <h4>{t('contactInfo.address')}</h4>
                 <p>UIR, Technopolis, Sala Al Jadida, Morocco</p>
               </div>
             </div>
@@ -103,7 +105,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
               onClick={() => handleContactTypeChange({ target: { value: 'inventor' } } as React.ChangeEvent<HTMLInputElement>)}
             >
               <FaUserTie className="toggle-icon" />
-              <span className="toggle-text">Inventor</span>
+              <span className="toggle-text">{t('form.inventor')}</span>
             </button>
             <button 
               type="button"
@@ -111,7 +113,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
               onClick={() => handleContactTypeChange({ target: { value: 'company' } } as React.ChangeEvent<HTMLInputElement>)}
             >
               <FaBuilding className="toggle-icon" />
-              <span className="toggle-text">Company</span>
+              <span className="toggle-text">{t('form.company')}</span>
             </button>
             <input 
               type="hidden" 
@@ -119,20 +121,20 @@ const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
               value={contactType}
             />
           </div>
-          <input type="text" name="name" id="name" placeholder="Full Name"/>
+          <input type="text" name="name" id="name" placeholder={t('form.fullName')}/>
           <div className="email_and_phone">
-            <input type="email" name="email" id="email" placeholder="Email" />
-            <input type="tel" name="phone" id="phone" placeholder="Phone" />
+            <input type="email" name="email" id="email" placeholder={t('form.email')} />
+            <input type="tel" name="phone" id="phone" placeholder={t('form.phone')} />
           </div>
           <div className="company_fields" id="companyFields" style={{ display: 'none' }}>
-            <input type="text" name="companyName" id="companyName" placeholder="Company Name"/>
-            <input type="text" name="position" id="position" placeholder="Your Position"/>
+            <input type="text" name="companyName" id="companyName" placeholder={t('form.companyName')}/>
+            <input type="text" name="position" id="position" placeholder={t('form.position')}/>
           </div>
-          <input type="text" name="subject" id="subject" placeholder="Subject"/>
-          <textarea name="message" id="message" placeholder="Message"/>
+          <input type="text" name="subject" id="subject" placeholder={t('form.subject')}/>
+          <textarea name="message" id="message" placeholder={t('form.message')}/>
         </div>
         <div className="HomeContactUsSubmit">
-          <button type="submit">Send Message</button>
+          <button type="submit">{t('form.sendMessage')}</button>
         </div>
       </form>
       </div>
