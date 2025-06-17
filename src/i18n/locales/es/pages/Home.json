@@ -1,0 +1,31 @@
+{
+  "hero": {
+    "title": "De la Idea al Mercado Conectando Innovación e Industria",
+    "description": "Nos complace tenerte aquí. Explora nuestras características y servicios.",
+    "firstAction": "Asóciate Con Nosotros",
+    "secondAction": "Presenta Una Patente"
+  },
+  "introduction": {
+    "title": "El Centro de Innovación y Emprendimiento",
+    "description": "El Centro de Innovación y Emprendimiento está dedicado a proteger y promover la investigación e innovación de la Universidad, así como a fomentar el emprendimiento y la transferencia de tecnología al sector industrial.",
+    "yearsOfExperience": "Años de experiencia",
+    "inventionsDisclosed": "Invenciones divulgadas"
+  },
+  "visionAndMission": {
+    "mission": "Multiplicar el impacto de la I+D+i al servicio de la competitividad industrial y territorial, a través de la valorización de los resultados de la investigación, la promoción del emprendimiento y la sólida asociación con actores socioeconómicos",
+    "vision": "El liderazgo de la UIR como Universidad promotora de la innovación y el emprendimiento a nivel nacional y africano."
+  },
+  "departmentHead": {
+    "role": "Director Ejecutivo",
+    "message": "Estamos comprometidos a fomentar una cultura de innovación y emprendimiento que impulse el crecimiento económico y el impacto social. Nuestro equipo está dedicado a apoyar a investigadores, inventores y emprendedores en la transformación de sus ideas en empresas exitosas."
+  },
+  "departments": {
+    "title": "Nuestros Departamentos",
+    "subtitle": "Explora nuestras unidades especializadas trabajando juntas para impulsar la innovación y el emprendimiento"
+  },
+  "stats": {
+    "innovationAndPatents": "Innovación y Patentes",
+    "internationalPatents": "Patentes Internacionales",
+    "goldMedals": "Medallas de Oro"
+  }
+} 

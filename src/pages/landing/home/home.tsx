@@ -1,6 +1,7 @@
 import LandingLayout from "@layouts/LandingLayout/LandingLayout";
 import "./home.css";
 import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentHeadSection";
+import { useTranslation } from 'react-i18next';
 
 import arrow from '../../../assets/icons/arrow.svg';
 import headImg from "./images/M-Bouya.png";
@@ -37,34 +38,41 @@ function CIEItem({name, description, icon, link}: CIEItemProps) {
 }
 
 function Home() {
+	const { t } = useTranslation('home');
 	useDocumentTitle('Home | Centre for Innovation and Entrepreneurship');
 
 	return (
-		<LandingLayout heroProps={heroProps}>
+		<LandingLayout heroProps={{
+			...heroProps,
+			heroTitle: t('hero.title'),
+			heroDescription: t('hero.description'),
+			firstAction: t('hero.firstAction'),
+			secondAction: t('hero.secondAction')
+		}}>
 				<Introduction 
-					title="The Centre for Innovation and Entrepreneurship"
-					description="The Centre for Innovation and Entrepreneurship is dedicated to protecting and promoting the University's research and innovation, as well as encouraging entrepreneurship and technology transfer to the industrial sector."
+					title={t('introduction.title')}
+					description={t('introduction.description')}
 					image="/home/1.svg"	
 					years={10}
 					inventions={600}
 				/>
 				<VisionAndMission 
-					mission="Multiplying the impact of RDI in the service of industrial and territorial competitiveness, through The valorization of research results, the promotion of entrepreneurship and the solid partnership with socioeconomic actors "
-					vision="UIR's leadership as a University promoting innovation and entrepreneurship at the national and African levels."
+					mission={t('visionAndMission.mission')}
+					vision={t('visionAndMission.vision')}
 				/>
 				<div className="Home3rdSection">
 				</div>
 
 				<DepartmentHeadSection 
 					name="Mohsine BOUYA"
-					role="Executive Director"
-					message="We are committed to fostering a culture of innovation and entrepreneurship that drives economic growth and societal impact. Our team is dedicated to supporting researchers, inventors, and entrepreneurs in transforming their ideas into successful ventures."
+					role={t('departmentHead.role')}
+					message={t('departmentHead.message')}
 					imageUrl={headImg}
 				/>
 				<div className="DepartmentsSection">
 					<div className="DepartmentsSectionHeader">
-						<h2>Our Departments</h2>
-						<p>Explore our specialized units working together to drive innovation and entrepreneurship</p>
+						<h2>{t('departments.title')}</h2>
+						<p>{t('departments.subtitle')}</p>
 					</div>
 					<div className="DepartmentsSectionContent">
 						{departments.map((dept, index) => (

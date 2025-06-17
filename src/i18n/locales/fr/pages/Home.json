@@ -1,0 +1,31 @@
+{
+  "hero": {
+    "title": "De l'Idée au Marché Relier l'Innovation et l'Industrie",
+    "description": "Nous sommes ravis de vous accueillir. Explorez nos fonctionnalités et services.",
+    "firstAction": "Partenariat",
+    "secondAction": "Soumettre un Brevet"
+  },
+  "introduction": {
+    "title": "Le Centre d'Innovation et d'Entrepreneuriat",
+    "description": "Le Centre d'Innovation et d'Entrepreneuriat est dédié à la protection et à la promotion de la recherche et de l'innovation de l'Université, ainsi qu'à l'encouragement de l'entrepreneuriat et du transfert de technologie vers le secteur industriel.",
+    "yearsOfExperience": "Années d'expérience",
+    "inventionsDisclosed": "Inventions divulguées"
+  },
+  "visionAndMission": {
+    "mission": "Multiplier l'impact de la RDI au service de la compétitivité industrielle et territoriale, à travers la valorisation des résultats de la recherche, la promotion de l'entrepreneuriat et le partenariat solide avec les acteurs socio-économiques",
+    "vision": "Le leadership de l'UIR en tant qu'Université promotrice de l'innovation et de l'entrepreneuriat aux niveaux national et africain."
+  },
+  "departmentHead": {
+    "role": "Directeur Exécutif",
+    "message": "Nous nous engageons à favoriser une culture d'innovation et d'entrepreneuriat qui stimule la croissance économique et l'impact social. Notre équipe est dédiée à soutenir les chercheurs, inventeurs et entrepreneurs dans la transformation de leurs idées en entreprises prospères."
+  },
+  "departments": {
+    "title": "Nos Départements",
+    "subtitle": "Explorez nos unités spécialisées travaillant ensemble pour stimuler l'innovation et l'entrepreneuriat"
+  },
+  "stats": {
+    "innovationAndPatents": "Innovation et Brevets",
+    "internationalPatents": "Brevets Internationaux",
+    "goldMedals": "Médailles d'Or"
+  }
+} 

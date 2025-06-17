@@ -1,0 +1,31 @@
+{
+  "hero": {
+    "title": "From Idea to Market Bridging Innovation and Industry",
+    "description": "We are glad to have you here. Explore our features and services.",
+    "firstAction": "Partner With Us",
+    "secondAction": "Submit A Patent"
+  },
+  "introduction": {
+    "title": "The Centre for Innovation and Entrepreneurship",
+    "description": "The Centre for Innovation and Entrepreneurship is dedicated to protecting and promoting the University's research and innovation, as well as encouraging entrepreneurship and technology transfer to the industrial sector.",
+    "yearsOfExperience": "Years of experience",
+    "inventionsDisclosed": "Inventions disclosed"
+  },
+  "visionAndMission": {
+    "mission": "Multiplying the impact of RDI in the service of industrial and territorial competitiveness, through The valorization of research results, the promotion of entrepreneurship and the solid partnership with socioeconomic actors",
+    "vision": "UIR's leadership as a University promoting innovation and entrepreneurship at the national and African levels."
+  },
+  "departmentHead": {
+    "role": "Executive Director",
+    "message": "We are committed to fostering a culture of innovation and entrepreneurship that drives economic growth and societal impact. Our team is dedicated to supporting researchers, inventors, and entrepreneurs in transforming their ideas into successful ventures."
+  },
+  "departments": {
+    "title": "Our Departments",
+    "subtitle": "Explore our specialized units working together to drive innovation and entrepreneurship"
+  },
+  "stats": {
+    "innovationAndPatents": "Innovation & Patents",
+    "internationalPatents": "International Patents",
+    "goldMedals": "Gold Medals"
+  }
+} 
