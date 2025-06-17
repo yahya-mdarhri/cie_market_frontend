@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import LandingLayout from "@components/layouts/LandingLayout/LandingLayout";
 import './JoinTheMailingList.css';
+import { heroProps, benefits, roleOptions, subscriptionPreferences } from './data';
 
 function JoinTheMailingList() {
     const formRef = useRef<HTMLDivElement>(null);
@@ -44,32 +45,10 @@ function JoinTheMailingList() {
         console.log('Form submitted:', formData);
     };
 
-    const benefits = [
-        {
-            title: "Latest Updates",
-            description: "Stay informed about the newest technology trends and innovations"
-        },
-        {
-            title: "Industry Insights",
-            description: "Get exclusive access to market trends and analysis"
-        },
-        {
-            title: "Opportunities",
-            description: "Be the first to know about upcoming events and opportunities"
-        },
-        {
-            title: "Success Stories",
-            description: "Learn from real-world case studies and success stories"
-        }
-    ];
+    heroProps.onFirstActionClick = scrollToForm
 
     return (
-        <LandingLayout heroProps={{
-            heroTitle: <>Stay Connected with Inn2Market</>,
-            heroDescription: "Join our mailing list to receive the latest updates on innovations, technology trends, and opportunities. Be the first to know about new developments in the world of intellectual property and technology transfer.",
-            firstAction: "Subscribe Now",
-            onFirstActionClick: scrollToForm
-        }}>
+        <LandingLayout heroProps={heroProps}>
             <div className="join-mailing-container">
                 <div className="mailing-content">
                     <div className="mailing-intro">
@@ -96,31 +75,20 @@ function JoinTheMailingList() {
                             <div className="form-section preferences-section">
                                 <h3>Your Preferences</h3>
                                 <div className="checkbox-group">
-                                    <label className="checkbox-label">
-                                        <input
-                                            type="checkbox"
-                                            name="newsletter"
-                                            checked={formData.newsletter}
-                                            onChange={handleChange}
-                                        />
-                                        <span className="checkbox-text">
-                                            <strong>Newsletter</strong>
-                                            <span className="checkbox-description">News, Updates, and the latest info about IP.</span>
-                                        </span>
-                                    </label>
-                                    
-                                    <label className="checkbox-label">
-                                        <input
-                                            type="checkbox"
-                                            name="techUpdates"
-                                            checked={formData.techUpdates}
-                                            onChange={handleChange}
-                                        />
-                                        <span className="checkbox-text">
-                                            <strong>Technology Updates</strong>
-                                            <span className="checkbox-description">Latest technologies in your inbox as soon as they are posted</span>
-                                        </span>
-                                    </label>
+                                    {subscriptionPreferences.map((pref, index) => (
+                                        <label key={index} className="checkbox-label">
+                                            <input
+                                                type="checkbox"
+                                                name={pref.name}
+                                                checked={formData[pref.name as keyof typeof formData] as boolean}
+                                                onChange={handleChange}
+                                            />
+                                            <span className="checkbox-text">
+                                                <strong>{pref.title}</strong>
+                                                <span className="checkbox-description">{pref.description}</span>
+                                            </span>
+                                        </label>
+                                    ))}
                                 </div>
                             </div>
 
@@ -199,12 +167,11 @@ function JoinTheMailingList() {
                                         value={formData.role}
                                         onChange={handleChange}
                                     >
-                                        <option value="">Select your role</option>
-                                        <option value="researcher">Researcher</option>
-                                        <option value="student">Student</option>
-                                        <option value="faculty">Faculty</option>
-                                        <option value="industry">Industry Professional</option>
-                                        <option value="other">Other</option>
+                                        {roleOptions.map((option, index) => (
+                                            <option key={index} value={option.value}>
+                                                {option.label}
+                                            </option>
+                                        ))}
                                     </select>
                                 </div>
                             </div>
