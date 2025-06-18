@@ -59,7 +59,6 @@ import enContactUs from './locales/en/components/ContactUs.json';
 import esContactUs from './locales/es/components/ContactUs.json';
 import frContactUs from './locales/fr/components/ContactUs.json';
 
-// Import licensing process translations
 import enLicensingProcess from './locales/en/pages/licensingProcess.json';
 import esLicensingProcess from './locales/es/pages/licensingProcess.json';
 import frLicensingProcess from './locales/fr/pages/licensingProcess.json';
@@ -67,6 +66,10 @@ import frLicensingProcess from './locales/fr/pages/licensingProcess.json';
 import enOurTeam from './locales/en/pages/ourTeam.json';
 import esOurTeam from './locales/es/pages/ourTeam.json';
 import frOurTeam from './locales/fr/pages/ourTeam.json';
+
+import enTechCenter from './locales/en/pages/techCenter.json';
+import esTechCenter from './locales/es/pages/techCenter.json';
+import frTechCenter from './locales/fr/pages/techCenter.json';
 
 // Define supported languages
 export const SUPPORTED_LANGUAGES = {
@@ -99,6 +102,7 @@ export const NAMESPACES = {
   contactUs: 'contactUs',
   licensingProcess: 'licensingProcess',
   ourTeam: 'ourTeam',
+  techCenter: 'techCenter'
 } as const;
 
 export type Namespace = keyof typeof NAMESPACES;
@@ -126,6 +130,7 @@ i18n
         contactUs: enContactUs,
         licensingProcess: enLicensingProcess,
         ourTeam: enOurTeam,
+        techCenter: enTechCenter
       },
       es: {
         navbar: esNavbar,
@@ -144,6 +149,7 @@ i18n
         contactUs: esContactUs,
         licensingProcess: esLicensingProcess,
         ourTeam: esOurTeam,
+        techCenter: esTechCenter
       },
       fr: {
         navbar: frNavbar,
@@ -162,21 +168,15 @@ i18n
         contactUs: frContactUs,
         licensingProcess: frLicensingProcess,
         ourTeam: frOurTeam,
+        techCenter: frTechCenter
       }
     },
-    // lng: 'en', // Set English as default language
     fallbackLng: 'en',
     defaultNS: 'common',
     ns: Object.values(NAMESPACES),
-    debug: process.env.NODE_ENV === 'development',
     interpolation: {
-      escapeValue: false, // React already escapes values
-    },
-    detection: {
-      order: ['localStorage', 'navigator'],
-      caches: ['localStorage'],
-      lookupLocalStorage: 'i18nextLng',
-    },
+      escapeValue: false
+    }
   });
 
 export default i18n; 

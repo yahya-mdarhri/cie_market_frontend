@@ -2,12 +2,13 @@ import "./tech_center.css";
 import LandingLayout from "@layouts/LandingLayout/LandingLayout";
 import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
+import { useTranslation } from 'react-i18next';
 
 import service1 from "./images/service1.jpg";
 import image2 from "./images/industrial2.png";
 
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
-import { heroProps, servicesData } from "./data";
+import { useTechCenterData } from "./data";
 
 function TechCenterServiceCard({title, description, image, key}:{title:string, description:string, image:string, key: number}){
 	return (
@@ -22,24 +23,25 @@ function TechCenterServiceCard({title, description, image, key}:{title:string, d
 }
 
 function TechCenter() {
+	const { t } = useTranslation('techCenter');
+	const { heroProps, servicesData } = useTechCenterData();
+
 	useDocumentTitle('Tech Center | Centre for Innovation and Entrepreneurship');
 	return (
 		<LandingLayout heroProps={heroProps}>
 				<Introduction 
-					title="Tech Center"
-					description="The Tech Center at UIR is a dynamic collaboration space where academic expertise meets industrial challenges. Through co-development projects, prototype creation, and technology integration, we deliver tailor-made solutions for businesses, cities, and public institutions. From smart solar infrastructure to urban beautification and energy-efficient systems, the clinic drives innovation with real-world impact."
+					title={t('introduction.title')}
+					description={t('introduction.description')}
 					image={image2}
 				/>
 				<VisionAndMission 
-					mission="support Made @UIR innovation projects to meet the specific needs of industry and territories"
-					vision="Transform the CIE into an effective Business Unit serving industry and the territories"
+					mission={t('visionAndMission.mission')}
+					vision={t('visionAndMission.vision')}
 				/>
 				<div className="techCenterServices">
 					<div className="techCenterServicesLeft">
-						<h2>Our Services</h2>
-						<p>
-							We connect industry with academic expertise to solve technical challenges through tailored research and innovation support
-						</p>
+						<h2>{t('services.title')}</h2>
+						<p>{t('services.description')}</p>
 					</div>
 					<div className="techCenterServicesGrid">
 						{servicesData.map((service, index) => (
