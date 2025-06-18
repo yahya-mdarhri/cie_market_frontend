@@ -1,0 +1,124 @@
+{
+  "innovationDiagnosis": {
+    "title": "Innovation Diagnosis",
+    "phases": {
+      "phase1": "Phase 1 - Launch",
+      "phase2": "Phase 2 - Progress",
+      "phase3": "Phase 3 - Acceleration",
+      "phase4": "Phase 4 - Realization"
+    },
+    "questions": {
+      "phase1": {
+        "question_1": "Leadership acknowledges and communicates the importance of innovation",
+        "question_2": "A shared vision for a better future is formalized",
+        "question_3": "An innovation audit has been conducted to identify obstacles",
+        "question_4": "A budget is allocated to innovation, training, and initiatives",
+        "question_5": "Entrepreneurship, empowerment, and risk-taking are part of the desired culture",
+        "question_6": "Innovation ambassadors are appointed in different departments"
+      },
+      "phase2": {
+        "question_1": "Clear goals are set (e.g., number of ideas, revenue from innovation, etc.)",
+        "question_2": "Training sessions are organized for managers and ambassadors",
+        "question_3": "An internal suggestion system is in place and actively managed",
+        "question_4": "Regular brainstorming sessions are held with diverse teams and a facilitator",
+        "question_5": "Innovation objectives are included in individual evaluations",
+        "question_6": "Innovation successes are shared and celebrated"
+      },
+      "phase3": {
+        "question_1": "An open innovation strategy is defined and being deployed",
+        "question_2": "An incubation or experimentation unit is operational",
+        "question_3": "Validation processes have been simplified to accelerate implementation",
+        "question_4": "More than 2 suggestions per employee per year are implemented",
+        "question_5": "A blame culture has been replaced with a culture of openness and questioning",
+        "question_6": "The concept of minimum viable product (MVP) is fully integrated"
+      },
+      "phase4": {
+        "question_1": "An open innovation program is fully integrated and generates external innovations",
+        "question_2": "New products/services represent a significant portion of revenue",
+        "question_3": "Employees are encouraged to try new initiatives — and they do",
+        "question_4": "Risk-taking is encouraged, failure is accepted and analyzed",
+        "question_5": "More than 5 suggestions per employee per year are implemented",
+        "question_6": "The company is recognized as an innovation leader and a stimulating workplace"
+      }
+    },
+    "rating": {
+      "strongly_disagree": "Strongly Disagree",
+      "disagree": "Disagree",
+      "neutral": "Neutral",
+      "agree": "Agree",
+      "strongly_agree": "Strongly Agree"
+    },
+    "results": {
+      "embryonic": {
+        "type": "Embryonic Innovation",
+        "description": "High potential but few structures in place."
+      },
+      "development": {
+        "type": "Innovation in Development",
+        "description": "A solid foundation, but further effort needed."
+      },
+      "active": {
+        "type": "Active Innovation",
+        "description": "Many projects and practices are in place."
+      },
+      "mature": {
+        "type": "Mature Innovation",
+        "description": "A well-established culture and visible results."
+      }
+    },
+    "form": {
+      "consent": "By clicking on 'Start Assessment', I consent to the collection and processing of the information I have provided for evaluation purposes.",
+      "start": "Start Assessment",
+      "fullName": "Full Name",
+      "phone": "Phone Number",
+      "organization": "Organization",
+      "position": "Position",
+      "email": "Email Address",
+      "evidence": {
+        "label": "Supporting Evidence",
+        "placeholder": "Describe any supporting evidence or examples..."
+      },
+      "placeholders": {
+        "fullName": "Enter your full name",
+        "phone": "Enter your phone number",
+        "organization": "Enter your organization name",
+        "position": "Enter your position",
+        "email": "Enter your email address"
+      },
+      "validation": {
+        "name": {
+          "min": "Name must be at least 3 characters",
+          "max": "Name must be at most 50 characters",
+          "required": "Name is required"
+        },
+        "email": {
+          "invalid": "Invalid email format",
+          "required": "Email is required"
+        },
+        "organization": {
+          "min": "Organization must be at least 3 characters",
+          "required": "Organization is required"
+        },
+        "position": {
+          "min": "Position must be at least 3 characters",
+          "required": "Position is required"
+        },
+        "phone": {
+          "min": "Phone number must be at least 10 characters",
+          "max": "Phone number must be at most 15 characters",
+          "required": "Phone number is required"
+        }
+      }
+    },
+    "results": {
+      "title": "Your Innovation Assessment",
+      "type": "Innovation Assessment",
+      "contact": "Contact Our Experts"
+    },
+    "navigation": {
+      "back": "Back",
+      "next": "Next",
+      "finish": "Finish"
+    }
+  }
+} 

@@ -2,84 +2,81 @@
 
 import { FaThumbsDown, FaThumbsUp, FaRegMeh, FaThumbsUp as FaSolidThumbsUp, FaThumbsDown as FaSolidThumbsDown } from "react-icons/fa";
 
-// The different phases of the innovation diagnosis process
-const phases = [
-    "Phase 1 - Launch",
-    "Phase 2 - Progress",
-    "Phase 3 - Acceleration",
-    "Phase 4 - Realization"
+// Functions that take translation parameter t and return localized data
+export const getPhases = (t: any) => [
+    t('innovationDiagnosis.phases.phase1'),
+    t('innovationDiagnosis.phases.phase2'),
+    t('innovationDiagnosis.phases.phase3'),
+    t('innovationDiagnosis.phases.phase4')
 ];
 
-// The questions for each phase of the diagnosis
-const questionsByPhase = {
-    [phases[0]]: [
-        "Leadership acknowledges and communicates the importance of innovation",
-        "A shared vision for a better future is formalized",
-        "An innovation audit has been conducted to identify obstacles",
-        "A budget is allocated to innovation, training, and initiatives",
-        "Entrepreneurship, empowerment, and risk-taking are part of the desired culture",
-        "Innovation ambassadors are appointed in different departments"
-    ],
-    [phases[1]]: [
-        "Clear goals are set (e.g., number of ideas, revenue from innovation, etc.)",
-        "Training sessions are organized for managers and ambassadors",
-        "An internal suggestion system is in place and actively managed",
-        "Regular brainstorming sessions are held with diverse teams and a facilitator",
-        "Innovation objectives are included in individual evaluations",
-        "Innovation successes are shared and celebrated"
-    ],
-    [phases[2]]: [
-        "An open innovation strategy is defined and being deployed",
-        "An incubation or experimentation unit is operational",
-        "Validation processes have been simplified to accelerate implementation",
-        "More than 2 suggestions per employee per year are implemented",
-        "A blame culture has been replaced with a culture of openness and questioning",
-        "The concept of minimum viable product (MVP) is fully integrated"
-    ],
-    [phases[3]]: [
-        "An open innovation program is fully integrated and generates external innovations",
-        "New products/services represent a significant portion of revenue",
-        "Employees are encouraged to try new initiatives — and they do",
-        "Risk-taking is encouraged, failure is accepted and analyzed",
-        "More than 5 suggestions per employee per year are implemented",
-        "The company is recognized as an innovation leader and a stimulating workplace"
-    ]
+export const getQuestionsByPhase = (t: any) => {
+    const phases = getPhases(t);
+    return {
+        [phases[0]]: [
+            t('innovationDiagnosis.questions.phase1.question_1'),
+            t('innovationDiagnosis.questions.phase1.question_2'),
+            t('innovationDiagnosis.questions.phase1.question_3'),
+            t('innovationDiagnosis.questions.phase1.question_4'),
+            t('innovationDiagnosis.questions.phase1.question_5'),
+            t('innovationDiagnosis.questions.phase1.question_6')
+        ],
+        [phases[1]]: [
+            t('innovationDiagnosis.questions.phase2.question_1'),
+            t('innovationDiagnosis.questions.phase2.question_2'),
+            t('innovationDiagnosis.questions.phase2.question_3'),
+            t('innovationDiagnosis.questions.phase2.question_4'),
+            t('innovationDiagnosis.questions.phase2.question_5'),
+            t('innovationDiagnosis.questions.phase2.question_6')
+        ],
+        [phases[2]]: [
+            t('innovationDiagnosis.questions.phase3.question_1'),
+            t('innovationDiagnosis.questions.phase3.question_2'),
+            t('innovationDiagnosis.questions.phase3.question_3'),
+            t('innovationDiagnosis.questions.phase3.question_4'),
+            t('innovationDiagnosis.questions.phase3.question_5'),
+            t('innovationDiagnosis.questions.phase3.question_6')
+        ],
+        [phases[3]]: [
+            t('innovationDiagnosis.questions.phase4.question_1'),
+            t('innovationDiagnosis.questions.phase4.question_2'),
+            t('innovationDiagnosis.questions.phase4.question_3'),
+            t('innovationDiagnosis.questions.phase4.question_4'),
+            t('innovationDiagnosis.questions.phase4.question_5'),
+            t('innovationDiagnosis.questions.phase4.question_6')
+        ]
+    };
 };
 
-// The icons and their labels for the rating system
-const icons = [
-    { icon: FaSolidThumbsDown, label: "Strongly Disagree", className: "strongly-disagree" },
-    { icon: FaThumbsDown, label: "Disagree", className: "disagree" },
-    { icon: FaRegMeh, label: "Neutral", className: "neutral" },
-    { icon: FaThumbsUp, label: "Agree", className: "agree" },
-    { icon: FaSolidThumbsUp, label: "Strongly Agree", className: "strongly-agree" }
+export const getIcons = (t: any) => [
+    { icon: FaSolidThumbsDown, label: t('innovationDiagnosis.rating.strongly_disagree'), className: "strongly-disagree" },
+    { icon: FaThumbsDown, label: t('innovationDiagnosis.rating.disagree'), className: "disagree" },
+    { icon: FaRegMeh, label: t('innovationDiagnosis.rating.neutral'), className: "neutral" },
+    { icon: FaThumbsUp, label: t('innovationDiagnosis.rating.agree'), className: "agree" },
+    { icon: FaSolidThumbsUp, label: t('innovationDiagnosis.rating.strongly_agree'), className: "strongly-agree" }
 ];
 
-// The score ranges and their corresponding result types and descriptions
-const scoreRanges = [
+export const getScoreRanges = (t: any) => [
     {
         max: 30,
-        type: "Embryonic Innovation",
-        description: "High potential but few structures in place."
+        type: t('innovationDiagnosis.results.embryonic.type'),
+        description: t('innovationDiagnosis.results.embryonic.description')
     },
     {
         max: 60,
-        type: "Innovation in Development",
-        description: "A solid foundation, but further effort needed."
+        type: t('innovationDiagnosis.results.development.type'),
+        description: t('innovationDiagnosis.results.development.description')
     },
     {
         max: 90,
-        type: "Active Innovation",
-        description: "Many projects and practices are in place."
+        type: t('innovationDiagnosis.results.active.type'),
+        description: t('innovationDiagnosis.results.active.description')
     },
     {
         max: Infinity,
-        type: "Mature Innovation",
-        description: "A well-established culture and visible results."
+        type: t('innovationDiagnosis.results.mature.type'),
+        description: t('innovationDiagnosis.results.mature.description')
     }
 ];
 
-// The consent text for the form
-const consentText = "By clicking on 'Start Assessment', I consent to the collection and processing of the information I have provided for evaluation purposes.";
-
-export { questionsByPhase, phases, icons, scoreRanges, consentText };
+export const getConsentText = (t: any) => t('innovationDiagnosis.form.consent');
