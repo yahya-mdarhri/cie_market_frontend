@@ -1,0 +1,67 @@
+{
+    "hero": {
+        "title": "Centre Technologique",
+        "description": "Nous fournissons les outils, le mentorat et l'environnement pour transformer les idées en entreprises viables",
+        "firstAction": "Soumettre un Brevet"
+    },
+    "stats": {
+        "techCenters": "Centres Technologiques",
+        "labeledLabs": "Laboratoires Labellisés",
+        "researchCenters": "Centres de Recherche",
+        "industrialProjects": "Projets de R&D Industrielle"
+    },
+    "introduction": {
+        "title": "Centre Technologique",
+        "description": "Le Centre Technologique de l'UIR est un espace de collaboration dynamique où l'expertise académique rencontre les défis industriels. À travers des projets de co-développement, la création de prototypes et l'intégration technologique, nous offrons des solutions sur mesure pour les entreprises, les villes et les institutions publiques. De l'infrastructure solaire intelligente à l'embellissement urbain et aux systèmes écoénergétiques, la clinique stimule l'innovation avec un impact réel."
+    },
+    "visionAndMission": {
+        "mission": "soutenir les projets d'innovation Made @UIR pour répondre aux besoins spécifiques de l'industrie et des territoires",
+        "vision": "Transformer le CIE en une Unité d'Affaires efficace au service de l'industrie et des territoires"
+    },
+    "services": {
+        "title": "Nos Services",
+        "description": "Nous connectons l'industrie avec l'expertise académique pour résoudre les défis techniques grâce à la recherche et l'innovation sur mesure",
+        "items": {
+            "productInnovation": {
+                "title": "Accélération de l'Innovation Produit",
+                "description": "Le Centre Technologique aide les entreprises à améliorer leur pipeline d'innovation en offrant l'accès à des outils de prototypage rapide et un support qualifié. Avec des équipements et des ressources de pointe, le centre aide à transformer les idées en produits tangibles plus rapidement."
+            },
+            "smallBatch": {
+                "title": "Production en Petites Séries pour Besoins Spécifiques",
+                "description": "Pour certains secteurs de niche de l'industrie, le centre permet la production rapide de pièces personnalisées en utilisant des méthodes précises qui répondent aux besoins de haute précision et de vitesse."
+            },
+            "manufacturing": {
+                "title": "Intégration des Technologies de Fabrication Avancées",
+                "description": "Nous aidons les entreprises à accéder à de nouveaux outils numériques et processus de fabrication avancés. Cela inclut l'intégration de capteurs, de robotique et d'impression 3D dans les flux de production existants pour améliorer l'efficacité et la faisabilité de production."
+            },
+            "prototyping": {
+                "title": "Prototypage Fonctionnel pour Secteurs Critiques",
+                "description": "Le Centre Technologique se spécialise dans le prototypage fonctionnel pour les usages de recherche et industriels à forte demande. Ceux-ci incluent des secteurs tels que la santé, l'énergie et les télécommunications, qui nécessitent des normes spécifiques de ces industries."
+            },
+            "processImprovement": {
+                "title": "Amélioration des Processus Industriels",
+                "description": "Développé en collaboration avec nos partenaires industriels, nous analysons et améliorons les chaînes de production à travers la simulation de processus, l'analyse de données et des outils logiciels personnalisés pour fournir des solutions sur mesure."
+            },
+            "automotive": {
+                "title": "Solutions de Prototypage pour l'Industrie Automobile",
+                "description": "Le Centre Technologique soutient l'industrie automobile en concevant et développant des prototypes avancés pour de nouveaux produits et composants, aidant les entreprises à rester innovantes dans un marché en évolution rapide."
+            },
+            "studentSupport": {
+                "title": "Support Technique pour Projets Étudiants",
+                "description": "En tant que centre de formation technologique, le Centre Technologique fournit des ressources et une expertise pour aider les étudiants dans la conception, le prototypage et les tests de leurs projets d'ingénierie. Cette orientation les aide à réaliser leurs projets académiques."
+            },
+            "research": {
+                "title": "Recherche et Développement pour l'Innovation Industrielle",
+                "description": "Objectif : Le Centre Technologique collabore avec des entreprises industrielles pour transformer la recherche en R&D en solutions concrètes. Nous fournissons les ressources et le savoir-faire nécessaires pour chaque étape du développement du produit, de l'idée initiale à la validation dans le monde réel."
+            },
+            "maintenance": {
+                "title": "Maintenance et Amélioration des Équipements Industriels",
+                "description": "Le Centre Technologique offre des services de maintenance pour les machines et systèmes industriels. Cela inclut la réparation matérielle, l'amélioration des performances et des diagnostics en temps réel basés sur les conditions pour optimiser les performances des machines."
+            },
+            "customSolutions": {
+                "title": "Solutions Industrielles Personnalisées",
+                "description": "Nous travaillons directement avec les industries pour concevoir des solutions personnalisées adaptées à leurs besoins. Des spécifications initiales à l'implémentation du produit final, nous fournissons un support complet pour assurer que les projets progressent des concepts à l'implémentation."
+            }
+        }
+    }
+} 

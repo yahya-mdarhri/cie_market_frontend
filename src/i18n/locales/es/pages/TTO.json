@@ -1,0 +1,84 @@
+{
+  "hero": {
+    "title": "Oficina de Transferencia de Tecnología",
+    "description": "Protegiendo ideas, fomentando colaboraciones y llevando la investigación al mercado.",
+    "firstAction": "Presentar una Patente",
+    "secondAction": "Proceso de Licenciamiento"
+  },
+  "introduction": {
+    "title": "Oficina de Transferencia de Tecnología",
+    "description": "La UIR ha creado la primera Oficina de Transferencia de Tecnología (OTT) según estándares internacionales para llevar a cabo la transferencia de tecnología y apoyar el desarrollo económico a nivel regional y nacional. La OTT opera en varios niveles para apoyar las actividades de investigación y mejorar la implementación de la cadena de valor del producto innovador."
+  },
+  "visionAndMission": {
+    "mission": "Facilitar la explotación de los resultados de la investigación científica, la Innovación Abierta y su apertura al mercado",
+    "vision": "Transformar la OTT en un trampolín para la innovación en la UIR y hacer rentable su actividad"
+  },
+  "inventions": {
+    "title": "Destacado de Invenciones",
+    "subtitle": "Tecnologías e innovaciones destacadas",
+    "invention_1": {
+      "title": "Generador Híbrido de Energía Renovable",
+      "problem": "Los generadores solares portátiles suelen carecer de suficiente potencia o fiabilidad, mientras que las soluciones híbridas siguen siendo raras e inaccesibles.",
+      "solution": "Este kit combina paneles solares y una micro turbina eólica en una estructura ligera, plegable y duradera. Permite la producción autónoma de energía renovable en áreas remotas o en movimiento.",
+      "impact": "La solución reduce la huella de carbono, mejora la autonomía energética y permite nuevos casos de uso en campos como la exploración, viviendas temporales y respuesta a emergencias."
+    },
+    "invention_2": {
+      "title": "OxCharger",
+      "problem": "Los usuarios enfrentan cargadores poco optimizados: pérdida de energía, sobrecalentamiento, falta de control e incompatibilidad con estándares de carga rápida o nuevos puertos.",
+      "solution": "OxCharger es un cargador de próxima generación con un chip de control que ajusta la energía en tiempo real, un cable de datos optimizado y puertos Micro-B y Type-C compatibles con la tecnología QC 3.0.",
+      "impact": "OxCharger prolonga la vida útil de la batería, reduce la pérdida de energía y proporciona una mejor protección del dispositivo, ofreciendo una respuesta concreta a las necesidades del usuario y los desafíos de eficiencia energética."
+    },
+    "invention_3": {
+      "title": "Almacenamiento de Energía por Gravedad Híbrida",
+      "problem": "Las soluciones actuales de almacenamiento de energía a menudo no cumplen con los criterios de durabilidad, escalabilidad y bajo impacto ambiental.",
+      "solution": "HyGES es un sistema de almacenamiento híbrido basado en gravedad que combina poleas, pesos e hidromecánica. Almacena electricidad elevando masas mediante bombas hidráulicas y la libera a través de turbinas. Compacto, modular y libre de dependencia de metales raros, es ideal para instalaciones locales o descentralizadas.",
+      "impact": "HyGES reduce la huella ecológica del almacenamiento de energía, extiende la vida útil de la infraestructura y se integra fácilmente en entornos remotos o industriales."
+    },
+    "invention_4": {
+      "title": "Desalinización Térmica",
+      "problem": "Las comunidades rurales y áreas aisladas carecen de soluciones viables para acceder al agua potable. Las tecnologías actuales de desalinización son costosas, poco adecuadas para uso a pequeña escala y muy dependientes del suministro continuo de energía.",
+      "solution": "Una unidad de desalinización alimentada por energía solar basada en tecnología MED (Destilación Multi-Efecto) adaptada a las necesidades locales. El proyecto desarrolla una unidad piloto capaz de producir 7.000 L/día (dentro de 6 horas), combinando evaporadores de película descendente, una red inteligente de intercambiadores de calor, un sistema de almacenamiento térmico y energía suministrada por paneles solares de tubo de vacío.",
+      "impact": "Esta solución reduce la dependencia de las redes eléctricas, reduce los costos operativos y proporciona una respuesta sostenible a los desafíos del cambio climático y la seguridad hídrica."
+    },
+    "invention_5": {
+      "title": "Alumbrado Público Inteligente INARA",
+      "problem": "El alumbrado público actual sufre de altos costos, falta de control remoto, rendimiento limitado y tecnología obsoleta. Esto se ve agravado por el aumento de los precios de la energía y la crisis energética global.",
+      "solution": "INARA integra componentes LED optimizados, un sistema inteligente de atenuación basado en la luz ambiental, un módulo de comunicación y una placa de control desarrollada localmente. Esta configuración permite el monitoreo remoto y la gestión precisa de las farolas estándar.",
+      "impact": "INARA logra reducciones medibles en el consumo de energía y los costos de mantenimiento, mientras contribuye directamente a los objetivos de sostenibilidad. También posiciona estratégicamente a Marruecos como un actor regional en el sector de las ciudades inteligentes."
+    },
+    "invention_6": {
+      "title": "Concentrador Solar Taqa PRO",
+      "problem": "En Marruecos, el aumento de los precios de los productos petrolíferos afecta gravemente la competitividad industrial. Las soluciones solares existentes a menudo no cumplen con los requisitos específicos de temperatura y las necesidades de operación continua.",
+      "solution": "Taqa PRO desarrolla un concentrador solar cilíndrico-parabólico nano capaz de producir agua caliente y vapor entre 60°C y 250°C, reduciendo el consumo de combustible en calderas industriales hasta en un 80%.",
+      "impact": "Al ofrecer una alternativa local, rentable y ecológica, Taqa PRO apoya la descarbonización de las industrias nacionales y posiciona a Marruecos como un actor innovador en la eficiencia de la energía solar."
+    }
+  },
+  "profiles": {
+    "title": "Nuestros Perfiles Distinguidos",
+    "subtitle": "Conozca las mentes brillantes detrás de nuestros avances innovadores"
+  },
+  "contact": {
+    "title": "Aprenda Más Sobre Nuestras Innovaciones",
+    "description": "¿Interesado en una invención o tecnología específica? Contáctenos para obtener más información sobre nuestros proyectos de investigación y desarrollo."
+  },
+  "stats": {
+    "totalPatents": "Total de Patentes Presentadas",
+    "internationalPatents": "Patentes Internacionales",
+    "researchContracts": "Contratos de Investigación",
+    "goldMedals": "Medallas de Oro"
+  },
+  "services": {
+    "transfer": {
+      "title": "Asistencia con la Transferencia",
+      "description": "Apoyo y orientación en la transferencia de tecnología y conocimiento a industrias o instituciones relevantes."
+    },
+    "patent": {
+      "title": "Redacción de Patentes y Protección de PI",
+      "description": "Soporte en la redacción de solicitudes de patentes y protección de la propiedad intelectual."
+    },
+    "marketing": {
+      "title": "Concienciación sobre PI y Marketing de la Innovación",
+      "description": "Promoción de la concienciación sobre PI y marketing estratégico de soluciones innovadoras."
+    }
+  }
+} 

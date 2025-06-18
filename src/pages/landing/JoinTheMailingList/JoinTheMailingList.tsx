@@ -1,8 +1,11 @@
 import React, { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import LandingLayout from "@components/layouts/LandingLayout/LandingLayout";
 import './JoinTheMailingList.css';
+import { useHeroProps, useBenefits, useRoleOptions, useSubscriptionPreferences } from './data';
 
 function JoinTheMailingList() {
+    const { t } = useTranslation('joinMailingList');
     const formRef = useRef<HTMLDivElement>(null);
 
     const scrollToForm = () => {
@@ -44,37 +47,20 @@ function JoinTheMailingList() {
         console.log('Form submitted:', formData);
     };
 
-    const benefits = [
-        {
-            title: "Latest Updates",
-            description: "Stay informed about the newest technology trends and innovations"
-        },
-        {
-            title: "Industry Insights",
-            description: "Get exclusive access to market trends and analysis"
-        },
-        {
-            title: "Opportunities",
-            description: "Be the first to know about upcoming events and opportunities"
-        },
-        {
-            title: "Success Stories",
-            description: "Learn from real-world case studies and success stories"
-        }
-    ];
+    const heroProps = useHeroProps(t);
+    const benefits = useBenefits(t);
+    const roleOptions = useRoleOptions(t);
+    const subscriptionPreferences = useSubscriptionPreferences(t);
+
+    heroProps.onFirstActionClick = scrollToForm;
 
     return (
-        <LandingLayout heroProps={{
-            heroTitle: <>Stay Connected with Inn2Market</>,
-            heroDescription: "Join our mailing list to receive the latest updates on innovations, technology trends, and opportunities. Be the first to know about new developments in the world of intellectual property and technology transfer.",
-            firstAction: "Subscribe Now",
-            onFirstActionClick: scrollToForm
-        }}>
+        <LandingLayout heroProps={heroProps}>
             <div className="join-mailing-container">
                 <div className="mailing-content">
                     <div className="mailing-intro">
-                        <h2>Why Join Our Mailing List?</h2>
-                        <p className="intro-description">Get exclusive access to our latest updates and insights</p>
+                        <h2>{t('intro.title')}</h2>
+                        <p className="intro-description">{t('intro.description')}</p>
                         
                         <div className="benefits-grid">
                             {benefits.map((benefit, index) => (
@@ -88,47 +74,36 @@ function JoinTheMailingList() {
 
                     <div className="mailing-form-section" ref={formRef}>
                         <div className="form-header">
-                            <h2>Join Our Community</h2>
-                            <p className="form-subtitle">Be part of our growing network of innovators and technology enthusiasts</p>
+                            <h2>{t('form.title')}</h2>
+                            <p className="form-subtitle">{t('form.subtitle')}</p>
                         </div>
 
                         <form onSubmit={handleSubmit} className="mailing-form">
                             <div className="form-section preferences-section">
-                                <h3>Your Preferences</h3>
+                                <h3>{t('form.preferences.title')}</h3>
                                 <div className="checkbox-group">
-                                    <label className="checkbox-label">
-                                        <input
-                                            type="checkbox"
-                                            name="newsletter"
-                                            checked={formData.newsletter}
-                                            onChange={handleChange}
-                                        />
-                                        <span className="checkbox-text">
-                                            <strong>Newsletter</strong>
-                                            <span className="checkbox-description">News, Updates, and the latest info about IP.</span>
-                                        </span>
-                                    </label>
-                                    
-                                    <label className="checkbox-label">
-                                        <input
-                                            type="checkbox"
-                                            name="techUpdates"
-                                            checked={formData.techUpdates}
-                                            onChange={handleChange}
-                                        />
-                                        <span className="checkbox-text">
-                                            <strong>Technology Updates</strong>
-                                            <span className="checkbox-description">Latest technologies in your inbox as soon as they are posted</span>
-                                        </span>
-                                    </label>
+                                    {subscriptionPreferences.map((pref, index) => (
+                                        <label key={index} className="checkbox-label">
+                                            <input
+                                                type="checkbox"
+                                                name={pref.name}
+                                                checked={formData[pref.name as keyof typeof formData] as boolean}
+                                                onChange={handleChange}
+                                            />
+                                            <span className="checkbox-text">
+                                                <strong>{pref.title}</strong>
+                                                <span className="checkbox-description">{pref.description}</span>
+                                            </span>
+                                        </label>
+                                    ))}
                                 </div>
                             </div>
 
                             <div className="form-section personal-info-section">
-                                <h3>Personal Information</h3>
+                                <h3>{t('form.personalInfo.title')}</h3>
                                 <div className="form-row">
                                     <div className="form-group">
-                                        <label htmlFor="firstName">First Name *</label>
+                                        <label htmlFor="firstName">{t('form.personalInfo.firstName')} *</label>
                                         <input
                                             type="text"
                                             id="firstName"
@@ -136,12 +111,12 @@ function JoinTheMailingList() {
                                             value={formData.firstName}
                                             onChange={handleChange}
                                             required
-                                            placeholder="Enter your first name"
+                                            placeholder={t('form.personalInfo.firstNamePlaceholder')}
                                         />
                                     </div>
 
                                     <div className="form-group">
-                                        <label htmlFor="lastName">Last Name *</label>
+                                        <label htmlFor="lastName">{t('form.personalInfo.lastName')} *</label>
                                         <input
                                             type="text"
                                             id="lastName"
@@ -149,13 +124,13 @@ function JoinTheMailingList() {
                                             value={formData.lastName}
                                             onChange={handleChange}
                                             required
-                                            placeholder="Enter your last name"
+                                            placeholder={t('form.personalInfo.lastNamePlaceholder')}
                                         />
                                     </div>
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="email">Email *</label>
+                                    <label htmlFor="email">{t('form.personalInfo.email')} *</label>
                                     <input
                                         type="email"
                                         id="email"
@@ -163,54 +138,53 @@ function JoinTheMailingList() {
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
-                                        placeholder="Enter your email address"
+                                        placeholder={t('form.personalInfo.emailPlaceholder')}
                                     />
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="organization">Organization</label>
+                                    <label htmlFor="organization">{t('form.personalInfo.organization')}</label>
                                     <input
                                         type="text"
                                         id="organization"
                                         name="organization"
                                         value={formData.organization}
                                         onChange={handleChange}
-                                        placeholder="Enter your organization name"
+                                        placeholder={t('form.personalInfo.organizationPlaceholder')}
                                     />
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="jobTitle">Job Title</label>
+                                    <label htmlFor="jobTitle">{t('form.personalInfo.jobTitle')}</label>
                                     <input
                                         type="text"
                                         id="jobTitle"
                                         name="jobTitle"
                                         value={formData.jobTitle}
                                         onChange={handleChange}
-                                        placeholder="Enter your job title"
+                                        placeholder={t('form.personalInfo.jobTitlePlaceholder')}
                                     />
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="role">Role</label>
+                                    <label htmlFor="role">{t('form.personalInfo.role')}</label>
                                     <select
                                         id="role"
                                         name="role"
                                         value={formData.role}
                                         onChange={handleChange}
                                     >
-                                        <option value="">Select your role</option>
-                                        <option value="researcher">Researcher</option>
-                                        <option value="student">Student</option>
-                                        <option value="faculty">Faculty</option>
-                                        <option value="industry">Industry Professional</option>
-                                        <option value="other">Other</option>
+                                        {roleOptions.map((option, index) => (
+                                            <option key={index} value={option.value}>
+                                                {option.label}
+                                            </option>
+                                        ))}
                                     </select>
                                 </div>
                             </div>
 
                             <button type="submit" className="submit-button">
-                                Subscribe Now
+                                {t('form.submit')}
                             </button>
                         </form>
                     </div>

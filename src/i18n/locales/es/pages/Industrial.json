@@ -1,0 +1,37 @@
+{
+  "industrial": {
+    "hero": {
+      "title": "Clínica Industrial",
+      "description": "Resolviendo Desafíos del Mundo Real a través de la Colaboración Académica-Industrial",
+      "firstAction": "Enviar una Patente"
+    },
+    "stats": {
+      "publications": "Publicaciones Científicas",
+      "awards": "Premios Nacionales e Internacionales",
+      "projects": "Proyectos de Co-desarrollo",
+      "partners": "Alianzas Industriales"
+    },
+    "introduction": {
+      "title": "Clínica Industrial",
+      "description": "La Clínica Industrial de la UIR es un espacio dinámico de colaboración donde la experiencia académica se encuentra con los desafíos industriales. A través de proyectos de co-desarrollo, creación de prototipos e integración tecnológica, entregamos soluciones a medida para empresas, ciudades e instituciones públicas. Desde infraestructura solar inteligente hasta embellecimiento urbano y sistemas energéticamente eficientes, la clínica impulsa la innovación con impacto real."
+    },
+    "visionAndMission": {
+      "mission": "apoyar proyectos de innovación Made @UIR para satisfacer las necesidades específicas de la industria y los territorios",
+      "vision": "Transformar el CIE en una Unidad de Negocio efectiva al servicio de la industria y los territorios"
+    },
+    "services": {
+      "solutions": {
+        "title": "Soluciones a Problemas Industriales",
+        "description": "Proporcionamos soluciones prácticas a desafíos industriales reales aprovechando la experiencia en investigación."
+      },
+      "pilot": {
+        "title": "Construcción de Líneas Piloto",
+        "description": "Apoyo en la construcción de líneas piloto de pre-industrialización para escalar productos y procesos innovadores."
+      },
+      "ip": {
+        "title": "Concienciación PI y Marketing de Innovación",
+        "description": "Crear conciencia sobre la propiedad intelectual y promover innovaciones a través del marketing estratégico."
+      }
+    }
+  }
+} 

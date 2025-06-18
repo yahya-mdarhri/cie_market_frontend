@@ -1,0 +1,84 @@
+{
+  "hero": {
+    "title": "Technology Transfer Office",
+    "description": "Protecting ideas, fostering collaborations, and bringing research to market.",
+    "firstAction": "Submit A Patent",
+    "secondAction": "Licensing Process"
+  },
+  "introduction": {
+    "title": "Technology Transfer Office",
+    "description": "The UIR has created the first Technology Transfer Office (TTO) according to international standards to carry out technology transfer and support economic development at the regional and national levels. The TTO operates on several levels to support research activities and to improve the implementation of the innovative product value chain."
+  },
+  "visionAndMission": {
+    "mission": "Facilitate the exploitation of the results of scientific research, Open Innovation and its opening up to the market",
+    "vision": "Transform the TTO into a springboard for innovation at the UIR and make its activity profitable"
+  },
+  "inventions": {
+    "title": "Inventions Spotlight",
+    "subtitle": "Highlighted technologies and innovations",
+    "invention_1": {
+      "title": "Hybrid Renewable Energy Generator",
+      "problem": "Portable solar generators often lack sufficient power or reliability, while hybrid solutions remain rare and inaccessible.",
+      "solution": "This kit combines solar panels and a micro wind turbine in a lightweight, foldable, and durable structure. It enables autonomous renewable energy production in remote areas or while on the move.",
+      "impact": "The solution reduces carbon footprint, enhances energy autonomy, and enables new use cases in fields such as exploration, temporary housing, and emergency response."
+    },
+    "invention_2": {
+      "title": "OxCharger",
+      "problem": "Users face poorly optimized chargers: energy loss, overheating, lack of control, and incompatibility with fast charging standards or new ports.",
+      "solution": "OxCharger is a next-generation charger featuring a control chip that adjusts energy in real time, an optimized data cable, and both Micro-B and Type-C ports compatible with QC 3.0 technology.",
+      "impact": "OxCharger extends battery life, reduces energy loss, and provides better device protection — offering a concrete response to user needs and energy efficiency challenges."
+    },
+    "invention_3": {
+      "title": "Hybrid Gravity Energy Storage",
+      "problem": "Current energy storage solutions often fail to meet criteria for durability, scalability, and low environmental impact.",
+      "solution": "HyGES is a hybrid gravity-based storage system combining pulleys, weights, and hydromechanics. It stores electricity by lifting masses using hydraulic pumps, then releases it through turbines. Compact, modular, and free from rare metal dependency, it's ideal for local or decentralized installations",
+      "impact": "HyGES reduces the ecological footprint of energy storage, extends the lifespan of infrastructure, and integrates easily into remote or industrial environments."
+    },
+    "invention_4": {
+      "title": "Thermal Desalination",
+      "problem": "Rural communities and isolated areas lack viable solutions for access to safe drinking water. Current desalination technologies are expensive, poorly suited for small-scale use, and heavily reliant on continuous energy supply.",
+      "solution": "A solar-powered desalination unit based on MED (Multi-Effect Distillation) technology tailored to local needs. The project develops a pilot unit capable of producing 7,000 L/day (within 6 hours), combining falling film evaporators, an intelligent network of heat exchangers, a thermal storage system, and power supplied by vacuum tube solar panels.",
+      "impact": "This solution reduces dependence on electric grids, lowers operational costs, and provides a sustainable answer to the challenges of climate change and water security."
+    },
+    "invention_5": {
+      "title": "Smart Public Lighting INARA",
+      "problem": "Current public lighting suffers from high costs, lack of remote control, limited performance, and outdated technology. This is compounded by rising energy prices and the global energy crisis.",
+      "solution": "INARA integrates optimized LED components, an intelligent dimming system based on ambient light, a communication module, and a locally developed control board. This setup enables remote monitoring and precise management of standard streetlights.",
+      "impact": "INARA achieves measurable reductions in energy consumption and maintenance costs, while contributing directly to sustainability goals. It also positions Morocco strategically as a regional player in the smart city sector."
+    },
+    "invention_6": {
+      "title": "Solar Concentrator Taqa PRO",
+      "problem": "In Morocco, rising petroleum product prices severely affect industrial competitiveness. Existing solar solutions often fail to meet specific temperature requirements and continuous operation needs.",
+      "solution": "Taqa PRO develops a nano cylindrical-parabolic solar concentrator capable of producing hot water and steam between 60°C and 250°C, cutting fuel consumption in industrial boilers by up to 80%.",
+      "impact": "By offering a local, cost-effective, and eco-friendly alternative, Taqa PRO supports the decarbonization of national industries and positions Morocco as an innovative player in solar energy efficiency."
+    }
+  },
+  "profiles": {
+    "title": "Our Distinguished Profiles",
+    "subtitle": "Meet the brilliant minds behind our innovative breakthroughs"
+  },
+  "contact": {
+    "title": "Learn More About Our Innovations",
+    "description": "Interested in a specific invention or technology? Contact us to learn more about our research and development projects."
+  },
+  "stats": {
+    "totalPatents": "Total Patents Filed",
+    "internationalPatents": "International Patents",
+    "researchContracts": "Research Contracts",
+    "goldMedals": "Gold Medals"
+  },
+  "services": {
+    "transfer": {
+      "title": "Assistance with the Transfer",
+      "description": "Support and guidance in the transfer of technology and knowledge to relevant industries or institutions."
+    },
+    "patent": {
+      "title": "Patent and IP Protection Drafting",
+      "description": "Drafting support for patent applications and protection of intellectual property."
+    },
+    "marketing": {
+      "title": "IP Awareness and Innovation Marketing",
+      "description": "Promotion of IP awareness and strategic marketing of innovative solutions."
+    }
+  }
+} 

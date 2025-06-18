@@ -1,0 +1,67 @@
+{
+  "incubator": {
+    "hero": {
+      "title": "Incubadora 360º",
+      "description": "Proporcionamos las herramientas, mentoría y entorno para convertir ideas en empresas viables",
+      "firstAction": "Enviar una Patente"
+    },
+    "introduction": {
+      "title": "Incubadora 360º",
+      "description": "La Incubadora 360° de la UIR apoya a los emprendedores en la transformación de ideas innovadoras en startups exitosas. Proporciona un viaje completo, desde el desarrollo de conceptos en etapas tempranas hasta el ajuste producto-mercado y la escalabilidad del negocio. Con coaching experto, recursos técnicos, acceso a financiamiento y alianzas estratégicas, la incubadora capacita a los creadores para construir soluciones del mundo real y llevarlas al mercado."
+    },
+    "visionAndMission": {
+      "mission": "apoyar el Made @UIR hacia el Go to Market y la asociación con inversores.",
+      "vision": "Acelerar el ROI del Made @UIR = Invención x Comercialización"
+    },
+    "startups": {
+      "title": "Nuestros Programas y Startups",
+      "subtitle": "Descubre las empresas innovadoras que hemos ayudado a lanzar y crecer"
+    },
+    "services": {
+      "funding": {
+        "title": "Financiamiento para el Emprendimiento",
+        "description": "Atracción de fondos nacionales e internacionales para proyectos de promoción del emprendimiento."
+      },
+      "startup": {
+        "title": "Creación y Apoyo a Startups",
+        "description": "Creación de startups Made@UIR, configuración de proyectos, acceso a financiamiento y coaching."
+      },
+      "training": {
+        "title": "Formación en Emprendimiento",
+        "description": "Proporcionando formación especializada en emprendimiento e innovación."
+      },
+      "mentorship": {
+        "title": "Mentoría y Pre-incubación",
+        "description": "Mentoría de líderes de proyectos y servicios de pre-incubación."
+      },
+      "capital": {
+        "title": "Acceso a Capital",
+        "description": "Apoyo en el acceso a capital semilla y de aceleración."
+      }
+    },
+    "stats": {
+      "startups": "Startups Incubadas",
+      "successRate": "Tasa de Éxito",
+      "investment": "Inversión Atraída (M MAD)",
+      "partners": "Socios Estratégicos"
+    },
+    "programs": {
+      "linkup": {
+        "name": "Linkup africa",
+        "description": "Empodera a los jóvenes africanos en Marruecos a través del apoyo al emprendimiento."
+      },
+      "enactus": {
+        "name": "Enactus",
+        "description": "Empodera a los estudiantes para crear un impacto social y ambiental positivo a través de proyectos emprendedores"
+      },
+      "ram": {
+        "name": "RAM Open Innovation",
+        "description": "Conecta startups con expertos en aviación para desarrollar soluciones innovadoras para los desafíos del viaje"
+      },
+      "etoufoula": {
+        "name": "E-Toufoula",
+        "description": "Una plataforma que conecta a los artesanos marroquíes con los mercados globales, promoviendo la artesanía tradicional y el patrimonio cultural."
+      }
+    }
+  }
+} 

@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "title": "Processus de Licence",
+    "description": "Un guide complet de notre processus de licence au Bureau de Transfert de Technologie, garantissant transparence et efficacité."
+  },
+  "overview": {
+    "title": "Aperçu",
+    "description1": "Au nom de l'UIR, le Bureau de Transfert de Technologie (TTO) négocie et accorde des licences pour les inventions brevetées de l'université, les œuvres protégées par le droit d'auteur et les résultats tangibles de recherche aux startups, PME et entreprises établies qui démontrent la capacité technique et commerciale à développer des technologies en phase initiale en produits et services commercialement viables.",
+    "description2": "Avec de nombreuses nouvelles divulgations de propriété intellectuelle reçues annuellement, le portefeuille d'innovation de l'UIR est en constante évolution. Si vous êtes intéressé par l'obtention d'une licence pour la propriété intellectuelle développée par l'UIR, il est important de comprendre les étapes impliquées dans le processus de licence."
+  },
+  "agreements": {
+    "title": "Accords de Licence",
+    "description1": "Un accord de licence est un contrat qui transfère les droits d'utilisation de la technologie de l'UIR à un licencié pour des avantages financiers et autres, tout en conservant la propriété de l'UIR. Ces accords sont conclus avec des startups et des entreprises établies et exigent généralement que le licencié développe diligemment et commercialise l'innovation, fournissant des retours équitables à l'UIR et servant l'intérêt public.",
+    "description2": "Les deux objectifs principaux de l'UIR dans tout accord de licence sont de :",
+    "goals": {
+      "goal1": "Assurer que la technologie est développée par le licencié pour le bénéfice de la société, en alignement avec les politiques d'innovation nationales de l'UIR et du Maroc.",
+      "goal2": "Fournir à l'UIR et aux inventeurs des retours financiers équitables et raisonnables si le développement du produit est réussi."
+    },
+    "requirements": {
+      "title": "Lors de l'élaboration d'un accord de licence, l'UIR commence par comprendre :",
+      "items": [
+        "Le modèle économique lié à la technologie et les avantages potentiels de leur solution proposée.",
+        "Le marché cible et la base de clients.",
+        "L'accès aux ressources telles que le capital, l'infrastructure et le personnel qualifié.",
+        "Les projections de revenus et de croissance attendus."
+      ]
+    }
+  },
+  "terms": {
+    "title": "Conditions de Licence",
+    "financial": {
+      "title": "Éléments Financiers Communs",
+      "items": [
+        "Frais d'émission de licence",
+        "Frais de maintenance annuels",
+        "Paiements basés sur des jalons de développement ou de commercialisation",
+        "Redevances sur les ventes ou revenus de services",
+        "Remboursement des coûts de brevet ou d'enregistrement",
+        "Partage des revenus de sous-licence",
+        "Parts de capital pour les startups"
+      ]
+    },
+    "nonFinancial": {
+      "title": "Conditions Non Financières",
+      "items": [
+        "Type d'exclusivité : non exclusive, exclusive ou limitée par domaine ou géographie",
+        "Conservation des droits pour l'UIR et les sponsors de recherche",
+        "Droits réservés pour usage académique et de recherche par l'UIR et les institutions partenaires",
+        "Exigences de diligence pour assurer le développement et la commercialisation en temps opportun"
+      ]
+    },
+    "info": {
+      "text1": "Les négociations de licence sont menées entre le TTO et le représentant désigné de l'entreprise, sans implication directe des inventeurs de l'UIR pendant la phase de négociation pour éviter les conflits d'intérêts.",
+      "text2": "Les accords de licence incluent souvent des jalons de performance pour assurer un progrès constant. Le non-respect de ceux-ci peut entraîner la résiliation de l'accord, permettant à l'UIR d'offrir la technologie à d'autres parties intéressées."
+    }
+  },
+  "findingLicensee": {
+    "title": "Trouver un Licencié",
+    "description": "Les inventeurs peuvent jouer un rôle clé dans l'identification des licenciés potentiels grâce à leur connaissance de l'industrie et leurs réseaux. Le TTO complète ces efforts par des contacts institutionnels, des analyses de marché, des forums d'affaires, des expositions d'innovation et le développement de partenariats.",
+    "inventorInvolvement": {
+      "title": "Implication et Avantages de l'Inventeur",
+      "items": [
+        "Les licenciés recherchent souvent le soutien des inventeurs pour le transfert de connaissances, allant des interactions occasionnelles aux arrangements de conseil formels.",
+        "La collaboration avec les startups peut nécessiter un engagement accru, régi par les politiques de conflit d'intérêts et d'éthique de l'UIR.",
+        "Les inventeurs bénéficient de l'impact réel, de relations étendues avec l'industrie et d'une part des retours financiers des revenus de licence."
+      ]
+    },
+    "timeline": {
+      "title": "Calendrier",
+      "description": "Selon la préparation du marché et la maturité de l'innovation, trouver le bon licencié peut prendre plusieurs mois ou années. Les technologies en phase initiale nécessitent souvent plus de temps pour la commercialisation."
+    },
+    "selectionCriteria": {
+      "title": "Choisir un Licencié",
+      "items": [
+        "Les licenciés sont sélectionnés sur la base de leur potentiel à apporter efficacement la technologie au marché et à servir les besoins publics.",
+        "Dans certains cas, les entreprises expérimentées avec une expertise pertinente du marché sont préférées.",
+        "Pour d'autres technologies, les entreprises startup offrent la concentration et la motivation nécessaires.",
+        "Les technologies peuvent être licenciées à plusieurs entités, non exclusivement ou exclusivement par domaine ou région."
+      ]
+    }
+  }
+} 

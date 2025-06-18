@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "title": "De la Idea al Mercado Conectando Innovación e Industria",
+    "description": "Nos complace tenerte aquí. Explora nuestras características y servicios.",
+    "firstAction": "Asóciate Con Nosotros",
+    "secondAction": "Presentar una Patente"
+  },
+  "introduction": {
+    "title": "Centro de Innovación y Emprendimiento",
+    "description": "El Centro de Innovación y Emprendimiento (CIE) es un centro de innovación, investigación y emprendimiento en la Universidad Internacional de Rabat. Apoyamos a investigadores, estudiantes y emprendedores en el desarrollo y comercialización de sus ideas."
+  },
+  "visionAndMission": {
+    "mission": "Fomentar la innovación y el emprendimiento proporcionando recursos, apoyo y oportunidades para que investigadores, estudiantes y emprendedores desarrollen y comercialicen sus ideas.",
+    "vision": "Ser un centro líder en innovación y emprendimiento en Marruecos y África, impulsando el crecimiento económico y el impacto social a través de la comercialización de la investigación y el desarrollo de startups."
+  },
+  "departmentHead": {
+    "role": "Director del Centro de Innovación y Emprendimiento",
+    "message": "Bienvenido al Centro de Innovación y Emprendimiento. Estamos comprometidos a apoyar la innovación y el emprendimiento en la Universidad Internacional de Rabat y más allá."
+  },
+  "departments": {
+    "title": "Nuestros Departamentos",
+    "subtitle": "Descubre nuestros departamentos especializados y sus ofertas únicas",
+    "learnMore": "Saber Más",
+    "tto": {
+      "name": "Oficina de Transferencia de Tecnología",
+      "description": "Conectando Innovación e Industria a través de la Comercialización de la Investigación"
+    },
+    "industrial": {
+      "name": "Clínica Industrial",
+      "description": "Resolviendo Desafíos del Mundo Real a través de la Colaboración Académica-Industrial"
+    },
+    "incubator": {
+      "name": "Incubadora",
+      "description": "Empoderando Startups para Transformar Ideas en Impacto"
+    },
+    "techCenter": {
+      "name": "Centro Tecnológico",
+      "description": "Impulsando la Innovación con Herramientas, Talento e Infraestructura de Vanguardia"
+    }
+  },
+  "stats": {
+    "innovationPatents": "Innovación y Patentes",
+    "internationalPatents": "Patentes Internacionales",
+    "goldMedals": "Medallas de Oro"
+  }
+} 

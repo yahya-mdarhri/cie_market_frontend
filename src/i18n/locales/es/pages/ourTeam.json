@@ -1,0 +1,25 @@
+{
+    "hero": {
+        "title": "Conoce a Nuestro Equipo Inn2Market",
+        "description": "Un grupo diverso de visionarios, creadores y solucionadores de problemas dedicados a transformar ideas en realidad. Juntos, estamos construyendo el futuro de la tecnología y la innovación.",
+        "firstAction": "Contáctanos"
+    },
+    "intro": {
+        "title": "Nuestro Liderazgo",
+        "description": "Somos un equipo diverso de innovadores, creadores y solucionadores de problemas dedicados a construir el futuro."
+    },
+    "values": {
+        "innovation": {
+            "title": "Innovación",
+            "description": "Impulsamos los límites y adoptamos nuevas ideas para crear soluciones revolucionarias."
+        },
+        "collaboration": {
+            "title": "Colaboración",
+            "description": "Creemos en el poder del trabajo en equipo y las perspectivas diversas."
+        },
+        "excellence": {
+            "title": "Excelencia",
+            "description": "Nos esforzamos por la más alta calidad en todo lo que hacemos."
+        }
+    }
+} 

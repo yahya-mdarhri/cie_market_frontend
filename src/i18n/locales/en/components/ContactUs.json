@@ -1,0 +1,23 @@
+{
+  "title": "Get in Touch",
+  "subtitle": "We'd love to hear from you. Whether you're an inventor or a company, we're here to help.",
+  "contactInfo": {
+    "title": "Contact Information",
+    "description": "Get in touch with us for any inquiries about our services, partnerships, or innovation opportunities.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address"
+  },
+  "form": {
+    "inventor": "Inventor",
+    "company": "Company",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "companyName": "Company Name",
+    "position": "Your Position",
+    "subject": "Subject",
+    "message": "Message",
+    "sendMessage": "Send Message"
+  }
+} 

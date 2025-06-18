@@ -1,34 +1,30 @@
 import React from 'react';
 import './Contact.css';
 import ProfileCard from '../ProfileCard/ProfileCard';
+import { useTranslation } from 'react-i18next';
 
 export interface ContactPerson {
     name: string;
     role: string;
     image: string;
     social: {
-        linkedin?: string;
-        twitter?: string;
         email?: string;
+        phone?: string;
     };
 }
 
 interface ContactProps {
     contacts: ContactPerson[];
-    title?: string;
-    description?: string;
 }
 
-const Contact: React.FC<ContactProps> = ({ 
-    contacts, 
-    title = "Get in Touch", 
-    description = "Have questions? Our team is here to help you with any inquiries you might have."
-}) => {
+const Contact: React.FC<ContactProps> = ({ contacts }) => {
+    const { t } = useTranslation('contact');
+
     return (
         <section className="contactSection">
             <div className="contactHeader">
-                <h2>{title}</h2>
-                <p>{description}</p>
+                <h2>{t('title')}</h2>
+                <p>{t('description')}</p>
             </div>
             <div className="contactGrid">
                 {contacts.map((contact, index) => (

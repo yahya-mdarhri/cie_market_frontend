@@ -1,0 +1,23 @@
+{
+  "faq": {
+    "hero": {
+      "title": "FAQ",
+      "description": "Trouvez des réponses aux questions les plus courantes sur nos services, programmes et installations"
+    },
+    "title": "FAQ",
+    "subtitle": "Questions Fréquemment Posées",
+    "description": "Trouvez des réponses aux questions les plus courantes sur nos services, programmes et installations",
+    "searchPlaceholder": "Rechercher des questions...",
+    "noResults": "Aucune question ne correspond à votre recherche.",
+    "question1": "Qu'est-ce que le Bureau de Transfert de Technologie (BTT) ?",
+    "answer1": "Le Bureau de Transfert de Technologie (BTT) est responsable de la gestion et de la commercialisation de la propriété intellectuelle et des résultats de recherche de l'institution.",
+    "question2": "Comment puis-je protéger ma propriété intellectuelle ?",
+    "answer2": "Vous pouvez protéger votre propriété intellectuelle par des brevets, des marques, des droits d'auteur et des secrets commerciaux. Notre équipe BTT peut vous guider dans le processus et vous aider à choisir la meilleure stratégia de protection pour votre innovation.",
+    "question3": "Quels services le Département Industriel propose-t-il ?",
+    "answer3": "Le Département Industriel fournit un support technique, des services de recherche et développement, et des solutions industrielles pour aider les entreprises à innover et à se développer.",
+    "question4": "Comment puis-je rejoindre le programme d'incubation ?",
+    "answer4": "Pour rejoindre notre programme d'incubation, vous devez soumettre une candidature avec votre idée ou projet d'entreprise. Notre équipe évaluera votre proposition et vous guidera dans le processus de sélection.",
+    "question5": "Quelles ressources sont disponibles au Centre Technologique ?",
+    "answer5": "Le Centre Technologique offre des équipements de pointe, une expertise technique et des espaces collaboratifs pour les projets de recherche, développement et innovation."
+  }
+}

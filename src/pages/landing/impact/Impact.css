@@ -1,12 +1,25 @@
-.impact-metrics {
+.impact-section {
   padding: 4rem 2rem;
 }
 
-.impact-metrics h2 {
+.impact-section-header {
   text-align: center;
-  font-size: 2.5rem;
-  color: var(--primary-color);
   margin-bottom: 3rem;
+}
+
+.impact-section-header h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 0.8rem;
+}
+
+.impact-section-header p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .metrics-grid {
@@ -205,19 +218,16 @@
 }
 
 @media (max-width: 768px) {
-  .impact-metrics,
-  .sdg-news-section {
+  .impact-section {
     padding: 2rem 1rem;
   }
 
-  .impact-metrics h2,
-  .sdg-news-section h2 {
+  .impact-section-header h2 {
     font-size: 2rem;
-    margin-bottom: 2rem;
   }
 
-  .metrics-grid {
-    gap: 1rem;
+  .impact-section-header p {
+    font-size: 1rem;
   }
 
   .metric-card {
@@ -253,8 +263,7 @@
 }
 
 @media (max-width: 480px) {
-  .impact-metrics h2,
-  .sdg-news-section h2 {
+  .impact-section-header h2 {
     font-size: 1.75rem;
   }
 
