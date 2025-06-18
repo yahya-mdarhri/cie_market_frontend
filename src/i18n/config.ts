@@ -31,6 +31,10 @@ import enPartners from './locales/en/components/Partners.json';
 import esPartners from './locales/es/components/Partners.json';
 import frPartners from './locales/fr/components/Partners.json';
 
+import enServices from './locales/en/components/Services.json';
+import esServices from './locales/es/components/Services.json';
+import frServices from './locales/fr/components/Services.json';
+
 import enIntroduction from './locales/en/components/Introduction.json';
 import esIntroduction from './locales/es/components/Introduction.json';
 import frIntroduction from './locales/fr/components/Introduction.json';
@@ -65,6 +69,7 @@ export const NAMESPACES = {
   impact: 'impact',
   incubator: 'incubator',
   partners: 'partners',
+  services: 'services',
   introduction: 'introduction',
   visionAndMission: 'visionAndMission',
   contactUs: 'contactUs'
@@ -86,6 +91,7 @@ i18n
         impact: enImpact,
         incubator: enIncubator,
         partners: enPartners,
+        services: enServices,
         introduction: enIntroduction,
         visionAndMission: enVisionAndMission,
         contactUs: enContactUs
@@ -98,6 +104,7 @@ i18n
         impact: esImpact,
         incubator: esIncubator,
         partners: esPartners,
+        services: esServices,
         introduction: esIntroduction,
         visionAndMission: esVisionAndMission,
         contactUs: esContactUs
@@ -110,6 +117,7 @@ i18n
         impact: frImpact,
         incubator: frIncubator,
         partners: frPartners,
+        services: frServices,
         introduction: frIntroduction,
         visionAndMission: frVisionAndMission,
         contactUs: frContactUs
