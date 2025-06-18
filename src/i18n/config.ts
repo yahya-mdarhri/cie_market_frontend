@@ -64,6 +64,10 @@ import enLicensingProcess from './locales/en/pages/licensingProcess.json';
 import esLicensingProcess from './locales/es/pages/licensingProcess.json';
 import frLicensingProcess from './locales/fr/pages/licensingProcess.json';
 
+import enOurTeam from './locales/en/pages/ourTeam.json';
+import esOurTeam from './locales/es/pages/ourTeam.json';
+import frOurTeam from './locales/fr/pages/ourTeam.json';
+
 // Define supported languages
 export const SUPPORTED_LANGUAGES = {
   en: { name: 'English', flag: '🇺🇸' },
@@ -94,6 +98,7 @@ export const NAMESPACES = {
   visionAndMission: 'visionAndMission',
   contactUs: 'contactUs',
   licensingProcess: 'licensingProcess',
+  ourTeam: 'ourTeam',
 } as const;
 
 export type Namespace = keyof typeof NAMESPACES;
@@ -120,6 +125,7 @@ i18n
         visionAndMission: enVisionAndMission,
         contactUs: enContactUs,
         licensingProcess: enLicensingProcess,
+        ourTeam: enOurTeam,
       },
       es: {
         navbar: esNavbar,
@@ -137,6 +143,7 @@ i18n
         visionAndMission: esVisionAndMission,
         contactUs: esContactUs,
         licensingProcess: esLicensingProcess,
+        ourTeam: esOurTeam,
       },
       fr: {
         navbar: frNavbar,
@@ -154,6 +161,7 @@ i18n
         visionAndMission: frVisionAndMission,
         contactUs: frContactUs,
         licensingProcess: frLicensingProcess,
+        ourTeam: frOurTeam,
       }
     },
     // lng: 'en', // Set English as default language

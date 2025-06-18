@@ -1,8 +1,17 @@
 // This file contains the data for the Our Team page of the landing page.
 
 import avatar from './images/avatar.jpg';
+import { HeroProps } from "@layouts/LandingLayout/LandingLayout";
+import { TFunction } from "i18next";
 
-// The team members data
+// The hero section props with translations
+export const useHeroProps = (t: TFunction): HeroProps => ({
+    heroTitle: t('hero.title'),
+    heroDescription: t('hero.description'),
+    firstAction: t('hero.firstAction'),
+});
+
+// The team members data (kept static)
 const teamMembers = [
     {
         name: "Wacim BEN YAHYA",
@@ -26,27 +35,20 @@ const teamMembers = [
     },
 ];
 
-// The team values data
-const teamValues = [
+// The team values data with translations
+export const useTeamValues = (t: TFunction) => [
     {
-        title: "Innovation",
-        description: "We push boundaries and embrace new ideas to create groundbreaking solutions."
+        title: t('values.innovation.title'),
+        description: t('values.innovation.description')
     },
     {
-        title: "Collaboration",
-        description: "We believe in the power of teamwork and diverse perspectives."
+        title: t('values.collaboration.title'),
+        description: t('values.collaboration.description')
     },
     {
-        title: "Excellence",
-        description: "We strive for the highest quality in everything we do."
+        title: t('values.excellence.title'),
+        description: t('values.excellence.description')
     }
 ];
 
-// The hero section props
-const heroProps = {
-    heroTitle: <>Meet Our Inn2Market Team</>,
-    heroDescription: "A diverse group of visionaries, creators, and problem-solvers dedicated to transforming ideas into reality. Together, we're building the future of technology and innovation.",
-    firstAction: "Contact Us",
-};
-
-export { teamMembers, teamValues, heroProps };
+export { teamMembers };
