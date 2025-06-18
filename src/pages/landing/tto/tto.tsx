@@ -189,8 +189,6 @@ function TTO() {
 				<HighlightedProfiles />
 				<Contact 
 					contacts={contactData}
-					title={t('contact.title')}
-					description={t('contact.description')}
 				/>
 				<Partners partners={partners} />
 		</LandingLayout>

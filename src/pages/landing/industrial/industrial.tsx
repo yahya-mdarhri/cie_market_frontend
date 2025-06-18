@@ -34,7 +34,6 @@ function Industrial() {
 				<Services services={getServicesData(t)} />
 				<Contact
 					contacts={contactData}
-					title={t('contact.title')}
 				/>
 				<Partners partners={clients} areCLients/>
 		</LandingLayout>

@@ -90,7 +90,6 @@ function Incubator() {
 
 				<Contact
 					contacts={contactData}
-					title={t('contact.title')}
 				/>
 				<Partners partners={partners} />
 		</LandingLayout>

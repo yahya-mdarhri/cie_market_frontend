@@ -58,8 +58,6 @@ function TechCenter() {
 				</div>
 				<Contact
 					contacts={contactData}
-					title={t('contact.title')}
-					description={t('contact.description')}
 				/>
 			{/* <Services services={servicesData} /> */}
 		</LandingLayout>
