@@ -1,0 +1,10 @@
+{
+    "title": "Our Team",
+    "subtitle": "Meet our dedicated professionals",
+    "contact": {
+        "email": "Email",
+        "phone": "Phone",
+        "call": "Call",
+        "emailPerson": "Email {{name}}"
+    }
+} 

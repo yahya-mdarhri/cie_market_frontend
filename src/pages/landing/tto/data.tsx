@@ -170,6 +170,24 @@ const contactData: ContactPerson[] = [
             email: "john.doe@example.com"
         }
     },
+    {
+        name: "John Doe",
+        role: "Technical Lead",
+        image: avatar, 
+        social: {
+            phone: "+212XXXXXXXXX",
+            email: "john.doe@example.com"
+        }
+    },
+    {
+        name: "John Doe",
+        role: "Technical Lead",
+        image: avatar, 
+        social: {
+            phone: "+212XXXXXXXXX",
+            email: "john.doe@example.com"
+        }
+    },
 ];
 
 interface Profile {

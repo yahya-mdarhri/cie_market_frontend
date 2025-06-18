@@ -10,7 +10,8 @@ import Partners from "@ui/Landing/Partners/Partners";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
 
 import Services from "@ui/Landing/Services/Services";
-import { partners, getServicesData, getHeroProps, getPrograms } from "./data";
+import { partners, getServicesData, getHeroProps, getPrograms, contactData } from "./data";
+import Contact from "@ui/Landing/Contact/Contact";
 
 interface StartupCardProps {
 	logo: string;
@@ -86,6 +87,11 @@ function Incubator() {
 				/>
 				<Services services={getServicesData(t)} />
 				<Startups/>
+
+				<Contact
+					contacts={contactData}
+					title={t('contact.title')}
+				/>
 				<Partners partners={partners} />
 		</LandingLayout>
 	);

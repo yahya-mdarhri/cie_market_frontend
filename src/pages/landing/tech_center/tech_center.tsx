@@ -8,7 +8,8 @@ import service1 from "./images/service1.jpg";
 import image2 from "./images/industrial2.png";
 
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
-import { useTechCenterData } from "./data";
+import { contactData, useTechCenterData } from "./data";
+import Contact from "@ui/Landing/Contact/Contact";
 // import Services from "@ui/Landing/Services/Services";
 
 function TechCenterServiceCard({title, description, image, key}:{title:string, description:string, image:string, key: number}){
@@ -55,7 +56,11 @@ function TechCenter() {
 						))}
 					</div>
 				</div>
-
+				<Contact
+					contacts={contactData}
+					title={t('contact.title')}
+					description={t('contact.description')}
+				/>
 			{/* <Services services={servicesData} /> */}
 		</LandingLayout>
 	);

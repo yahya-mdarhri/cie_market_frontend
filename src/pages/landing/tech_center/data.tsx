@@ -87,3 +87,35 @@ export const useTechCenterData = () => {
 
     return { heroProps, servicesData };
 }; 
+
+import avatar from "@pages/landing/our_team/images/avatar.jpg"
+
+export const contactData: ContactPerson[] = [
+    {
+        name: "John Doe",
+        role: "Technical Lead",
+        image: avatar, 
+        social: {
+            phone: "+212XXXXXXXXX",
+            email: "john.doe@example.com"
+        }
+    },
+    {
+        name: "John Doe",
+        role: "Technical Lead",
+        image: avatar, 
+        social: {
+            phone: "+212XXXXXXXXX",
+            email: "john.doe@example.com"
+        }
+    },
+    {
+        name: "John Doe",
+        role: "Technical Lead",
+        image: avatar, 
+        social: {
+            phone: "+212XXXXXXXXX",
+            email: "john.doe@example.com"
+        }
+    },
+];

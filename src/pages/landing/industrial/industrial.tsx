@@ -9,7 +9,8 @@ import image2 from "./images/industrial2.png";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
 import Services from "@ui/Landing/Services/Services";
 import Partners from "@ui/Landing/Partners/Partners";
-import { clients, getServicesData, getHeroProps } from "./data";
+import { clients, getServicesData, getHeroProps, contactData } from "./data";
+import Contact from "@ui/Landing/Contact/Contact";
 
 function Industrial() {
 	const { t } = useTranslation('industrial');
@@ -31,7 +32,10 @@ function Industrial() {
 					imageUrl={headImg}
 				/> */}
 				<Services services={getServicesData(t)} />
-
+				<Contact
+					contacts={contactData}
+					title={t('contact.title')}
+				/>
 				<Partners partners={clients} areCLients/>
 		</LandingLayout>
 	);

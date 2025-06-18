@@ -71,6 +71,14 @@ import enTechCenter from './locales/en/pages/techCenter.json';
 import esTechCenter from './locales/es/pages/techCenter.json';
 import frTechCenter from './locales/fr/pages/techCenter.json';
 
+import enContact from './locales/en/components/Contact.json';
+import esContact from './locales/es/components/Contact.json';
+import frContact from './locales/fr/components/Contact.json';
+
+import enProfileCard from './locales/en/components/ProfileCard.json';
+import esProfileCard from './locales/es/components/ProfileCard.json';
+import frProfileCard from './locales/fr/components/ProfileCard.json';
+
 // Define supported languages
 export const SUPPORTED_LANGUAGES = {
   en: { name: 'English', flag: '🇺🇸' },
@@ -87,6 +95,7 @@ export const NAMESPACES = {
   hero: 'hero',
   footer: 'footer',
   contact: 'contact',
+  profileCard: 'profileCard',
   home: 'home',
   tto: 'tto',
   faq: 'faq',
@@ -115,6 +124,8 @@ i18n
     resources: {
       en: {
         navbar: enNavbar,
+        contact: enContact,
+        profileCard: enProfileCard,
         home: enHome,
         tto: enTTO,
         faq: enFAQ,
@@ -134,6 +145,8 @@ i18n
       },
       es: {
         navbar: esNavbar,
+        contact: esContact,
+        profileCard: esProfileCard,
         home: esHome,
         tto: esTTO,
         faq: esFAQ,
@@ -153,6 +166,8 @@ i18n
       },
       fr: {
         navbar: frNavbar,
+        contact: frContact,
+        profileCard: frProfileCard,
         home: frHome,
         tto: frTTO,
         faq: frFAQ,

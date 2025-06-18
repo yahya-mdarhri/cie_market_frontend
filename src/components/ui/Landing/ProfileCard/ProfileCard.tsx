@@ -1,5 +1,6 @@
 import './ProfileCard.css';
 import { FaPhone, FaEnvelope } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 export interface SocialLinks {
 	email?: string;
@@ -15,6 +16,8 @@ interface ProfileCardProps {
 }
 
 function ProfileCard({ name, image, role, social, className = '' }: ProfileCardProps) {
+	const { t } = useTranslation('components.ProfileCard');
+
 	return (
 		<div className={`profileCard ${className}`}>
 			<div className="profileContent">
@@ -30,7 +33,7 @@ function ProfileCard({ name, image, role, social, className = '' }: ProfileCardP
 								<a 
 									href={`tel:${social.phone}`}
 									className="socialLink"
-									aria-label={`Call ${name}`}
+									aria-label={t('contact.call', { name })}
 								>
 									<FaPhone />
 									<span>{social.phone}</span>
@@ -40,7 +43,7 @@ function ProfileCard({ name, image, role, social, className = '' }: ProfileCardP
 								<a 
 									href={`mailto:${social.email}`}
 									className="socialLink"
-									aria-label={`Email ${name}`}
+									aria-label={t('contact.emailPerson', { name })}
 								>
 									<FaEnvelope />
 									<span>{social.email}</span>
