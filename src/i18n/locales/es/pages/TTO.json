@@ -30,5 +30,19 @@
     "internationalPatents": "Patentes Internacionales",
     "researchContracts": "Contratos de Investigación",
     "goldMedals": "Medallas de Oro"
+  },
+  "services": {
+    "transfer": {
+      "title": "Asistencia con la Transferencia",
+      "description": "Apoyo y orientación en la transferencia de tecnología y conocimiento a industrias o instituciones relevantes."
+    },
+    "patent": {
+      "title": "Redacción de Patentes y Protección de PI",
+      "description": "Soporte en la redacción de solicitudes de patentes y protección de la propiedad intelectual."
+    },
+    "marketing": {
+      "title": "Concienciación sobre PI y Marketing de la Innovación",
+      "description": "Promoción de la concienciación sobre PI y marketing estratégico de soluciones innovadoras."
+    }
   }
 } 

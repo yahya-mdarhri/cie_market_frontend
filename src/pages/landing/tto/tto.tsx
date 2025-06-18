@@ -20,7 +20,7 @@ import ProfileCard from "@ui/Landing/ProfileCard/ProfileCard";
 import { Invention } from "@ui/Landing/InventionInfo/InventionInfo";
 import Partners from "@ui/Landing/Partners/Partners";
 
-import {getTranslatedStats, partners, inventionCardData, servicesData, profileData, contactData} from "./data";
+import {getTranslatedStats, partners, inventionCardData, getServicesData, profileData, contactData} from "./data";
 
 
 function LandingInventionCards({
@@ -155,6 +155,7 @@ function TTO() {
 		stats: getTranslatedStats(),
 		onSecondActionClick: () => navigate('/licensing-process')
 	};
+	const servicesData = getServicesData(t);
 
 	return (
 		<LandingLayout heroProps={heroProps} inventionInfoProps={{

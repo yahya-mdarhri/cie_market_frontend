@@ -30,5 +30,19 @@
     "internationalPatents": "International Patents",
     "researchContracts": "Research Contracts",
     "goldMedals": "Gold Medals"
+  },
+  "services": {
+    "transfer": {
+      "title": "Assistance with the Transfer",
+      "description": "Support and guidance in the transfer of technology and knowledge to relevant industries or institutions."
+    },
+    "patent": {
+      "title": "Patent and IP Protection Drafting",
+      "description": "Drafting support for patent applications and protection of intellectual property."
+    },
+    "marketing": {
+      "title": "IP Awareness and Innovation Marketing",
+      "description": "Promotion of IP awareness and strategic marketing of innovative solutions."
+    }
   }
 } 

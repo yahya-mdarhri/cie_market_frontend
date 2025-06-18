@@ -30,5 +30,19 @@
     "internationalPatents": "Brevets Internationaux",
     "researchContracts": "Contrats de Recherche",
     "goldMedals": "Médailles d'Or"
+  },
+  "services": {
+    "transfer": {
+      "title": "Assistance au Transfert",
+      "description": "Soutien et accompagnement dans le transfert de technologie et de connaissances vers les industries ou institutions concernées."
+    },
+    "patent": {
+      "title": "Rédaction de Brevets et Protection de la PI",
+      "description": "Soutien à la rédaction des demandes de brevets et à la protection de la propriété intellectuelle."
+    },
+    "marketing": {
+      "title": "Sensibilisation à la PI et Marketing de l'Innovation",
+      "description": "Promotion de la sensibilisation à la PI et marketing stratégique des solutions innovantes."
+    }
   }
 } 

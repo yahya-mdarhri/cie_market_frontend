@@ -138,24 +138,23 @@ const inventionCardData: Invention[] = [
 
 import { FaHandshake, FaFileSignature, FaBullhorn } from "react-icons/fa";
 
-const servicesData = [
-	{
-		icon: <FaHandshake />,
-		title: "Assistance with the Transfer",
-		description: "Support and guidance in the transfer of technology and knowledge to relevant industries or institutions."
-	},
-	{
-		icon: <FaFileSignature />,
-		title: "Patent and IP Protection Drafting",
-		description: "Drafting support for patent applications and protection of intellectual property."
-	},
-	{
-		icon: <FaBullhorn />,
-		title: "IP Awareness and Innovation Marketing",
-		description: "Promotion of IP awareness and strategic marketing of innovative solutions."
-	}
-];
-
+const getServicesData = (t : TFunction) => [
+		{
+			icon: <FaHandshake />,
+			title: t('services.transfer.title'),
+			description: t('services.transfer.description')
+		},
+		{
+			icon: <FaFileSignature />,
+			title: t('services.patent.title'),
+			description: t('services.patent.description')
+		},
+		{
+			icon: <FaBullhorn />,
+			title: t('services.marketing.title'),
+			description: t('services.marketing.description')
+		}
+	];
 
 
 import avatar from "@pages/landing/our_team/images/avatar.jpg"
@@ -201,6 +200,7 @@ import ahmed_zouggar from "./images/inventors/ahmed_zouggar.jpeg";
 import maouena_fongbedgi from './images/inventors/maouena_fongbedgi.jpeg'
 import abdellatif_benabdellah from './images/inventors/abdellatif_benabdellah.jpeg'
 import { ContactPerson } from "@ui/Landing/Contact/Contact";
+import { TFunction } from "i18next";
 
 const profileData: Profile[] = [
 	{
@@ -226,4 +226,4 @@ const profileData: Profile[] = [
 ];
 
 
-export {statsData, partners, inventionCardData, servicesData, profileData, contactData}
+export {statsData, partners, inventionCardData, getServicesData, profileData, contactData}
