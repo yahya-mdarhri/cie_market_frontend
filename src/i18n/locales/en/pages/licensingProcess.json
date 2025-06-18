@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "title": "Licensing Process",
+    "description": "A comprehensive guide to our licensing process at Technology Transfer Office, ensuring transparency and efficiency."
+  },
+  "overview": {
+    "title": "Overview",
+    "description1": "On behalf of UIR, the Technology Transfer Office (TTO) negotiates and grants licenses for the university's patented inventions, copyrighted works, and tangible research outcomes to startups, SMEs, and established companies that demonstrate the technical and business capacity to develop early-stage technologies into commercially successful products and services.",
+    "description2": "With numerous new intellectual property disclosures received annually, UIR's innovation portfolio is constantly evolving. If you are interested in obtaining a license to UIR-developed intellectual property, it's important to understand the stages involved in the licensing process."
+  },
+  "agreements": {
+    "title": "Licensing Agreements",
+    "description1": "A license agreement is a contract that transfers the rights to use UIR technology to a licensee for financial and other benefits, while retaining ownership by UIR. These agreements are made with both startups and established businesses and typically require the licensee to diligently develop and bring the innovation to market, providing fair returns to UIR and serving the public interest.",
+    "description2": "UIR's two primary goals in any licensing agreement are to:",
+    "goals": {
+      "goal1": "Ensure the technology is developed by the licensee for the benefit of society, aligning with UIR and Moroccan national innovation policies.",
+      "goal2": "Provide UIR and the inventors with fair and reasonable financial returns if the product development is successful."
+    },
+    "requirements": {
+      "title": "When crafting a license agreement, UIR begins by understanding the licensee's:",
+      "items": [
+        "Business model related to the technology and the potential advantages of their proposed solution.",
+        "Target market and customer base.",
+        "Access to resources such as capital, infrastructure, and skilled personnel.",
+        "Expected revenue and growth projections."
+      ]
+    }
+  },
+  "terms": {
+    "title": "Licensing Terms",
+    "financial": {
+      "title": "Common Financial Elements",
+      "items": [
+        "License issue fees",
+        "Annual maintenance fees",
+        "Milestone-based development or commercialization payments",
+        "Royalties on sales or service revenue",
+        "Reimbursement of patent or registration costs",
+        "Revenue sharing from sublicensing",
+        "Equity shares for startups"
+      ]
+    },
+    "nonFinancial": {
+      "title": "Non-Financial Terms",
+      "items": [
+        "Type of exclusivity: non-exclusive, exclusive, or limited by field or geography",
+        "Retention of rights for UIR and research sponsors",
+        "Rights reserved for academic and research use by UIR and partner institutions",
+        "Diligence requirements to ensure timely development and commercialization"
+      ]
+    },
+    "info": {
+      "text1": "Licensing negotiations are conducted between the TTO and the company's designated representative, with no direct involvement of UIR inventors during the negotiation phase to avoid conflicts of interest.",
+      "text2": "License agreements often include performance milestones to ensure consistent progress. Failure to meet these can lead to termination of the agreement, allowing UIR to offer the technology to other interested parties."
+    }
+  },
+  "findingLicensee": {
+    "title": "Finding a Licensee",
+    "description": "Inventors can play a key role in identifying potential licensees through their industry knowledge and networks. The TTO complements these efforts through institutional contacts, market analysis, business forums, innovation expos, and partnership cultivation.",
+    "inventorInvolvement": {
+      "title": "Inventor Involvement and Benefits",
+      "items": [
+        "Licensees often seek support from inventors for knowledge transfer, ranging from casual interactions to formal consulting arrangements.",
+        "Collaboration with startups may require increased engagement, governed by UIR's conflict of interest and ethics policies.",
+        "Inventors benefit from real-world impact, expanded industry relationships, and a share in financial returns from licensing revenues."
+      ]
+    },
+    "timeline": {
+      "title": "Timeline",
+      "description": "Depending on market readiness and the maturity of the innovation, finding the right licensee can take several months to years. Early-stage technologies often require more time for commercialization."
+    },
+    "selectionCriteria": {
+      "title": "Choosing a Licensee",
+      "items": [
+        "Licensees are selected based on their potential to effectively bring the technology to market and serve public needs.",
+        "In some cases, experienced companies with relevant market expertise are preferred.",
+        "For other technologies, startup companies offer the necessary focus and drive.",
+        "Technologies may be licensed to multiple entities, non-exclusively or exclusively by field or region."
+      ]
+    }
+  }
+} 

@@ -59,6 +59,11 @@ import enContactUs from './locales/en/components/ContactUs.json';
 import esContactUs from './locales/es/components/ContactUs.json';
 import frContactUs from './locales/fr/components/ContactUs.json';
 
+// Import licensing process translations
+import enLicensingProcess from './locales/en/pages/licensingProcess.json';
+import esLicensingProcess from './locales/es/pages/licensingProcess.json';
+import frLicensingProcess from './locales/fr/pages/licensingProcess.json';
+
 // Define supported languages
 export const SUPPORTED_LANGUAGES = {
   en: { name: 'English', flag: '🇺🇸' },
@@ -87,7 +92,8 @@ export const NAMESPACES = {
   services: 'services',
   introduction: 'introduction',
   visionAndMission: 'visionAndMission',
-  contactUs: 'contactUs'
+  contactUs: 'contactUs',
+  licensingProcess: 'licensingProcess',
 } as const;
 
 export type Namespace = keyof typeof NAMESPACES;
@@ -112,7 +118,8 @@ i18n
         services: enServices,
         introduction: enIntroduction,
         visionAndMission: enVisionAndMission,
-        contactUs: enContactUs
+        contactUs: enContactUs,
+        licensingProcess: enLicensingProcess,
       },
       es: {
         navbar: esNavbar,
@@ -128,7 +135,8 @@ i18n
         services: esServices,
         introduction: esIntroduction,
         visionAndMission: esVisionAndMission,
-        contactUs: esContactUs
+        contactUs: esContactUs,
+        licensingProcess: esLicensingProcess,
       },
       fr: {
         navbar: frNavbar,
@@ -144,7 +152,8 @@ i18n
         services: frServices,
         introduction: frIntroduction,
         visionAndMission: frVisionAndMission,
-        contactUs: frContactUs
+        contactUs: frContactUs,
+        licensingProcess: frLicensingProcess,
       }
     },
     // lng: 'en', // Set English as default language
