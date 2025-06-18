@@ -1,5 +1,6 @@
 import "./InventionInfo.css";
 import { useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 
 interface Invention {
   title: string;
@@ -18,6 +19,8 @@ interface InventionInfoProps {
 }
 
 function InventionInfo({ isOpen, onClose, invention }: InventionInfoProps) {
+  const { t } = useTranslation('inventionInfo');
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -48,19 +51,19 @@ function InventionInfo({ isOpen, onClose, invention }: InventionInfoProps) {
           <div className="InventionInfoIDs">
             <div className="IDCard">
               <div className="IDCardContent">
-                <span className="IDLabel">National ID</span>
+                <span className="IDLabel">{t('nationalId')}</span>
                 <span className="IDValue">{invention.nationalId}</span>
               </div>
             </div>
             <div className="IDCard">
               <div className="IDCardContent">
-                <span className="IDLabel">International ID</span>
+                <span className="IDLabel">{t('internationalId')}</span>
                 {invention.internationalId ? (
                   <span className="IDValue">{invention.internationalId}</span>
                 ) : (
                   <span className="IDStatus in-progress">
                     <span className="IDStatusIcon"></span>
-                    In Progress
+                    {t('inProgress')}
                   </span>
                 )}
               </div>
@@ -73,15 +76,15 @@ function InventionInfo({ isOpen, onClose, invention }: InventionInfoProps) {
             <img src={invention.image} alt={invention.title} />
           </div>
           <div className="InventionInfoSection">
-            <h3>Problem Statement</h3>
+            <h3>{t('problemStatement')}</h3>
             <p>{invention.problem}</p>
           </div>
           <div className="InventionInfoSection">
-            <h3>Solution</h3>
+            <h3>{t('solution')}</h3>
             <p>{invention.solution}</p>
           </div>
           <div className="InventionInfoSection">
-            <h3>Impact</h3>
+            <h3>{t('impact')}</h3>
             <p>{invention.impact}</p>
           </div>
         </div>
@@ -89,7 +92,6 @@ function InventionInfo({ isOpen, onClose, invention }: InventionInfoProps) {
     </div>
   );
 }
-
 
 export type { Invention, InventionInfoProps };
 export default InventionInfo;

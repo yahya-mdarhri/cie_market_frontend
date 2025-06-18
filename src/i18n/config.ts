@@ -79,6 +79,10 @@ import enProfileCard from './locales/en/components/ProfileCard.json';
 import esProfileCard from './locales/es/components/ProfileCard.json';
 import frProfileCard from './locales/fr/components/ProfileCard.json';
 
+import enInventionInfo from './locales/en/components/InventionInfo.json';
+import esInventionInfo from './locales/es/components/InventionInfo.json';
+import frInventionInfo from './locales/fr/components/InventionInfo.json';
+
 // Define supported languages
 export const SUPPORTED_LANGUAGES = {
   en: { name: 'English', flag: '🇺🇸' },
@@ -111,7 +115,8 @@ export const NAMESPACES = {
   contactUs: 'contactUs',
   licensingProcess: 'licensingProcess',
   ourTeam: 'ourTeam',
-  techCenter: 'techCenter'
+  techCenter: 'techCenter',
+  inventionInfo: 'inventionInfo'
 } as const;
 
 export type Namespace = keyof typeof NAMESPACES;
@@ -141,7 +146,8 @@ i18n
         contactUs: enContactUs,
         licensingProcess: enLicensingProcess,
         ourTeam: enOurTeam,
-        techCenter: enTechCenter
+        techCenter: enTechCenter,
+        inventionInfo: enInventionInfo
       },
       es: {
         navbar: esNavbar,
@@ -162,7 +168,8 @@ i18n
         contactUs: esContactUs,
         licensingProcess: esLicensingProcess,
         ourTeam: esOurTeam,
-        techCenter: esTechCenter
+        techCenter: esTechCenter,
+        inventionInfo: esInventionInfo
       },
       fr: {
         navbar: frNavbar,
@@ -183,7 +190,8 @@ i18n
         contactUs: frContactUs,
         licensingProcess: frLicensingProcess,
         ourTeam: frOurTeam,
-        techCenter: frTechCenter
+        techCenter: frTechCenter,
+        inventionInfo: frInventionInfo
       }
     },
     fallbackLng: 'en',

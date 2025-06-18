@@ -20,7 +20,7 @@ import ProfileCard from "@ui/Landing/ProfileCard/ProfileCard";
 import { Invention } from "@ui/Landing/InventionInfo/InventionInfo";
 import Partners from "@ui/Landing/Partners/Partners";
 
-import {getTranslatedStats, partners, inventionCardData, getServicesData, profileData, contactData} from "./data";
+import {getTranslatedStats, partners, getInventionCardData, getServicesData, profileData, contactData} from "./data";
 
 
 function LandingInventionCards({
@@ -53,6 +53,7 @@ function LandingInventionCards({
 	const handleInventionClick = (invention: Invention) => {
 		onSelectInvention(invention);
 	};
+	const inventionCardData = getInventionCardData(t);
 
 	return (
 		<>

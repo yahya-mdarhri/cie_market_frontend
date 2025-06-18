@@ -1,0 +1,8 @@
+{
+  "nationalId": "ID Nacional",
+  "internationalId": "ID Internacional",
+  "inProgress": "En Progreso",
+  "problemStatement": "Declaración del Problema",
+  "solution": "Solución",
+  "impact": "Impacto"
+} 
