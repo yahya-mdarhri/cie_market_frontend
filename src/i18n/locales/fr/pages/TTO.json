@@ -1,0 +1,84 @@
+{
+  "hero": {
+    "title": "Bureau de Transfert de Technologie",
+    "description": "Protéger les idées, favoriser les collaborations et amener la recherche sur le marché.",
+    "firstAction": "Soumettre un Brevet",
+    "secondAction": "Processus de Licence"
+  },
+  "introduction": {
+    "title": "Bureau de Transfert de Technologie",
+    "description": "L'UIR a créé le premier Bureau de Transfert de Technologie (BTT) selon les normes internationales pour effectuer le transfert de technologie et soutenir le développement économique aux niveaux régional et national. Le BTT opère à plusieurs niveaux pour soutenir les activités de recherche et améliorer la mise en œuvre de la chaîne de valeur du produit innovant."
+  },
+  "visionAndMission": {
+    "mission": "Faciliter l'exploitation des résultats de la recherche scientifique, l'Innovation Ouverte et son ouverture au marché",
+    "vision": "Transformer le BTT en tremplin pour l'innovation à l'UIR et rendre son activité rentable"
+  },
+  "inventions": {
+    "title": "Mise en Avant des Inventions",
+    "subtitle": "Technologies et innovations mises en avant",
+    "invention_1": {
+      "title": "Générateur Hybride d'Énergie Renouvelable",
+      "problem": "Les générateurs solaires portables manquent souvent de puissance ou de fiabilité, tandis que les solutions hybrides restent rares et inaccessibles.",
+      "solution": "Ce kit combine des panneaux solaires et une micro-éolienne dans une structure légère, pliable et durable. Il permet une production autonome d'énergie renouvelable dans les zones reculées ou en déplacement.",
+      "impact": "La solution réduit l'empreinte carbone, améliore l'autonomie énergétique et permet de nouveaux cas d'utilisation dans des domaines tels que l'exploration, l'habitat temporaire et la gestion des urgences."
+    },
+    "invention_2": {
+      "title": "OxCharger",
+      "problem": "Les utilisateurs font face à des chargeurs mal optimisés : perte d'énergie, surchauffe, manque de contrôle et incompatibilité avec les normes de charge rapide ou les nouveaux ports.",
+      "solution": "OxCharger est un chargeur nouvelle génération doté d'une puce de contrôle qui ajuste l'énergie en temps réel, d'un câble de données optimisé et de ports Micro-B et Type-C compatibles avec la technologie QC 3.0.",
+      "impact": "OxCharger prolonge la durée de vie de la batterie, réduit la perte d'énergie et offre une meilleure protection des appareils — apportant une réponse concrète aux besoins des utilisateurs et aux défis d'efficacité énergétique."
+    },
+    "invention_3": {
+      "title": "Stockage d'Énergie par Gravité Hybride",
+      "problem": "Les solutions actuelles de stockage d'énergie ne répondent souvent pas aux critères de durabilité, d'évolutivité et de faible impact environnemental.",
+      "solution": "HyGES est un système de stockage hybride basé sur la gravité combinant poulies, poids et hydromécanique. Il stocke l'électricité en soulevant des masses à l'aide de pompes hydrauliques, puis la libère via des turbines. Compact, modulaire et sans dépendance aux métaux rares, il est idéal pour les installations locales ou décentralisées.",
+      "impact": "HyGES réduit l'empreinte écologique du stockage d'énergie, prolonge la durée de vie des infrastructures et s'intègre facilement dans les environnements reculés ou industriels."
+    },
+    "invention_4": {
+      "title": "Dessalement Thermique",
+      "problem": "Les communautés rurales et les zones isolées manquent de solutions viables pour l'accès à l'eau potable. Les technologies actuelles de dessalement sont coûteuses, mal adaptées aux usages à petite échelle et très dépendantes d'un approvisionnement continu en énergie.",
+      "solution": "Une unité de dessalement alimentée par l'énergie solaire basée sur la technologie MED (Distillation Multi-Effets) adaptée aux besoins locaux. Le projet développe une unité pilote capable de produire 7 000 L/jour (en 6 heures), combinant des évaporateurs à film tombant, un réseau intelligent d'échangeurs de chaleur, un système de stockage thermique et une alimentation par panneaux solaires à tubes sous vide.",
+      "impact": "Cette solution réduit la dépendance aux réseaux électriques, abaisse les coûts opérationnels et apporte une réponse durable aux défis du changement climatique et de la sécurité hydrique."
+    },
+    "invention_5": {
+      "title": "Éclairage Public Intelligent INARA",
+      "problem": "L'éclairage public actuel souffre de coûts élevés, d'un manque de contrôle à distance, de performances limitées et d'une technologie obsolète. Ceci est aggravé par la hausse des prix de l'énergie et la crise énergétique mondiale.",
+      "solution": "INARA intègre des composants LED optimisés, un système intelligent d'atténuation basé sur la lumière ambiante, un module de communication et une carte de contrôle développée localement. Cette configuration permet la surveillance à distance et la gestion précise des lampadaires standard.",
+      "impact": "INARA réalise des réductions mesurables de la consommation d'énergie et des coûts de maintenance, tout en contribuant directement aux objectifs de durabilité. Elle positionne également stratégiquement le Maroc comme un acteur régional dans le secteur des villes intelligentes."
+    },
+    "invention_6": {
+      "title": "Concentrateur Solaire Taqa PRO",
+      "problem": "Au Maroc, la hausse des prix des produits pétroliers affecte gravement la compétitivité industrielle. Les solutions solaires existantes ne répondent souvent pas aux exigences spécifiques de température et aux besoins de fonctionnement continu.",
+      "solution": "Taqa PRO développe un concentrateur solaire cylindro-parabolique nano capable de produire de l'eau chaude et de la vapeur entre 60°C et 250°C, réduisant la consommation de carburant dans les chaudières industrielles jusqu'à 80%.",
+      "impact": "En offrant une alternative locale, rentable et écologique, Taqa PRO soutient la décarbonation des industries nationales et positionne le Maroc comme un acteur innovant dans l'efficacité de l'énergie solaire."
+    }
+  },
+  "profiles": {
+    "title": "Nos Profils Distingués",
+    "subtitle": "Découvrez les esprits brillants derrière nos percées innovantes"
+  },
+  "contact": {
+    "title": "En Savoir Plus sur Nos Innovations",
+    "description": "Intéressé par une invention ou une technologie spécifique ? Contactez-nous pour en savoir plus sur nos projets de recherche et développement."
+  },
+  "stats": {
+    "totalPatents": "Total des Brevets Déposés",
+    "internationalPatents": "Brevets Internationaux",
+    "researchContracts": "Contrats de Recherche",
+    "goldMedals": "Médailles d'Or"
+  },
+  "services": {
+    "transfer": {
+      "title": "Assistance au Transfert",
+      "description": "Soutien et accompagnement dans le transfert de technologie et de connaissances vers les industries ou institutions concernées."
+    },
+    "patent": {
+      "title": "Rédaction de Brevets et Protection de la PI",
+      "description": "Soutien à la rédaction des demandes de brevets et à la protection de la propriété intellectuelle."
+    },
+    "marketing": {
+      "title": "Sensibilisation à la PI et Marketing de l'Innovation",
+      "description": "Promotion de la sensibilisation à la PI et marketing stratégique des solutions innovantes."
+    }
+  }
+} 

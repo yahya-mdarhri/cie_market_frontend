@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import "./NavBar.css";
 import { useIsActive } from '@hooks/useIsActive';
 import { useWindowWidth } from '@hooks/useWindowWidth';
@@ -7,8 +8,8 @@ import { MEDIA_QUERY } from '@constants/media';
 
 function NavActions({ closeMobileMenu }: { closeMobileMenu: () => void }) {
 	const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-	const [currentLang, setCurrentLang] = useState('en');
 	const languageSelectorRef = useRef<HTMLDivElement>(null);
+	const { t, i18n } = useTranslation('navbar');
 
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
@@ -30,52 +31,53 @@ function NavActions({ closeMobileMenu }: { closeMobileMenu: () => void }) {
 	];
 
 	const handleLanguageSelect = (langCode: string) => {
-		setCurrentLang(langCode);
+		i18n.changeLanguage(langCode);
 		setIsLanguageOpen(false);
 	};
 
 	return (
 		<div className="nav-actions">
-		<Link 
-			to="/audit-innovation" 
-			className={`nav-link action-link ${useIsActive('/audit-innovation') ? 'active' : ''}`}
-			onClick={closeMobileMenu}
-		>
-			Invention Diagnosis
-		</Link>
-		<div className="language-selector" ref={languageSelectorRef}>
-			<button 
-				className="language-button"
-				onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+			<Link 
+				to="/audit-innovation" 
+				className={`nav-link action-link ${useIsActive('/audit-innovation') ? 'active' : ''}`}
+				onClick={closeMobileMenu}
 			>
-				<span className="language-flag">
-					{languages.find(lang => lang.code === currentLang)?.flag}
-				</span>
-				<span className="language-name">
-					{languages.find(lang => lang.code === currentLang)?.name}
-				</span>
-				<span className="language-arrow">▼</span>
-			</button>
-			{isLanguageOpen && (
-				<div className="language-dropdown">
-					{languages.map((lang) => (
-						<button
-							key={lang.code}
-							className={`language-option ${currentLang === lang.code ? 'active' : ''}`}
-							onClick={() => handleLanguageSelect(lang.code)}
-						>
-							<span className="language-flag">{lang.flag}</span>
-							<span className="language-name">{lang.name}</span>
-						</button>
-					))}
-				</div>
-			)}
+				{t('inventionDiagnosis')}
+			</Link>
+			<div className="language-selector" ref={languageSelectorRef}>
+				<button 
+					className="language-button"
+					onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+				>
+					<span className="language-flag">
+						{languages.find(lang => lang.code === i18n.language)?.flag || languages[0].flag}
+					</span>
+					<span className="language-name">
+						{languages.find(lang => lang.code === i18n.language)?.name || languages[0].name}
+					</span>
+					<span className="language-arrow">▼</span>
+				</button>
+				{isLanguageOpen && (
+					<div className="language-dropdown">
+						{languages.map((lang) => (
+							<button
+								key={lang.code}
+								className={`language-option ${i18n.language === lang.code ? 'active' : ''}`}
+								onClick={() => handleLanguageSelect(lang.code)}
+							>
+								<span className="language-flag">{lang.flag}</span>
+								<span className="language-name">{lang.name}</span>
+							</button>
+						))}
+					</div>
+				)}
+			</div>
 		</div>
-	</div>
 	);
 }	
 
 function NavLinks({ closeMobileMenu, isMobile }: { closeMobileMenu: () => void, isMobile: boolean }) {
+	const { t } = useTranslation('navbar');
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 	const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -94,110 +96,152 @@ function NavLinks({ closeMobileMenu, isMobile }: { closeMobileMenu: () => void, 
 
 	return (
 		<div className="nav-main">
-		<Link 
-			to="/" 
-			className={`nav-link ${useIsActive('/') ? 'active' : ''}`}
-			onClick={closeMobileMenu}
-		>
-			Home
-		</Link>
-		<Link 
-			to="/tto" 
-			className={`nav-link ${useIsActive('/tto') ? 'active' : ''}`}
-			onClick={closeMobileMenu}
-		>
-			Technology Transfer Office
-		</Link>
-		<Link 
-			to="/incubator" 
-			className={`nav-link ${useIsActive('/incubator') ? 'active' : ''}`}
-			onClick={closeMobileMenu}
-		>
-			Incubator 360º
-		</Link>
-		<Link 
-			to="/industrial" 
-			className={`nav-link ${useIsActive('/industrial') ? 'active' : ''}`}
-			onClick={closeMobileMenu}
-		>
-			Industrial Clinic
-		</Link>
-		<Link 
-			to="/tech_center" 
-			className={`nav-link ${useIsActive('/tech_center') ? 'active' : ''}`}
-			onClick={closeMobileMenu}
-		>
-			Tech Center
-		</Link>
-		{isMobile ? (
-			<>
 			<Link 
-				to="/our-team" 
-				className={`nav-link  ${useIsActive('/our-team') ? 'active' : ''}`}
+				to="/" 
+				className={`nav-link ${useIsActive('/') ? 'active' : ''}`}
 				onClick={closeMobileMenu}
 			>
-				Our Team
+				{t('home')}
 			</Link>
 			<Link 
-				to="/faq" 
-				className={`nav-link  ${useIsActive('/faq') ? 'active' : ''}`}
+				to="/tto" 
+				className={`nav-link ${useIsActive('/tto') ? 'active' : ''}`}
 				onClick={closeMobileMenu}
 			>
-				FAQ
+				{t('technologyTransferOffice')}
 			</Link>
-			</>
-		) : (
-			<>
-			<div className="dropdown-container" ref={dropdownRef}>
-				<button 
-					className={`dropdown-button ${isDropdownOpen ? 'active' : ''}`}
-					onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-				>
-					About
-					<span className="dropdown-arrow">▼</span>
-				</button>
-				{isDropdownOpen && (
-					<div className="dropdown-menu">
-					<Link 
+			<Link 
+				to="/incubator" 
+				className={`nav-link ${useIsActive('/incubator') ? 'active' : ''}`}
+				onClick={closeMobileMenu}
+			>
+				{t('incubator')}
+			</Link>
+			<Link 
+				to="/industrial" 
+				className={`nav-link ${useIsActive('/industrial') ? 'active' : ''}`}
+				onClick={closeMobileMenu}
+			>
+				{t('industrialClinic')}
+			</Link>
+			<Link 
+				to="/tech-center" 
+				className={`nav-link ${useIsActive('/tech-center') ? 'active' : ''}`}
+				onClick={closeMobileMenu}
+			>
+				{t('techCenter')}
+			</Link>
+			{isMobile ? (
+				<>
+				<Link 
 						to="/licensing-process" 
-						className={`dropdown-item ${useIsActive('/licensing-process') ? 'active' : ''}`}
+						className={`nav-link ${useIsActive('/licensing-process') ? 'active' : ''}`}
 						onClick={closeMobileMenu}
 					>
-						Licensing Process  
+						{t('licensingProcess')}
 					</Link>
-						<Link 
-							to="/our-team" 
-							className={`dropdown-item ${useIsActive('/our-team') ? 'active' : ''}`}
-							onClick={closeMobileMenu}
+					<Link 
+						to="/our-team" 
+						className={`nav-link ${useIsActive('/our-team') ? 'active' : ''}`}
+						onClick={closeMobileMenu}
+					>
+						{t('ourTeam')}
+					</Link>
+					<Link 
+						to="https://uir-recrutement.ma/" 
+						className="nav-link"
+						onClick={closeMobileMenu}
+					>
+						{t('careerOpportunities')}
+					</Link>
+					<Link 
+						to="/impact" 
+						className="nav-link"
+						onClick={closeMobileMenu}
+					>
+						{t('impact')}
+					</Link>
+					<Link 
+						to="/join-our-mailing-list" 
+						className={`nav-link ${useIsActive('/join-our-mailing-list') ? 'active' : ''}`}
+						onClick={closeMobileMenu}
+					>
+						{t('joinMailingList')}
+					</Link>
+					<Link 
+						to="/faq" 
+						className={`nav-link ${useIsActive('/faq') ? 'active' : ''}`}
+						onClick={closeMobileMenu}
+					>
+						{t('faq')}
+					</Link>
+				</>
+			) : (
+				<>
+					<div className="dropdown-container" ref={dropdownRef}>
+						<button 
+							className={`dropdown-button ${isDropdownOpen ? 'active' : ''}`}
+							onClick={() => setIsDropdownOpen(!isDropdownOpen)}
 						>
-							Our Team
-						</Link>
-						<Link 
-							to="https://uir-recrutement.ma/" 
-							className={`dropdown-item `}
-							onClick={closeMobileMenu}
-						>
-							Career Opportunities
-						</Link>
-						<Link 
-							to="/faq" 
-							className={`dropdown-item ${useIsActive('/faq') ? 'active' : ''}`}
-							onClick={closeMobileMenu}
-						>
-							FAQ
-						</Link>
+							{t('about')}
+							<span className="dropdown-arrow">▼</span>
+						</button>
+						{isDropdownOpen && (
+							<div className="dropdown-menu">
+								<Link 
+									to="/licensing-process" 
+									className={`dropdown-item ${useIsActive('/licensing-process') ? 'active' : ''}`}
+									onClick={closeMobileMenu}
+								>
+									{t('licensingProcess')}
+								</Link>
+								<Link 
+									to="/our-team" 
+									className={`dropdown-item ${useIsActive('/our-team') ? 'active' : ''}`}
+									onClick={closeMobileMenu}
+								>
+									{t('ourTeam')}
+								</Link>
+								<Link 
+									to="https://uir-recrutement.ma/" 
+									className="dropdown-item"
+									onClick={closeMobileMenu}
+								>
+									{t('careerOpportunities')}
+								</Link>
+								<Link 
+									to="/impact" 
+									className="dropdown-item"
+									onClick={closeMobileMenu}
+								>
+									{t('impact')}
+								</Link>
+								<Link 
+									to="/join-our-mailing-list" 
+									className={`dropdown-item ${useIsActive('/join-our-mailing-list') ? 'active' : ''}`}
+									onClick={closeMobileMenu}
+								>
+									{t('joinMailingList')}
+								</Link>
+								<Link 
+									to="/faq" 
+									className={`dropdown-item ${useIsActive('/faq') ? 'active' : ''}`}
+									onClick={closeMobileMenu}
+								>
+									{t('faq')}
+								</Link>
+							</div>
+						)}
 					</div>
-				)}
-			</div>
-			</>
-		)}
-	</div>
+				</>
+			)}
+		</div>
 	);
 }
 
 function NavBar({ noHero }: { noHero: boolean }) {
 	const width = useWindowWidth();
-	const isMobile = width <= MEDIA_QUERY.TABLET; // is mobile or
+	const isMobile = width <= MEDIA_QUERY.TABLET;
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
 
@@ -228,25 +272,15 @@ function NavBar({ noHero }: { noHero: boolean }) {
 				</Link>
 			</div>
 			{isMobile ? (
-			<button className="mobile-menu-button" onClick={toggleMobileMenu} aria-label="Toggle menu">
-				<span className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}></span>
-			</button>
-			) : (
-				<>
-				</>
-			)}
+				<button className="mobile-menu-button" onClick={toggleMobileMenu} aria-label="Toggle menu">
+					<span className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}></span>
+				</button>
+			) : null}
 			{isMobile ? (
-			<nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
-				<NavLinks closeMobileMenu={closeMobileMenu} isMobile={isMobile}/>
-				{
-					isMobile ? (
-						<NavActions closeMobileMenu={closeMobileMenu} />
-					) : (
-						<>
-						</>
-					)
-				}
-			</nav>
+				<nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
+					<NavLinks closeMobileMenu={closeMobileMenu} isMobile={isMobile}/>
+					<NavActions closeMobileMenu={closeMobileMenu} />
+				</nav>
 			) : (
 				<>
 					<nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>

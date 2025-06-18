@@ -1,5 +1,6 @@
 import './Introduction.css'
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 interface IntroductionProps {
 	title: string;
@@ -10,6 +11,8 @@ interface IntroductionProps {
 }
 
 function Introduction({title, description, image, years, inventions}: IntroductionProps) {
+	const { t } = useTranslation('introduction');
+
 	return (
 		<section className="Introduction">
 			<div className="IntroductionGrid">
@@ -30,13 +33,13 @@ function Introduction({title, description, image, years, inventions}: Introducti
 								{years && (
 									<div className="Metric">
 										<div className="MetricNumber">{years}+</div>
-										<div className="MetricLabel">Years of experience</div>
+										<div className="MetricLabel">{t('yearsOfExperience')}</div>
 									</div>
 								)}
 								{inventions && (
 									<div className="Metric">
 										<div className="MetricNumber">{inventions}+</div>
-										<div className="MetricLabel">Inventions disclosed</div>
+										<div className="MetricLabel">{t('inventionsDisclosed')}</div>
 									</div>
 								)}
 							</div>

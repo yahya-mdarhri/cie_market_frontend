@@ -1,11 +1,14 @@
 import "./Services.css";
+import { useTranslation } from 'react-i18next';
 
 function Services({ services }: { services: any }) {
+    const { t } = useTranslation('services');
+    
     return (
         <div className="services-container">
             <div className="services-header">
-                <h1>Our Services</h1>
-                <p>We help protect innovations, build industry partnerships, and bring research to market</p>
+                <h1>{t('services.title')}</h1>
+                <p>{t('services.subtitle')}</p>
             </div>
             <div className="services-cards">
                 {

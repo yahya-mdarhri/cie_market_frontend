@@ -1,0 +1,67 @@
+{
+  "incubator": {
+    "hero": {
+      "title": "Incubateur 360º",
+      "description": "Nous fournissons les outils, le mentorat et l'environnement pour transformer les idées en entreprises viables",
+      "firstAction": "Soumettre un Brevet"
+    },
+    "introduction": {
+      "title": "Incubateur 360º",
+      "description": "L'Incubateur 360° de l'UIR soutient les entrepreneurs dans la transformation d'idées innovantes en startups réussies. Il offre un parcours complet, du développement initial du concept jusqu'à l'adéquation produit-marché et la croissance de l'entreprise. Avec un coaching expert, des ressources techniques, un accès au financement et des partenariats stratégiques, l'incubateur permet aux créateurs de construire des solutions concrètes et de les amener sur le marché."
+    },
+    "visionAndMission": {
+      "mission": "soutenir le Made @UIR vers le Go to Market et l'association avec les investisseurs.",
+      "vision": "Accélérer le ROI du Made @UIR = Invention x Commercialisation"
+    },
+    "startups": {
+      "title": "Nos Programmes et Startups",
+      "subtitle": "Découvrez les entreprises innovantes que nous avons aidées à lancer et à se développer"
+    },
+    "services": {
+      "funding": {
+        "title": "Financement pour l'Entrepreneuriat",
+        "description": "Attraction de fonds nationaux et internationaux pour les projets de promotion de l'entrepreneuriat."
+      },
+      "startup": {
+        "title": "Création et Soutien aux Startups",
+        "description": "Création de startups Made@UIR, mise en place de projets, accès au financement et coaching."
+      },
+      "training": {
+        "title": "Formation à l'Entrepreneuriat",
+        "description": "Formation spécialisée en entrepreneuriat et innovation."
+      },
+      "mentorship": {
+        "title": "Mentorat et Pré-incubation",
+        "description": "Accompagnement des porteurs de projets et services de pré-incubation."
+      },
+      "capital": {
+        "title": "Accès au Capital",
+        "description": "Soutien pour l'accès au capital d'amorçage et d'accélération."
+      }
+    },
+    "stats": {
+      "startups": "Startups Incubées",
+      "successRate": "Taux de Réussite",
+      "investment": "Investissement Attiré (M MAD)",
+      "partners": "Partenaires Stratégiques"
+    },
+    "programs": {
+      "linkup": {
+        "name": "Linkup africa",
+        "description": "Autonomise les jeunes Africains au Maroc grâce au soutien à l'entrepreneuriat."
+      },
+      "enactus": {
+        "name": "Enactus",
+        "description": "Autonomise les étudiants pour créer un impact social et environnemental positif à travers des projets entrepreneuriaux"
+      },
+      "ram": {
+        "name": "RAM Open Innovation",
+        "description": "Connecte les startups avec des experts de l'aviation pour développer des solutions innovantes aux défis du voyage"
+      },
+      "etoufoula": {
+        "name": "E-Toufoula",
+        "description": "Une plateforme qui connecte les artisans marocains aux marchés mondiaux, promouvant l'artisanat traditionnel et le patrimoine culturel."
+      }
+    }
+  }
+} 

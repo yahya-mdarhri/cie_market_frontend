@@ -1,0 +1,124 @@
+{
+  "innovationDiagnosis": {
+    "title": "Diagnostic d'Innovation",
+    "phases": {
+      "phase1": "Phase 1 - Lancement",
+      "phase2": "Phase 2 - Progression",
+      "phase3": "Phase 3 - Accélération",
+      "phase4": "Phase 4 - Réalisation"
+    },
+    "questions": {
+      "phase1": {
+        "question_1": "Le leadership reconnaît et communique l'importance de l'innovation",
+        "question_2": "Une vision partagée pour un meilleur avenir est formalisée",
+        "question_3": "Un audit d'innovation a été réalisé pour identifier les obstacles",
+        "question_4": "Un budget est alloué à l'innovation, à la formation et aux initiatives",
+        "question_5": "L'entrepreneuriat, l'autonomisation et la prise de risques font partie de la culture souhaitée",
+        "question_6": "Des ambassadeurs d'innovation sont nommés dans différents départements"
+      },
+      "phase2": {
+        "question_1": "Des objectifs clairs sont fixés (ex. nombre d'idées, revenus de l'innovation, etc.)",
+        "question_2": "Des sessions de formation sont organisées pour les managers et les ambassadeurs",
+        "question_3": "Un système de suggestions interne est en place et activement géré",
+        "question_4": "Des sessions régulières de brainstorming sont organisées avec des équipes diverses et un facilitateur",
+        "question_5": "Les objectifs d'innovation sont inclus dans les évaluations individuelles",
+        "question_6": "Les succès de l'innovation sont partagés et célébrés"
+      },
+      "phase3": {
+        "question_1": "Une stratégie d'innovation ouverte est définie et déployée",
+        "question_2": "Une unité d'incubation ou d'expérimentation est opérationnelle",
+        "question_3": "Les processus de validation ont été simplifiés pour accélérer la mise en œuvre",
+        "question_4": "Plus de 2 suggestions par employé par an sont mises en œuvre",
+        "question_5": "Une culture du blâme a été remplacée par une culture d'ouverture et de questionnement",
+        "question_6": "Le concept de produit minimum viable (MVP) est pleinement intégré"
+      },
+      "phase4": {
+        "question_1": "Un programme d'innovation ouverte est pleinement intégré et génère des innovations externes",
+        "question_2": "Les nouveaux produits/services représentent une part significative des revenus",
+        "question_3": "Les employés sont encouragés à essayer de nouvelles initiatives — et ils le font",
+        "question_4": "La prise de risques est encouragée, l'échec est accepté et analysé",
+        "question_5": "Plus de 5 suggestions par employé par an sont mises en œuvre",
+        "question_6": "L'entreprise est reconnue comme un leader de l'innovation et un lieu de travail stimulant"
+      }
+    },
+    "rating": {
+      "strongly_disagree": "Fortement en Désaccord",
+      "disagree": "En Désaccord",
+      "neutral": "Neutre",
+      "agree": "D'Accord",
+      "strongly_agree": "Fortement d'Accord"
+    },
+    "results": {
+      "embryonic": {
+        "type": "Innovation Embryonnaire",
+        "description": "Haut potentiel mais peu de structures en place."
+      },
+      "development": {
+        "type": "Innovation en Développement",
+        "description": "Une base solide, mais des efforts supplémentaires sont nécessaires."
+      },
+      "active": {
+        "type": "Innovation Active",
+        "description": "De nombreux projets et pratiques sont en place."
+      },
+      "mature": {
+        "type": "Innovation Mature",
+        "description": "Une culture bien établie et des résultats visibles."
+      }
+    },
+    "form": {
+      "consent": "En cliquant sur 'Démarrer l'Évaluation', je consens à la collecte et au traitement des informations que j'ai fournies à des fins d'évaluation.",
+      "start": "Démarrer l'Évaluation",
+      "fullName": "Nom Complet",
+      "phone": "Numéro de Téléphone",
+      "organization": "Organisation",
+      "position": "Poste",
+      "email": "Adresse Email",
+      "evidence": {
+        "label": "Preuves à l'Appui",
+        "placeholder": "Décrivez toute preuve ou exemple à l'appui..."
+      },
+      "placeholders": {
+        "fullName": "Entrez votre nom complet",
+        "phone": "Entrez votre numéro de téléphone",
+        "organization": "Entrez le nom de votre organisation",
+        "position": "Entrez votre poste",
+        "email": "Entrez votre adresse email"
+      },
+      "validation": {
+        "name": {
+          "min": "Le nom doit contenir au moins 3 caractères",
+          "max": "Le nom ne doit pas dépasser 50 caractères",
+          "required": "Le nom est requis"
+        },
+        "email": {
+          "invalid": "Format d'email invalide",
+          "required": "L'email est requis"
+        },
+        "organization": {
+          "min": "L'organisation doit contenir au moins 3 caractères",
+          "required": "L'organisation est requise"
+        },
+        "position": {
+          "min": "Le poste doit contenir au moins 3 caractères",
+          "required": "Le poste est requis"
+        },
+        "phone": {
+          "min": "Le numéro de téléphone doit contenir au moins 10 caractères",
+          "max": "Le numéro de téléphone ne doit pas dépasser 15 caractères",
+          "required": "Le numéro de téléphone est requis"
+        }
+      }
+    },
+    "results": {
+      "title": "Votre Évaluation d'Innovation",
+      "type": "Évaluation d'Innovation",
+      "contact": "Contactez Nos Experts"
+    },
+    "navigation": {
+      "back": "Retour",
+      "next": "Suivant",
+      "finish": "Terminer"
+    }
+  }
+} 

@@ -15,10 +15,20 @@ function Hero({props}: { props: HeroProps }) {
 					</p>
 					<div className="hero-buttons">
 						{props.firstAction && (
-							<button className="hero-btn primary">{props.firstAction}</button>
+							<button 
+								className="hero-btn primary" 
+								onClick={props.onFirstActionClick}
+							>
+								{props.firstAction}
+							</button>
 						)}
 						{props.secondAction && (
-							<button className="hero-btn secondary">{props.secondAction}</button>
+							<button 
+								className="hero-btn secondary" 
+								onClick={props.onSecondActionClick}
+							>
+								{props.secondAction}
+							</button>
 						)}
 					</div>
 				</div>

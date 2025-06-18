@@ -1,0 +1,37 @@
+{
+  "industrial": {
+    "hero": {
+      "title": "Clinique Industrielle",
+      "description": "Résoudre les Défis du Monde Réel Grâce à la Collaboration Académique-Industrielle",
+      "firstAction": "Soumettre un Brevet"
+    },
+    "stats": {
+      "publications": "Publications Scientifiques",
+      "awards": "Prix Nationaux et Internationaux",
+      "projects": "Projets de Co-développement",
+      "partners": "Partenariats Industriels"
+    },
+    "introduction": {
+      "title": "Clinique Industrielle",
+      "description": "La Clinique Industrielle de l'UIR est un espace de collaboration dynamique où l'expertise académique rencontre les défis industriels. À travers des projets de co-développement, la création de prototypes et l'intégration technologique, nous fournissons des solutions sur mesure pour les entreprises, les villes et les institutions publiques. De l'infrastructure solaire intelligente à l'embellissement urbain et aux systèmes écoénergétiques, la clinique stimule l'innovation avec un impact réel."
+    },
+    "visionAndMission": {
+      "mission": "soutenir les projets d'innovation Made @UIR pour répondre aux besoins spécifiques de l'industrie et des territoires",
+      "vision": "Transformer le CIE en une Unité d'Affaires efficace au service de l'industrie et des territoires"
+    },
+    "services": {
+      "solutions": {
+        "title": "Solutions aux Problèmes Industriels",
+        "description": "Nous fournissons des solutions pratiques aux défis industriels réels en tirant parti de l'expertise en recherche."
+      },
+      "pilot": {
+        "title": "Construction de Lignes Pilotes",
+        "description": "Support dans la construction de lignes pilotes de pré-industrialisation pour mettre à l'échelle des produits et processus innovants."
+      },
+      "ip": {
+        "title": "Sensibilisation PI & Marketing de l'Innovation",
+        "description": "Sensibiliser à la propriété intellectuelle et promouvoir les innovations par le marketing stratégique."
+      }
+    }
+  }
+} 

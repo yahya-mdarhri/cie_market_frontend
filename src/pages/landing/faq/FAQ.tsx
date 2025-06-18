@@ -2,38 +2,20 @@ import { useState } from "react";
 import "./FAQ.css";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
 import LandingLayout from "@components/layouts/LandingLayout/LandingLayout";
+import { getFaqItems } from "./data";
+import { useTranslation } from "react-i18next";
 
 function FAQ() {
     useDocumentTitle('FAQ | Centre for Innovation and Entrepreneurship');
+    const { t } = useTranslation("faq");
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
     const [searchQuery, setSearchQuery] = useState("");
+
+    const faqItems = getFaqItems(t);
 
     const toggleFAQ = (index: number) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
-
-    const faqItems = [
-        {
-            question: "this is a example question?",
-            answer: "this is a example answer."
-        },
-        {
-            question: "this is a example of a verry long long long long long long question?",
-            answer: "this is a example answer. this is a example answer.this is a example answer.this is a example answer.this is a example answer."
-        },
-        {
-            question: "this is a example question?",
-            answer: "this is a example answer."
-        },
-        {
-            question: "this is a example question?",
-            answer: "this is a example answer."
-        },
-        {
-            question: "this is a example question?",
-            answer: "this is a example answer."
-        },
-    ];
 
     // filter the question and answer based on search query
     const filteredFaqItems = faqItems.filter(item => 
@@ -50,22 +32,22 @@ function FAQ() {
     return (
         <LandingLayout
         heroProps={{
-            heroTitle: <>FAQ</>,
-            heroDescription: "Frequently Asked Questions",
+            heroTitle: <>{t('faq.title')}</>,
+            heroDescription: t('faq.description'),
         }}
         >
         <div className="faq-container">
             <div className="faq-wrapper">
                 <div className="faq-header">
                     <div className="faq-title">
-                        <h1>FAQ</h1>
-                        <h3>Frequently Asked Questions</h3>
+                        <h1>{t('faq.title')}</h1>
+                        <h3>{t('faq.subtitle')}</h3>
                     </div>
                     <div className="faq-search">
                         <div className="search-container">
                             <input 
                                 type="text" 
-                                placeholder="Search questions..." 
+                                placeholder={t('faq.searchPlaceholder')} 
                                 className="search-input"
                                 value={searchQuery}
                                 onChange={handleSearch}
@@ -104,7 +86,7 @@ function FAQ() {
                         ))
                     ) : (
                         <div className="no-results">
-                            <p>No questions found matching your search.</p>
+                            <p>{t('faq.noResults')}</p>
                         </div>
                     )}
                 </div>

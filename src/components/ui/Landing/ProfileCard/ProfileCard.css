@@ -1,5 +1,5 @@
-.inventorCard {
-    flex: 0 1 300px;
+.profileCard {
+    flex: 0 0 calc(25% - 1.5rem); /* 25% width minus gap */
     background-color: var(--white);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
@@ -13,23 +13,23 @@
     transform-origin: center;
 }
 
-.inventorContent {
+.profileContent {
     position: relative;
     width: 100%;
-    padding-top: 100%;
+    padding-top: 120%;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.inventorCard:hover {
+.profileCard:hover {
 	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 	filter: grayscale(0%) contrast(1.1);
 	opacity: 1;
 }
 
-.inventorImageWrapper {
+.profileImageWrapper {
     position: absolute;
     top: 0;
     left: 0;
@@ -38,7 +38,7 @@
     overflow: hidden;
 }
 
-.inventorImageWrapper img {
+.profileImageWrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -46,38 +46,38 @@
     filter: brightness(0.95);
 }
 
-.inventorCard:hover .inventorImageWrapper img {
+.profileCard:hover .profileImageWrapper img {
     transform: scale(1.1);
     filter: brightness(1.05);
 }
 
-.inventorNameBox {
-    width: 90%;
+.profileNameBox {
+    width: 93%;
     position: absolute;
-    bottom: 20px;
+    bottom: 15px;
     background: rgba(255, 255, 255, 0.95);
-    padding: 1rem 0.7rem;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    border-left: 5px solid var(--primary-color);
+    padding: 0.6rem 0.5rem;
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    border-left: 4px solid var(--primary-color);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     z-index: 2;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateX(-10px);
-    opacity: 0.9;
+    transform: translateX(-100%);
+    opacity: 0;
 }
 
-.inventorCard:hover .inventorNameBox {
+.profileCard:hover .profileNameBox {
     background: rgba(255, 255, 255, 1);
     transform: translateX(0);
     opacity: 1;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-.inventorNameBox h3 {
+.profileNameBox h3 {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #333;
     font-weight: 600;
     white-space: nowrap;
@@ -85,9 +85,9 @@
     transition: all 0.3s ease;
 }
 
-.inventorRole {
-    margin: 0.3rem 0 0 0;
-    font-size: 0.9rem;
+.profileRole {
+    margin: 0.2rem 0 0 0;
+    font-size: 0.8rem;
     color: #666;
     font-weight: 400;
     white-space: nowrap;
@@ -95,14 +95,53 @@
     transition: all 0.3s ease;
 }
 
-.inventorCard:hover .inventorNameBox h3 {
+.profileCard:hover .profileNameBox h3 {
     color: var(--primary-color);
     transform: translateX(5px);
 }
 
-.inventorCard:hover .inventorRole {
+.profileCard:hover .profileRole {
     color: #444;
     transform: translateX(5px);
+}
+
+.socialLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.profileCard:hover .socialLinks {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.socialLink {
+    color: #666;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.socialLink svg {
+    font-size: 0.9rem;
+}
+
+.socialLink span {
+    font-size: 0.8rem;
+}
+
+.socialLink:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 @keyframes cardAppear {
@@ -117,24 +156,28 @@
 }
 
 /* Responsive adjustments */
+@media (max-width: 1200px) {
+    .profileCard {
+        flex: 0 0 calc(33.333% - 1rem); /* 3 cards per row */
+    }
+}
+
 @media (max-width: 768px) {
-    .inventorCard {
-        flex: 0 1 250px;
-        padding: 0.75rem;
+    .profileCard {
+        flex: 0 0 calc(50% - 0.5rem); /* 2 cards per row */
     }
 }
 
 @media (max-width: 480px) {
-    .inventorCard {
-        flex: 0 1 200px;
-        padding: 0.5rem;
+    .profileCard {
+        flex: 0 0 100%; /* 1 card per row */
     }
     
-    .inventorNameBox {
+    .profileNameBox {
         padding: 0.75rem 1rem;
     }
     
-    .inventorNameBox h3 {
+    .profileNameBox h3 {
         font-size: 1rem;
     }
 }

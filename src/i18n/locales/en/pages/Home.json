@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "title": "From Idea to Market Bridging Innovation and Industry",
+    "description": "We are glad to have you here. Explore our features and services.",
+    "firstAction": "Partner With Us",
+    "secondAction": "Submit A Patent"
+  },
+  "introduction": {
+    "title": "Centre for Innovation and Entrepreneurship",
+    "description": "The Centre for Innovation and Entrepreneurship (CIE) is a hub for innovation, research, and entrepreneurship at the International University of Rabat. We support researchers, students, and entrepreneurs in developing and commercializing their ideas."
+  },
+  "visionAndMission": {
+    "mission": "To foster innovation and entrepreneurship by providing resources, support, and opportunities for researchers, students, and entrepreneurs to develop and commercialize their ideas.",
+    "vision": "To be a leading center for innovation and entrepreneurship in Morocco and Africa, driving economic growth and social impact through research commercialization and startup development."
+  },
+  "departmentHead": {
+    "role": "Director of the Centre for Innovation and Entrepreneurship",
+    "message": "Welcome to the Centre for Innovation and Entrepreneurship. We are committed to supporting innovation and entrepreneurship at the International University of Rabat and beyond."
+  },
+  "departments": {
+    "title": "Our Departments",
+    "subtitle": "Discover our specialized departments and their unique offerings",
+    "learnMore": "Learn More",
+    "tto": {
+      "name": "Technology Transfer Office",
+      "description": "Bridging Innovation and Industry through Research Commercialization"
+    },
+    "industrial": {
+      "name": "Industrial Clinic",
+      "description": "Solving Real-World Challenges Through Academic–Industry Collaboration"
+    },
+    "incubator": {
+      "name": "Incubator",
+      "description": "Empowering Startups to Transform Ideas into Impact"
+    },
+    "techCenter": {
+      "name": "Tech Center",
+      "description": "Driving Innovation with Cutting-Edge Tools, Talent, and Infrastructure"
+    }
+  },
+  "stats": {
+    "innovationPatents": "Innovation & Patents",
+    "internationalPatents": "International Patents",
+    "goldMedals": "Gold Medals"
+  }
+} 

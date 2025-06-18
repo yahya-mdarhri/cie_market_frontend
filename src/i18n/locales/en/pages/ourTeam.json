@@ -1,0 +1,25 @@
+{
+    "hero": {
+        "title": "Meet Our Inn2Market Team",
+        "description": "A diverse group of visionaries, creators, and problem-solvers dedicated to transforming ideas into reality. Together, we're building the future of technology and innovation.",
+        "firstAction": "Contact Us"
+    },
+    "intro": {
+        "title": "Our Leadership",
+        "description": "We're a diverse team of innovators, creators, and problem-solvers dedicated to building the future."
+    },
+    "values": {
+        "innovation": {
+            "title": "Innovation",
+            "description": "We push boundaries and embrace new ideas to create groundbreaking solutions."
+        },
+        "collaboration": {
+            "title": "Collaboration",
+            "description": "We believe in the power of teamwork and diverse perspectives."
+        },
+        "excellence": {
+            "title": "Excellence",
+            "description": "We strive for the highest quality in everything we do."
+        }
+    }
+} 

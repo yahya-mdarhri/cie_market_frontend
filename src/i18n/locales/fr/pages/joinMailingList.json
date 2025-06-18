@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "title": "Restez Connecté avec Inn2Market",
+    "description": "Rejoignez notre liste de diffusion pour recevoir les dernières mises à jour sur les innovations, les tendances technologiques et les opportunités. Soyez le premier à connaître les nouveaux développements dans le monde de la propriété intellectuelle et du transfert de technologie.",
+    "firstAction": "S'abonner Maintenant"
+  },
+  "intro": {
+    "title": "Pourquoi Rejoindre Notre Liste de Diffusion ?",
+    "description": "Obtenez un accès exclusif à nos dernières mises à jour et analyses"
+  },
+  "benefits": {
+    "latestUpdates": {
+      "title": "Dernières Mises à Jour",
+      "description": "Restez informé des dernières tendances et innovations technologiques"
+    },
+    "industryInsights": {
+      "title": "Aperçus du Secteur",
+      "description": "Accédez exclusivement aux tendances et analyses du marché"
+    },
+    "opportunities": {
+      "title": "Opportunités",
+      "description": "Soyez le premier à connaître les événements et opportunités à venir"
+    },
+    "successStories": {
+      "title": "Histoires de Réussite",
+      "description": "Apprenez des études de cas et des histoires de réussite réelles"
+    }
+  },
+  "form": {
+    "title": "Rejoignez Notre Communauté",
+    "subtitle": "Faites partie de notre réseau croissant d'innovateurs et d'enthousiastes de la technologie",
+    "preferences": {
+      "title": "Vos Préférences",
+      "newsletter": {
+        "title": "Newsletter",
+        "description": "Actualités, mises à jour et dernières informations sur la PI."
+      },
+      "techUpdates": {
+        "title": "Mises à Jour Technologiques",
+        "description": "Les dernières technologies dans votre boîte de réception dès leur publication"
+      }
+    },
+    "personalInfo": {
+      "title": "Informations Personnelles",
+      "firstName": "Prénom",
+      "firstNamePlaceholder": "Entrez votre prénom",
+      "lastName": "Nom",
+      "lastNamePlaceholder": "Entrez votre nom",
+      "email": "Email",
+      "emailPlaceholder": "Entrez votre adresse email",
+      "organization": "Organisation",
+      "organizationPlaceholder": "Entrez le nom de votre organisation",
+      "jobTitle": "Poste",
+      "jobTitlePlaceholder": "Entrez votre poste",
+      "role": "Rôle"
+    },
+    "role": {
+      "placeholder": "Sélectionnez votre rôle",
+      "researcher": "Chercheur",
+      "student": "Étudiant",
+      "faculty": "Enseignant",
+      "industry": "Professionnel de l'Industrie",
+      "other": "Autre"
+    },
+    "submit": "S'abonner Maintenant"
+  }
+} 

@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "title": "Mantente Conectado con Inn2Market",
+    "description": "Únete a nuestra lista de correo para recibir las últimas actualizaciones sobre innovaciones, tendencias tecnológicas y oportunidades. Sé el primero en conocer los nuevos desarrollos en el mundo de la propiedad intelectual y la transferencia de tecnología.",
+    "firstAction": "Suscribirse Ahora"
+  },
+  "intro": {
+    "title": "¿Por qué unirse a nuestra lista de correo?",
+    "description": "Obtén acceso exclusivo a nuestras últimas actualizaciones e información"
+  },
+  "benefits": {
+    "latestUpdates": {
+      "title": "Últimas Actualizaciones",
+      "description": "Mantente informado sobre las últimas tendencias tecnológicas e innovaciones"
+    },
+    "industryInsights": {
+      "title": "Información del Sector",
+      "description": "Obtén acceso exclusivo a tendencias y análisis del mercado"
+    },
+    "opportunities": {
+      "title": "Oportunidades",
+      "description": "Sé el primero en conocer próximos eventos y oportunidades"
+    },
+    "successStories": {
+      "title": "Casos de Éxito",
+      "description": "Aprende de casos de estudio y casos de éxito reales"
+    }
+  },
+  "form": {
+    "title": "Únete a Nuestra Comunidad",
+    "subtitle": "Sé parte de nuestra creciente red de innovadores y entusiastas de la tecnología",
+    "preferences": {
+      "title": "Tus Preferencias",
+      "newsletter": {
+        "title": "Boletín Informativo",
+        "description": "Noticias, actualizaciones y la última información sobre PI."
+      },
+      "techUpdates": {
+        "title": "Actualizaciones Tecnológicas",
+        "description": "Las últimas tecnologías en tu bandeja de entrada tan pronto como se publiquen"
+      }
+    },
+    "personalInfo": {
+      "title": "Información Personal",
+      "firstName": "Nombre",
+      "firstNamePlaceholder": "Ingresa tu nombre",
+      "lastName": "Apellido",
+      "lastNamePlaceholder": "Ingresa tu apellido",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "Ingresa tu correo electrónico",
+      "organization": "Organización",
+      "organizationPlaceholder": "Ingresa el nombre de tu organización",
+      "jobTitle": "Cargo",
+      "jobTitlePlaceholder": "Ingresa tu cargo",
+      "role": "Rol"
+    },
+    "role": {
+      "placeholder": "Selecciona tu rol",
+      "researcher": "Investigador",
+      "student": "Estudiante",
+      "faculty": "Profesor",
+      "industry": "Profesional de la Industria",
+      "other": "Otro"
+    },
+    "submit": "Suscribirse Ahora"
+  }
+} 

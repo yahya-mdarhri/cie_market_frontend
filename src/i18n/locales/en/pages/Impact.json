@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "title": "Our Impact",
+    "description": "Discover how we are making a difference through sustainable innovation and technology.",
+    "firstAction": "Join Our Mailing List"
+  },
+  "metrics": {
+    "title": "Key Metrics",
+    "description": "Our commitment to sustainable innovation is reflected in these key achievements",
+    "items": {
+      "metric_1": {
+        "value": "50+",
+        "title": "Innovations Developed",
+        "description": "Cutting-edge solutions addressing global challenges"
+      },
+      "metric_2": {
+        "value": "100+",
+        "title": "Startups Supported",
+        "description": "Entrepreneurs empowered to create positive change"
+      },
+      "metric_3": {
+        "value": "1M+",
+        "title": "Lives Impacted",
+        "description": "People benefiting from our sustainable solutions"
+      }
+    }
+  },
+  "news": {
+    "title": "News & Stories",
+    "description": "Stay updated with our latest developments and success stories",
+    "sdg_alt": "SDG {{number}}",
+    "items": {
+      "news_1": {
+        "title": "Sustainable Development in Action",
+        "description": "How our innovations are contributing to global sustainability goals and creating lasting impact."
+      },
+      "news_2": {
+        "title": "Clean Energy Breakthrough",
+        "description": "Revolutionary technology that promises to transform renewable energy production and distribution."
+      },
+      "news_3": {
+        "title": "Education for All",
+        "description": "Breaking barriers in education through innovative digital learning solutions."
+      }
+    }
+  }
+}

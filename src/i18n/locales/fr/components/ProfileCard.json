@@ -1,0 +1,10 @@
+{
+    "title": "Notre Équipe",
+    "subtitle": "Rencontrez nos professionnels dévoués",
+    "contact": {
+        "email": "Email",
+        "phone": "Téléphone",
+        "call": "Appeler",
+        "emailPerson": "Envoyer un email à {{name}}"
+    }
+} 
