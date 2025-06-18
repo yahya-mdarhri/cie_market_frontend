@@ -32,6 +32,20 @@ function InventionInfo({ isOpen, onClose, invention }: InventionInfoProps) {
     };
   }, [isOpen]);
 
+  const handleContactClick = () => {
+    onClose();
+    // Add a small delay to ensure the modal is closed before scrolling
+    setTimeout(() => {
+      const contactSection = document.querySelector('.contactSection');
+      if (contactSection) {
+        contactSection.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }, 100);
+  };
+
   if (!isOpen || !invention) return null;
 
   return (
@@ -86,6 +100,14 @@ function InventionInfo({ isOpen, onClose, invention }: InventionInfoProps) {
           <div className="InventionInfoSection">
             <h3>{t('impact')}</h3>
             <p>{invention.impact}</p>
+          </div>
+          <div className="InventionInfoActions">
+            <button 
+              className="InventionInfoContactButton"
+              onClick={handleContactClick}
+            >
+              {t('contactUs')}
+            </button>
           </div>
         </div>
       </div>

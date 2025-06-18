@@ -270,3 +270,40 @@
     width: 100%;
   }
 }
+
+.InventionInfoActions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.InventionInfoContactButton {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.InventionInfoContactButton:hover {
+  background-color: var(--primary-color-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.InventionInfoContactButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .InventionInfoContactButton {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+  }
+}
