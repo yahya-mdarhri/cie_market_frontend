@@ -83,7 +83,8 @@ function Home() {
 				</div>
 				<Partners partners={partners} />
 				<div className="Home5thSection" id="contact">
-					<ContactUs onSubmit={(formData) =>{}} />
+					<ContactUs 
+					onSubmit={(_formData) =>{}} />
 				</div>
 		</LandingLayout>
 	);

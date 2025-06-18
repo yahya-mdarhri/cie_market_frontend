@@ -89,6 +89,7 @@ export const useTechCenterData = () => {
 }; 
 
 import avatar from "@pages/landing/our_team/images/avatar.jpg"
+import { ContactPerson } from "@ui/Landing/Contact/Contact";
 
 export const contactData: ContactPerson[] = [
     {
