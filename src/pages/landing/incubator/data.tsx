@@ -10,51 +10,12 @@ import {
 	FaChalkboardTeacher,
 	FaUserTie,
 	FaSeedling
-  } from "react-icons/fa";
+} from "react-icons/fa";
 
 import linkup_africa from "./images/progrmas/linkup_africa.png";
 import enactus from "./images/progrmas/enactus.svg";
 import ram from "./images/progrmas/RAM.svg";
 import etoufoula from "./images/progrmas/etoufoula.png";
-
-
-// this array contains the data for the services provided by the incubator
-const servicesData = [
-	{
-	  icon: <FaGlobeAmericas />,
-	  title: "Funding for Entrepreneurship",
-	  description: "Attracting national and international funds to entrepreneurship promotion projects."
-	},
-	{
-	  icon: <FaRocket />,
-	  title: "Startup Creation & Support",
-	  description: "Creation of Made@UIR startups, project setup, access to financing, and coaching."
-	},
-	{
-	  icon: <FaChalkboardTeacher />,
-	  title: "Entrepreneurship Training",
-	  description: "Providing specialized entrepreneurship and innovation training."
-	},
-	{
-	  icon: <FaUserTie />,
-	  title: "Mentorship & Preincubation",
-	  description: "Mentoring of project leaders and preincubation services."
-	},
-	{
-	  icon: <FaSeedling />,
-	  title: "Access to Capital",
-	  description: "Support in accessing seed and acceleration capital."
-	}
-  ];
-  
-// this object contains the data for the stats displayed in the hero section
-const statsData:StatsItemsType = {
-	a: { name: "Incubated Startups", value: 50 },
-	b: { name: "Success Rate", value: 85 },
-	c: { name: "Investment Attracted (M DHS)", value: 25 },
-	d: { name: "Strategic Partners", value: 15 },
-};
-
 
 // this array contains the data for the partners of the incubator
 const partners = [
@@ -75,41 +36,74 @@ const partners = [
 	}
 ];
 
-// this object contains the data for the hero section of the incubator page
-const heroProps: HeroProps = {
-	heroTitle: <>Incubator 360º</>,
-	heroDescription: "We provide the tools, mentorship, and environment to turn ideas into saleable ventures",
-	firstAction: "Submit A Patent",
-	stats: statsData,
-};
-
-// this array contains the data for the programs offered by the incubator 
-const programs = [
+// Functions that take translation parameter t and return localized data
+export const getServicesData = (t: any) => [
 	{
-		name: "Linkup africa",
-		description: "Empowers African youth in Morocco through entrepreneurship support.",
+		icon: <FaGlobeAmericas />,
+		title: t('incubator.services.funding.title'),
+		description: t('incubator.services.funding.description')
+	},
+	{
+		icon: <FaRocket />,
+		title: t('incubator.services.startup.title'),
+		description: t('incubator.services.startup.description')
+	},
+	{
+		icon: <FaChalkboardTeacher />,
+		title: t('incubator.services.training.title'),
+		description: t('incubator.services.training.description')
+	},
+	{
+		icon: <FaUserTie />,
+		title: t('incubator.services.mentorship.title'),
+		description: t('incubator.services.mentorship.description')
+	},
+	{
+		icon: <FaSeedling />,
+		title: t('incubator.services.capital.title'),
+		description: t('incubator.services.capital.description')
+	}
+];
+
+export const getStatsData = (t: any): StatsItemsType => ({
+	a: { name: t('incubator.stats.startups'), value: 50 },
+	b: { name: t('incubator.stats.successRate'), value: 85 },
+	c: { name: t('incubator.stats.investment'), value: 25 },
+	d: { name: t('incubator.stats.partners'), value: 15 },
+});
+
+export const getHeroProps = (t: any): HeroProps => ({
+	heroTitle: t('incubator.hero.title'),
+	heroDescription: t('incubator.hero.description'),
+	firstAction: t('incubator.hero.firstAction'),
+	stats: getStatsData(t),
+});
+
+export const getPrograms = (t: any) => [
+	{
+		name: t('incubator.programs.linkup.name'),
+		description: t('incubator.programs.linkup.description'),
 		image: linkup_africa,
 		link: "https://www.lua.ma/"
 	},
 	{
-		name: "Enactus",
-		description: "Empowers students to create positive social and environmental impact through entrepreneurial projects",
+		name: t('incubator.programs.enactus.name'),
+		description: t('incubator.programs.enactus.description'),
 		image: enactus,
 		link: "https://enactus-morocco.org/",
 	},
 	{
-		name: "RAM Open Innovation",
+		name: t('incubator.programs.ram.name'),
 		image: ram,
-		description: "Connects startups with aviation experts to develop innovative solutions for travel challenge",
+		description: t('incubator.programs.ram.description'),
 		link: "https://openinnovation.royalairmaroc.com/",
 	},
 	{
-		name: "E-Toufoula",
-		description: "A platform that connects Moroccan artisans with global markets, promoting traditional crafts and cultural heritage.",
+		name: t('incubator.programs.etoufoula.name'),
+		description: t('incubator.programs.etoufoula.description'),
 		image: etoufoula,
 		link: "https://ityhad.com"
 	}
+];
 
-]
-
-export {partners, servicesData, heroProps, programs};
+export { partners };

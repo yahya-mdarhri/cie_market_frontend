@@ -50,10 +50,10 @@ function NavActions({ closeMobileMenu }: { closeMobileMenu: () => void }) {
 					onClick={() => setIsLanguageOpen(!isLanguageOpen)}
 				>
 					<span className="language-flag">
-						{languages.find(lang => lang.code === i18n.language)?.flag}
+						{languages.find(lang => lang.code === i18n.language)?.flag || languages[0].flag}
 					</span>
 					<span className="language-name">
-						{languages.find(lang => lang.code === i18n.language)?.name}
+						{languages.find(lang => lang.code === i18n.language)?.name || languages[0].name}
 					</span>
 					<span className="language-arrow">▼</span>
 				</button>

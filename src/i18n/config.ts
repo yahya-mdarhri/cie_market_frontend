@@ -23,6 +23,14 @@ import enImpact from './locales/en/pages/Impact.json';
 import esImpact from './locales/es/pages/Impact.json';
 import frImpact from './locales/fr/pages/Impact.json';
 
+import enIncubator from './locales/en/pages/Incubator.json';
+import esIncubator from './locales/es/pages/Incubator.json';
+import frIncubator from './locales/fr/pages/Incubator.json';
+
+import enPartners from './locales/en/components/Partners.json';
+import esPartners from './locales/es/components/Partners.json';
+import frPartners from './locales/fr/components/Partners.json';
+
 import enIntroduction from './locales/en/components/Introduction.json';
 import esIntroduction from './locales/es/components/Introduction.json';
 import frIntroduction from './locales/fr/components/Introduction.json';
@@ -55,6 +63,8 @@ export const NAMESPACES = {
   tto: 'tto',
   faq: 'faq',
   impact: 'impact',
+  incubator: 'incubator',
+  partners: 'partners',
   introduction: 'introduction',
   visionAndMission: 'visionAndMission',
   contactUs: 'contactUs'
@@ -74,6 +84,8 @@ i18n
         tto: enTTO,
         faq: enFAQ,
         impact: enImpact,
+        incubator: enIncubator,
+        partners: enPartners,
         introduction: enIntroduction,
         visionAndMission: enVisionAndMission,
         contactUs: enContactUs
@@ -84,6 +96,8 @@ i18n
         tto: esTTO,
         faq: esFAQ,
         impact: esImpact,
+        incubator: esIncubator,
+        partners: esPartners,
         introduction: esIntroduction,
         visionAndMission: esVisionAndMission,
         contactUs: esContactUs
@@ -94,12 +108,14 @@ i18n
         tto: frTTO,
         faq: frFAQ,
         impact: frImpact,
+        incubator: frIncubator,
+        partners: frPartners,
         introduction: frIntroduction,
         visionAndMission: frVisionAndMission,
         contactUs: frContactUs
       }
     },
-    lng: 'en', // Set English as default language
+    // lng: 'en', // Set English as default language
     fallbackLng: 'en',
     defaultNS: 'common',
     ns: Object.values(NAMESPACES),
