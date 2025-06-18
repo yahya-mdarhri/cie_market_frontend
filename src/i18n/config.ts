@@ -35,6 +35,10 @@ import enInnovationDiagnosis from './locales/en/pages/InnovationDiagnosis.json';
 import esInnovationDiagnosis from './locales/es/pages/InnovationDiagnosis.json';
 import frInnovationDiagnosis from './locales/fr/pages/InnovationDiagnosis.json';
 
+import enJoinMailingList from './locales/en/pages/joinMailingList.json';
+import esJoinMailingList from './locales/es/pages/joinMailingList.json';
+import frJoinMailingList from './locales/fr/pages/joinMailingList.json';
+
 import enPartners from './locales/en/components/Partners.json';
 import esPartners from './locales/es/components/Partners.json';
 import frPartners from './locales/fr/components/Partners.json';
@@ -78,6 +82,7 @@ export const NAMESPACES = {
   incubator: 'incubator',
   industrial: 'industrial',
   innovationDiagnosis: 'innovationDiagnosis',
+  joinMailingList: 'joinMailingList',
   partners: 'partners',
   services: 'services',
   introduction: 'introduction',
@@ -102,6 +107,7 @@ i18n
         incubator: enIncubator,
         industrial: enIndustrial,
         innovationDiagnosis: enInnovationDiagnosis,
+        joinMailingList: enJoinMailingList,
         partners: enPartners,
         services: enServices,
         introduction: enIntroduction,
@@ -117,6 +123,7 @@ i18n
         incubator: esIncubator,
         industrial: esIndustrial,
         innovationDiagnosis: esInnovationDiagnosis,
+        joinMailingList: esJoinMailingList,
         partners: esPartners,
         services: esServices,
         introduction: esIntroduction,
@@ -132,6 +139,7 @@ i18n
         incubator: frIncubator,
         industrial: frIndustrial,
         innovationDiagnosis: frInnovationDiagnosis,
+        joinMailingList: frJoinMailingList,
         partners: frPartners,
         services: frServices,
         introduction: frIntroduction,

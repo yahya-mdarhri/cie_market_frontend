@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "title": "Stay Connected with Inn2Market",
+    "description": "Join our mailing list to receive the latest updates on innovations, technology trends, and opportunities. Be the first to know about new developments in the world of intellectual property and technology transfer.",
+    "firstAction": "Subscribe Now"
+  },
+  "intro": {
+    "title": "Why Join Our Mailing List?",
+    "description": "Get exclusive access to our latest updates and insights"
+  },
+  "benefits": {
+    "latestUpdates": {
+      "title": "Latest Updates",
+      "description": "Stay informed about the newest technology trends and innovations"
+    },
+    "industryInsights": {
+      "title": "Industry Insights",
+      "description": "Get exclusive access to market trends and analysis"
+    },
+    "opportunities": {
+      "title": "Opportunities",
+      "description": "Be the first to know about upcoming events and opportunities"
+    },
+    "successStories": {
+      "title": "Success Stories",
+      "description": "Learn from real-world case studies and success stories"
+    }
+  },
+  "form": {
+    "title": "Join Our Community",
+    "subtitle": "Be part of our growing network of innovators and technology enthusiasts",
+    "preferences": {
+      "title": "Your Preferences",
+      "newsletter": {
+        "title": "Newsletter",
+        "description": "News, Updates, and the latest info about IP."
+      },
+      "techUpdates": {
+        "title": "Technology Updates",
+        "description": "Latest technologies in your inbox as soon as they are posted"
+      }
+    },
+    "personalInfo": {
+      "title": "Personal Information",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "Enter your first name",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Enter your last name",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email address",
+      "organization": "Organization",
+      "organizationPlaceholder": "Enter your organization name",
+      "jobTitle": "Job Title",
+      "jobTitlePlaceholder": "Enter your job title",
+      "role": "Role"
+    },
+    "role": {
+      "placeholder": "Select your role",
+      "researcher": "Researcher",
+      "student": "Student",
+      "faculty": "Faculty",
+      "industry": "Industry Professional",
+      "other": "Other"
+    },
+    "submit": "Subscribe Now"
+  }
+}
