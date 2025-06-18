@@ -7,9 +7,8 @@ export interface ContactPerson {
     role: string;
     image: string;
     social: {
-        linkedin?: string;
-        twitter?: string;
         email?: string;
+        phone?: string;
     };
 }
 

@@ -166,28 +166,7 @@ const contactData: ContactPerson[] = [
         role: "Technical Lead",
         image: avatar, 
         social: {
-            linkedin: "https://linkedin.com/in/johndoe",
-            twitter: "https://twitter.com/johndoe",
-            email: "john.doe@example.com"
-        }
-    },
-	{
-        name: "John Doe",
-        role: "Technical Lead",
-        image: avatar, 
-        social: {
-            linkedin: "https://linkedin.com/in/johndoe",
-            twitter: "https://twitter.com/johndoe",
-            email: "john.doe@example.com"
-        }
-    },
-	{
-        name: "John Doe",
-        role: "Technical Lead",
-        image: avatar, 
-        social: {
-            linkedin: "https://linkedin.com/in/johndoe",
-            twitter: "https://twitter.com/johndoe",
+            phone: "+212XXXXXXXXX",
             email: "john.doe@example.com"
         }
     },

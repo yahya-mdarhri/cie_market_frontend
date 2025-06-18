@@ -1,10 +1,9 @@
 import './ProfileCard.css';
-import { FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaPhone, FaEnvelope } from 'react-icons/fa';
 
 export interface SocialLinks {
-	linkedin?: string;
-	twitter?: string;
 	email?: string;
+	phone?: string;
 }
 
 interface ProfileCardProps {
@@ -27,26 +26,14 @@ function ProfileCard({ name, image, role, social, className = '' }: ProfileCardP
 					{role && <p className="profileRole">{role}</p>}
 					{social && (
 						<div className="socialLinks">
-							{social.linkedin && (
+							{social.phone && (
 								<a 
-									href={social.linkedin} 
-									target="_blank" 
-									rel="noopener noreferrer"
+									href={`tel:${social.phone}`}
 									className="socialLink"
-									aria-label={`${name}'s LinkedIn`}
+									aria-label={`Call ${name}`}
 								>
-									<FaLinkedin />
-								</a>
-							)}
-							{social.twitter && (
-								<a 
-									href={social.twitter} 
-									target="_blank" 
-									rel="noopener noreferrer"
-									className="socialLink"
-									aria-label={`${name}'s Twitter`}
-								>
-									<FaTwitter />
+									<FaPhone />
+									<span>{social.phone}</span>
 								</a>
 							)}
 							{social.email && (
@@ -56,6 +43,7 @@ function ProfileCard({ name, image, role, social, className = '' }: ProfileCardP
 									aria-label={`Email ${name}`}
 								>
 									<FaEnvelope />
+									<span>{social.email}</span>
 								</a>
 							)}
 						</div>
