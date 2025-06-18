@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "title": "Proceso de Licenciamiento",
+    "description": "Una guía completa de nuestro proceso de licenciamiento en la Oficina de Transferencia de Tecnología, garantizando transparencia y eficiencia."
+  },
+  "overview": {
+    "title": "Descripción General",
+    "description1": "En nombre de UIR, la Oficina de Transferencia de Tecnología (TTO) negocia y otorga licencias para las invenciones patentadas de la universidad, obras con derechos de autor y resultados tangibles de investigación a startups, PYMEs y empresas establecidas que demuestren la capacidad técnica y comercial para desarrollar tecnologías en etapa temprana en productos y servicios comercialmente exitosos.",
+    "description2": "Con numerosas nuevas divulgaciones de propiedad intelectual recibidas anualmente, el portafolio de innovación de UIR está en constante evolución. Si está interesado en obtener una licencia para la propiedad intelectual desarrollada por UIR, es importante comprender las etapas involucradas en el proceso de licenciamiento."
+  },
+  "agreements": {
+    "title": "Acuerdos de Licenciamiento",
+    "description1": "Un acuerdo de licencia es un contrato que transfiere los derechos para usar la tecnología de UIR a un licenciatario por beneficios financieros y otros, mientras mantiene la propiedad de UIR. Estos acuerdos se realizan tanto con startups como con empresas establecidas y típicamente requieren que el licenciatario desarrolle diligentemente y lleve la innovación al mercado, proporcionando retornos justos a UIR y sirviendo al interés público.",
+    "description2": "Los dos objetivos principales de UIR en cualquier acuerdo de licencia son:",
+    "goals": {
+      "goal1": "Asegurar que la tecnología sea desarrollada por el licenciatario para el beneficio de la sociedad, alineándose con las políticas de innovación nacionales de UIR y Marruecos.",
+      "goal2": "Proporcionar a UIR y a los inventores retornos financieros justos y razonables si el desarrollo del producto es exitoso."
+    },
+    "requirements": {
+      "title": "Al elaborar un acuerdo de licencia, UIR comienza por comprender:",
+      "items": [
+        "Modelo de negocio relacionado con la tecnología y las ventajas potenciales de su solución propuesta.",
+        "Mercado objetivo y base de clientes.",
+        "Acceso a recursos como capital, infraestructura y personal calificado.",
+        "Proyecciones de ingresos y crecimiento esperados."
+      ]
+    }
+  },
+  "terms": {
+    "title": "Términos de Licenciamiento",
+    "financial": {
+      "title": "Elementos Financieros Comunes",
+      "items": [
+        "Tarifas de emisión de licencia",
+        "Tarifas de mantenimiento anual",
+        "Pagos basados en hitos de desarrollo o comercialización",
+        "Regalías sobre ventas o ingresos por servicios",
+        "Reembolso de costos de patentes o registro",
+        "Participación en ingresos de sublicencias",
+        "Participaciones accionarias para startups"
+      ]
+    },
+    "nonFinancial": {
+      "title": "Términos No Financieros",
+      "items": [
+        "Tipo de exclusividad: no exclusiva, exclusiva o limitada por campo o geografía",
+        "Retención de derechos para UIR y patrocinadores de investigación",
+        "Derechos reservados para uso académico y de investigación por UIR e instituciones asociadas",
+        "Requisitos de diligencia para asegurar el desarrollo y comercialización oportuna"
+      ]
+    },
+    "info": {
+      "text1": "Las negociaciones de licencias se llevan a cabo entre la TTO y el representante designado de la empresa, sin participación directa de los inventores de UIR durante la fase de negociación para evitar conflictos de interés.",
+      "text2": "Los acuerdos de licencia a menudo incluyen hitos de rendimiento para asegurar un progreso constante. El incumplimiento de estos puede llevar a la terminación del acuerdo, permitiendo a UIR ofrecer la tecnología a otras partes interesadas."
+    }
+  },
+  "findingLicensee": {
+    "title": "Encontrar un Licenciatario",
+    "description": "Los inventores pueden desempeñar un papel clave en la identificación de potenciales licenciatarios a través de su conocimiento de la industria y redes. La TTO complementa estos esfuerzos a través de contactos institucionales, análisis de mercado, foros empresariales, exposiciones de innovación y cultivo de asociaciones.",
+    "inventorInvolvement": {
+      "title": "Participación y Beneficios del Inventor",
+      "items": [
+        "Los licenciatarios a menudo buscan el apoyo de los inventores para la transferencia de conocimiento, desde interacciones casuales hasta arreglos de consultoría formal.",
+        "La colaboración con startups puede requerir un mayor compromiso, gobernado por las políticas de conflicto de interés y ética de UIR.",
+        "Los inventores se benefician del impacto en el mundo real, relaciones expandidas con la industria y una participación en los retornos financieros de los ingresos por licencias."
+      ]
+    },
+    "timeline": {
+      "title": "Cronograma",
+      "description": "Dependiendo de la preparación del mercado y la madurez de la innovación, encontrar el licenciatario adecuado puede tomar varios meses o años. Las tecnologías en etapa temprana a menudo requieren más tiempo para la comercialización."
+    },
+    "selectionCriteria": {
+      "title": "Elegir un Licenciatario",
+      "items": [
+        "Los licenciatarios son seleccionados según su potencial para llevar efectivamente la tecnología al mercado y servir las necesidades públicas.",
+        "En algunos casos, se prefieren empresas experimentadas con experiencia relevante en el mercado.",
+        "Para otras tecnologías, las empresas startup ofrecen el enfoque y la motivación necesarios.",
+        "Las tecnologías pueden ser licenciadas a múltiples entidades, no exclusivamente o exclusivamente por campo o región."
+      ]
+    }
+  }
+} 

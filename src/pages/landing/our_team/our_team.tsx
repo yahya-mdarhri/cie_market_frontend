@@ -1,58 +1,21 @@
 import LandingLayout from "@components/layouts/LandingLayout/LandingLayout";
-import InventorCard from "@ui/Landing/InventorCard/InventorCard";
-import avatar from './images/avatar.jpg';
+import ProfileCard from "@ui/Landing/ProfileCard/ProfileCard";
 import './our_team.css';
+import { useHeroProps, teamMembers, useTeamValues } from './data';
+import { useTranslation } from 'react-i18next';
 
 function OurTeam() {
-    const teamMembers = [
-        {
-            name: "Wacim BEN YAHYA",
-            role: "Head of TTO",
-            image: avatar,
-        },
-        {
-            name: "Yahya MDARHRI",
-            role: "Tech Lead",
-            image: avatar,
-        },
-        {
-            name: "Elhoussaine EDDAHBI",
-            role: "DevOps",
-            image: avatar,
-        },
-        {
-            name: "Hamza Oumansour",
-            role: "Full Stack",
-            image: avatar,
-        },
-    ];
-
-    const teamValues = [
-        {
-            title: "Innovation",
-            description: "We push boundaries and embrace new ideas to create groundbreaking solutions."
-        },
-        {
-            title: "Collaboration",
-            description: "We believe in the power of teamwork and diverse perspectives."
-        },
-        {
-            title: "Excellence",
-            description: "We strive for the highest quality in everything we do."
-        }
-    ];
+    const { t } = useTranslation('ourTeam');
+    const heroProps = useHeroProps(t);
+    const teamValues = useTeamValues(t);
 
     return (
-        <LandingLayout heroProps={{
-            heroTitle: <>Meet Our Inn2Market Team</>,
-            heroDescription: "A diverse group of visionaries, creators, and problem-solvers dedicated to transforming ideas into reality. Together, we're building the future of technology and innovation.",
-            firstAction: "Contact Us",
-        }}>
+        <LandingLayout heroProps={heroProps}>
             <div className="our-team-container">
                 <div className="team-content">
                     <div className="team-intro">
-                        <h2>Our Leadership</h2>
-                        <p>We're a diverse team of innovators, creators, and problem-solvers dedicated to building the future.</p>
+                        <h2>{t('intro.title')}</h2>
+                        <p>{t('intro.description')}</p>
                     </div>
 
                     <div className="team-values">
@@ -66,7 +29,7 @@ function OurTeam() {
 
                     <div className="team-flex">
                         {teamMembers.map((member, index) => (
-                            <InventorCard
+                            <ProfileCard
                                 key={index}
                                 name={member.name}
                                 role={member.role}

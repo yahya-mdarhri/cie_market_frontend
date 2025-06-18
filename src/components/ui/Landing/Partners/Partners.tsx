@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import './Partners.css';
+import { useTranslation } from 'react-i18next';
 
 interface Partner {
 	logo: string;
@@ -13,13 +14,14 @@ interface PartnersProps {
 }
 
 export default function Partners({ partners, areCLients = false}: PartnersProps) {
+	const { t } = useTranslation('partners');
+	
 	return (
 		<section className="partners-section">
-			<h2 className="partners-title">
-				{
-					areCLients ? "Trusted us" : "Our Partners"
-				}
-			</h2>
+			<div className="contact-section-header">
+				<h2>{areCLients ? t('clients.title') : t('partners.title')}</h2>
+				<p>{areCLients ? t('clients.subtitle') : t('partners.subtitle')}</p>
+			</div>
 			<div className="partners-grid">
 				{partners.map((partner, index) => (
 					<motion.a

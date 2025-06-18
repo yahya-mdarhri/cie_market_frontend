@@ -1,0 +1,122 @@
+{
+  "innovationDiagnosis": {
+    "title": "Diagnóstico de Innovación",
+    "phases": {
+      "phase1": "Fase 1 - Lanzamiento",
+      "phase2": "Fase 2 - Progreso",
+      "phase3": "Fase 3 - Aceleración",
+      "phase4": "Fase 4 - Realización"
+    },
+    "questions": {
+      "phase1": {
+        "question_1": "El liderazgo reconoce y comunica la importancia de la innovación",
+        "question_2": "Se ha formalizado una visión compartida para un futuro mejor",
+        "question_3": "Se ha realizado una auditoría de innovación para identificar obstáculos",
+        "question_4": "Se asigna un presupuesto a la innovación, formación e iniciativas",
+        "question_5": "El emprendimiento, el empoderamiento y la asunción de riesgos son parte de la cultura deseada",
+        "question_6": "Se designan embajadores de innovación en diferentes departamentos"
+      },
+      "phase2": {
+        "question_1": "Se establecen objetivos claros (ej. número de ideas, ingresos por innovación, etc.)",
+        "question_2": "Se organizan sesiones de formación para gerentes y embajadores",
+        "question_3": "Existe un sistema interno de sugerencias que se gestiona activamente",
+        "question_4": "Se realizan sesiones regulares de lluvia de ideas con equipos diversos y un facilitador",
+        "question_5": "Los objetivos de innovación se incluyen en las evaluaciones individuales",
+        "question_6": "Los éxitos de innovación se comparten y celebran"
+      },
+      "phase3": {
+        "question_1": "Se define y despliega una estrategia de innovación abierta",
+        "question_2": "Una unidad de incubación o experimentación está operativa",
+        "question_3": "Los procesos de validación se han simplificado para acelerar la implementación",
+        "question_4": "Se implementan más de 2 sugerencias por empleado al año",
+        "question_5": "La cultura de culpa ha sido reemplazada por una cultura de apertura y cuestionamiento",
+        "question_6": "El concepto de producto mínimo viable (MVP) está totalmente integrado"
+      },
+      "phase4": {
+        "question_1": "Un programa de innovación abierta está totalmente integrado y genera innovaciones externas",
+        "question_2": "Los nuevos productos/servicios representan una parte significativa de los ingresos",
+        "question_3": "Se anima a los empleados a probar nuevas iniciativas — y lo hacen",
+        "question_4": "Se fomenta la asunción de riesgos, se acepta el fracaso y se analiza",
+        "question_5": "Se implementan más de 5 sugerencias por empleado al año",
+        "question_6": "La empresa es reconocida como líder en innovación y un lugar de trabajo estimulante"
+      }
+    },
+    "rating": {
+      "strongly_disagree": "Totalmente en Desacuerdo",
+      "disagree": "En Desacuerdo",
+      "neutral": "Neutral",
+      "agree": "De Acuerdo",
+      "strongly_agree": "Totalmente de Acuerdo"
+    },
+    "results": {
+      "title": "Tu Evaluación de Innovación",
+      "type": "Evaluación de Innovación",
+      "contact": "Contacta con Nuestros Expertos",
+      "embryonic": {
+        "type": "Innovación Embrionaria",
+        "description": "Alto potencial pero pocas estructuras establecidas."
+      },
+      "development": {
+        "type": "Innovación en Desarrollo",
+        "description": "Una base sólida, pero se necesita más esfuerzo."
+      },
+      "active": {
+        "type": "Innovación Activa",
+        "description": "Muchos proyectos y prácticas están en marcha."
+      },
+      "mature": {
+        "type": "Innovación Madura",
+        "description": "Una cultura bien establecida y resultados visibles."
+      }
+    },
+    "form": {
+      "consent": "Al hacer clic en 'Iniciar Evaluación', doy mi consentimiento para la recopilación y el procesamiento de la información proporcionada con fines de evaluación.",
+      "start": "Iniciar Evaluación",
+      "fullName": "Nombre Completo",
+      "phone": "Número de Teléfono",
+      "organization": "Organización",
+      "position": "Cargo",
+      "email": "Correo Electrónico",
+      "evidence": {
+        "label": "Evidencia de Apoyo",
+        "placeholder": "Describe cualquier evidencia o ejemplos de apoyo..."
+      },
+      "placeholders": {
+        "fullName": "Ingresa tu nombre completo",
+        "phone": "Ingresa tu número de teléfono",
+        "organization": "Ingresa el nombre de tu organización",
+        "position": "Ingresa tu cargo",
+        "email": "Ingresa tu correo electrónico"
+      },
+      "validation": {
+        "name": {
+          "min": "El nombre debe tener al menos 3 caracteres",
+          "max": "El nombre debe tener como máximo 50 caracteres",
+          "required": "El nombre es obligatorio"
+        },
+        "email": {
+          "invalid": "Formato de correo electrónico inválido",
+          "required": "El correo electrónico es obligatorio"
+        },
+        "organization": {
+          "min": "La organización debe tener al menos 3 caracteres",
+          "required": "La organización es obligatoria"
+        },
+        "position": {
+          "min": "El cargo debe tener al menos 3 caracteres",
+          "required": "El cargo es obligatorio"
+        },
+        "phone": {
+          "min": "El número de teléfono debe tener al menos 10 caracteres",
+          "max": "El número de teléfono debe tener como máximo 15 caracteres",
+          "required": "El número de teléfono es obligatorio"
+        }
+      }
+    },
+    "navigation": {
+      "back": "Atrás",
+      "next": "Siguiente",
+      "finish": "Finalizar"
+    }
+  }
+} 

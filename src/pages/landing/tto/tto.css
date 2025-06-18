@@ -10,8 +10,7 @@
 .HighLightSpotLeft{
 	display: flex;
 	flex-direction: column;
-	/* gap: 1rem; */
-	width: 30%;
+	/* width: 80%; */
 	justify-content: center;
 	/* align-items: center; */
 	padding: 10px;
@@ -193,7 +192,7 @@
 .inventorsGrid {
     display: flex;
     flex-wrap: wrap;
-    gap: 2.5rem;
+    gap: 2rem;
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -201,13 +200,15 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    .highlightedInventors {
-        padding: 3rem 1rem;
+@media (max-width: 1200px) {
+    .inventorsGrid {
+        gap: 1.5rem;
     }
+}
 
-    .inventorsHeader h2 {
-        font-size: 2rem;
+@media (max-width: 768px) {
+    .inventorsGrid {
+        gap: 1rem;
     }
 }
 
@@ -217,6 +218,62 @@
     }
 
     .inventorsHeader h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Profiles Section Styles */
+.highlightedProfiles {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profilesHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.profilesHeader h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.profilesHeader p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.profilesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .profilesGrid {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .profilesGrid {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .highlightedProfiles {
+        padding: 2rem 1rem;
+    }
+
+    .profilesHeader h2 {
         font-size: 1.75rem;
     }
 }

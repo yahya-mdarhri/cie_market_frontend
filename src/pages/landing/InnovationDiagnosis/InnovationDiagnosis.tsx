@@ -1,68 +1,13 @@
 import { useState } from "react";
-import { FaThumbsDown, FaThumbsUp, FaRegMeh, FaThumbsUp as FaSolidThumbsUp, FaThumbsDown as FaSolidThumbsDown, FaTimes, FaRedo } from "react-icons/fa";
+import { FaTimes, FaRedo } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import "./InnovationDiagnosis.css";
-  import { HashLink } from "react-router-hash-link";
-
-const phases = [
-  "Phase 1 - Launch",
-  "Phase 2 - Progress",
-  "Phase 3 - Acceleration",
-  "Phase 4 - Realization"
-];
-
-const questionsByPhase = {
-  [phases[0]]: [
-    "Leadership acknowledges and communicates the importance of innovation",
-    "A shared vision for a better future is formalized",
-    "An innovation audit has been conducted to identify obstacles",
-    "A budget is allocated to innovation, training, and initiatives",
-    "Entrepreneurship, empowerment, and risk-taking are part of the desired culture",
-    "Innovation ambassadors are appointed in different departments"
-  ],
-  [phases[1]]: [
-    "Clear goals are set (e.g., number of ideas, revenue from innovation, etc.)",
-    "Training sessions are organized for managers and ambassadors",
-    "An internal suggestion system is in place and actively managed",
-    "Regular brainstorming sessions are held with diverse teams and a facilitator",
-    "Innovation objectives are included in individual evaluations",
-    "Innovation successes are shared and celebrated"
-  ],
-  [phases[2]]: [
-    "An open innovation strategy is defined and being deployed",
-    "An incubation or experimentation unit is operational",
-    "Validation processes have been simplified to accelerate implementation",
-    "More than 2 suggestions per employee per year are implemented",
-    "A blame culture has been replaced with a culture of openness and questioning",
-    "The concept of minimum viable product (MVP) is fully integrated"
-  ],
-  [phases[3]]: [
-    "An open innovation program is fully integrated and generates external innovations",
-    "New products/services represent a significant portion of revenue",
-    "Employees are encouraged to try new initiatives — and they do",
-    "Risk-taking is encouraged, failure is accepted and analyzed",
-    "More than 5 suggestions per employee per year are implemented",
-    "The company is recognized as an innovation leader and a stimulating workplace"
-  ]
-};
-
-const questions = phases.flatMap(phase => 
-  questionsByPhase[phase].map(question => ({
-    phase,
-    question
-  }))
-);
-
-const icons = [
-  { icon: FaSolidThumbsDown, label: "Strongly Disagree", className: "strongly-disagree" },
-  { icon: FaThumbsDown, label: "Disagree", className: "disagree" },
-  { icon: FaRegMeh, label: "Neutral", className: "neutral" },
-  { icon: FaThumbsUp, label: "Agree", className: "agree" },
-  { icon: FaSolidThumbsUp, label: "Strongly Agree", className: "strongly-agree" }
-];
+import { HashLink } from "react-router-hash-link";
+import { useTranslation } from 'react-i18next';
+import { getPhases, getQuestionsByPhase, getIcons, getScoreRanges, getConsentText } from "./data";
 
 interface Response {
   note: number;
@@ -87,27 +32,33 @@ interface UserInfo {
   phone: string;
 }
 
-const userInfoSchema = yup.object().shape({
+interface Question {
+  phase: string;
+  question: string;
+}
+
+const createUserInfoSchema = (t: (key: string) => string) => yup.object().shape({
   name: yup.string()
-    .min(3, "Name must be at least 3 characters")
-    .max(50, "Name must be at most 50 characters")
-    .required("Name is required"),
+    .min(3, t('innovationDiagnosis.form.validation.name.min'))
+    .max(50, t('innovationDiagnosis.form.validation.name.max'))
+    .required(t('innovationDiagnosis.form.validation.name.required')),
   email: yup.string()
-    .email("Invalid email format")
-    .required("Email is required"),
+    .email(t('innovationDiagnosis.form.validation.email.invalid'))
+    .required(t('innovationDiagnosis.form.validation.email.required')),
   organisation: yup.string()
-    .min(3, "Organization must be at least 3 characters")
-    .required("Organization is required"),
+    .min(3, t('innovationDiagnosis.form.validation.organization.min'))
+    .required(t('innovationDiagnosis.form.validation.organization.required')),
   position: yup.string()
-    .min(3, "Position must be at least 3 characters")
-    .required("Position is required"),
+    .min(3, t('innovationDiagnosis.form.validation.position.min'))
+    .required(t('innovationDiagnosis.form.validation.position.required')),
   phone: yup.string()
-    .min(10, "Phone number must be at least 10 characters")
-    .max(15, "Phone number must be at most 15 characters")
-    .required("Phone number is required")
+    .min(10, t('innovationDiagnosis.form.validation.phone.min'))
+    .max(15, t('innovationDiagnosis.form.validation.phone.max'))
+    .required(t('innovationDiagnosis.form.validation.phone.required'))
 });
 
 function InnovationDiagnosis() {
+  const { t } = useTranslation('innovationDiagnosis');
   const [responses, setResponses] = useState<Responses>({});
   const [step, setStep] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
@@ -120,8 +71,21 @@ function InnovationDiagnosis() {
   });
   const [hasStarted, setHasStarted] = useState(false);
 
+  const phases = getPhases(t);
+  const questionsByPhase = getQuestionsByPhase(t);
+  const icons = getIcons(t);
+  const scoreRanges = getScoreRanges(t);
+  const consentText = getConsentText(t);
+
+  const questions: Question[] = phases.flatMap(phase => 
+    questionsByPhase[phase].map(question => ({
+      phase,
+      question
+    }))
+  );
+
   const { register, handleSubmit, formState: { errors } } = useForm<UserInfo>({
-    resolver: yupResolver(userInfoSchema)
+    resolver: yupResolver(createUserInfoSchema(t))
   });
 
   const handleExit = () => {
@@ -162,25 +126,11 @@ function InnovationDiagnosis() {
       (sum: number, r: Response) => sum + Number(r.note || 0),
       0
     );
-    if (total <= 30) return { 
-      total, 
-      type: "Embryonic Innovation",
-      description: "High potential but few structures in place."
-    };
-    if (total <= 60) return { 
-      total, 
-      type: "Innovation in Development",
-      description: "A solid foundation, but further effort needed."
-    };
-    if (total <= 90) return { 
-      total, 
-      type: "Active Innovation",
-      description: "Many projects and practices are in place."
-    };
-    return { 
-      total, 
-      type: "Mature Innovation",
-      description: "A well-established culture and visible results."
+    const result = scoreRanges.find(range => total <= range.max);
+    return {
+      total,
+      type: result?.type || "Unknown",
+      description: result?.description || "No description available."
     };
   };
 
@@ -210,70 +160,70 @@ function InnovationDiagnosis() {
           transition={{ duration: 0.5 }}
           className="audit-content"
         >
-          <h1 className="audit-title">Innovation Diagnosis</h1>
+          <h1 className="audit-title">{t('innovationDiagnosis.title')}</h1>
           <form onSubmit={handleSubmit(handleUserInfoSubmit)} className="user-info-form">
             <div className="form-row">
               <div className="form-group">
-                <label htmlFor="name">Full Name *</label>
+                <label htmlFor="name">{t('innovationDiagnosis.form.fullName')} *</label>
                 <input
                   type="text"
                   id="name"
                   {...register("name")}
-                  placeholder="Enter your full name"
+                  placeholder={t('innovationDiagnosis.form.placeholders.fullName')}
                 />
                 {errors.name && <span className="error-message">{errors.name.message}</span>}
               </div>
               <div className="form-group">
-                <label htmlFor="phone">Phone Number *</label>
+                <label htmlFor="phone">{t('innovationDiagnosis.form.phone')} *</label>
                 <input
                   type="tel"
                   id="phone"
                   {...register("phone")}
-                  placeholder="Enter your phone number"
+                  placeholder={t('innovationDiagnosis.form.placeholders.phone')}
                 />
                 {errors.phone && <span className="error-message">{errors.phone.message}</span>}
               </div>
             </div>
             <div className="form-row">
               <div className="form-group">
-                <label htmlFor="organisation">Organization *</label>
+                <label htmlFor="organisation">{t('innovationDiagnosis.form.organization')} *</label>
                 <input
                   type="text"
                   id="organisation"
                   {...register("organisation")}
-                  placeholder="Enter your organization name"
+                  placeholder={t('innovationDiagnosis.form.placeholders.organization')}
                 />
                 {errors.organisation && <span className="error-message">{errors.organisation.message}</span>}
               </div>
               <div className="form-group">
-                <label htmlFor="position">Position *</label>
+                <label htmlFor="position">{t('innovationDiagnosis.form.position')} *</label>
                 <input
                   type="text"
                   id="position"
                   {...register("position")}
-                  placeholder="Enter your position"
+                  placeholder={t('innovationDiagnosis.form.placeholders.position')}
                 />
                 {errors.position && <span className="error-message">{errors.position.message}</span>}
               </div>
             </div>
             <div className="form-row">
               <div className="form-group full-width">
-                <label htmlFor="email">Email Address *</label>
+                <label htmlFor="email">{t('innovationDiagnosis.form.email')} *</label>
                 <input
                   type="email"
                   id="email"
                   {...register("email")}
-                  placeholder="Enter your email address"
+                  placeholder={t('innovationDiagnosis.form.placeholders.email')}
                 />
                 {errors.email && <span className="error-message">{errors.email.message}</span>}
               </div>
             </div>
             <p className="consent-text">
-              By clicking on 'Start Assessment', I consent to the collection and processing of the information I have provided for evaluation purposes.
+              {consentText}
             </p>
             <div className="form-submit">
               <button type="submit" className="audit-nav-button next">
-                Start Assessment
+                {t('innovationDiagnosis.form.start')}
               </button>
             </div>
           </form>
@@ -297,17 +247,17 @@ function InnovationDiagnosis() {
           transition={{ duration: 0.5 }}
           className="results-container"
         >
-          <h2 className="results-title">Your Innovation Assessment</h2>
+          <h2 className="results-title">{t('innovationDiagnosis.results.title')}</h2>
           <div className="results-type">
-            <h3 className="type-label">Innovation Assessment</h3>
+            <h3 className="type-label">{t('innovationDiagnosis.results.type')}</h3>
             <div className="type-value">{type}</div>
             <p className="type-description">{description}</p>
           </div>
           
           <div className="results-actions">
-          <HashLink smooth to="/#contact" className="action-button contact">
-            Contact Our Experts
-          </HashLink>
+            <HashLink smooth to="/#contact" className="action-button contact">
+              {t('innovationDiagnosis.results.contact')}
+            </HashLink>
           </div>
         </motion.div>
       </div>
@@ -319,7 +269,7 @@ function InnovationDiagnosis() {
       <button className="exit-button" onClick={handleExit}>
         <FaTimes />
       </button>
-      <h1 className="audit-title">Innovation Diagnosis</h1>
+      <h1 className="audit-title">{t('innovationDiagnosis.title')}</h1>
 
       <motion.div
         key={step}
@@ -354,9 +304,9 @@ function InnovationDiagnosis() {
         </div>
 
         <div className="audit-evidence">
-          <label>Supporting Evidence</label>
+          <label>{t('innovationDiagnosis.form.evidence.label')}</label>
           <textarea
-            placeholder="Describe any supporting evidence or examples..."
+            placeholder={t('innovationDiagnosis.form.evidence.placeholder')}
             value={evidence}
             onChange={e => handleChange(globalIndex, "evidence", e.target.value)}
           />
@@ -368,14 +318,14 @@ function InnovationDiagnosis() {
             disabled={step === 0}
             className="audit-nav-button back"
           >
-            Back
+            {t('innovationDiagnosis.navigation.back')}
           </button>
           <button
             onClick={handleNext}
             disabled={selectedNote === undefined}
             className="audit-nav-button next"
           >
-            {step === totalQuestions - 1 ? 'Finish' : 'Next'}
+            {step === totalQuestions - 1 ? t('innovationDiagnosis.navigation.finish') : t('innovationDiagnosis.navigation.next')}
           </button>
         </div>
       </motion.div>

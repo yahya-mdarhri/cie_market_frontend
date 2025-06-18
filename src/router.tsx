@@ -9,6 +9,8 @@ import NotFound from '@pages/NotFound/NotFound';
 import AuditInnovationForm from '@pages/landing/InnovationDiagnosis/InnovationDiagnosis';
 import OurTeam from '@pages/landing/our_team/our_team';
 import LicensingProcess from '@pages/landing/licensing_process/licensing_process';
+import JoinTheMailingList from '@pages/landing/JoinTheMailingList/JoinTheMailingList';
+import Impact from '@pages/landing/impact/Impact';
 
 const router = createBrowserRouter([
   {
@@ -33,7 +35,7 @@ const router = createBrowserRouter([
         element: <Incubator />,
       },
       {
-        path: '/tech_center',
+        path: '/tech-center',
         element: <TechCenter />,
       },
       {
@@ -51,6 +53,14 @@ const router = createBrowserRouter([
       {
         path: 'licensing-process',
         element: <LicensingProcess />,
+      },
+      {
+        path: '/join-our-mailing-list',
+        element: <JoinTheMailingList />,
+      },
+      {
+        path: '/impact',
+        element: <Impact />,
       }
     ]
   },

@@ -1,0 +1,23 @@
+{
+  "title": "Contactez-nous",
+  "subtitle": "Nous aimerions avoir de vos nouvelles. Que vous soyez un inventeur ou une entreprise, nous sommes là pour vous aider.",
+  "contactInfo": {
+    "title": "Informations de Contact",
+    "description": "Contactez-nous pour toute question concernant nos services, partenariats ou opportunités d'innovation.",
+    "phone": "Téléphone",
+    "email": "Email",
+    "address": "Adresse"
+  },
+  "form": {
+    "inventor": "Inventeur",
+    "company": "Entreprise",
+    "fullName": "Nom Complet",
+    "email": "Email",
+    "phone": "Téléphone",
+    "companyName": "Nom de l'Entreprise",
+    "position": "Votre Poste",
+    "subject": "Sujet",
+    "message": "Message",
+    "sendMessage": "Envoyer le Message"
+  }
+} 
