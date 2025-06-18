@@ -83,6 +83,10 @@ import enInventionInfo from './locales/en/components/InventionInfo.json';
 import esInventionInfo from './locales/es/components/InventionInfo.json';
 import frInventionInfo from './locales/fr/components/InventionInfo.json';
 
+import enFooter from './locales/en/components/Footer.json';
+import esFooter from './locales/es/components/Footer.json';
+import frFooter from './locales/fr/components/Footer.json';
+
 // Define supported languages
 export const SUPPORTED_LANGUAGES = {
   en: { name: 'English', flag: '🇺🇸' },
@@ -147,7 +151,8 @@ i18n
         licensingProcess: enLicensingProcess,
         ourTeam: enOurTeam,
         techCenter: enTechCenter,
-        inventionInfo: enInventionInfo
+        inventionInfo: enInventionInfo,
+        footer: enFooter
       },
       es: {
         navbar: esNavbar,
@@ -169,7 +174,8 @@ i18n
         licensingProcess: esLicensingProcess,
         ourTeam: esOurTeam,
         techCenter: esTechCenter,
-        inventionInfo: esInventionInfo
+        inventionInfo: esInventionInfo,
+        footer: esFooter
       },
       fr: {
         navbar: frNavbar,
@@ -191,7 +197,8 @@ i18n
         licensingProcess: frLicensingProcess,
         ourTeam: frOurTeam,
         techCenter: frTechCenter,
-        inventionInfo: frInventionInfo
+        inventionInfo: frInventionInfo,
+        footer: frFooter
       }
     },
     fallbackLng: 'en',
