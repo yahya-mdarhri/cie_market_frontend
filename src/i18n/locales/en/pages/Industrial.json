@@ -1,0 +1,37 @@
+{
+  "industrial": {
+    "hero": {
+      "title": "Industrial Clinic",
+      "description": "Solving Real-World Challenges Through Academic–Industry Collaboration",
+      "firstAction": "Submit A Patent"
+    },
+    "stats": {
+      "publications": "Scientific Publications",
+      "awards": "National & International Awards",
+      "projects": "Co-development Projects",
+      "partners": "Industry Partnerships"
+    },
+    "introduction": {
+      "title": "Industrial Clinic",
+      "description": "The Industrial Clinic at UIR is a dynamic collaboration space where academic expertise meets industrial challenges. Through co-development projects, prototype creation, and technology integration, we deliver tailor-made solutions for businesses, cities, and public institutions. From smart solar infrastructure to urban beautification and energy-efficient systems, the clinic drives innovation with real-world impact."
+    },
+    "visionAndMission": {
+      "mission": "support Made @UIR innovation projects to meet the specific needs of industry and territories",
+      "vision": "Transform the CIE into an effective Business Unit serving industry and the territories"
+    },
+    "services": {
+      "solutions": {
+        "title": "Solutions to Industrial Problems",
+        "description": "We provide practical solutions to real-world industrial challenges by leveraging research expertise."
+      },
+      "pilot": {
+        "title": "Pilot Line Construction",
+        "description": "Support in building preindustrialization pilot lines to scale up innovative products and processes."
+      },
+      "ip": {
+        "title": "IP Awareness & Innovation Marketing",
+        "description": "Raise awareness about intellectual property and promote innovations through strategic marketing."
+      }
+    }
+  }
+}

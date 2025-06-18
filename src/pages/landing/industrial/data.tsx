@@ -18,40 +18,37 @@ const clients = [
     },
 ];
 
-// this array contains the data for the services provided by the industrial clinic
-const servicesData = [
+// Functions that take translation parameter t and return localized data
+export const getServicesData = (t: any) => [
     {
         icon: <FaTools />,
-        title: "Solutions to Industrial Problems",
-        description: "We provide practical solutions to real-world industrial challenges by leveraging research expertise."
+        title: t('industrial.services.solutions.title'),
+        description: t('industrial.services.solutions.description')
     },
     {
         icon: <FaIndustry />,
-        title: "Pilot Line Construction",
-        description: "Support in building preindustrialization pilot lines to scale up innovative products and processes."
+        title: t('industrial.services.pilot.title'),
+        description: t('industrial.services.pilot.description')
     },
     {
         icon: <FaLightbulb />,
-        title: "IP Awareness & Innovation Marketing",
-        description: "Raise awareness about intellectual property and promote innovations through strategic marketing."
+        title: t('industrial.services.ip.title'),
+        description: t('industrial.services.ip.description')
     }
 ];
 
-// this object contains the data for the stats displayed in the hero section
-const statsData: StatsItemsType = {
-    a: { name: "Scientific Publications", value: 1800 },
-    b: { name: "National & International Awards", value: 10 },
-    c: { name: "Co-development Projects", value: 40 },
-    d: { name: "Industry Partnerships", value: 25 },
-};
+export const getStatsData = (t: any): StatsItemsType => ({
+    a: { name: t('industrial.stats.publications'), value: 1800 },
+    b: { name: t('industrial.stats.awards'), value: 10 },
+    c: { name: t('industrial.stats.projects'), value: 40 },
+    d: { name: t('industrial.stats.partners'), value: 25 },
+});
 
-// this object contains the data for the hero section
-const heroProps: HeroProps = {
-    heroTitle: <>Industrial Clinic</>,
-    heroDescription: "Solving Real-World Challenges Through Academic–Industry Collaboration",
-    firstAction: "Submit A Patent",
-    stats: statsData,
-}; 
+export const getHeroProps = (t: any): HeroProps => ({
+    heroTitle: t('industrial.hero.title'),
+    heroDescription: t('industrial.hero.description'),
+    firstAction: t('industrial.hero.firstAction'),
+    stats: getStatsData(t),
+});
 
-
-export {clients, servicesData, heroProps}
+export { clients };

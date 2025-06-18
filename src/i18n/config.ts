@@ -27,6 +27,10 @@ import enIncubator from './locales/en/pages/Incubator.json';
 import esIncubator from './locales/es/pages/Incubator.json';
 import frIncubator from './locales/fr/pages/Incubator.json';
 
+import enIndustrial from './locales/en/pages/Industrial.json';
+import esIndustrial from './locales/es/pages/Industrial.json';
+import frIndustrial from './locales/fr/pages/Industrial.json';
+
 import enPartners from './locales/en/components/Partners.json';
 import esPartners from './locales/es/components/Partners.json';
 import frPartners from './locales/fr/components/Partners.json';
@@ -68,6 +72,7 @@ export const NAMESPACES = {
   faq: 'faq',
   impact: 'impact',
   incubator: 'incubator',
+  industrial: 'industrial',
   partners: 'partners',
   services: 'services',
   introduction: 'introduction',
@@ -90,6 +95,7 @@ i18n
         faq: enFAQ,
         impact: enImpact,
         incubator: enIncubator,
+        industrial: enIndustrial,
         partners: enPartners,
         services: enServices,
         introduction: enIntroduction,
@@ -103,6 +109,7 @@ i18n
         faq: esFAQ,
         impact: esImpact,
         incubator: esIncubator,
+        industrial: esIndustrial,
         partners: esPartners,
         services: esServices,
         introduction: esIntroduction,
@@ -116,6 +123,7 @@ i18n
         faq: frFAQ,
         impact: frImpact,
         incubator: frIncubator,
+        industrial: frIndustrial,
         partners: frPartners,
         services: frServices,
         introduction: frIntroduction,
