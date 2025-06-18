@@ -10,8 +10,7 @@
 .HighLightSpotLeft{
 	display: flex;
 	flex-direction: column;
-	/* gap: 1rem; */
-	width: 30%;
+	/* width: 80%; */
 	justify-content: center;
 	/* align-items: center; */
 	padding: 10px;
