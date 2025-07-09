@@ -13,46 +13,20 @@ pipeline {
             }
         }
         stage('Check Docker') {
-    steps {
-        script {
-            def dockerExists = sh(script: 'command -v docker || true', returnStdout: true).trim()
-            if (!dockerExists) {
-                echo "⚠️ Docker not found. Attempting to install Docker..."
-
-                sh '''
-                    set -e
-                    if [ -x "$(command -v apt-get)" ]; then
-                        echo "🔧 Installing Docker via apt-get..."
-                         apt-get update -y
-                         apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release
-                        curl -fsSL https://download.docker.com/linux/ubuntu/gpg |  gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-                        echo \
-                          "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-                          $(lsb_release -cs) stable" |  tee /etc/apt/sources.list.d/docker.list > /dev/null
-                         apt-get update -y
-                         apt-get install -y docker-ce docker-ce-cli containerd.io
-                         usermod -aG docker $USER
-                    else
-                        echo "❌ Unsupported package manager. Manual Docker install required."
-                        exit 1
-                    fi
-                '''
-            }
-
-            def dockerRunning = sh(script: 'docker info > /dev/null 2>&1 || true', returnStatus: true)
-            if (dockerRunning != 0) {
-                echo "⚠️ Docker installed but not running. Attempting to start Docker..."
-                def startStatus = sh(script: ' systemctl start docker || service docker start', returnStatus: true)
-                if (startStatus != 0) {
-                    error "❌ Docker could not be started. Please start it manually."
+            steps {
+                script {
+                    def dockerExists = sh(script: 'command -v docker || true', returnStdout: true).trim()
+                    if (!dockerExists) {
+                        error "❌ Docker is not installed on this Jenkins agent. Please install Docker to proceed."
+                    }
+                    def dockerRunning = sh(script: 'docker info > /dev/null 2>&1 || true', returnStatus: true)
+                    if (dockerRunning != 0) {
+                        error "❌ Docker is installed but not running. Make sure the Docker daemon is active."
+                    }
+                    echo "✅ Docker is installed and running."
                 }
             }
-
-            echo "✅ Docker is installed and running."
         }
-    }
-}
-
         stage('Build Docker Image') {
             steps {
                 script {
