@@ -4,7 +4,7 @@ import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentH
 import { useTranslation } from 'react-i18next';
 
 import arrow from '../../../assets/icons/arrow.svg';
-import headImg from "./images/M-Bouya.png";
+import headImg from "./images/M-bouya.jpg";
 
 import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
