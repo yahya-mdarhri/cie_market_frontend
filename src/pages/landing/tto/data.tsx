@@ -7,9 +7,9 @@ export const getTranslatedStats = () => {
 	const { t } = useTranslation('tto');
 	return {
 		a: { name: t('stats.totalPatents'), value: 650 },
-		b: { name: t('stats.internationalPatents'), value: 108 },
-		c: { name: t('stats.researchContracts'), value: 66 },
-		d: { name: t('stats.goldMedals'), value: 3 },
+		b: { name: t('stats.internationalPatents'), value: 119 },
+		c: { name: t('stats.transfers'), value: 7 },
+		d: { name: t('stats.medals'), value: 7 },
 	};
 };
 
@@ -157,33 +157,16 @@ const getServicesData = (t : TFunction) => [
 
 
 import avatar from "@pages/landing/our_team/images/avatar.jpg"
+import wacim from "@pages/landing/tto/images/wacim.jpeg"
 
 const contactData: ContactPerson[] = [
     {
-        name: "John Doe",
+        name: " BENYAHYA Wacim",
         role: "Technical Lead",
-        image: avatar, 
+        image: wacim, 
         social: {
-            phone: "+212XXXXXXXXX",
-            email: "john.doe@example.com"
-        }
-    },
-    {
-        name: "John Doe",
-        role: "Technical Lead",
-        image: avatar, 
-        social: {
-            phone: "+212XXXXXXXXX",
-            email: "john.doe@example.com"
-        }
-    },
-    {
-        name: "John Doe",
-        role: "Technical Lead",
-        image: avatar, 
-        social: {
-            phone: "+212XXXXXXXXX",
-            email: "john.doe@example.com"
+            phone: "+212658477660",
+            email: "Wacim.benyahya@uir.ac.ma"
         }
     },
 ];

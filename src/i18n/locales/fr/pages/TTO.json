@@ -64,8 +64,8 @@
   "stats": {
     "totalPatents": "Total des Brevets Déposés",
     "internationalPatents": "Brevets Internationaux",
-    "researchContracts": "Contrats de Recherche",
-    "goldMedals": "Médailles d'Or"
+    "transfers": "Transferts",
+    "medals": "Médailles"
   },
   "services": {
     "transfer": {

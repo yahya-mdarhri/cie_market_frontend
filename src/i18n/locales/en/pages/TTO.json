@@ -64,8 +64,8 @@
   "stats": {
     "totalPatents": "Total Patents Filed",
     "internationalPatents": "International Patents",
-    "researchContracts": "Research Contracts",
-    "goldMedals": "Gold Medals"
+    "transfers": "Transfers",
+    "medals": "Medals"
   },
   "services": {
     "transfer": {

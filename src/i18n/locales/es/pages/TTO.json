@@ -64,8 +64,8 @@
   "stats": {
     "totalPatents": "Total de Patentes Presentadas",
     "internationalPatents": "Patentes Internacionales",
-    "researchContracts": "Contratos de Investigación",
-    "goldMedals": "Medallas de Oro"
+    "researchContracts": "transferencias",
+    "medals": "Medallas"
   },
   "services": {
     "transfer": {
