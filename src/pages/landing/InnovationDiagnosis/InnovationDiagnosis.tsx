@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaTimes, FaRedo } from "react-icons/fa";
+import { FaTimes, FaRedo, FaUserTie, FaBuilding } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -70,6 +70,15 @@ function InnovationDiagnosis() {
     phone: ''
   });
   const [hasStarted, setHasStarted] = useState(false);
+  const [userType, setUserType] = useState('person');
+
+  const handleUserTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUserType(e.target.value);
+    const companyFields = document.getElementById('companyFields');
+    if (companyFields) {
+      companyFields.style.display = e.target.value === 'company' ? 'flex' : 'none';
+    }
+  };
 
   const phases = getPhases(t);
   const questionsByPhase = getQuestionsByPhase(t);
@@ -162,6 +171,29 @@ function InnovationDiagnosis() {
         >
           <h1 className="audit-title">{t('innovationDiagnosis.title')}</h1>
           <form onSubmit={handleSubmit(handleUserInfoSubmit)} className="user-info-form">
+            <div className="contact-type-toggle">
+              <button 
+                type="button"
+                className={`toggle-option ${userType === 'person' ? 'active' : ''}`}
+                onClick={() => handleUserTypeChange({ target: { value: 'person' } } as React.ChangeEvent<HTMLInputElement>)}
+              >
+                <FaUserTie className="toggle-icon" />
+                <span className="toggle-text">{t('form.person')}</span>
+              </button>
+              <button 
+                type="button"
+                className={`toggle-option ${userType === 'company' ? 'active' : ''}`}
+                onClick={() => handleUserTypeChange({ target: { value: 'company' } } as React.ChangeEvent<HTMLInputElement>)}
+              >
+                <FaBuilding className="toggle-icon" />
+                <span className="toggle-text">{t('form.company')}</span>
+              </button>
+              <input 
+                type="hidden" 
+                name="userType" 
+                value={userType}
+              />
+            </div>
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="name">{t('innovationDiagnosis.form.fullName')} *</label>
