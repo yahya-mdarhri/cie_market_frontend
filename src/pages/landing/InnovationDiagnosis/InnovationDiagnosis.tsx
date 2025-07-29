@@ -7,7 +7,7 @@ import * as yup from "yup";
 import "./InnovationDiagnosis.css";
 import { HashLink } from "react-router-hash-link";
 import { useTranslation } from 'react-i18next';
-import { getPhases, getQuestionsByPhase, getIcons, getScoreRanges, getConsentText } from "./data";
+import { getPhases, getQuestionsByPhase, getIcons, getScoreRanges, getConsentText, getInfoQuestions } from "./data";
 
 interface Response {
   note: number;
@@ -54,7 +54,7 @@ const createUserInfoSchema = (t: (key: string) => string) => yup.object().shape(
   phone: yup.string()
     .min(10, t('innovationDiagnosis.form.validation.phone.min'))
     .max(15, t('innovationDiagnosis.form.validation.phone.max'))
-    .required(t('innovationDiagnosis.form.validation.phone.required'))
+    .required(t('innovationDiagnosis.form.validation.phone.required')),
 });
 
 function InnovationDiagnosis() {
@@ -62,14 +62,17 @@ function InnovationDiagnosis() {
   const [responses, setResponses] = useState<Responses>({});
   const [step, setStep] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
+  const infoQuestionsData = getInfoQuestions(t)
+  const [infoQuestions, setInfoQuestions] = useState<string[]>([]);
   const [_userInfo, setUserInfo] = useState<UserInfo>({
     name: '',
     email: '',
     organisation: '',
     position: '',
-    phone: ''
+    phone: '',
   });
   const [hasStarted, setHasStarted] = useState(false);
+  const [filledSecondForm, setFilledSecondForm] = useState(false);
   const [userType, setUserType] = useState('person');
 
   const handleUserTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -116,6 +119,11 @@ function InnovationDiagnosis() {
         [field]: value
       }
     }));
+  };
+
+  const handleMoreInfoSubmit = (data: string[]) => {
+    setInfoQuestions(data);
+    setFilledSecondForm(true);
   };
 
   const handleUserInfoSubmit = (data: UserInfo) => {
@@ -250,6 +258,57 @@ function InnovationDiagnosis() {
                 {errors.email && <span className="error-message">{errors.email.message}</span>}
               </div>
             </div>
+            <p className="consent-text">
+              {consentText}
+            </p>
+            <div className="form-submit">
+              <button type="submit" className="audit-nav-button next">
+                {t('innovationDiagnosis.form.start')}
+              </button>
+            </div>
+          </form>
+        </motion.div>
+      </div>
+    );
+  }
+
+  if (hasStarted && !isComplete && userType === 'company' && !filledSecondForm) {
+    return (
+      <div className="audit-container">
+        <button className="exit-button" onClick={handleExit}>
+          <FaTimes />
+        </button>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="audit-content"
+        >
+          <h1 className="audit-title">{t('innovationDiagnosis.title')}</h1>
+          <form onSubmit={e => {
+            e.preventDefault();
+            handleMoreInfoSubmit(infoQuestions);
+            }} className="user-info-form">
+            {
+              infoQuestionsData.map((question, index) => (
+                <div className="form-row" key={index}>
+                <div className="form-group full-width">
+                  <label htmlFor={`question-${index}`}>{question}</label>
+                  <input
+                    type="text"
+                    value={infoQuestions[index] || ''}
+                    onChange={e => {
+                      const newInfoQuestions = [...infoQuestions];
+                      newInfoQuestions[index] = e.target.value;
+                      setInfoQuestions(newInfoQuestions);
+                    }}
+                    placeholder={t('innovationDiagnosis.form.info.placeholder', { index: index + 1 })}
+                    id={`question-${index}`}
+                  />
+                </div>
+              </div>
+              ))
+            }
             <p className="consent-text">
               {consentText}
             </p>

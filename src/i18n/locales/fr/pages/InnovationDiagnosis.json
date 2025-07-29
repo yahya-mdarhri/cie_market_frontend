@@ -108,6 +108,17 @@
           "max": "Le numéro de téléphone ne doit pas dépasser 15 caractères",
           "required": "Le numéro de téléphone est requis"
         }
+      },
+      "info": {
+        "question_1": "Décrivez brièvement votre rôle actuel et vos responsabilités.",
+        "question_2": "Avez-vous contribué à des initiatives d’innovation ou d’amélioration au sein de votre organisation ? Décrivez brièvement.",
+        "question_3": "Qu’est-ce qui vous motive le plus dans votre travail actuel ?",
+        "question_4": "Quel type de problèmes ou de défis aimez-vous résoudre ?",
+        "question_5": "Quelles qualités personnelles pensez-vous favoriser l’innovation dans votre travail ?",
+        "question_6": "Quel est, selon vous, le principal obstacle à l’innovation dans votre environnement ?",
+        "question_7": "Quelle est votre plus grande force lorsque vous travaillez en équipe ?",
+        "question_8": "Quel est votre plus grand défi ou point faible dans le travail d’équipe ou créatif ?",
+        "placeholder": "Votre réponse ici..."
       }
     },
     "results": {

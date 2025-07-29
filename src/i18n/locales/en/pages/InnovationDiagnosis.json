@@ -108,6 +108,17 @@
           "max": "Phone number must be at most 15 characters",
           "required": "Phone number is required"
         }
+      },
+      "info": {
+        "question_1": "Briefly describe your current role and responsibilities.",
+        "question_2": "Have you contributed to any innovation or improvement initiatives in your organization? Describe briefly.",
+        "question_3": "What motivates you most in your current work?",
+        "question_4": "What kind of problems or challenges do you enjoy solving?",
+        "question_5": "What personal qualities do you think support innovation in your work?",
+        "question_6": "What do you consider the main barrier to innovation in your environment?",
+        "question_7": "What is your biggest strength when working in a team?",
+        "question_8": "What is your biggest challenge or weakness in team-based or creative work?",
+        "placeholder": "Your answer here..."
       }
     },
     "results": {

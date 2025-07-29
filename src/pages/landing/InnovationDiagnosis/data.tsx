@@ -79,4 +79,15 @@ export const getScoreRanges = (t: any) => [
     }
 ];
 
+export const getInfoQuestions = (t: any) => [
+    t('innovationDiagnosis.form.info.question_1'),
+    t('innovationDiagnosis.form.info.question_2'),
+    t('innovationDiagnosis.form.info.question_3'),
+    t('innovationDiagnosis.form.info.question_4'),
+    t('innovationDiagnosis.form.info.question_5'),
+    t('innovationDiagnosis.form.info.question_6'),
+    t('innovationDiagnosis.form.info.question_7'),
+    t('innovationDiagnosis.form.info.question_8'),
+];
+
 export const getConsentText = (t: any) => t('innovationDiagnosis.form.consent');
