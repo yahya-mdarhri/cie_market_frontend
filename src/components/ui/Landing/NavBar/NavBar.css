@@ -21,9 +21,10 @@
 
 .navbar.scrolled {
   background-color: var(--primary-color);
-  margin: 5px 1%;
+  margin-top: 5px;
   max-width: 1400px;
   border-radius: 8px;
+	width: 97%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
