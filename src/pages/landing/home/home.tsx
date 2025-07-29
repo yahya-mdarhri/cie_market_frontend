@@ -13,6 +13,7 @@ import { useDocumentTitle } from "@hooks/useDocumentTitle";
 import { Link } from 'react-router-dom';
 import ContactUs from "@ui/Landing/ContactUs/ContactUs";
 import { getDepartments, getHeroProps, partners } from './data';
+import axios from "axios";
 
 interface CIEItemProps {
 	name: string;
@@ -42,6 +43,11 @@ function Home() {
 	const { t } = useTranslation('home');
 	useDocumentTitle('Home | Centre for Innovation and Entrepreneurship');
 
+
+	const handleContactUsSubmit = (data: any) => {
+		axios.post('https://backendciemarket-baa6b6e1090a.herokuapp.com/api/public/contact-us/', data)
+		.catch(err => console.log(err))
+	}
 	return (
 		<LandingLayout heroProps={getHeroProps(t)}>
 				<Introduction 
@@ -84,7 +90,7 @@ function Home() {
 				<Partners partners={partners} />
 				<div className="Home5thSection" id="contact">
 					<ContactUs 
-					onSubmit={(_formData) =>{}} />
+					onSubmit={handleContactUsSubmit} />
 				</div>
 		</LandingLayout>
 	);
