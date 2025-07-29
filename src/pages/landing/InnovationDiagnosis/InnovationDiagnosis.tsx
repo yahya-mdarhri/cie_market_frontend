@@ -232,8 +232,13 @@ function InnovationDiagnosis() {
 				responses: responses,
 				profile_responses: profileResponses,
 			};
+
+			const submitPayload = async () => {
+				await axios.post('https://backendciemarket-baa6b6e1090a.herokuapp.com/api/public/innovation-submition/', payload);
+			};
 	
-			axios.post('https://backendciemarket-baa6b6e1090a.herokuapp.com/api/public/innovation-submition/', payload)
+			submitPayload();
+	
 		}
 	}, [isComplete]);
   // basic  information form
