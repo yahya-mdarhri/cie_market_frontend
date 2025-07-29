@@ -12,7 +12,7 @@ export interface ContactFormData {
   name: string;
   email: string;
   phone: string;
-  companyName?: string;
+  company_name?: string;
   position?: string;
   subject: string;
   message: string;
@@ -32,6 +32,8 @@ const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+		const form = e.target as HTMLFormElement;
     const formData = new FormData(e.target as HTMLFormElement);
     const data: ContactFormData = {
       contact_type: formData.get('contact_type') as 'inventor' | 'company',
@@ -46,6 +48,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
     if (onSubmit) {
       onSubmit(data);
     }
+		form.reset();
   };
 
   return (
