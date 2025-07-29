@@ -67,6 +67,8 @@
       }
     },
     "form": {
+			"person": "Personne",
+			"company": "Entreprise",
       "consent": "En cliquant sur 'Démarrer l'Évaluation', je consens à la collecte et au traitement des informations que j'ai fournies à des fins d'évaluation.",
       "start": "Démarrer l'Évaluation",
       "fullName": "Nom Complet",
@@ -130,6 +132,230 @@
       "back": "Retour",
       "next": "Suivant",
       "finish": "Terminer"
-    }
+    },
+		"profile": {
+			"questions": {
+				"question_1": {
+					"question": "Lors d’une réunion d’équipe, vous avez tendance à…",
+					"option_a": "Définir des priorités à long terme",
+					"option_b": "Faire en sorte que tout le monde soit entendu",
+					"option_c": "Suggérer des idées originales",
+					"option_d": "Soutenir vos coéquipiers",
+					"option_e": "Pousser à l’exécution"
+				},
+				"question_2": {
+					"question": "Votre point fort dans un projet est…",
+					"option_a": "La vision et la planification",
+					"option_b": "La coordination de l’équipe",
+					"option_c": "La recherche de nouvelles solutions",
+					"option_d": "Le mentorat des autres",
+					"option_e": "Faire avancer les choses"
+				},
+				"question_3": {
+					"question": "Face à l’ambiguïté, vous…",
+					"option_a": "Analysez et définissez les objectifs",
+					"option_b": "Demandez l’avis de tout le monde",
+					"option_c": "Passez à l’expérimentation",
+					"option_d": "Rassurez les autres",
+					"option_e": "Commencez à tester des solutions rapidement"
+				},
+				"question_4": {
+					"question": "Devant un nouveau défi, vous commencez par…",
+					"option_a": "Structurer et cadrer la situation",
+					"option_b": "Organiser une réunion d’équipe",
+					"option_c": "Faire des recherches et explorer",
+					"option_d": "Demander qui a besoin d’aide",
+					"option_e": "Identifier ce qui peut être exécuté rapidement"
+				},
+				"question_5": {
+					"question": "Votre rôle idéal dans un projet est de…",
+					"option_a": "Définir la stratégie",
+					"option_b": "Animer les réunions",
+					"option_c": "Stimuler la créativité",
+					"option_d": "Soutenir le développement",
+					"option_e": "Produire des résultats"
+				},
+				"question_6": {
+					"question": "Vous mesurez le succès par…",
+					"option_a": "L’atteinte des objectifs stratégiques",
+					"option_b": "La satisfaction de l’équipe",
+					"option_c": "Le nombre d’idées générées",
+					"option_d": "L’autonomisation des personnes",
+					"option_e": "Les tâches accomplies"
+				},
+				"question_7": {
+					"question": "En collaboration, vous…",
+					"option_a": "Donnez la direction",
+					"option_b": "Faites la médiation et organisez",
+					"option_c": "Remettez en question les idées",
+					"option_d": "Encouragez le développement personnel",
+					"option_e": "Vous concentrez sur les livrables"
+				},
+				"question_8": {
+					"question": "Votre style de pensée est…",
+					"option_a": "Logique et à long terme",
+					"option_b": "Relationnel et dynamique",
+					"option_c": "Curieux et divergent",
+					"option_d": "Réfléchi et empathique",
+					"option_e": "Pratique et ciblé"
+				},
+				"question_9": {
+					"question": "Vous vous épanouissez lorsque…",
+					"option_a": "Vous élaborez des plans",
+					"option_b": "Vous unifiez les équipes",
+					"option_c": "Vous explorez des possibilités",
+					"option_d": "Vous accompagnez les débutants",
+					"option_e": "Vous livrez des résultats"
+				},
+				"question_10": {
+					"question": "Vous détestez quand…",
+					"option_a": "Il n’y a pas d’objectif clair",
+					"option_b": "Certaines personnes sont exclues",
+					"option_c": "Il n’y a pas de place pour l’innovation",
+					"option_d": "Les autres luttent seuls",
+					"option_e": "Les projets prennent du retard"
+				},
+				"question_11": {
+					"question": "Vous proposez généralement…",
+					"option_a": "Un cadre de travail",
+					"option_b": "Un accord d’équipe",
+					"option_c": "Une nouvelle expérience",
+					"option_d": "Une histoire personnelle",
+					"option_e": "Un plan d’action"
+				},
+				"question_12": {
+					"question": "Ce qui vous frustre le plus est…",
+					"option_a": "Le manque de vision",
+					"option_b": "La mauvaise communication",
+					"option_c": "La routine et la monotonie",
+					"option_d": "Le manque de soutien",
+					"option_e": "Les discussions interminables sans action"
+				},
+				"question_13": {
+					"question": "Vous préférez apprendre par…",
+					"option_a": "Des modèles et des stratégies",
+					"option_b": "Des discussions et du travail en groupe",
+					"option_c": "L’exploration et les tests",
+					"option_d": "Le partage et les retours",
+					"option_e": "La pratique et l’itération"
+				},
+				"question_14": {
+					"question": "On vous voit comme quelqu’un qui…",
+					"option_a": "Apporte de la clarté",
+					"option_b": "Crée du lien",
+					"option_c": "Pense différemment",
+					"option_d": "Renforce la confiance",
+					"option_e": "Exécute de manière constante"
+				},
+				"question_15": {
+					"question": "En cas de conflit, vous…",
+					"option_a": "Réalignez la vision",
+					"option_b": "Médiez pour un consensus",
+					"option_c": "Explorez d’autres perspectives",
+					"option_d": "Désamorcez et empathisez",
+					"option_e": "Vous recentrez sur les tâches"
+				},
+				"question_16": {
+					"question": "Sous pression avec un délai serré, vous…",
+					"option_a": "Réorganisez les priorités",
+					"option_b": "Réattribuez les rôles",
+					"option_c": "Cherchez des raccourcis créatifs",
+					"option_d": "Restez calme et guidez les autres",
+					"option_e": "Poussez pour finir vite"
+				},
+				"question_17": {
+					"question": "Vous préférez travailler avec…",
+					"option_a": "Des objectifs structurés",
+					"option_b": "Un alignement d’équipe",
+					"option_c": "Des problèmes ouverts",
+					"option_d": "Des apprenants",
+					"option_e": "Des tâches claires"
+				},
+				"question_18": {
+					"question": "Vous brillez lorsque…",
+					"option_a": "Vous présentez une stratégie",
+					"option_b": "Vous organisez des ateliers",
+					"option_c": "Vous prototypez des idées",
+					"option_d": "Vous menez des coachings",
+					"option_e": "Vous dirigez des sprints"
+				},
+				"question_19": {
+					"question": "Pour vous, l’innovation est…",
+					"option_a": "Un processus guidé",
+					"option_b": "Un sport d’équipe",
+					"option_c": "Un état d’esprit curieux",
+					"option_d": "Un parcours de croissance",
+					"option_e": "Une question d’exécution"
+				},
+				"question_20": {
+					"question": "Votre style de leadership est…",
+					"option_a": "Stratégique",
+					"option_b": "Participatif",
+					"option_c": "Expérimental",
+					"option_d": "Développemental",
+					"option_e": "Directif"
+				},
+				"question_21": {
+					"question": "En groupe, vous êtes…",
+					"option_a": "Le planificateur",
+					"option_b": "Le connecteur",
+					"option_c": "Le générateur d’idées",
+					"option_d": "Le coach",
+					"option_e": "L’exécutant"
+				},
+				"question_22": {
+					"question": "Votre plus grand atout est…",
+					"option_a": "La vision",
+					"option_b": "L’empathie",
+					"option_c": "La créativité",
+					"option_d": "L’écoute",
+					"option_e": "L’efficacité"
+				},
+				"question_23": {
+					"question": "Votre modèle est…",
+					"option_a": "Un PDG visionnaire",
+					"option_b": "Un excellent chef d’équipe",
+					"option_c": "Un innovateur tech",
+					"option_d": "Un enseignant ou un guide",
+					"option_e": "Un exécutant orienté résultats"
+				},
+				"question_24": {
+					"question": "Ce qui vous enthousiasme le plus dans un nouveau projet…",
+					"option_a": "Définir les objectifs",
+					"option_b": "La dynamique d’équipe",
+					"option_c": "Tester de nouvelles méthodes",
+					"option_d": "Faire grandir les gens",
+					"option_e": "Atteindre les étapes clés"
+				},
+				"question_25": {
+					"question": "Comment gérez-vous l’échec ?",
+					"option_a": "En retravaillant le plan",
+					"option_b": "En comptant sur votre équipe",
+					"option_c": "En testant de nouvelles approches",
+					"option_d": "En encourageant les autres",
+					"option_e": "En corrigeant et avançant rapidement"
+				}
+			},
+			"comment": {
+				"label": "Laissez un commentaire",
+				"placeholder": "Partagez un exemple ou une réflexion liée à votre choix..."
+			},
+			"profiles": {
+				"titles": {
+					"a": "Le Stratège",
+					"b": "Le Facilitateur",
+					"c": "L'Explorateur",
+					"d": "Le Mentor",
+					"e": "Le Réalisateur / L’Exécutant"
+				},
+				"descriptions": {
+					"a": "Vous êtes un Stratège — vous voyez la situation dans son ensemble et apportez de la clarté à la complexité. Vous excellez à définir des objectifs à long terme, structurer les idées et aligner les équipes sur une vision commune. Votre force réside dans la transformation du chaos en plans cohérents. Dans les équipes d’innovation, vous apportez orientation et prévoyance.",
+					"b": "Vous êtes un Facilitateur — le lien entre les personnes et les idées. Vous créez un environnement collaboratif, garantissez l’alignement, et supprimez les obstacles pour favoriser l’innovation. Votre présence aide les équipes à avancer dans l’harmonie et la compréhension partagée.",
+					"c": "Vous êtes un Explorateur — curieux, expérimental, et animé par la découverte. Vous n’avez pas peur de remettre en question les normes et d’expérimenter de nouvelles possibilités. Dans l’innovation, vous stimulez la créativité, interrogez les hypothèses et poussez les équipes vers de nouvelles directions audacieuses.",
+					"d": "Vous êtes un Mentor — bienveillant, réfléchi et centré sur les personnes. Vous encouragez les autres, partagez vos connaissances et créez un espace de croissance. Dans l’innovation, vous accompagnez les talents et aidez les idées à mûrir pour générer de la valeur réelle.",
+					"e": "Vous êtes un Réalisateur — orienté vers l’action et axé sur les résultats. Vous transformez les idées en réalités concrètes. Dans l’innovation, vous êtes essentiel pour faire avancer les choses et concrétiser les concepts."
+				}
+			}
+		}
   }
 } 

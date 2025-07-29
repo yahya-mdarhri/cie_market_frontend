@@ -266,6 +266,7 @@
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.
 .audit-results h3 {
     font-size: 1.1rem;
     font-weight: 600;
@@ -347,6 +348,10 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.results-container.radar-results {
+	max-width: 1000px;
+}
+
 .results-title {
     font-size: 2rem;
     color: var(--white);
@@ -407,6 +412,10 @@
     opacity: 0.9;
     padding-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.type-description.profile-des {
+	margin-bottom: 30px;
 }
 
 .results-description {
@@ -722,3 +731,10 @@
         padding: 0.6rem;
     }
 }
+
+.recharts-wrapper svg {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+

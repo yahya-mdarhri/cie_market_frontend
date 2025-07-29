@@ -7,15 +7,28 @@ import * as yup from "yup";
 import "./InnovationDiagnosis.css";
 import { HashLink } from "react-router-hash-link";
 import { useTranslation } from 'react-i18next';
-import { getPhases, getQuestionsByPhase, getIcons, getScoreRanges, getConsentText, getInfoQuestions } from "./data";
+import { getPhases, getQuestionsByPhase, getIcons, getScoreRanges, getConsentText, getInfoQuestions, getProfileQuestions, getProfileAnswers } from "./data";
+
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+
+
 
 interface Response {
   note: number;
   evidence: string;
 }
 
+interface ProfileResponse {
+	option: string;
+	comment: string;
+}
+
 interface Responses {
   [key: number]: Response;
+}
+
+interface ProfileResponses {
+	[key: number]: ProfileResponse
 }
 
 interface QuizResult {
@@ -60,6 +73,7 @@ const createUserInfoSchema = (t: (key: string) => string) => yup.object().shape(
 function InnovationDiagnosis() {
   const { t } = useTranslation('innovationDiagnosis');
   const [responses, setResponses] = useState<Responses>({});
+	const [profileResponses, setProfileResponses] = useState<ProfileResponses>({})
   const [step, setStep] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
   const infoQuestionsData = getInfoQuestions(t)
@@ -96,6 +110,8 @@ function InnovationDiagnosis() {
     }))
   );
 
+	const profileQuestions: string[] =  getProfileQuestions(t);
+	const profileQuestionOptions = getProfileAnswers(t)
   const { register, handleSubmit, formState: { errors } } = useForm<UserInfo>({
     resolver: yupResolver(createUserInfoSchema(t))
   });
@@ -120,6 +136,15 @@ function InnovationDiagnosis() {
       }
     }));
   };
+	const handleProfileChange = (index: number, field: keyof ProfileResponse, value: string | number) => {
+		setProfileResponses(prev => ({
+			...prev,
+			[index]: {
+				...prev[index],
+				[field]: value
+			}
+		}))
+	}
 
   const handleMoreInfoSubmit = (data: string[]) => {
     setInfoQuestions(data);
@@ -131,12 +156,20 @@ function InnovationDiagnosis() {
     setHasStarted(true);
   };
 
+	const globalIndex = step + 1;
+	
   const totalQuestions = questions.length;
   const currentQuestion = questions[step];
-  const currentPhase = currentQuestion.phase;
-  const globalIndex = step + 1;
+  const currentPhase = currentQuestion?.phase;
   const selectedNote = responses[globalIndex]?.note ?? "";
   const evidence = responses[globalIndex]?.evidence ?? "";
+
+
+	const totalProfileQuestions = profileQuestions.length;
+  const currentProfileQuestion = profileQuestions[step];
+  const selectedOption = profileResponses[globalIndex]?.option ?? "";
+  const comment = profileResponses[globalIndex]?.comment ?? "";
+	
 
   const calculateScore = (): QuizResult => {
     const total = Object.values(responses).reduce(
@@ -159,12 +192,21 @@ function InnovationDiagnosis() {
     }
   };
 
+	const handleProfileNext = () => {
+    if (step < totalProfileQuestions - 1) {
+      setStep(step + 1);
+    } else {
+      setIsComplete(true);
+    }
+  };
+
   const handleBack = () => {
     if (step > 0) setStep(step - 1);
   };
 
   const { type, description } = calculateScore();
 
+  // basic  information form
   if (!hasStarted) {
     return (
       <div className="audit-container">
@@ -272,7 +314,8 @@ function InnovationDiagnosis() {
     );
   }
 
-  if (hasStarted && !isComplete && userType === 'company' && !filledSecondForm) {
+  // more question info for company 
+  if (hasStarted && !isComplete && userType === 'person' && !filledSecondForm) {
     return (
       <div className="audit-container">
         <button className="exit-button" onClick={handleExit}>
@@ -323,37 +366,173 @@ function InnovationDiagnosis() {
     );
   }
 
-  if (isComplete) {
+  // result of like-seek for company
+  if (userType === 'company') {
+    if (isComplete) {
+      return (
+        <div className="audit-container">
+          <button className="exit-button" onClick={handleExit}>
+            <FaTimes />
+          </button>
+          <button className="reset-button" onClick={handleReset}>
+            <FaRedo />
+          </button>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="results-container"
+          >
+            <h2 className="results-title">{t('innovationDiagnosis.results.title')}</h2>
+            <div className="results-type">
+              <h3 className="type-label">{t('innovationDiagnosis.results.type')}</h3>
+              <div className="type-value">{type}</div>
+              <p className="type-description">{description}</p>
+            </div>
+            
+            <div className="results-actions">
+              <HashLink smooth to="/#contact" className="action-button contact">
+                {t('innovationDiagnosis.results.contact')}
+              </HashLink>
+            </div>
+          </motion.div>
+        </div>
+      );
+    }
+  
     return (
       <div className="audit-container">
         <button className="exit-button" onClick={handleExit}>
           <FaTimes />
         </button>
-        <button className="reset-button" onClick={handleReset}>
-          <FaRedo />
-        </button>
+        <h1 className="audit-title">{t('innovationDiagnosis.title')}</h1>
+  
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          key={step}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="results-container"
+          className="audit-content"
         >
-          <h2 className="results-title">{t('innovationDiagnosis.results.title')}</h2>
-          <div className="results-type">
-            <h3 className="type-label">{t('innovationDiagnosis.results.type')}</h3>
-            <div className="type-value">{type}</div>
-            <p className="type-description">{description}</p>
+          <div className="audit-progress">
+            <div className="progress-header">
+              <div className="phase-badge">{currentPhase}</div>
+              <div className="question-number">
+                <span className="number">{globalIndex}</span>
+                <span className="separator">/</span>
+                <span className="total">{totalQuestions}</span>
+              </div>
+            </div>
+            <p className="audit-question">{currentQuestion.question}</p>
           </div>
-          
-          <div className="results-actions">
-            <HashLink smooth to="/#contact" className="action-button contact">
-              {t('innovationDiagnosis.results.contact')}
-            </HashLink>
+  
+          <div className="audit-answers-grid">
+            {icons.map((item, index) => (
+              <button
+                key={index}
+                onClick={() => handleChange(globalIndex, "note", index)}
+                className={`audit-answer-button ${selectedNote === index ? 'selected' : ''} ${item.className}`}
+              >
+                <item.icon />
+                <span className="answer-label">{item.label}</span>
+              </button>
+            ))}
+          </div>
+  
+          <div className="audit-evidence">
+            <label>{t('innovationDiagnosis.form.evidence.label')}</label>
+            <textarea
+              placeholder={t('innovationDiagnosis.form.evidence.placeholder')}
+              value={evidence}
+              onChange={e => handleChange(globalIndex, "evidence", e.target.value)}
+            />
+          </div>
+  
+          <div className="audit-navigation">
+            <button
+              onClick={handleBack}
+              disabled={step === 0}
+              className="audit-nav-button back"
+            >
+              {t('innovationDiagnosis.navigation.back')}
+            </button>
+            <button
+              onClick={handleNext}
+              disabled={selectedNote === undefined}
+              className="audit-nav-button next"
+            >
+              {step === totalQuestions - 1 ? t('innovationDiagnosis.navigation.finish') : t('innovationDiagnosis.navigation.next')}
+            </button>
           </div>
         </motion.div>
       </div>
     );
   }
+
+	if (isComplete) {
+		const profileCounts: Record<'a' | 'b' | 'c' | 'd' | 'e', number> = {
+			a: 0,
+			b: 0,
+			c: 0,
+			d: 0,
+			e: 0,
+		};
+		
+		Object.values(profileResponses).forEach(response => {
+			if (response.option in profileCounts) {
+				profileCounts[response.option as keyof typeof profileCounts]++;
+			}
+		});
+		
+		const maxProfile = (Object.keys(profileCounts) as Array<keyof typeof profileCounts>)
+					.reduce((a, b) => profileCounts[a] > profileCounts[b] ? a : b);
+		const radarData = Object.entries(profileCounts).map(([key, value]) => ({
+			profile: t(`innovationDiagnosis.profile.profiles.titles.${key}`),
+			count: value,
+		}));
+
+		const description = t(`innovationDiagnosis.profile.profiles.descriptions.${maxProfile}`);
+		const formattedDescription = description.split('.').map((sentence, index) => (
+			sentence.trim() && (
+				<span key={index}>
+					{sentence.trim()}.
+					<br />
+				</span>
+			)
+		));
+
+		return (
+			<div className="audit-container">
+				<button className="exit-button" onClick={handleExit}><FaTimes /></button>
+				<button className="reset-button" onClick={handleReset}><FaRedo /></button>
+				<motion.div
+					initial={{ opacity: 0, scale: 0.9 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 0.5 }}
+					className="radar-results results-container "
+				>
+					<h2 className="results-title">{t('innovationDiagnosis.results.title')}</h2>
+					<div className="results-type">
+						<div className="type-value">{t(`innovationDiagnosis.profile.profiles.titles.${maxProfile}`)}</div>
+						<p className="type-description profile-des">{formattedDescription}</p>
+						<ResponsiveContainer width="100%" height={300}>
+							<RadarChart data={radarData}>
+								<PolarGrid />
+								<PolarAngleAxis dataKey="profile" tick={{ fill: '#fff' }}/>
+								<PolarRadiusAxis  tick={false} axisLine={false}/>
+								<Radar name="Profile" dataKey="count" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+							</RadarChart>
+						</ResponsiveContainer>
+					</div>
+					<div className="results-actions">
+						<HashLink smooth to="/#contact" className="action-button contact">
+							{t('innovationDiagnosis.results.contact')}
+						</HashLink>
+					</div>
+				</motion.div>
+			</div>
+		);
+	}
 
   return (
     <div className="audit-container">
@@ -371,35 +550,36 @@ function InnovationDiagnosis() {
       >
         <div className="audit-progress">
           <div className="progress-header">
-            <div className="phase-badge">{currentPhase}</div>
+            {
+						// <div className="phase-badge">{currentPhase}</div>
+						}
             <div className="question-number">
               <span className="number">{globalIndex}</span>
               <span className="separator">/</span>
-              <span className="total">{totalQuestions}</span>
+              <span className="total">{totalProfileQuestions}</span>
             </div>
           </div>
-          <p className="audit-question">{currentQuestion.question}</p>
+          <p className="audit-question">{currentProfileQuestion}</p>
         </div>
 
-        <div className="audit-answers-grid">
-          {icons.map((item, index) => (
+        <div className="flex w-full flex-row flex-wrap justify-center-safe gap-2 ">
+          {profileQuestionOptions[step].map((item, index) => (
             <button
               key={index}
-              onClick={() => handleChange(globalIndex, "note", index)}
-              className={`audit-answer-button ${selectedNote === index ? 'selected' : ''} ${item.className}`}
+              onClick={() => handleProfileChange(globalIndex, "option", "abcde"[index])}
+              className={`audit-answer-button w-[49%] ${selectedOption === "abcde"[index] ? 'selected' : ''}`}
             >
-              <item.icon />
-              <span className="answer-label">{item.label}</span>
+              <span className="answer-label">{item}</span>
             </button>
           ))}
         </div>
 
         <div className="audit-evidence">
-          <label>{t('innovationDiagnosis.form.evidence.label')}</label>
+          <label>{t('innovationDiagnosis.profile.comment.label')}</label>
           <textarea
-            placeholder={t('innovationDiagnosis.form.evidence.placeholder')}
-            value={evidence}
-            onChange={e => handleChange(globalIndex, "evidence", e.target.value)}
+            placeholder={t('innovationDiagnosis.profile.comment.placeholder')}
+            value={comment}
+            onChange={e => handleProfileChange(globalIndex, "comment", e.target.value)}
           />
         </div>
 
@@ -412,11 +592,11 @@ function InnovationDiagnosis() {
             {t('innovationDiagnosis.navigation.back')}
           </button>
           <button
-            onClick={handleNext}
-            disabled={selectedNote === undefined}
+            onClick={handleProfileNext}
+            disabled={selectedOption === undefined}
             className="audit-nav-button next"
           >
-            {step === totalQuestions - 1 ? t('innovationDiagnosis.navigation.finish') : t('innovationDiagnosis.navigation.next')}
+            {step === totalProfileQuestions - 1 ? t('innovationDiagnosis.navigation.finish') : t('innovationDiagnosis.navigation.next')}
           </button>
         </div>
       </motion.div>

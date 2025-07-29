@@ -71,6 +71,8 @@
       }
     },
     "form": {
+			"person": "Persona",
+			"company": "Empresa",
       "consent": "Al hacer clic en 'Iniciar Evaluación', doy mi consentimiento para la recopilación y el procesamiento de la información proporcionada con fines de evaluación.",
       "start": "Iniciar Evaluación",
       "fullName": "Nombre Completo",
@@ -129,6 +131,230 @@
       "back": "Atrás",
       "next": "Siguiente",
       "finish": "Finalizar"
-    }
+    },
+		"profile": {
+			"questions": {
+				"question_1": {
+					"question": "En una reunión de equipo, tú normalmente…",
+					"option_a": "Estableces prioridades a largo plazo",
+					"option_b": "Te aseguras de que todos sean escuchados",
+					"option_c": "Sugieres ideas poco comunes",
+					"option_d": "Apoyas a los compañeros",
+					"option_e": "Impulsas la ejecución"
+				},
+				"question_2": {
+					"question": "Tu fortaleza en un proyecto es…",
+					"option_a": "Visión y planificación",
+					"option_b": "Coordinación del equipo",
+					"option_c": "Encontrar nuevas soluciones",
+					"option_d": "Guiar a otros",
+					"option_e": "Lograr que las cosas se hagan"
+				},
+				"question_3": {
+					"question": "Ante la ambigüedad, tú…",
+					"option_a": "Analizas y defines objetivos",
+					"option_b": "Preguntas la opinión de todos",
+					"option_c": "Te lanzas a experimentar",
+					"option_d": "Tranquilizas a los demás",
+					"option_e": "Empiezas a probar soluciones rápidas"
+				},
+				"question_4": {
+					"question": "Ante un nuevo reto, primero tú…",
+					"option_a": "Lo estructuras y lo encuadras",
+					"option_b": "Llamas a una reunión de equipo",
+					"option_c": "Investigas y exploras",
+					"option_d": "Preguntas quién necesita ayuda",
+					"option_e": "Identificas qué se puede ejecutar rápido"
+				},
+				"question_5": {
+					"question": "Tu rol ideal en un proyecto…",
+					"option_a": "Liderar la estrategia",
+					"option_b": "Facilitar reuniones",
+					"option_c": "Desencadenar la creatividad",
+					"option_d": "Apoyar el desarrollo",
+					"option_e": "Impulsar resultados"
+				},
+				"question_6": {
+					"question": "Mides el éxito por…",
+					"option_a": "Alcanzar metas estratégicas",
+					"option_b": "Satisfacción del equipo",
+					"option_c": "Ideas generadas",
+					"option_d": "Personas empoderadas",
+					"option_e": "Tareas completadas"
+				},
+				"question_7": {
+					"question": "Al colaborar, tú…",
+					"option_a": "Estableces la dirección",
+					"option_b": "Medias y organizas",
+					"option_c": "Cuestionas ideas",
+					"option_d": "Fomentas el crecimiento",
+					"option_e": "Te enfocas en entregables"
+				},
+				"question_8": {
+					"question": "Tu estilo de pensamiento es…",
+					"option_a": "Lógico y a largo plazo",
+					"option_b": "Relacional y dinámico",
+					"option_c": "Curioso y divergente",
+					"option_d": "Reflexivo y empático",
+					"option_e": "Práctico y enfocado"
+				},
+				"question_9": {
+					"question": "Te destacas cuando…",
+					"option_a": "Construyes planes",
+					"option_b": "Unificas equipos",
+					"option_c": "Exploras opciones",
+					"option_d": "Guias a los más jóvenes",
+					"option_e": "Entregas resultados"
+				},
+				"question_10": {
+					"question": "No te gusta cuando…",
+					"option_a": "No hay una meta clara",
+					"option_b": "Las personas se sienten excluidas",
+					"option_c": "No hay espacio para innovar",
+					"option_d": "Otros luchan solos",
+					"option_e": "Los proyectos se retrasan"
+				},
+				"question_11": {
+					"question": "Normalmente propones…",
+					"option_a": "Un marco",
+					"option_b": "Un acuerdo del equipo",
+					"option_c": "Un nuevo experimento",
+					"option_d": "Una historia personal",
+					"option_e": "Un plan de acción"
+				},
+				"question_12": {
+					"question": "Lo que más te frustra es…",
+					"option_a": "Falta de visión",
+					"option_b": "Mala comunicación",
+					"option_c": "Rutina y monotonía",
+					"option_d": "Falta de apoyo",
+					"option_e": "Hablar sin actuar"
+				},
+				"question_13": {
+					"question": "Prefieres aprender mediante…",
+					"option_a": "Modelos y estrategias",
+					"option_b": "Debates y trabajo en grupo",
+					"option_c": "Exploración y prueba",
+					"option_d": "Retroalimentación",
+					"option_e": "Haciendo e iterando"
+				},
+				"question_14": {
+					"question": "Eres visto como alguien que…",
+					"option_a": "Aporta claridad",
+					"option_b": "Conecta a las personas",
+					"option_c": "Piensa fuera de la caja",
+					"option_d": "Construye confianza",
+					"option_e": "Ejecuta de forma consistente"
+				},
+				"question_15": {
+					"question": "Si hay conflicto, tú…",
+					"option_a": "Realineas la visión",
+					"option_b": "Medias para lograr consenso",
+					"option_c": "Exploras nuevas perspectivas",
+					"option_d": "Desescalas y empatizas",
+					"option_e": "Te enfocas en las tareas"
+				},
+				"question_16": {
+					"question": "Con una fecha límite ajustada, tú…",
+					"option_a": "Reorganizas prioridades",
+					"option_b": "Reasignas roles",
+					"option_c": "Buscas atajos creativos",
+					"option_d": "Mantienes la calma y guías",
+					"option_e": "Empujas para terminar rápido"
+				},
+				"question_17": {
+					"question": "Prefieres trabajar con…",
+					"option_a": "Objetivos estructurados",
+					"option_b": "Alineación del equipo",
+					"option_c": "Problemas abiertos",
+					"option_d": "Personas dispuestas a aprender",
+					"option_e": "Tareas claras"
+				},
+				"question_18": {
+					"question": "Brillas cuando…",
+					"option_a": "Presentas estrategias",
+					"option_b": "Organizas talleres",
+					"option_c": "Prototipas ideas",
+					"option_d": "Das sesiones de coaching",
+					"option_e": "Diriges sprints"
+				},
+				"question_19": {
+					"question": "Crees que la innovación es…",
+					"option_a": "Un proceso guiado",
+					"option_b": "Un deporte en equipo",
+					"option_c": "Una mentalidad de curiosidad",
+					"option_d": "Un viaje de crecimiento",
+					"option_e": "Una cuestión de ejecución"
+				},
+				"question_20": {
+					"question": "Tu estilo de liderazgo es…",
+					"option_a": "Estratégico",
+					"option_b": "Participativo",
+					"option_c": "Experimental",
+					"option_d": "Desarrollador",
+					"option_e": "Directivo"
+				},
+				"question_21": {
+					"question": "En trabajo grupal, tú eres…",
+					"option_a": "El planificador",
+					"option_b": "El conector",
+					"option_c": "El creativo",
+					"option_d": "El coach",
+					"option_e": "El ejecutor"
+				},
+				"question_22": {
+					"question": "Tu mayor fortaleza es…",
+					"option_a": "Visión",
+					"option_b": "Empatía",
+					"option_c": "Creatividad",
+					"option_d": "Escucha activa",
+					"option_e": "Eficiencia"
+				},
+				"question_23": {
+					"question": "Tu modelo a seguir es…",
+					"option_a": "Un CEO visionario",
+					"option_b": "Un gran líder de equipo",
+					"option_c": "Un innovador tecnológico",
+					"option_d": "Un maestro o guía",
+					"option_e": "Un ejecutor orientado a resultados"
+				},
+				"question_24": {
+					"question": "¿Qué te emociona más de un nuevo proyecto?",
+					"option_a": "Establecer objetivos",
+					"option_b": "La dinámica del equipo",
+					"option_c": "Probar nuevos métodos",
+					"option_d": "Hacer crecer a las personas",
+					"option_e": "Alcanzar hitos"
+				},
+				"question_25": {
+					"question": "¿Cómo afrontas el fracaso?",
+					"option_a": "Revisando el plan",
+					"option_b": "Apoyándote en tu equipo",
+					"option_c": "Iterando nuevos enfoques",
+					"option_d": "Animando a los demás",
+					"option_e": "Solucionando y avanzando rápido"
+				}
+			},
+			"comment": {
+				"label": "Deja un comentario",
+				"placeholder": "Comparte un ejemplo específico o reflexión relacionada con tu elección..."
+			},
+			"profiles": {
+				"titles": {
+					"a": "El Estratega",
+					"b": "El Facilitador",
+					"c": "El Explorador",
+					"d": "El Mentor",
+					"e": "El Realizador / Ejecutador"
+				},
+				"descriptions": {
+					"a": "Eres un Estratega: ves el panorama general y aportas claridad a la complejidad. Eres excelente definiendo objetivos a largo plazo, estructurando ideas y alineando equipos con una visión compartida. Tu fortaleza está en convertir el caos en planes coherentes. En los equipos de innovación, aportas dirección y previsión.",
+					"b": "Eres un Facilitador: el puente entre las personas y las ideas. Creas entornos colaborativos, aseguras el alineamiento y eliminas barreras para que la innovación fluya. Tu presencia ayuda a los equipos a avanzar con armonía y entendimiento compartido.",
+					"c": "Eres un Explorador: curioso, experimental y motivado por el descubrimiento. No temes desafiar normas y probar nuevas posibilidades. En innovación, inspiras creatividad, cuestionas suposiciones y empujas al equipo hacia nuevas direcciones audaces.",
+					"d": "Eres un Mentor: solidario, reflexivo y enfocado en las personas. Empoderas a los demás, compartes conocimiento y creas espacio para el crecimiento. En innovación, cultivas el talento y ayudas a que las ideas maduren hasta convertirse en valor real.",
+					"e": "Eres un Realizador: orientado a la acción y centrado en los resultados. Tomas ideas y las haces realidad, asegurando que el progreso ocurra. En innovación, eres esencial para transformar conceptos en resultados concretos."
+				}
+			}
+		}
   }
 } 
