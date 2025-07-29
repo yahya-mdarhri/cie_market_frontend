@@ -49,6 +49,9 @@
       "strongly_agree": "Fortement d'Accord"
     },
     "results": {
+      "title": "Votre Évaluation d'Innovation",
+      "type": "Évaluation d'Innovation",
+      "contact": "Contactez Nos Experts",
       "embryonic": {
         "type": "Innovation Embryonnaire",
         "description": "Haut potentiel mais peu de structures en place."
@@ -122,11 +125,6 @@
         "question_8": "Quel est votre plus grand défi ou point faible dans le travail d’équipe ou créatif ?",
         "placeholder": "Votre réponse ici..."
       }
-    },
-    "results": {
-      "title": "Votre Évaluation d'Innovation",
-      "type": "Évaluation d'Innovation",
-      "contact": "Contactez Nos Experts"
     },
     "navigation": {
       "back": "Retour",

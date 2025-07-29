@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaTimes, FaRedo, FaUserTie, FaBuilding } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import "./InnovationDiagnosis.css";
+import axios from 'axios';
 import { HashLink } from "react-router-hash-link";
 import { useTranslation } from 'react-i18next';
 import { getPhases, getQuestionsByPhase, getIcons, getScoreRanges, getConsentText, getInfoQuestions, getProfileQuestions, getProfileAnswers } from "./data";
@@ -40,7 +41,7 @@ interface QuizResult {
 interface UserInfo {
   name: string;
   email: string;
-  organisation: string;
+  organization: string;
   position: string;
   phone: string;
 }
@@ -58,7 +59,7 @@ const createUserInfoSchema = (t: (key: string) => string) => yup.object().shape(
   email: yup.string()
     .email(t('innovationDiagnosis.form.validation.email.invalid'))
     .required(t('innovationDiagnosis.form.validation.email.required')),
-  organisation: yup.string()
+  organization: yup.string()
     .min(3, t('innovationDiagnosis.form.validation.organization.min'))
     .required(t('innovationDiagnosis.form.validation.organization.required')),
   position: yup.string()
@@ -78,10 +79,10 @@ function InnovationDiagnosis() {
   const [isComplete, setIsComplete] = useState(false);
   const infoQuestionsData = getInfoQuestions(t)
   const [infoQuestions, setInfoQuestions] = useState<string[]>([]);
-  const [_userInfo, setUserInfo] = useState<UserInfo>({
+  const [userInfo, setUserInfo] = useState<UserInfo>({
     name: '',
     email: '',
-    organisation: '',
+    organization: '',
     position: '',
     phone: '',
   });
@@ -121,11 +122,22 @@ function InnovationDiagnosis() {
   };
 
   const handleReset = () => {
-    setResponses({});
-    setStep(0);
-    setIsComplete(false);
-    setHasStarted(false);
-  };
+		setResponses({});
+		setProfileResponses({});
+		setStep(0);
+		setIsComplete(false);
+		setHasStarted(false);
+		setFilledSecondForm(false);
+		setUserType('person');
+		setUserInfo({
+			name: '',
+			email: '',
+			organization: '',
+			position: '',
+			phone: '',
+		});
+		setInfoQuestions([]);
+		};
 
   const handleChange = (index: number, field: keyof Response, value: string | number) => {
     setResponses(prev => ({
@@ -206,6 +218,24 @@ function InnovationDiagnosis() {
 
   const { type, description } = calculateScore();
 
+
+	useEffect(() => {
+		if (isComplete) {
+			const payload = {
+				name: userInfo.name,
+				email: userInfo.email,
+				organization: userInfo.organization,
+				position: userInfo.position,
+				phone: userInfo.phone,
+				user_type: userType,
+				info_questions: infoQuestions,
+				responses: responses,
+				profile_responses: profileResponses,
+			};
+	
+			axios.post('https://backendciemarket-baa6b6e1090a.herokuapp.com/api/public/innovation-submition/', payload)
+		}
+	}, [isComplete]);
   // basic  information form
   if (!hasStarted) {
     return (
@@ -268,14 +298,14 @@ function InnovationDiagnosis() {
             </div>
             <div className="form-row">
               <div className="form-group">
-                <label htmlFor="organisation">{t('innovationDiagnosis.form.organization')} *</label>
+                <label htmlFor="organization">{t('innovationDiagnosis.form.organization')} *</label>
                 <input
                   type="text"
-                  id="organisation"
-                  {...register("organisation")}
+                  id="organization"
+                  {...register("organization")}
                   placeholder={t('innovationDiagnosis.form.placeholders.organization')}
                 />
-                {errors.organisation && <span className="error-message">{errors.organisation.message}</span>}
+                {errors.organization && <span className="error-message">{errors.organization.message}</span>}
               </div>
               <div className="form-group">
                 <label htmlFor="position">{t('innovationDiagnosis.form.position')} *</label>
@@ -458,7 +488,7 @@ function InnovationDiagnosis() {
             </button>
             <button
               onClick={handleNext}
-              disabled={selectedNote === undefined}
+              disabled={!(globalIndex in responses) || responses[globalIndex].note === undefined}
               className="audit-nav-button next"
             >
               {step === totalQuestions - 1 ? t('innovationDiagnosis.navigation.finish') : t('innovationDiagnosis.navigation.next')}
@@ -593,7 +623,7 @@ function InnovationDiagnosis() {
           </button>
           <button
             onClick={handleProfileNext}
-            disabled={selectedOption === undefined}
+            disabled={!(globalIndex in profileResponses) || profileResponses[globalIndex].option === undefined}
             className="audit-nav-button next"
           >
             {step === totalProfileQuestions - 1 ? t('innovationDiagnosis.navigation.finish') : t('innovationDiagnosis.navigation.next')}

@@ -49,6 +49,9 @@
       "strongly_agree": "Strongly Agree"
     },
     "results": {
+      "title": "Your Innovation Assessment",
+      "type": "Innovation Assessment",
+      "contact": "Contact Our Experts",
       "embryonic": {
         "type": "Embryonic Innovation",
         "description": "High potential but few structures in place."
@@ -122,11 +125,6 @@
         "question_8": "What is your biggest challenge or weakness in team-based or creative work?",
         "placeholder": "Your answer here..."
       }
-    },
-    "results": {
-      "title": "Your Innovation Assessment",
-      "type": "Innovation Assessment",
-      "contact": "Contact Our Experts"
     },
     "navigation": {
       "back": "Back",
