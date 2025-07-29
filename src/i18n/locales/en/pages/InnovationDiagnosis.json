@@ -49,6 +49,9 @@
       "strongly_agree": "Strongly Agree"
     },
     "results": {
+      "title": "Your Innovation Assessment",
+      "type": "Innovation Assessment",
+      "contact": "Contact Our Experts",
       "embryonic": {
         "type": "Embryonic Innovation",
         "description": "High potential but few structures in place."
@@ -67,6 +70,8 @@
       }
     },
     "form": {
+			"person": "Person",
+			"company": "Company",
       "consent": "By clicking on 'Start Assessment', I consent to the collection and processing of the information I have provided for evaluation purposes.",
       "start": "Start Assessment",
       "fullName": "Full Name",
@@ -108,17 +113,247 @@
           "max": "Phone number must be at most 15 characters",
           "required": "Phone number is required"
         }
+      },
+      "info": {
+        "question_1": "Briefly describe your current role and responsibilities.",
+        "question_2": "Have you contributed to any innovation or improvement initiatives in your organization? Describe briefly.",
+        "question_3": "What motivates you most in your current work?",
+        "question_4": "What kind of problems or challenges do you enjoy solving?",
+        "question_5": "What personal qualities do you think support innovation in your work?",
+        "question_6": "What do you consider the main barrier to innovation in your environment?",
+        "question_7": "What is your biggest strength when working in a team?",
+        "question_8": "What is your biggest challenge or weakness in team-based or creative work?",
+        "placeholder": "Your answer here..."
       }
-    },
-    "results": {
-      "title": "Your Innovation Assessment",
-      "type": "Innovation Assessment",
-      "contact": "Contact Our Experts"
     },
     "navigation": {
       "back": "Back",
       "next": "Next",
       "finish": "Finish"
-    }
+    },
+		"profile": {
+			"questions": {
+				"question_1": {
+					"question": "In a team meeting, you usually…",
+					"option_a": "Set long-term priorities",
+					"option_b": "Ensure everyone is heard",
+					"option_c": "Suggest unusual ideas",
+					"option_d": "Support teammates",
+					"option_e": "Push toward execution"
+				},
+				"question_2": {
+					"question": "Your strength in a project is…",
+					"option_a": "Vision and planning",
+					"option_b": "Team coordination",
+					"option_c": "Finding new solutions",
+					"option_d": "Coaching others",
+					"option_e": "Getting things done"
+				},
+				"question_3": {
+					"question": "Faced with ambiguity, you…",
+					"option_a": "Analyze and define goals",
+					"option_b": "Ask everyone’s opinion",
+					"option_c": "Dive into experimentation",
+					"option_d": "Reassure others",
+					"option_e": "Start testing quick solutions"
+				},
+				"question_4": {
+					"question": "In a new challenge, you first…",
+					"option_a": "Structure and frame it",
+					"option_b": "Call a team meeting",
+					"option_c": "Research and explore",
+					"option_d": "Ask who needs help",
+					"option_e": "Identify what can be executed fast"
+				},
+				"question_5": {
+					"question": "Your ideal role in a project…",
+					"option_a": "Lead strategy",
+					"option_b": "Facilitate meetings",
+					"option_c": "Spark creativity",
+					"option_d": "Support development",
+					"option_e": "Drive results"
+				},
+				"question_6": {
+					"question": "You measure success by…",
+					"option_a": "Reaching strategic goals",
+					"option_b": "Team satisfaction",
+					"option_c": "Ideas generated",
+					"option_d": "People empowered",
+					"option_e": "Tasks completed"
+				},
+				"question_7": {
+					"question": "When collaborating, you…",
+					"option_a": "Set direction",
+					"option_b": "Mediate and organize",
+					"option_c": "Challenge ideas",
+					"option_d": "Encourage growth",
+					"option_e": "Focus on deliverables"
+				},
+				"question_8": {
+					"question": "Your thinking style is…",
+					"option_a": "Logical and long-term",
+					"option_b": "Relational and dynamic",
+					"option_c": "Curious and divergent",
+					"option_d": "Reflective and empathetic",
+					"option_e": "Practical and focused"
+				},
+				"question_9": {
+					"question": "You thrive when…",
+					"option_a": "Building plans",
+					"option_b": "Unifying teams",
+					"option_c": "Exploring options",
+					"option_d": "Mentoring juniors",
+					"option_e": "Delivering outcomes"
+				},
+				"question_10": {
+					"question": "You dislike when…",
+					"option_a": "There’s no clear goal",
+					"option_b": "People feel excluded",
+					"option_c": "There’s no room to innovate",
+					"option_d": "Others struggle alone",
+					"option_e": "Projects are delayed"
+				},
+				"question_11": {
+					"question": "You usually propose…",
+					"option_a": "A framework",
+					"option_b": "A team agreement",
+					"option_c": "A new experiment",
+					"option_d": "A personal story",
+					"option_e": "An actionable plan"
+				},
+				"question_12": {
+					"question": "You’re most frustrated by…",
+					"option_a": "Lack of vision",
+					"option_b": "Poor communication",
+					"option_c": "Routine and monotony",
+					"option_d": "Lack of support",
+					"option_e": "Endless talk without action"
+				},
+				"question_13": {
+					"question": "You prefer learning through…",
+					"option_a": "Models and strategies",
+					"option_b": "Discussions and group work",
+					"option_c": "Exploration and testing",
+					"option_d": "Sharing and receiving feedback",
+					"option_e": "Doing and iterating"
+				},
+				"question_14": {
+					"question": "You are seen as someone who…",
+					"option_a": "Brings clarity",
+					"option_b": "Connects people",
+					"option_c": "Thinks outside the box",
+					"option_d": "Builds confidence",
+					"option_e": "Executes consistently"
+				},
+				"question_15": {
+					"question": "If there’s conflict, you…",
+					"option_a": "Re-align the vision",
+					"option_b": "Mediate for consensus",
+					"option_c": "Explore new perspectives",
+					"option_d": "De-escalate and empathize",
+					"option_e": "Refocus on tasks"
+				},
+				"question_16": {
+					"question": "On a tight deadline, you…",
+					"option_a": "Reorganize priorities",
+					"option_b": "Reassign roles",
+					"option_c": "Look for creative shortcuts",
+					"option_d": "Stay calm and guide others",
+					"option_e": "Push to finish fast"
+				},
+				"question_17": {
+					"question": "You prefer working with…",
+					"option_a": "Structured goals",
+					"option_b": "Team alignment",
+					"option_c": "Open-ended problems",
+					"option_d": "Learners",
+					"option_e": "Clear tasks"
+				},
+				"question_18": {
+					"question": "You shine when…",
+					"option_a": "Pitching strategy",
+					"option_b": "Organizing workshops",
+					"option_c": "Prototyping ideas",
+					"option_d": "Coaching sessions",
+					"option_e": "Running sprints"
+				},
+				"question_19": {
+					"question": "You believe innovation is…",
+					"option_a": "A guided process",
+					"option_b": "A team sport",
+					"option_c": "A mindset of curiosity",
+					"option_d": "A journey of growth",
+					"option_e": "A matter of execution"
+				},
+				"question_20": {
+					"question": "Your leadership style is…",
+					"option_a": "Strategic",
+					"option_b": "Participative",
+					"option_c": "Experimental",
+					"option_d": "Developmental",
+					"option_e": "Directive"
+				},
+				"question_21": {
+					"question": "In group work, you’re…",
+					"option_a": "The planner",
+					"option_b": "The connector",
+					"option_c": "The brainstormer",
+					"option_d": "The coach",
+					"option_e": "The executor"
+				},
+				"question_22": {
+					"question": "Your biggest asset is…",
+					"option_a": "Vision",
+					"option_b": "Empathy",
+					"option_c": "Creativity",
+					"option_d": "Listening",
+					"option_e": "Efficiency"
+				},
+				"question_23": {
+					"question": "Your role model is…",
+					"option_a": "A visionary CEO",
+					"option_b": "A great team leader",
+					"option_c": "A tech innovator",
+					"option_d": "A teacher or guide",
+					"option_e": "A results-driven doer"
+				},
+				"question_24": {
+					"question": "What excites you most in a new project?",
+					"option_a": "Setting objectives",
+					"option_b": "Team dynamics",
+					"option_c": "Trying new methods",
+					"option_d": "Growing people",
+					"option_e": "Reaching milestones"
+				},
+				"question_25": {
+					"question": "You deal with failure by:",
+					"option_a": "Reworking the plan",
+					"option_b": "Leaning on your team",
+					"option_c": "Iterating new approaches",
+					"option_d": "Encouraging others",
+					"option_e": "Fixing and moving fast"
+				}
+			},
+			"comment": {
+				"label": "Leave a comment",
+				"placeholder": "Share a specific example or reflection related to your choice..."
+			},
+			"profiles": {
+				"titles": {
+					"a": "The Strategist",
+					"b": "The Facilitator",
+					"c": "The Explorer",
+					"d": "The Mentor",
+					"e": "The Implementer / Doer"
+				},
+				"descriptions": {
+					"a": "You are a Strategist — you see the big picture and bring clarity to complexity. You excel at defining long-term goals, structuring ideas, and aligning teams with a shared vision. Your strength lies in turning chaos into coherent plans. In innovation teams, you bring direction and foresight.",
+					"b": "You are a Facilitator — the bridge between people and ideas. You create collaborative environments, ensure alignment, and remove barriers so innovation can flow. Your presence helps teams move forward with harmony and shared understanding.",
+					"c": "You are an Explorer — curious, experimental, and driven by discovery. You are not afraid to challenge norms and test new possibilities. In innovation, you spark creativity, question assumptions, and push teams toward bold new directions.",
+					"d": "You are a Mentor — supportive, reflective, and people-focused. You empower others, share knowledge, and create space for growth. In innovation, you nurture talent and help ideas mature into real value.",
+					"e": "You are a Realizer — action-oriented and results-driven. You take ideas and make them real, ensuring that progress happens. In innovation, you are essential for transforming concepts into concrete outcomes."
+				}
+			}
+		}
   }
 } 
