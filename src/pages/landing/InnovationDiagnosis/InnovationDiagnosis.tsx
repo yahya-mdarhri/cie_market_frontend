@@ -228,7 +228,7 @@ function InnovationDiagnosis() {
                 onClick={() => handleUserTypeChange({ target: { value: 'person' } } as React.ChangeEvent<HTMLInputElement>)}
               >
                 <FaUserTie className="toggle-icon" />
-                <span className="toggle-text">{t('form.person')}</span>
+                <span className="toggle-text">{t('innovationDiagnosis.form.person')}</span>
               </button>
               <button 
                 type="button"
@@ -236,7 +236,7 @@ function InnovationDiagnosis() {
                 onClick={() => handleUserTypeChange({ target: { value: 'company' } } as React.ChangeEvent<HTMLInputElement>)}
               >
                 <FaBuilding className="toggle-icon" />
-                <span className="toggle-text">{t('form.company')}</span>
+                <span className="toggle-text">{t('innovationDiagnosis.form.company')}</span>
               </button>
               <input 
                 type="hidden" 
