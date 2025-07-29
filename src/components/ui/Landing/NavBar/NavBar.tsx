@@ -265,7 +265,7 @@ function NavBar({ noHero }: { noHero: boolean }) {
 	};
 
 	return (
-		<header className={`navbar ${isScrolled || noHero ? 'scrolled' : ''}`}>
+		<header className={`navbar ${isScrolled || noHero ? 'scrolled' : 'notScrolled'}`} >
 			<div className="logo">
 				<Link to="/" className="logo">
 					<img src={"/small_logo.svg"} alt="Logo" />
