@@ -45,7 +45,7 @@ function JoinTheMailingList() {
 
 		const handleSubmit = async (e: React.FormEvent) => {
 			e.preventDefault();
-			await axios.post('https://backendciemarket-baa6b6e1090a.herokuapp.com/api/public/mailing-list-join/', formData);
+			await axios.post('/api/public/mailing-list-join/', formData);
 			setFormData({
 				first_name: '',
 				last_name: '',

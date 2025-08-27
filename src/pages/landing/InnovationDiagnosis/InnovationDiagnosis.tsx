@@ -234,7 +234,7 @@ function InnovationDiagnosis() {
 			};
 
 			const submitPayload = async () => {
-				await axios.post('https://backendciemarket-baa6b6e1090a.herokuapp.com/api/public/innovation-submition/', payload);
+				await axios.post('/api/public/innovation-submition/', payload);
 			};
 	
 			submitPayload();

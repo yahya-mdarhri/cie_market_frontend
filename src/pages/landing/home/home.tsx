@@ -45,7 +45,7 @@ function Home() {
 
 
 	const handleContactUsSubmit = (data: any) => {
-		axios.post('https://backendciemarket-baa6b6e1090a.herokuapp.com/api/public/contact-us/', data)
+		axios.post('/api/public/contact-us/', data)
 		.catch(err => console.log(err))
 	}
 	return (
