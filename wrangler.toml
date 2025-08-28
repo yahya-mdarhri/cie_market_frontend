@@ -1,5 +1,4 @@
 name = "cie-front"
-workers_dev = true
-
+workers_dev = false
 assets = {directory = "dist"}
 
