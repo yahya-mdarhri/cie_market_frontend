@@ -83,6 +83,10 @@ import enInventionInfo from './locales/en/components/InventionInfo.json';
 import esInventionInfo from './locales/es/components/InventionInfo.json';
 import frInventionInfo from './locales/fr/components/InventionInfo.json';
 
+import enSubmitPatent from './locales/en/pages/submit_patent.json';
+import esSubmitPatent from './locales/es/pages/submit_patent.json';
+import frSubmitPatent from './locales/fr/pages/submit_patent.json';
+
 import enFooter from './locales/en/components/Footer.json';
 import esFooter from './locales/es/components/Footer.json';
 import frFooter from './locales/fr/components/Footer.json';
@@ -120,7 +124,8 @@ export const NAMESPACES = {
   licensingProcess: 'licensingProcess',
   ourTeam: 'ourTeam',
   techCenter: 'techCenter',
-  inventionInfo: 'inventionInfo'
+  inventionInfo: 'inventionInfo',
+  SubmitPatent: 'SubmitPatent'
 } as const;
 
 export type Namespace = keyof typeof NAMESPACES;
@@ -152,6 +157,7 @@ i18n
         ourTeam: enOurTeam,
         techCenter: enTechCenter,
         inventionInfo: enInventionInfo,
+        SubmitPatent: enSubmitPatent,
         footer: enFooter
       },
       es: {
@@ -175,6 +181,7 @@ i18n
         ourTeam: esOurTeam,
         techCenter: esTechCenter,
         inventionInfo: esInventionInfo,
+        SubmitPatent: esSubmitPatent,
         footer: esFooter
       },
       fr: {
@@ -198,6 +205,7 @@ i18n
         ourTeam: frOurTeam,
         techCenter: frTechCenter,
         inventionInfo: frInventionInfo,
+        SubmitPatent: frSubmitPatent,
         footer: frFooter
       }
     },

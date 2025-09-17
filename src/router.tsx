@@ -11,6 +11,8 @@ import OurTeam from '@pages/landing/our_team/our_team';
 import LicensingProcess from '@pages/landing/licensing_process/licensing_process';
 import JoinTheMailingList from '@pages/landing/JoinTheMailingList/JoinTheMailingList';
 import Impact from '@pages/landing/impact/Impact';
+import SubmitPatent from '@pages/landing/submit_patent/submit_patent';
+
 
 const router = createBrowserRouter([
   {
@@ -57,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: '/join-our-mailing-list',
         element: <JoinTheMailingList />,
+      },
+      {
+        path: '/submit_patent',
+        element: <SubmitPatent />,
       },
       {
         path: '/impact',

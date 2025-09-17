@@ -1,0 +1,128 @@
+.licensing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.licensing-section {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.licensing-section h2 {
+    color: #1a365d;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.licensing-section h3 {
+    color: #2d3748;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.licensing-section p {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.requirements-list,
+.goals-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.requirements-list li,
+.goals-list li {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    background: #f8fafc;
+    border-radius: 6px;
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.goals-list {
+    margin: 1.5rem 0;
+}
+
+.goal-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.goal-number {
+    background: #3182ce;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.goal-text {
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+.terms-block {
+    margin-top: 2rem;
+}
+
+.terms-block:first-of-type {
+    margin-top: 0;
+}
+
+.info-block {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .licensing-container {
+        padding: 1rem;
+    }
+
+    .licensing-section {
+        padding: 1.5rem;
+    }
+
+    .licensing-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .licensing-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .licensing-section p,
+    .requirements-list li {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .licensing-section {
+        padding: 1.25rem;
+    }
+
+    .licensing-section h2 {
+        font-size: 1.5rem;
+    }
+}
