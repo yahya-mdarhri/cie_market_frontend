@@ -154,6 +154,7 @@ function TTO() {
 		firstAction: t('hero.firstAction'),
 		secondAction: t('hero.secondAction'),
 		stats: getTranslatedStats(),
+		onFirstActionClick: () => navigate('/submit_patent'),
 		onSecondActionClick: () => navigate('/licensing-process')
 	};
 	const servicesData = getServicesData(t);

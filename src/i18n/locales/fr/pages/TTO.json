@@ -62,10 +62,10 @@
     "description": "Intéressé par une invention ou une technologie spécifique ? Contactez-nous pour en savoir plus sur nos projets de recherche et développement."
   },
   "stats": {
-    "totalPatents": "Total des Brevets Déposés",
-    "internationalPatents": "Brevets Internationaux",
+    "totalPatents": "Technologies & Brevets",
+    "internationalPatents": "PCT",
     "transfers": "Transferts",
-    "medals": "Médailles"
+    "medals": "Prix & Distinctions"
   },
   "services": {
     "transfer": {

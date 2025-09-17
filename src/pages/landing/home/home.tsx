@@ -10,7 +10,7 @@ import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 import Partners from "@ui/Landing/Partners/Partners";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ContactUs from "@ui/Landing/ContactUs/ContactUs";
 import { getDepartments, getHeroProps, partners } from './data';
 import axios from "axios";
@@ -40,6 +40,7 @@ function CIEItem({name, description, icon, link}: CIEItemProps) {
 }
 
 function Home() {
+	const navigator = useNavigate();
 	const { t } = useTranslation('home');
 	useDocumentTitle('Home | Centre for Innovation and Entrepreneurship');
 
@@ -48,8 +49,16 @@ function Home() {
 		axios.post('/api/public/contact-us/', data)
 		.catch(err => console.log(err))
 	}
+	const heroProps = getHeroProps(t);
+	heroProps.onFirstActionClick = () => { 
+		const el = document.getElementById("contact");
+		if (el) {
+			el.scrollIntoView({ behavior: "smooth" });
+		}
+	}
+	heroProps.onSecondActionClick = () => { navigator('/submit_patent'); }
 	return (
-		<LandingLayout heroProps={getHeroProps(t)}>
+		<LandingLayout heroProps={heroProps}>
 				<Introduction 
 					title={t('introduction.title')}
 					description={t('introduction.description')}
