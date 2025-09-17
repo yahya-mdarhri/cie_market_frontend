@@ -62,11 +62,12 @@
     "description": "Interested in a specific invention or technology? Contact us to learn more about our research and development projects."
   },
   "stats": {
-    "totalPatents": "Total Patents Filed",
-    "internationalPatents": "International Patents",
+    "totalPatents": "Technologies & Patents",
+    "internationalPatents": "PCT",
     "transfers": "Transfers",
-    "medals": "Medals"
+    "medals": "Awards & Recognitions"
   },
+
   "services": {
     "transfer": {
       "title": "Assistance with the Transfer",

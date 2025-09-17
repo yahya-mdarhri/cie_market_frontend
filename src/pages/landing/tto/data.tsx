@@ -6,8 +6,8 @@ import { useTranslation } from 'react-i18next';
 export const getTranslatedStats = () => {
 	const { t } = useTranslation('tto');
 	return {
-		a: { name: t('stats.totalPatents'), value: 650 },
-		b: { name: t('stats.internationalPatents'), value: 119 },
+		a: { name: t('stats.totalPatents'), value: 674 },
+		b: { name: t('stats.internationalPatents'), value: 120 },
 		c: { name: t('stats.transfers'), value: 7 },
 		d: { name: t('stats.medals'), value: 7 },
 	};

@@ -62,10 +62,10 @@
     "description": "¿Interesado en una invención o tecnología específica? Contáctenos para obtener más información sobre nuestros proyectos de investigación y desarrollo."
   },
   "stats": {
-    "totalPatents": "Total de Patentes Presentadas",
-    "internationalPatents": "Patentes Internacionales",
+    "totalPatents":  "Tecnologías y Patentes",
+    "internationalPatents": "PCT",
     "researchContracts": "transferencias",
-    "medals": "Medallas"
+    "medals": "Premios y Reconocimientos"
   },
   "services": {
     "transfer": {
