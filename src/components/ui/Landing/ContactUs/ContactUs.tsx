@@ -72,7 +72,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
               </div>
               <div className="contact-text">
                 <h4>{t('contactInfo.phone')}</h4>
-                <p>+212 5XX-XXXXXX</p>
+                <p>+212658477660</p>
               </div>
             </div>
             
@@ -82,7 +82,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
               </div>
               <div className="contact-text">
                 <h4>{t('contactInfo.email')}</h4>
-                <p>contact@uir.ac.ma</p>
+                <p>Wacim.benyahya@uir.ac.ma</p>
               </div>
             </div>
             

@@ -39,8 +39,9 @@
     }
   },
   "stats": {
-    "innovationPatents": "Innovation et Brevets",
-    "internationalPatents": "Brevets Internationaux",
-    "goldMedals": "Médailles d'Or"
+    "innovationPatents": "Technologies & Brevets",
+    "internationalPatents": "PCT",
+    "goldMedals": "Prix & Distinctions"
   }
+
 } 
