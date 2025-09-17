@@ -1,6 +1,9 @@
 // This file contains the data for the Our Team page of the landing page.
 
 import avatar from './images/avatar.jpg';
+import wacim from './images/wacim.jpeg';
+import yahya from './images/yahya.jpeg';
+
 import { HeroProps } from "@layouts/LandingLayout/LandingLayout";
 import { TFunction } from "i18next";
 
@@ -16,12 +19,12 @@ const teamMembers = [
     {
         name: "Wacim BEN YAHYA",
         role: "Head of TTO",
-        image: avatar,
+        image: wacim,
     },
     {
         name: "Yahya MDARHRI",
         role: "Tech Lead",
-        image: avatar,
+        image: yahya,
     },
     {
         name: "Elhoussaine EDDAHBI",
