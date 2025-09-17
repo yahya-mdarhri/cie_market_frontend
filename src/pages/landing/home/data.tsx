@@ -57,7 +57,7 @@ export const getStatsData = (t: any): StatsItemsType => {
     return {
         a: { name: t('stats.innovationPatents'), value: 681 },
         b: { name: t('stats.internationalPatents'), value: 119 },
-        c: { name: t('stats.medals'), value: 7 },
+        c: { name: t('stats.goldMedals'), value: 7 },
     };
 }
 
