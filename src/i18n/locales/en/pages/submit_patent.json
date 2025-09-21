@@ -1,9 +1,97 @@
 {
     "hero": {
-    "title": "Manage Your Inventions with Ease",
-    "description": "Inn2Market is connected to our secure Patent Disclosure Platform, where every inventor has a personal space to manage, visualize, and grow their portfolio. This platform also streamlines communication with the TTO, ensuring a smooth journey from idea to market.",
-    "firstAction": "Access My Inventor Space",
-    "secondAction": "Register as a New Inventor"
-
-  }
+        "title": "Manage Your Inventions with Ease",
+        "description": "Inn2Market is connected to our secure Patent Disclosure Platform, where every inventor has a personal space to manage, visualize, and grow their portfolio. This platform also streamlines communication with the TTO, ensuring a smooth journey from idea to market.",
+        "firstAction": "Access My Inventor Space",
+        "secondAction": "Register as a New Inventor"
+    },
+    "platformFeatures": {
+        "title": "Platform Features",
+        "subtitle": "Everything you need to manage your inventions in one place",
+        "features": [
+            {
+                "title": "Personal Inventor Dashboard",
+                "description": "Access your personalized dashboard to view all your inventions, track their status, and monitor progress through the patent process."
+            },
+            {
+                "title": "Portfolio Visualization",
+                "description": "Visualize your invention portfolio with interactive charts and graphs that show the development timeline and market potential of each invention."
+            },
+            {
+                "title": "Secure Document Management",
+                "description": "Store and organize all your invention-related documents securely in the cloud with version control and access tracking."
+            },
+            {
+                "title": "Direct TTO Communication",
+                "description": "Communicate directly with our Technology Transfer Office through the platform, ensuring quick responses and streamlined support."
+            },
+            {
+                "title": "Market Analysis Tools",
+                "description": "Access market research tools and industry insights to better understand the commercial potential of your inventions."
+            },
+            {
+                "title": "Collaboration Features",
+                "description": "Collaborate with co-inventors, researchers, and industry partners through integrated communication and project management tools."
+            }
+        ]
+    },
+    "processSteps": {
+        "title": "How It Works",
+        "subtitle": "From idea submission to market success",
+        "steps": [
+            {
+                "number": 1,
+                "title": "Submit Your Invention",
+                "description": "Upload your invention details, supporting documents, and preliminary research through our secure platform."
+            },
+            {
+                "number": 2,
+                "title": "Initial Review",
+                "description": "Our TTO team conducts an initial review to assess the invention's potential and patentability."
+            },
+            {
+                "number": 3,
+                "title": "Detailed Analysis",
+                "description": "Comprehensive analysis including prior art search, market assessment, and technical evaluation."
+            },
+            {
+                "number": 4,
+                "title": "Patent Application",
+                "description": "If approved, we guide you through the patent application process and handle all legal requirements."
+            },
+            {
+                "number": 5,
+                "title": "Commercialization",
+                "description": "We help you find licensing partners and commercialize your invention in the market."
+            }
+        ]
+    },
+    "benefits": {
+        "title": "Why Choose Our Platform",
+        "subtitle": "Join thousands of inventors who trust our platform",
+        "benefits": [
+            {
+                "title": "Expert Guidance",
+                "description": "Get expert guidance from our experienced TTO team throughout the entire patent process."
+            },
+            {
+                "title": "Cost-Effective",
+                "description": "Reduce patent filing costs with our streamlined process and bulk filing capabilities."
+            },
+            {
+                "title": "Global Reach",
+                "description": "Access international markets with our network of partners and global patent filing expertise."
+            },
+            {
+                "title": "24/7 Support",
+                "description": "Get round-the-clock support and assistance whenever you need help with your inventions."
+            }
+        ]
+    },
+    "cta": {
+        "title": "Ready to Get Started?",
+        "description": "Join our community of innovators and turn your ideas into market-ready inventions.",
+        "primaryAction": "Start Your Journey",
+        "secondaryAction": "Learn More"
+    }
 }

@@ -1,8 +1,97 @@
 {
   "hero": {
     "title": "Gérez vos inventions en toute simplicité",
-    "description": "Inn2Market est connecté à notre plateforme sécurisée de divulgation de brevets, où chaque inventeur dispose d’un espace personnel pour gérer, visualiser et développer son portefeuille. Cette plateforme facilite également la communication avec le TTO, garantissant un parcours fluide de l’idée jusqu’au marché.",
+    "description": "Inn2Market est connecté à notre plateforme sécurisée de divulgation de brevets, où chaque inventeur dispose d'un espace personnel pour gérer, visualiser et développer son portefeuille. Cette plateforme facilite également la communication avec le TTO, garantissant un parcours fluide de l'idée jusqu'au marché.",
     "firstAction": "Accéder à mon espace inventeur",
-    "secondAction": "S’inscrire comme nouvel inventeur"
+    "secondAction": "S'inscrire comme nouvel inventeur"
+  },
+  "platformFeatures": {
+    "title": "Fonctionnalités de la Plateforme",
+    "subtitle": "Tout ce dont vous avez besoin pour gérer vos inventions en un seul endroit",
+    "features": [
+      {
+        "title": "Tableau de Bord Inventeur Personnel",
+        "description": "Accédez à votre tableau de bord personnalisé pour voir toutes vos inventions, suivre leur statut et surveiller les progrès tout au long du processus de brevet."
+      },
+      {
+        "title": "Visualisation du Portefeuille",
+        "description": "Visualisez votre portefeuille d'inventions avec des graphiques interactifs qui montrent la chronologie de développement et le potentiel de marché de chaque invention."
+      },
+      {
+        "title": "Gestion Sécurisée des Documents",
+        "description": "Stockez et organisez tous vos documents liés aux inventions en toute sécurité dans le cloud avec contrôle de version et suivi d'accès."
+      },
+      {
+        "title": "Communication Directe avec le TTO",
+        "description": "Communiquez directement avec notre Bureau de Transfert de Technologie via la plateforme, garantissant des réponses rapides et un support simplifié."
+      },
+      {
+        "title": "Outils d'Analyse de Marché",
+        "description": "Accédez aux outils de recherche de marché et aux informations sectorielles pour mieux comprendre le potentiel commercial de vos inventions."
+      },
+      {
+        "title": "Fonctionnalités de Collaboration",
+        "description": "Collaborez avec des co-inventeurs, chercheurs et partenaires industriels grâce aux outils intégrés de communication et de gestion de projet."
+      }
+    ]
+  },
+  "processSteps": {
+    "title": "Comment Ça Marche",
+    "subtitle": "De la soumission d'idée au succès sur le marché",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Soumettez Votre Invention",
+        "description": "Téléchargez les détails de votre invention, les documents de support et la recherche préliminaire via notre plateforme sécurisée."
+      },
+      {
+        "number": 2,
+        "title": "Examen Initial",
+        "description": "Notre équipe TTO effectue un examen initial pour évaluer le potentiel et la brevetabilité de l'invention."
+      },
+      {
+        "number": 3,
+        "title": "Analyse Détaillée",
+        "description": "Analyse complète incluant la recherche d'antériorité, l'évaluation de marché et l'évaluation technique."
+      },
+      {
+        "number": 4,
+        "title": "Demande de Brevet",
+        "description": "Si approuvée, nous vous guidons à travers le processus de demande de brevet et gérons toutes les exigences légales."
+      },
+      {
+        "number": 5,
+        "title": "Commercialisation",
+        "description": "Nous vous aidons à trouver des partenaires de licence et à commercialiser votre invention sur le marché."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Pourquoi Choisir Notre Plateforme",
+    "subtitle": "Rejoignez des milliers d'inventeurs qui font confiance à notre plateforme",
+    "benefits": [
+      {
+        "title": "Conseil Expert",
+        "description": "Obtenez des conseils d'experts de notre équipe TTO expérimentée tout au long du processus de brevet."
+      },
+      {
+        "title": "Économique",
+        "description": "Réduisez les coûts de dépôt de brevet avec notre processus simplifié et nos capacités de dépôt en masse."
+      },
+      {
+        "title": "Portée Mondiale",
+        "description": "Accédez aux marchés internationaux avec notre réseau de partenaires et notre expertise en dépôt de brevets mondiaux."
+      },
+      {
+        "title": "Support 24/7",
+        "description": "Obtenez un support et une assistance 24h/24, 7j/7 quand vous avez besoin d'aide avec vos inventions."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Commencer ?",
+    "description": "Rejoignez notre communauté d'innovateurs et transformez vos idées en inventions prêtes pour le marché.",
+    "primaryAction": "Commencez Votre Voyage",
+    "secondaryAction": "En Savoir Plus"
   }
 }

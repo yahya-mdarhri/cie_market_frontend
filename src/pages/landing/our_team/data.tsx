@@ -1,6 +1,8 @@
 // This file contains the data for the Our Team page of the landing page.
 
-import avatar from './images/avatar.jpg';
+// import avatar from './images/avatar.jpg';
+import hamza from './images/hamza.jpg';
+import elhoussaine from './images/elhoussaine.png';
 import wacim from './images/wacim.jpeg';
 import yahya from './images/yahya.jpeg';
 
@@ -28,13 +30,13 @@ const teamMembers = [
     },
     {
         name: "Elhoussaine EDDAHBI",
-        role: "DevOps",
-        image: avatar,
+        role: "Cloud & DevOps Engineer",
+        image: elhoussaine,
     },
     {
         name: "Hamza Oumansour",
-        role: "Full Stack",
-        image: avatar,
+        role: "Software Engineer",
+        image: hamza,
     },
 ];
 
