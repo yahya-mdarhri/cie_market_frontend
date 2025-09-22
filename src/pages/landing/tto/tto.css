@@ -124,6 +124,21 @@
 	cursor: not-allowed;
 }
 
+.moreButton {
+	background-color: transparent;
+	border: 1px solid var(--primary-color);
+	color: var(--primary-color);
+	padding: 8px 14px;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.moreButton:hover {
+	background-color: var(--primary-color);
+	color: var(--white);
+}
+
 @media (max-width: 768px) {
 	.inventionCardWrapper {
 		flex: 0 0 100%;

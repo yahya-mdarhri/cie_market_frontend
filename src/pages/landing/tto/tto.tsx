@@ -29,6 +29,7 @@ function LandingInventionCards({
 	onSelectInvention: (invention: Invention) => void 
 }) {
 	const { t } = useTranslation('tto');
+	const navigate = useNavigate();
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const cardsPerView = 3;
 
@@ -89,6 +90,12 @@ function LandingInventionCards({
 					>
 						{'>'}
 					</div>
+					<button 
+						className="moreButton"
+						onClick={() => navigate('/technologies')}
+					>
+						{t('inventions.more') || 'More'}
+					</button>
 				</div>
 			</div>
 			<div className="LandingInventionCards">

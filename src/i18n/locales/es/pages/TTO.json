@@ -15,6 +15,7 @@
   },
   "inventions": {
     "title": "Destacado de Invenciones",
+    "more": "Más",
     "subtitle": "Tecnologías e innovaciones destacadas",
     "invention_1": {
       "title": "Generador Híbrido de Energía Renovable",

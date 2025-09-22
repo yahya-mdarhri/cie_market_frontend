@@ -15,6 +15,7 @@
   },
   "inventions": {
     "title": "Mise en Avant des Inventions",
+    "more": "Plus",
     "subtitle": "Technologies et innovations mises en avant",
     "invention_1": {
       "title": "Générateur Hybride d'Énergie Renouvelable",
