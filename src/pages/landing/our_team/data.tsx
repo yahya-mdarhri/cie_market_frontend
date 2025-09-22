@@ -19,17 +19,17 @@ export const useHeroProps = (t: TFunction): HeroProps => ({
 // The team members data (kept static)
 const teamMembers = [
     {
-        name: "Wacim BEN YAHYA",
+        name: "Wacim Ben Yahya",
         role: "Head of TTO",
         image: wacim,
     },
     {
-        name: "Yahya MDARHRI",
+        name: "Yahya Mdarhri",
         role: "Tech Lead",
         image: yahya,
     },
     {
-        name: "Elhoussaine EDDAHBI",
+        name: "El Houssaine Eddahbi",
         role: "Cloud & DevOps Engineer",
         image: elhoussaine,
     },
