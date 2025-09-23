@@ -6,6 +6,7 @@ import Incubator from '@pages/landing/incubator/Incubator';
 import TechCenter from '@pages/landing/tech_center/tech_center';
 import FAQ from '@pages/landing/faq/FAQ';
 import NotFound from '@pages/NotFound/NotFound';
+import Technologies from '@pages/landing/technologies/Technologies';
 import AuditInnovationForm from '@pages/landing/InnovationDiagnosis/InnovationDiagnosis';
 import OurTeam from '@pages/landing/our_team/our_team';
 import LicensingProcess from '@pages/landing/licensing_process/licensing_process';
@@ -67,6 +68,11 @@ const router = createBrowserRouter([
       {
         path: '/impact',
         element: <Impact />,
+      }
+      ,
+      {
+        path: '/technologies',
+        element: <Technologies />,
       }
     ]
   },

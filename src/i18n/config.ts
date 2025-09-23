@@ -91,6 +91,10 @@ import enFooter from './locales/en/components/Footer.json';
 import esFooter from './locales/es/components/Footer.json';
 import frFooter from './locales/fr/components/Footer.json';
 
+import enTechnologies from './locales/en/pages/technologies.json';
+import esTechnologies from './locales/es/pages/technologies.json';
+import frTechnologies from './locales/fr/pages/technologies.json';
+
 // Define supported languages
 export const SUPPORTED_LANGUAGES = {
   en: { name: 'English', flag: '🇺🇸' },
@@ -125,7 +129,8 @@ export const NAMESPACES = {
   ourTeam: 'ourTeam',
   techCenter: 'techCenter',
   inventionInfo: 'inventionInfo',
-  SubmitPatent: 'SubmitPatent'
+  SubmitPatent: 'SubmitPatent',
+  technologies: 'technologies'
 } as const;
 
 export type Namespace = keyof typeof NAMESPACES;
@@ -158,7 +163,8 @@ i18n
         techCenter: enTechCenter,
         inventionInfo: enInventionInfo,
         SubmitPatent: enSubmitPatent,
-        footer: enFooter
+        footer: enFooter,
+        technologies: enTechnologies
       },
       es: {
         navbar: esNavbar,
@@ -182,7 +188,8 @@ i18n
         techCenter: esTechCenter,
         inventionInfo: esInventionInfo,
         SubmitPatent: esSubmitPatent,
-        footer: esFooter
+        footer: esFooter,
+        technologies: esTechnologies
       },
       fr: {
         navbar: frNavbar,
@@ -206,7 +213,8 @@ i18n
         techCenter: frTechCenter,
         inventionInfo: frInventionInfo,
         SubmitPatent: frSubmitPatent,
-        footer: frFooter
+        footer: frFooter,
+        technologies: frTechnologies
       }
     },
     fallbackLng: 'en',
