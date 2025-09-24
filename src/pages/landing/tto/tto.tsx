@@ -92,7 +92,10 @@ function LandingInventionCards({
 					</div>
 					<button 
 						className="moreButton"
-						onClick={() => navigate('/technologies')}
+						onClick={() => {
+							navigate('/technologies')
+							window.scrollTo(0, 0);
+						}}
 					>
 						{t('inventions.more') || 'More'}
 					</button>

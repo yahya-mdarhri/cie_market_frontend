@@ -14,6 +14,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import ContactUs from "@ui/Landing/ContactUs/ContactUs";
 import { getDepartments, getHeroProps, partners } from './data';
 import axios from "axios";
+import { useEffect } from "react";
 
 interface CIEItemProps {
 	name: string;
@@ -57,6 +58,14 @@ function Home() {
 		}
 	}
 	heroProps.onSecondActionClick = () => { navigator('/submit_patent'); }
+	useEffect(() => {
+		if (window.location.hash === "#contact") {
+			const el = document.getElementById("contact");
+			if (el) {
+				el.scrollIntoView({ behavior: "smooth" });
+			}
+		}
+	}, [window.location.hash]);
 	return (
 		<LandingLayout heroProps={heroProps}>
 				<Introduction 

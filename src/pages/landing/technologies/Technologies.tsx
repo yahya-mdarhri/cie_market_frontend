@@ -3,11 +3,16 @@ import LandingLayout, { HeroProps } from "@layouts/LandingLayout/LandingLayout";
 import { useTranslation } from "react-i18next";
 import { getHeroProps, getTechnologies, type Technology } from "./data";
 import { useEffect, useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Technologies() {
+  const navigator = useNavigate()
   const { t } = useTranslation("technologies");
 
   const heroProps: HeroProps = getHeroProps(t);
+  heroProps.onFirstActionClick = () => {
+      navigator("/#contact")
+  }
   const technologies: Technology[] = useMemo(() => getTechnologies(), []);
 
   const [selectedTech, setSelectedTech] = useState<Technology | null>(null);

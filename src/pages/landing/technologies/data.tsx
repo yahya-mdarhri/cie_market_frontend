@@ -6,8 +6,8 @@ type TranslateFn = (key: string) => string;
 export const getHeroProps = (t: TranslateFn): HeroProps => ({
     heroTitle: t('hero.title'),
     heroDescription: t('hero.description'),
-    firstAction: t('hero.firstAction'),
-    secondAction: t('hero.secondAction'),
+    firstAction: t('hero.secondAction'),
+    // secondAction: t('hero.secondAction'),
 });
 
 // Technology listing data and types
