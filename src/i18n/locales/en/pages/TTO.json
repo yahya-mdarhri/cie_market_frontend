@@ -15,6 +15,7 @@
   },
   "inventions": {
     "title": "Inventions Spotlight",
+		"more": "More",
     "subtitle": "Highlighted technologies and innovations",
     "invention_1": {
       "title": "Hybrid Renewable Energy Generator",
