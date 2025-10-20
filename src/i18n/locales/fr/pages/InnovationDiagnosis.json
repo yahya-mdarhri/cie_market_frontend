@@ -52,6 +52,7 @@
       "title": "Votre Évaluation d'Innovation",
       "type": "Évaluation d'Innovation",
       "contact": "Contactez Nos Experts",
+      "downloadPDF": "Télécharger le PDF",
       "embryonic": {
         "type": "Innovation Embryonnaire",
         "description": "Haut potentiel mais peu de structures en place."

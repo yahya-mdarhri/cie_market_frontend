@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { FaTimes, FaRedo, FaUserTie, FaBuilding } from "react-icons/fa";
+import { useEffect, useState, useRef } from "react";
+import { FaTimes, FaRedo, FaUserTie, FaBuilding, FaDownload } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -9,6 +9,8 @@ import axios from 'axios';
 import { HashLink } from "react-router-hash-link";
 import { useTranslation } from 'react-i18next';
 import { getPhases, getQuestionsByPhase, getIcons, getScoreRanges, getConsentText, getInfoQuestions, getProfileQuestions, getProfileAnswers } from "./data";
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
@@ -89,6 +91,51 @@ function InnovationDiagnosis() {
   const [hasStarted, setHasStarted] = useState(false);
   const [filledSecondForm, setFilledSecondForm] = useState(false);
   const [userType, setUserType] = useState('person');
+  const resultsRef = useRef<HTMLDivElement>(null);
+
+  const handleDownloadPDF = async () => {
+    if (!resultsRef.current) return;
+
+    try {
+      const canvas = await html2canvas(resultsRef.current, {
+        scale: 2,
+        useCORS: true,
+        logging: false,
+        backgroundColor: '#1a1a2e',
+      });
+
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF({
+        orientation: 'portrait',
+        unit: 'mm',
+        format: 'a4',
+      });
+
+      const imgWidth = 210; // A4 width in mm
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+      const pageHeight = 297; // A4 height in mm
+      let heightLeft = imgHeight;
+      let position = 0;
+
+      pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+      heightLeft -= pageHeight;
+
+      while (heightLeft > 0) {
+        position = heightLeft - imgHeight;
+        pdf.addPage();
+        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+        heightLeft -= pageHeight;
+      }
+
+      const fileName = userType === 'company' 
+        ? `innovation-diagnosis-${userInfo.organization}.pdf`
+        : `innovation-profile-${userInfo.name}.pdf`;
+      
+      pdf.save(fileName);
+    } catch (error) {
+      console.error('Error generating PDF:', error);
+    }
+  };
 
   const handleUserTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUserType(e.target.value);
@@ -413,6 +460,7 @@ function InnovationDiagnosis() {
             <FaRedo />
           </button>
           <motion.div
+            ref={resultsRef}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
@@ -426,6 +474,9 @@ function InnovationDiagnosis() {
             </div>
             
             <div className="results-actions">
+              <button onClick={handleDownloadPDF} className="action-button download">
+                <FaDownload /> {t('innovationDiagnosis.results.downloadPDF')}
+              </button>
               <HashLink smooth to="/#contact" className="action-button contact">
                 {t('innovationDiagnosis.results.contact')}
               </HashLink>
@@ -541,6 +592,7 @@ function InnovationDiagnosis() {
 				<button className="exit-button" onClick={handleExit}><FaTimes /></button>
 				<button className="reset-button" onClick={handleReset}><FaRedo /></button>
 				<motion.div
+					ref={resultsRef}
 					initial={{ opacity: 0, scale: 0.9 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 0.5 }}
@@ -560,6 +612,9 @@ function InnovationDiagnosis() {
 						</ResponsiveContainer>
 					</div>
 					<div className="results-actions">
+						<button onClick={handleDownloadPDF} className="action-button download">
+							<FaDownload /> {t('innovationDiagnosis.results.downloadPDF')}
+						</button>
 						<HashLink smooth to="/#contact" className="action-button contact">
 							{t('innovationDiagnosis.results.contact')}
 						</HashLink>

@@ -52,6 +52,7 @@
       "title": "Your Innovation Assessment",
       "type": "Innovation Assessment",
       "contact": "Contact Our Experts",
+      "downloadPDF": "Download PDF",
       "embryonic": {
         "type": "Embryonic Innovation",
         "description": "High potential but few structures in place."
