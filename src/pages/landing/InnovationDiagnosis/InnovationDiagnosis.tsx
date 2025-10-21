@@ -467,6 +467,9 @@ function InnovationDiagnosis() {
             className="results-container"
           >
             <h2 className="results-title">{t('innovationDiagnosis.results.title')}</h2>
+            <p className="results-greeting">
+              {t('innovationDiagnosis.results.greeting')} <span className="user-name">{userInfo.name}</span>
+            </p>
             <div className="results-type">
               <h3 className="type-label">{t('innovationDiagnosis.results.type')}</h3>
               <div className="type-value">{type}</div>
@@ -599,6 +602,9 @@ function InnovationDiagnosis() {
 					className="radar-results results-container "
 				>
 					<h2 className="results-title">{t('innovationDiagnosis.results.title')}</h2>
+					<p className="results-greeting">
+						{t('innovationDiagnosis.results.greeting')} <span className="user-name">{userInfo.name}</span>
+					</p>
 					<div className="results-type">
 						<div className="type-value">{t(`innovationDiagnosis.profile.profiles.titles.${maxProfile}`)}</div>
 						<p className="type-description profile-des">{formattedDescription}</p>

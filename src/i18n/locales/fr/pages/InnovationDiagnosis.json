@@ -51,6 +51,7 @@
     "results": {
       "title": "Votre Évaluation d'Innovation",
       "type": "Évaluation d'Innovation",
+      "greeting": "Félicitations,",
       "contact": "Contactez Nos Experts",
       "downloadPDF": "Télécharger le PDF",
       "embryonic": {

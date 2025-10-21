@@ -51,6 +51,7 @@
     "results": {
       "title": "Your Innovation Assessment",
       "type": "Innovation Assessment",
+      "greeting": "Congratulations,",
       "contact": "Contact Our Experts",
       "downloadPDF": "Download PDF",
       "embryonic": {
