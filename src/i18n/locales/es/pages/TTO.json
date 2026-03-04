@@ -15,6 +15,7 @@
   },
   "inventions": {
     "title": "Destacado de Invenciones",
+    "more": "Más",
     "subtitle": "Tecnologías e innovaciones destacadas",
     "invention_1": {
       "title": "Generador Híbrido de Energía Renovable",
@@ -62,10 +63,10 @@
     "description": "¿Interesado en una invención o tecnología específica? Contáctenos para obtener más información sobre nuestros proyectos de investigación y desarrollo."
   },
   "stats": {
-    "totalPatents": "Total de Patentes Presentadas",
-    "internationalPatents": "Patentes Internacionales",
-    "researchContracts": "Contratos de Investigación",
-    "goldMedals": "Medallas de Oro"
+    "totalPatents":  "Tecnologías y Patentes",
+    "internationalPatents": "PCT",
+    "researchContracts": "transferencias",
+    "medals": "Premios y Reconocimientos"
   },
   "services": {
     "transfer": {

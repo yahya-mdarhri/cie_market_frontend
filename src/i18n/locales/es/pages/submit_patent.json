@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "title": "Gestiona tus invenciones con facilidad",
+    "description": "Inn2Market está conectado a nuestra plataforma segura de divulgación de patentes, donde cada inventor dispone de un espacio personal para gestionar, visualizar y hacer crecer su portafolio. Esta plataforma también agiliza la comunicación con la TTO, garantizando un recorrido fluido desde la idea hasta el mercado.",
+    "firstAction": "Acceder a mi espacio de inventor",
+    "secondAction": "Registrarse como nuevo inventor"
+  },
+  "platformFeatures": {
+    "title": "Características de la Plataforma",
+    "subtitle": "Todo lo que necesitas para gestionar tus invenciones en un solo lugar",
+    "features": [
+      {
+        "title": "Panel de Inventor Personal",
+        "description": "Accede a tu panel personalizado para ver todas tus invenciones, rastrear su estado y monitorear el progreso a través del proceso de patentes."
+      },
+      {
+        "title": "Visualización de Portafolio",
+        "description": "Visualiza tu portafolio de invenciones con gráficos interactivos que muestran la línea de tiempo de desarrollo y el potencial de mercado de cada invención."
+      },
+      {
+        "title": "Gestión Segura de Documentos",
+        "description": "Almacena y organiza todos tus documentos relacionados con invenciones de forma segura en la nube con control de versiones y seguimiento de acceso."
+      },
+      {
+        "title": "Comunicación Directa con TTO",
+        "description": "Comunícate directamente con nuestra Oficina de Transferencia de Tecnología a través de la plataforma, asegurando respuestas rápidas y soporte simplificado."
+      },
+      {
+        "title": "Herramientas de Análisis de Mercado",
+        "description": "Accede a herramientas de investigación de mercado e información de la industria para entender mejor el potencial comercial de tus invenciones."
+      },
+      {
+        "title": "Características de Colaboración",
+        "description": "Colabora con coinventores, investigadores y socios de la industria a través de herramientas integradas de comunicación y gestión de proyectos."
+      }
+    ]
+  },
+  "processSteps": {
+    "title": "Cómo Funciona",
+    "subtitle": "Desde la presentación de la idea hasta el éxito en el mercado",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Presenta tu Invención",
+        "description": "Sube los detalles de tu invención, documentos de apoyo e investigación preliminar a través de nuestra plataforma segura."
+      },
+      {
+        "number": 2,
+        "title": "Revisión Inicial",
+        "description": "Nuestro equipo de TTO realiza una revisión inicial para evaluar el potencial y patentabilidad de la invención."
+      },
+      {
+        "number": 3,
+        "title": "Análisis Detallado",
+        "description": "Análisis integral que incluye búsqueda de arte previo, evaluación de mercado y evaluación técnica."
+      },
+      {
+        "number": 4,
+        "title": "Solicitud de Patente",
+        "description": "Si es aprobada, te guiamos a través del proceso de solicitud de patente y manejamos todos los requisitos legales."
+      },
+      {
+        "number": 5,
+        "title": "Comercialización",
+        "description": "Te ayudamos a encontrar socios de licencia y comercializar tu invención en el mercado."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Por Qué Elegir Nuestra Plataforma",
+    "subtitle": "Únete a miles de inventores que confían en nuestra plataforma",
+    "benefits": [
+      {
+        "title": "Orientación Experta",
+        "description": "Obtén orientación experta de nuestro experimentado equipo de TTO durante todo el proceso de patentes."
+      },
+      {
+        "title": "Económico",
+        "description": "Reduce los costos de presentación de patentes con nuestro proceso simplificado y capacidades de presentación masiva."
+      },
+      {
+        "title": "Alcance Global",
+        "description": "Accede a mercados internacionales con nuestra red de socios y experiencia en presentación de patentes globales."
+      },
+      {
+        "title": "Soporte 24/7",
+        "description": "Obtén soporte y asistencia las 24 horas del día, los 7 días de la semana cuando necesites ayuda con tus invenciones."
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para Comenzar?",
+    "description": "Únete a nuestra comunidad de innovadores y convierte tus ideas en invenciones listas para el mercado.",
+    "primaryAction": "Comienza tu Viaje",
+    "secondaryAction": "Aprende Más"
+  }
+}

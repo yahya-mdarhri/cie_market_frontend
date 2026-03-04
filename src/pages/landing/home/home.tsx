@@ -4,15 +4,17 @@ import DepartmentHeadSection from "@ui/Landing/DepartmentHeadSection/DepartmentH
 import { useTranslation } from 'react-i18next';
 
 import arrow from '../../../assets/icons/arrow.svg';
-import headImg from "./images/M-Bouya.png";
+import headImg from "./images/M-bouya.jpg";
 
 import Introduction from "@ui/Landing/Introduction/Introduction";
 import VisionAndMission from "@ui/Landing/VisionAndMission/VisionAndMission";
 import Partners from "@ui/Landing/Partners/Partners";
 import { useDocumentTitle } from "@hooks/useDocumentTitle";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ContactUs from "@ui/Landing/ContactUs/ContactUs";
 import { getDepartments, getHeroProps, partners } from './data';
+import axios from "axios";
+import { useEffect } from "react";
 
 interface CIEItemProps {
 	name: string;
@@ -39,11 +41,33 @@ function CIEItem({name, description, icon, link}: CIEItemProps) {
 }
 
 function Home() {
+	const navigator = useNavigate();
 	const { t } = useTranslation('home');
 	useDocumentTitle('Home | Centre for Innovation and Entrepreneurship');
 
+
+	const handleContactUsSubmit = (data: any) => {
+		axios.post('/api/public/contact-us/', data)
+		.catch(err => console.log(err))
+	}
+	const heroProps = getHeroProps(t);
+	heroProps.onFirstActionClick = () => { 
+		const el = document.getElementById("contact");
+		if (el) {
+			el.scrollIntoView({ behavior: "smooth" });
+		}
+	}
+	heroProps.onSecondActionClick = () => { navigator('/submit_patent'); }
+	useEffect(() => {
+		if (window.location.hash === "#contact") {
+			const el = document.getElementById("contact");
+			if (el) {
+				el.scrollIntoView({ behavior: "smooth" });
+			}
+		}
+	}, [window.location.hash]);
 	return (
-		<LandingLayout heroProps={getHeroProps(t)}>
+		<LandingLayout heroProps={heroProps}>
 				<Introduction 
 					title={t('introduction.title')}
 					description={t('introduction.description')}
@@ -84,7 +108,7 @@ function Home() {
 				<Partners partners={partners} />
 				<div className="Home5thSection" id="contact">
 					<ContactUs 
-					onSubmit={(_formData) =>{}} />
+					onSubmit={handleContactUsSubmit} />
 				</div>
 		</LandingLayout>
 	);

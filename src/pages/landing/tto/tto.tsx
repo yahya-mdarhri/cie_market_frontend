@@ -29,6 +29,7 @@ function LandingInventionCards({
 	onSelectInvention: (invention: Invention) => void 
 }) {
 	const { t } = useTranslation('tto');
+	const navigate = useNavigate();
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const cardsPerView = 3;
 
@@ -89,6 +90,15 @@ function LandingInventionCards({
 					>
 						{'>'}
 					</div>
+					<button 
+						className="moreButton"
+						onClick={() => {
+							navigate('/technologies')
+							window.scrollTo(0, 0);
+						}}
+					>
+						{t('inventions.more') || 'More'}
+					</button>
 				</div>
 			</div>
 			<div className="LandingInventionCards">
@@ -154,6 +164,7 @@ function TTO() {
 		firstAction: t('hero.firstAction'),
 		secondAction: t('hero.secondAction'),
 		stats: getTranslatedStats(),
+		onFirstActionClick: () => navigate('/submit_patent'),
 		onSecondActionClick: () => navigate('/licensing-process')
 	};
 	const servicesData = getServicesData(t);

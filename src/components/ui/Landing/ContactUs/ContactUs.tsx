@@ -8,11 +8,11 @@ interface ContactUsProps {
 }
 
 export interface ContactFormData {
-  contactType: 'inventor' | 'company';
+  contact_type: 'inventor' | 'company';
   name: string;
   email: string;
   phone: string;
-  companyName?: string;
+  company_name?: string;
   position?: string;
   subject: string;
   message: string;
@@ -32,13 +32,15 @@ const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+		const form = e.target as HTMLFormElement;
     const formData = new FormData(e.target as HTMLFormElement);
     const data: ContactFormData = {
-      contactType: formData.get('contactType') as 'inventor' | 'company',
+      contact_type: formData.get('contact_type') as 'inventor' | 'company',
       name: formData.get('name') as string,
       email: formData.get('email') as string,
       phone: formData.get('phone') as string,
-      companyName: formData.get('companyName') as string,
+      company_name: formData.get('company_name') as string,
       position: formData.get('position') as string,
       subject: formData.get('subject') as string,
       message: formData.get('message') as string
@@ -46,6 +48,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
     if (onSubmit) {
       onSubmit(data);
     }
+		form.reset();
   };
 
   return (
@@ -69,7 +72,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
               </div>
               <div className="contact-text">
                 <h4>{t('contactInfo.phone')}</h4>
-                <p>+212 5XX-XXXXXX</p>
+                <p>+212658477660</p>
               </div>
             </div>
             
@@ -79,7 +82,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
               </div>
               <div className="contact-text">
                 <h4>{t('contactInfo.email')}</h4>
-                <p>contact@uir.ac.ma</p>
+                <p>Wacim.benyahya@uir.ac.ma</p>
               </div>
             </div>
             
@@ -117,7 +120,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
             </button>
             <input 
               type="hidden" 
-              name="contactType" 
+              name="contact_type" 
               value={contactType}
             />
           </div>
@@ -127,7 +130,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ onSubmit }) => {
             <input type="tel" name="phone" id="phone" placeholder={t('form.phone')} />
           </div>
           <div className="company_fields" id="companyFields" style={{ display: 'none' }}>
-            <input type="text" name="companyName" id="companyName" placeholder={t('form.companyName')}/>
+            <input type="text" name="company_name" id="company_name" placeholder={t('form.companyName')}/>
             <input type="text" name="position" id="position" placeholder={t('form.position')}/>
           </div>
           <input type="text" name="subject" id="subject" placeholder={t('form.subject')}/>

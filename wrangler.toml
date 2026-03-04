@@ -1,3 +1,4 @@
-name = "demo"
-workers_dev = true
+name = "cie-front"
+workers_dev = false
 assets = {directory = "dist"}
+

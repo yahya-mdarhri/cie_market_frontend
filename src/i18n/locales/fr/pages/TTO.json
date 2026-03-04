@@ -15,6 +15,7 @@
   },
   "inventions": {
     "title": "Mise en Avant des Inventions",
+    "more": "Plus",
     "subtitle": "Technologies et innovations mises en avant",
     "invention_1": {
       "title": "Générateur Hybride d'Énergie Renouvelable",
@@ -62,10 +63,10 @@
     "description": "Intéressé par une invention ou une technologie spécifique ? Contactez-nous pour en savoir plus sur nos projets de recherche et développement."
   },
   "stats": {
-    "totalPatents": "Total des Brevets Déposés",
-    "internationalPatents": "Brevets Internationaux",
-    "researchContracts": "Contrats de Recherche",
-    "goldMedals": "Médailles d'Or"
+    "totalPatents": "Technologies & Brevets",
+    "internationalPatents": "PCT",
+    "transfers": "Transferts",
+    "medals": "Prix & Distinctions"
   },
   "services": {
     "transfer": {

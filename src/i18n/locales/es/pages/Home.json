@@ -39,8 +39,8 @@
     }
   },
   "stats": {
-    "innovationPatents": "Innovación y Patentes",
-    "internationalPatents": "Patentes Internacionales",
-    "goldMedals": "Medallas de Oro"
+    "innovationPatents": "Tecnologías y Patentes",
+    "internationalPatents": "PCT",
+    "goldMedals": "Premios y Reconocimientos"
   }
 } 

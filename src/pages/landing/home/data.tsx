@@ -55,9 +55,9 @@ export const partners = [
 // this array contains the stats data for the hero section
 export const getStatsData = (t: any): StatsItemsType => {
     return {
-        a: { name: t('stats.innovationPatents'), value: 644 },
-        b: { name: t('stats.internationalPatents'), value: 117 },
-        c: { name: t('stats.goldMedals'), value: 2 },
+        a: { name: t('stats.innovationPatents'), value: 674 },
+        b: { name: t('stats.internationalPatents'), value: 120 },
+        c: { name: t('stats.goldMedals'), value: 7 },
     };
 }
 

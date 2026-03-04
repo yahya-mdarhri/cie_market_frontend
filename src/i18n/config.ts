@@ -83,9 +83,17 @@ import enInventionInfo from './locales/en/components/InventionInfo.json';
 import esInventionInfo from './locales/es/components/InventionInfo.json';
 import frInventionInfo from './locales/fr/components/InventionInfo.json';
 
+import enSubmitPatent from './locales/en/pages/submit_patent.json';
+import esSubmitPatent from './locales/es/pages/submit_patent.json';
+import frSubmitPatent from './locales/fr/pages/submit_patent.json';
+
 import enFooter from './locales/en/components/Footer.json';
 import esFooter from './locales/es/components/Footer.json';
 import frFooter from './locales/fr/components/Footer.json';
+
+import enTechnologies from './locales/en/pages/technologies.json';
+import esTechnologies from './locales/es/pages/technologies.json';
+import frTechnologies from './locales/fr/pages/technologies.json';
 
 // Define supported languages
 export const SUPPORTED_LANGUAGES = {
@@ -120,7 +128,9 @@ export const NAMESPACES = {
   licensingProcess: 'licensingProcess',
   ourTeam: 'ourTeam',
   techCenter: 'techCenter',
-  inventionInfo: 'inventionInfo'
+  inventionInfo: 'inventionInfo',
+  SubmitPatent: 'SubmitPatent',
+  technologies: 'technologies'
 } as const;
 
 export type Namespace = keyof typeof NAMESPACES;
@@ -152,7 +162,9 @@ i18n
         ourTeam: enOurTeam,
         techCenter: enTechCenter,
         inventionInfo: enInventionInfo,
-        footer: enFooter
+        SubmitPatent: enSubmitPatent,
+        footer: enFooter,
+        technologies: enTechnologies
       },
       es: {
         navbar: esNavbar,
@@ -175,7 +187,9 @@ i18n
         ourTeam: esOurTeam,
         techCenter: esTechCenter,
         inventionInfo: esInventionInfo,
-        footer: esFooter
+        SubmitPatent: esSubmitPatent,
+        footer: esFooter,
+        technologies: esTechnologies
       },
       fr: {
         navbar: frNavbar,
@@ -198,7 +212,9 @@ i18n
         ourTeam: frOurTeam,
         techCenter: frTechCenter,
         inventionInfo: frInventionInfo,
-        footer: frFooter
+        SubmitPatent: frSubmitPatent,
+        footer: frFooter,
+        technologies: frTechnologies
       }
     },
     fallbackLng: 'en',

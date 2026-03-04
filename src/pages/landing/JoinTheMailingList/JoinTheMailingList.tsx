@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import LandingLayout from "@components/layouts/LandingLayout/LandingLayout";
 import './JoinTheMailingList.css';
 import { useHeroProps, useBenefits, useRoleOptions, useSubscriptionPreferences } from './data';
+import axios from 'axios';
 
 function JoinTheMailingList() {
     const { t } = useTranslation('joinMailingList');
@@ -16,8 +17,8 @@ function JoinTheMailingList() {
     };
 
     const [formData, setFormData] = React.useState({
-        firstName: '',
-        lastName: '',
+        first_name: '',
+        last_name: '',
         email: '',
         organization: '',
         jobTitle: '',
@@ -42,10 +43,20 @@ function JoinTheMailingList() {
         }
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log('Form submitted:', formData);
-    };
+		const handleSubmit = async (e: React.FormEvent) => {
+			e.preventDefault();
+			await axios.post('/api/public/mailing-list-join/', formData);
+			setFormData({
+				first_name: '',
+				last_name: '',
+				email: '',
+				organization: '',
+				jobTitle: '',
+				role: '',
+				newsletter: false,
+				techUpdates: false,
+			});
+		};
 
     const heroProps = useHeroProps(t);
     const benefits = useBenefits(t);
@@ -103,12 +114,12 @@ function JoinTheMailingList() {
                                 <h3>{t('form.personalInfo.title')}</h3>
                                 <div className="form-row">
                                     <div className="form-group">
-                                        <label htmlFor="firstName">{t('form.personalInfo.firstName')} *</label>
+                                        <label htmlFor="first_name">{t('form.personalInfo.firstName')} *</label>
                                         <input
                                             type="text"
-                                            id="firstName"
-                                            name="firstName"
-                                            value={formData.firstName}
+                                            id="first_name"
+                                            name="first_name"
+                                            value={formData.first_name}
                                             onChange={handleChange}
                                             required
                                             placeholder={t('form.personalInfo.firstNamePlaceholder')}
@@ -116,12 +127,12 @@ function JoinTheMailingList() {
                                     </div>
 
                                     <div className="form-group">
-                                        <label htmlFor="lastName">{t('form.personalInfo.lastName')} *</label>
+                                        <label htmlFor="last_name">{t('form.personalInfo.lastName')} *</label>
                                         <input
                                             type="text"
-                                            id="lastName"
-                                            name="lastName"
-                                            value={formData.lastName}
+                                            id="last_name"
+                                            name="last_name"
+                                            value={formData.last_name}
                                             onChange={handleChange}
                                             required
                                             placeholder={t('form.personalInfo.lastNamePlaceholder')}
@@ -183,7 +194,7 @@ function JoinTheMailingList() {
                                 </div>
                             </div>
 
-                            <button type="submit" className="submit-button">
+                            <button type="submit" className="submit-button" onClick={handleSubmit}>
                                 {t('form.submit')}
                             </button>
                         </form>
