@@ -4,7 +4,7 @@
 import hamza from './images/hamza.jpg';
 import elhoussaine from './images/elhoussaine.png';
 import wacim from './images/wacim.jpeg';
-import yahya from './images/yahya.jpeg';
+import avatar from './images/avatar.jpg';
 
 import { HeroProps } from "@layouts/LandingLayout/LandingLayout";
 import { TFunction } from "i18next";
@@ -26,7 +26,7 @@ const teamMembers = [
     {
         name: "Yahya Mdarhri",
         role: "Tech Lead",
-        image: yahya,
+        image: avatar,
     },
     {
         name: "El Houssaine Eddahbi",
