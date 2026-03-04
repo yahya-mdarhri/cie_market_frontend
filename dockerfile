@@ -1,27 +1,14 @@
 
-FROM node:20-alpine AS base
+FROM node:20-alpine AS build
 WORKDIR /app
 COPY package*.json ./
-
-FROM base AS prod-deps
-RUN npm install --omit=dev
-
-
-FROM base AS build
-RUN npm install
+RUN npm ci
 COPY . .
 RUN npm run build
 
+FROM nginx:1.27-alpine
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/dist /usr/share/nginx/html
 
-FROM node:20-alpine AS runner
-WORKDIR /app
-
-
-COPY --from=prod-deps /app/node_modules ./node_modules
-COPY --from=build /app/dist ./dist
-COPY --from=build /app/package*.json ./
-
-
-EXPOSE 4173
-
-CMD [ "npm", "run", "preview" ]
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

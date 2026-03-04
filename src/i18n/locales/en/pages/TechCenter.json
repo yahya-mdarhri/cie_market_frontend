@@ -1,0 +1,67 @@
+{
+    "hero": {
+        "title": "Tech Center",
+        "description": "We provide the tools, mentorship, and environment to turn ideas into saleable ventures",
+        "firstAction": "Submit A Patent"
+    },
+    "stats": {
+        "techCenters": "Tech Centers",
+        "labeledLabs": "Labeled Laboratories",
+        "researchCenters": "Research Centers",
+        "industrialProjects": "Industrial R&D Projects"
+    },
+    "introduction": {
+        "title": "Tech Center",
+        "description": "The Tech Center at UIR is a dynamic collaboration space where academic expertise meets industrial challenges. Through co-development projects, prototype creation, and technology integration, we deliver tailor-made solutions for businesses, cities, and public institutions. From smart solar infrastructure to urban beautification and energy-efficient systems, the clinic drives innovation with real-world impact."
+    },
+    "visionAndMission": {
+        "mission": "support Made @UIR innovation projects to meet the specific needs of industry and territories",
+        "vision": "Transform the CIE into an effective Business Unit serving industry and the territories"
+    },
+    "services": {
+        "title": "Our Services",
+        "description": "We connect industry with academic expertise to solve technical challenges through tailored research and innovation support",
+        "items": {
+            "productInnovation": {
+                "title": "Accelerating Product Innovation",
+                "description": "The Techcenter helps companies enhance their innovation pipeline by offering access to rapid prototyping tools and skilled support. With state-of-the-art equipment and resources, the center assists in turning ideas into tangible products faster."
+            },
+            "smallBatch": {
+                "title": "Small Batch Production for Specific Industry Needs",
+                "description": "For certain niche sectors of industries, the center enables quick production of customized parts using precise methods that meet high precision and speed needs."
+            },
+            "manufacturing": {
+                "title": "Integrating Advanced Manufacturing Technologies",
+                "description": "We help companies gain access to new digital tools and advanced manufacturing processes. This includes integrating sensors, robotics, and 3D printing into existing production flows to improve efficiency and production feasibility."
+            },
+            "prototyping": {
+                "title": "Functional Prototyping for Critical Sectors",
+                "description": "The Techcenter specializes in functional prototyping for high-demand research and industrial uses. These include sectors such as healthcare, energy, and telecommunications, which require specific standards of these industries."
+            },
+            "processImprovement": {
+                "title": "Industrial Process Improvement",
+                "description": "Developed in collaboration with our industrial partners, we analyze and improve production chains through process simulation, data analysis, and custom software tools to provide tailored solutions."
+            },
+            "automotive": {
+                "title": "Prototyping Solutions for the Automotive Industry",
+                "description": "The Techcenter supports the automotive industry by designing and developing advanced prototypes for new products and components, helping businesses remain innovative in a rapidly evolving market."
+            },
+            "studentSupport": {
+                "title": "Technical Support for Student Projects",
+                "description": "As a technological training center, the Techcenter provides resources and expertise to assist students in designing, prototyping, and testing their engineering projects. This guidance helps them in realizing their academic projects."
+            },
+            "research": {
+                "title": "Research and Development for Industrial Innovation",
+                "description": "Objective: The Techcenter collaborates with industrial firms to turn R&D research into real-world solutions. We provide the necessary resources and know-how for every stage of product development, from initial idea to real-world validation."
+            },
+            "maintenance": {
+                "title": "Maintenance and Enhancement of Industrial Equipment",
+                "description": "The Techcenter offers maintenance services for industrial machines and systems. This includes hardware repair, performance enhancement, and real-time condition-based diagnostics to optimize machine performance."
+            },
+            "customSolutions": {
+                "title": "Custom Industrial Solutions",
+                "description": "We work directly with industries to tailor design custom solutions tailored to their needs. From initial specifications to final product implementation, we provide complete support to ensure projects progress from concepts to implementation."
+            }
+        }
+    }
+} 
