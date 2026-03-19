@@ -178,7 +178,6 @@ interface Profile {
 }
 
 
-import ahmed_zouggar from "./images/inventors/ahmed_zouggar.jpeg";
 import maouena_fongbedgi from './images/inventors/maouena_fongbedgi.jpeg'
 import abdellatif_benabdellah from './images/inventors/abdellatif_benabdellah.jpeg'
 import { ContactPerson } from "@ui/Landing/Contact/Contact";
@@ -194,11 +193,6 @@ const profileData: Profile[] = [
 		name: "Maouena FONGBEDGI",
 		role: "PhD, M.Eng",
 		image: maouena_fongbedgi,
-	},
-	{
-		name: "Ahmed ZOUGGAR",
-		role: "Expert",
-		image: ahmed_zouggar,
 	},
 	{
 		name: "Mohammed OUAHABI",
