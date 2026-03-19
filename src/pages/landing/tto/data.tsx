@@ -72,7 +72,7 @@ const partners = [
 
 
 
-import ma63830 from './images/inventions/ma63830.jpg'
+import energies from './images/inventions/energies.jpg'
 import ma47040 from './images/inventions/ma47040.png'
 import ma52677 from './images/inventions/ma52677.png'
 import ma36470 from './images/inventions/ma36470.png'
@@ -85,7 +85,7 @@ const getInventionCardData = (t: TFunction): Invention[] => [
 		problem: t('inventions.invention_1.problem'),
 		solution: t('inventions.invention_1.solution'),
 		impact: t('inventions.invention_1.impact'),
-		image: ma63830,
+		image: energies,
 		nationalId: "MA63830",
 	},
 	{
